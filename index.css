@@ -49,23 +49,53 @@ body {
   border-right-color: black;
   border-bottom-color: brown;
 }
-/* state */
-button {
-    cursor: pointer;
-}
 
-button:hover {
-    background-color: yellow;
-    color: green;
+/* class for js */
+
+.width {
+    width: 200px;
+    background-color: red;
 }
-button:active {
-    background-color: aqua !important;
-    color: black !important;
-    font-size: 40px !important;
+.height {
+    height: 200px;
+    background-color: red;
 }
-button:focus {
-    background-color: black;
-    color: white;
-    font-size: 30px;
+.min-width {
+    min-width: 200px;
+    background-color: red;
 }
-/* end state */
+.min-height {
+    min-height: 200px;
+    background-color: red;
+}
+.max-width {
+    max-width: 200px;
+    background-color: red;
+}
+.max-height {
+    max-height: 200px;
+    background-color: red;
+}
+.padding {
+    padding: 50px;
+}
+.box-sizing {
+    box-sizing: border-box;
+    width: 100px;
+    padding: 50px;
+    background-color: red;
+    height: 100px;
+}
+.padding-top {
+    padding-top: 100px;
+}
+.padding-right {
+    padding-right: 100px;
+}
+.padding-bottom {
+    padding-bottom: 100px;
+}
+.padding-left {
+    padding-left: 100px;
+}
+/* end class for js */
