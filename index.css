@@ -65,6 +65,11 @@ button:focus {
   font-weight: 700;
 }
 /* end button */
+/* list */
+ul {
+    list-style: decimal;
+}
+/* end list */
 /* class for js */
 
 .width {
