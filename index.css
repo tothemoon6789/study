@@ -51,10 +51,11 @@ body {
 }
 /* button */
 button {
-    background-color: black;
-    color: white;
+  background-color: black;
+  color: white;
   padding: 8px 16px;
   margin: 8px;
+  cursor: pointer;
 }
 button:hover {
   background-color: gray;
@@ -67,7 +68,7 @@ button:focus {
 /* end button */
 /* list */
 ul {
-    list-style: decimal;
+  list-style: decimal;
 }
 /* end list */
 /* class for js */
@@ -137,7 +138,6 @@ ul {
   padding-inline-end: 100px;
 }
 .display-inline {
-
   display: inline;
   background-color: red;
 }
@@ -173,55 +173,83 @@ ul {
   display: inline-table;
 }
 .border {
-    border: 10px solid red;
+  border: 10px solid red;
 }
 .border-top-width {
-    border-color: red;
-    border-top-width: 10px;
-    border-top-style: dashed;
+  border-color: red;
+  border-top-width: 10px;
+  border-top-style: dashed;
 }
 .border-right-width {
-    border-color: red;
-    border-right-width: 10px;
-    border-right-style: dashed;
+  border-color: red;
+  border-right-width: 10px;
+  border-right-style: dashed;
 }
 .border-bottom-width {
-    border-color: red;
-    border-bottom-width: 10px;
-    border-bottom-style: dashed;
+  border-color: red;
+  border-bottom-width: 10px;
+  border-bottom-style: dashed;
 }
 .border-left-width {
-    border-color: red;
-    border-left-width: 10px;
-    border-left-style: dashed;
+  border-color: red;
+  border-left-width: 10px;
+  border-left-style: dashed;
 }
 .border-block {
-    border-block: 10px solid red;
+  border-block: 10px solid red;
 }
 .border-block-start-width {
-    border-block-start-width: 10px;
-    border-block-start-color: red;
-    border-block-start-style: dashed;
+  border-block-start-width: 10px;
+  border-block-start-color: red;
+  border-block-start-style: dashed;
 }
 .border-block-end-width {
-    border-block-end-width: 10px;
-    border-block-end-color: red;
-    border-block-end-style: dashed;
+  border-block-end-width: 10px;
+  border-block-end-color: red;
+  border-block-end-style: dashed;
 }
 
 .border-inline-width {
-    border-inline-width: 10px;
-    border-inline-color: red;
-    border-inline-style: dashed;
+  border-inline-width: 10px;
+  border-inline-color: red;
+  border-inline-style: dashed;
 }
 .border-inline-start-width {
-    border-inline-start-width: 10px;
-    border-inline-start-color: red;
-    border-inline-start-style: dashed;
+  border-inline-start-width: 10px;
+  border-inline-start-color: red;
+  border-inline-start-style: dashed;
 }
 .border-inline-end-width {
-    border-inline-end-width: 10px;
-    border-inline-end-color: red;
-    border-inline-end-style: dashed;
+  border-inline-end-width: 10px;
+  border-inline-end-color: red;
+  border-inline-end-style: dashed;
+}
+.aspect-ratio {
+  height: 300px;
+  aspect-ratio: 1/1;
+  background-color: red;
+  overflow: hidden;
+  animation: aspectRatio 2s infinite alternate;
+}
+@keyframes aspectRatio {
+  0% {
+    aspect-ratio: 16/9;
+  }
+  100% {
+    aspect-ratio: 4/3;
+  }
+}
+.flex-grow {
+  display: flex;
+  border: 5px solid blue;
+}
+.flex-grow > div {
+  border: 10px solid red;
+  padding: 20px;
+}
+.flex-grow > div:nth-child(1),
+.flex-grow > div:nth-child(2) {
+  background-color: yellow;
+  flex-grow: 1;
 }
 /* end class for js */
