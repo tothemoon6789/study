@@ -1,4 +1,6 @@
+
 buttons = document.querySelectorAll("button");
+
 buttons.forEach((e) => {
   e.addEventListener("click", function () {
     var demo = document.getElementById("demo");
@@ -7,10 +9,8 @@ buttons.forEach((e) => {
     demo.scrollIntoView();
   });
 });
-function flexGrow(e) {
-  e.addEventListener("click", function () {
-    var demo = document.getElementById("demo");
+document.getElementById('flexGrow').addEventListener('click',function(){
     var html = `<div>mot</div><div>hai</div><div>ba</div><div>bon</div>`;
+    var demo = document.getElementById("demo");
     demo.innerHTML = html;
-  });
-}
+})

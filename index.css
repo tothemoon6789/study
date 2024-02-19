@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 body {
   margin: 0px;
 }
@@ -242,14 +245,27 @@ ul {
 .flex-grow {
   display: flex;
   border: 5px solid blue;
+  overflow: scroll;
 }
 .flex-grow > div {
   border: 10px solid red;
   padding: 20px;
 }
-.flex-grow > div:nth-child(1),
+.flex-grow > div:nth-child(1) {
+    background-color: yellow;
+    flex-grow: 1;
+    animation: flexGrow 2s linear infinite alternate;
+}
 .flex-grow > div:nth-child(2) {
-  background-color: yellow;
-  flex-grow: 1;
+  background-color: green;
+  flex-grow: 4;
+}
+@keyframes flexGrow {
+    0% {
+        flex-grow: 1;
+    }
+    100% {
+        flex-grow: 10;
+    }
 }
 /* end class for js */
