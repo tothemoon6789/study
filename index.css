@@ -1,5 +1,5 @@
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 body {
   margin: 0px;
@@ -228,10 +228,9 @@ ul {
   border-inline-end-style: dashed;
 }
 .aspect-ratio {
-  height: 300px;
-  aspect-ratio: 1/1;
+  width: 200px;
   background-color: red;
-  overflow: hidden;
+  overflow: scroll;
   animation: aspectRatio 2s infinite alternate;
 }
 @keyframes aspectRatio {
@@ -252,20 +251,45 @@ ul {
   padding: 20px;
 }
 .flex-grow > div:nth-child(1) {
-    background-color: yellow;
-    flex-grow: 1;
-    animation: flexGrow 2s linear infinite alternate;
+  background-color: yellow;
+  flex-grow: 1;
+  animation: flexGrow 2s linear infinite alternate;
 }
 .flex-grow > div:nth-child(2) {
   background-color: green;
   flex-grow: 4;
 }
 @keyframes flexGrow {
-    0% {
-        flex-grow: 1;
-    }
-    100% {
-        flex-grow: 10;
-    }
+  0% {
+    flex-grow: 1;
+  }
+  100% {
+    flex-grow: 10;
+  }
+}
+.flex-shrink {
+  display: flex;
+  border: 5px solid blue;
+  overflow: scroll;
+}
+.flex-shrink > div {
+  border: 10px solid red;
+  padding: 20px;
+  flex-shrink: 1;
+}
+.flex-shrink > div:nth-child(1) {
+  background-color: yellow;
+  animation: flexShrink 2s linear infinite alternate;
+}
+.flex-shrink > div:nth-child(2) {
+  background-color: green;
+}
+@keyframes flexShrink {
+  0% {
+    flex-shrink: 10;
+  }
+  100% {
+    flex-shrink: 100;
+  }
 }
 /* end class for js */

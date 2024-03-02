@@ -14,3 +14,8 @@ document.getElementById('flexGrow').addEventListener('click',function(){
     var demo = document.getElementById("demo");
     demo.innerHTML = html;
 })
+document.getElementById('flexShrink').addEventListener('click',function(){
+    var html = `<div>mot</div><div>hai</div><div>ba</div><div>bon</div>`;
+    var demo = document.getElementById("demo");
+    demo.innerHTML = html;
+})
