@@ -36,7 +36,7 @@ body {
   left: 50px;
   bottom: 50px;
   right: 50px;
-  float: right;
+  /* float: right; */
   position: unset;
   margin-top: 50px;
   margin-right: 50px;
@@ -54,14 +54,17 @@ body {
 }
 /* button */
 button {
-  background-color: black;
-  color: white;
   padding: 8px 16px;
   margin: 8px;
   cursor: pointer;
+  width: 100%;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2);
+  background-color: transparent;
+  border: unset;
 }
 button:hover {
   background-color: gray;
+  color: white;
 }
 button:focus {
   background-color: blue;
@@ -293,3 +296,10 @@ ul {
   }
 }
 /* end class for js */
+.attribute {
+  display: flex;
+}
+
+.attribute ul li:first-of-type {
+  margin-top: 20px;
+}
