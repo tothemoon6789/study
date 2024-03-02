@@ -1,5 +1,4 @@
-
-buttons = document.querySelectorAll("button");
+buttons = document.querySelectorAll("li > button");
 
 buttons.forEach((e) => {
   e.addEventListener("click", function () {
@@ -9,13 +8,32 @@ buttons.forEach((e) => {
     demo.scrollIntoView();
   });
 });
-document.getElementById('flexGrow').addEventListener('click',function(){
-    var html = `<div>mot</div><div>hai</div><div>ba</div><div>bon</div>`;
-    var demo = document.getElementById("demo");
-    demo.innerHTML = html;
-})
-document.getElementById('flexShrink').addEventListener('click',function(){
-    var html = `<div>mot</div><div>hai</div><div>ba</div><div>bon</div>`;
-    var demo = document.getElementById("demo");
-    demo.innerHTML = html;
-})
+document.getElementById("flexGrow").addEventListener("click", function () {
+  var html = `<div>mot</div><div>hai</div><div>ba</div><div>bon</div>`;
+  var demo = document.getElementById("demo");
+  demo.innerHTML = html;
+});
+document.getElementById("flexShrink").addEventListener("click", function () {
+  var html = `<div>mot</div><div>hai</div><div>ba</div><div>bon</div>`;
+  var demo = document.getElementById("demo");
+  demo.innerHTML = html;
+});
+(function () {
+  var id = [ "kichthuoc", "vitri"];
+  var control = [];
+  id.forEach((e) => {
+    control.push("control" + e);
+  });
+  control.forEach(function (e, i) {
+    var ele = document.getElementById(e);
+    if (ele !== null) {
+      ele.addEventListener("click", function () {
+        id.forEach(function (e) {
+          document.getElementById(e).classList.remove("show");
+        });
+        index = document.getElementById(id[i]);
+        index.classList.add("show");
+      });
+    }
+  });
+})();

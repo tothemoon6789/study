@@ -52,6 +52,18 @@ body {
   border-right-color: black;
   border-bottom-color: brown;
 }
+.container .box {
+  display: none;
+}
+.container .show {
+  display: block;
+}
+.wrap-demo {
+  border: 50px solid blue;
+}
+.wrap-control button {
+  width: unset;
+}
 /* button */
 button {
   padding: 8px 16px;
@@ -303,3 +315,152 @@ ul {
 .attribute ul li:first-of-type {
   margin-top: 20px;
 }
+
+
+/* vị trí */
+.margin-top {
+  margin-top: -20px;
+  animation: margin-top 2s infinite alternate;
+}
+@keyframes margin-top {
+  from {
+    margin-top: -100px;
+  }
+  to {
+    margin-top: 100px;
+  }
+}
+.margin-left {
+  animation: margin-left 2s infinite alternate;
+}
+@keyframes margin-left {
+  from {
+    margin-left: -100px;
+  }
+  to {
+    margin-left: 100px;
+  }
+}
+.margin-right {
+  animation: margin-right 2s infinite alternate;
+}
+@keyframes margin-right {
+  from {
+    margin-right: -100px;
+  }
+  to {
+    margin-right: 100px;
+  }
+}
+.margin-bottom {
+  animation: margin-bottom 2s infinite alternate;
+}
+@keyframes margin-bottom {
+  from {
+    margin-bottom: -100px;
+  }
+  to {
+    margin-bottom: 100px;
+  }
+}
+.relative {
+  position: relative;
+  animation: relative 2s infinite alternate;
+}
+@keyframes relative {
+  0% {
+    left: -100px;
+    top : 0;
+  }
+  25% {
+    left: -100px;
+    top : -100px;
+  }
+  50% {
+    left: 100px;
+    top : -100px;
+  }
+  75% {
+    bottom: 100px;
+    top : 100px;
+  }
+  100% {
+    left: -100px;
+    top:0;
+  }
+}
+.absolute {
+  position: absolute;
+  animation: absolute 2s infinite alternate;
+}
+@keyframes absolute {
+  0% {
+    left: -100px;
+    top : 0;
+  }
+  25% {
+    left: -100px;
+    top : -100px;
+  }
+  50% {
+    left: 100px;
+    top : -100px;
+  }
+  75% {
+    bottom: 100px;
+    top : 100px;
+  }
+  100% {
+    left: -100px;
+    top:0;
+  }
+}
+.left {
+  position: relative;
+  animation: left 2s infinite alternate;
+}
+@keyframes left {
+  from {
+    left: -100px;
+  }
+  to {
+    left: 100px;
+  }
+}
+.top {
+  position: relative;
+  animation: top 2s infinite alternate;
+}
+@keyframes top {
+  from {
+    top: -100px;
+  }
+  to {
+    top: 100px;
+  }
+}
+.right {
+  position: relative;
+  animation: right 2s infinite alternate;
+}
+@keyframes right {
+  from {
+    right: -100px;
+  }
+  to {
+    right: 100px;
+  }
+}
+.bottom {
+  position: relative;
+  animation: bottom 2s infinite alternate;
+}
+@keyframes bottom {
+  from {
+    bottom: -100px;
+  }
+  to {
+    bottom: 100px;
+  }
+}
+/* end vị trí */
