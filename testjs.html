@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .child {
+        background-color: red;
+        transform: scale(0);
+        transition: all 2s;
+      }
+      .child.show {
+        /* display: block; */
+        transform: scale(1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <button>mot</button>
+      <div class="child">du lieu 1</div>
+    </div>
+    <div class="box">
+      <button>hai</button>
+      <div class="child">du lieu 2</div>
+    </div>
+    <script>
+      var buttons = document.querySelectorAll(".box > button");
+      buttons.forEach(function (e) {
+        e.addEventListener("click", function (e) {
+            buttons.forEach(function (e) {
+                e.nextElementSibling.classList.remove("show");
+            })
+          this.nextElementSibling.classList.add("show");
+        });
+      });
+    </script>
+  </body>
+</html>
