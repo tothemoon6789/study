@@ -24,18 +24,20 @@ document.getElementById("float").addEventListener("click", function () {
   var demo = document.getElementById("demo");
   demo.innerHTML = html;
 });
-document.getElementById("justify-content").addEventListener("click", function () {
-  var html = `<div>mot</div><div>hai</div><div>ba</div><div>bon</div>`;
-  var demo = document.getElementById("demo");
-  demo.innerHTML = html;
-});
-document.getElementById("align-items").addEventListener("click", function () {
-  var html = `<div>mot</div><div>hai</div><div>ba</div><div>bon</div>`;
-  var demo = document.getElementById("demo");
-  demo.innerHTML = html;
-});
 (function () {
-  var id = [ "kichthuoc", "vitri"];
+  "use strict";
+  var c = ["justify-content", "align-items", "flex-wrap","flex-direction"];
+  c.forEach(function (e) {
+    document.getElementById(e).addEventListener("click", flex);
+  });
+  function flex(e) {
+    var html = `<div>mot</div><div>hai</div><div>ba</div><div>bon</div>`;
+    var demo = document.getElementById("demo");
+    demo.innerHTML = html;
+  }
+})();
+(function () {
+  var id = ["kichthuoc", "vitri"];
   var control = [];
   id.forEach((e) => {
     control.push("control" + e);

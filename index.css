@@ -52,6 +52,9 @@ body {
   border-right-color: black;
   border-bottom-color: brown;
 }
+.container {
+  overflow: auto;
+}
 .container .box {
   display: none;
 }
@@ -316,7 +319,6 @@ ul {
   margin-top: 20px;
 }
 
-
 /* vị trí */
 .margin {
   margin: auto;
@@ -436,23 +438,23 @@ ul {
 @keyframes relative {
   0% {
     left: -100px;
-    top : 0;
+    top: 0;
   }
   25% {
     left: -100px;
-    top : -100px;
+    top: -100px;
   }
   50% {
     left: 100px;
-    top : -100px;
+    top: -100px;
   }
   75% {
     bottom: 100px;
-    top : 100px;
+    top: 100px;
   }
   100% {
     left: -100px;
-    top:0;
+    top: 0;
   }
 }
 .fixed {
@@ -463,23 +465,23 @@ ul {
 @keyframes fixed {
   0% {
     left: -100px;
-    top : 0;
+    top: 0;
   }
   25% {
     left: -100px;
-    top : -100px;
+    top: -100px;
   }
   50% {
     left: 100px;
-    top : -100px;
+    top: -100px;
   }
   75% {
     bottom: 100px;
-    top : 100px;
+    top: 100px;
   }
   100% {
     left: -100px;
-    top:0;
+    top: 0;
   }
 }
 .absolute {
@@ -490,23 +492,23 @@ ul {
 @keyframes absolute {
   0% {
     left: -100px;
-    top : 0;
+    top: 0;
   }
   25% {
     left: -100px;
-    top : -100px;
+    top: -100px;
   }
   50% {
     left: 100px;
-    top : -100px;
+    top: -100px;
   }
   75% {
     bottom: 100px;
-    top : 100px;
+    top: 100px;
   }
   100% {
     left: -100px;
-    top:0;
+    top: 0;
   }
 }
 .left {
@@ -567,55 +569,99 @@ ul {
 }
 .justify-content {
   display: flex;
-  animation: justify-content 6s infinite;
+  animation: justify-content 8s infinite;
   height: 200px;
 }
 .justify-content > div {
   border: 1px solid red;
 }
 @keyframes justify-content {
-  0% {
+  16% {
     justify-content: flex-start;
   }
-  20% {
+  32% {
     justify-content: space-evenly;
   }
-  40% {
+  48% {
     justify-content: space-around;
   }
-  60% {
+  64% {
     justify-content: space-between;
   }
   80% {
     justify-content: center;
   }
-  100% {
+  96% {
     justify-content: flex-end;
   }
 }
 .align-items {
   display: flex;
-  animation: align-items 5s infinite;
+  animation: align-items 8s infinite;
   height: 200px;
 }
 .align-items > div {
   border: 1px solid red;
 }
 @keyframes align-items {
-  0% {
+  20% {
     align-items: flex-start;
   }
-  25% {
+  40% {
     align-items: center;
   }
-  50% {
+  60% {
     align-items: flex-end;
   }
-  75% {
-    align-items: stretch;
+  80% {
+    align-items: baseline;
   }
   100% {
-    align-items: baseline;
+    align-items: stretch;
+  }
+}
+.flex-wrap {
+  border: 1px solid red;
+  animation: flex-wrap 5s infinite;
+  display: flex;
+}
+.flex-wrap > div {
+  width: 50%;
+  border: 1px solid green;
+  box-sizing: border-box;
+}
+@keyframes flex-wrap {
+  30% {
+    flex-wrap: nowrap;
+  }
+  60% {
+    flex-wrap: wrap;
+  }
+  90% {
+    flex-wrap: wrap-reverse;
+  }
+}
+.flex-direction {
+  border: 1px solid red;
+  animation: flex-direction 5s infinite;
+  display: flex;
+}
+.flex-direction > div {
+  border: 1px solid green;
+  box-sizing: border-box;
+}
+@keyframes flex-direction {
+  25% {
+    flex-direction: row;
+  }
+  50% {
+    flex-direction: row-reverse;
+  }
+  75% {
+    flex-direction: column;
+  }
+  100% {
+    flex-direction: column-reverse;
   }
 }
 /* end vị trí */
