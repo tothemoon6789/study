@@ -835,10 +835,10 @@ ul {
 }
 @keyframes background-image-linear {
   from {
-    background-image: linear-gradient(to right, red, green)
+    background-image: linear-gradient(to right, red, green);
   }
   to {
-    background-image: linear-gradient(to right, red, yellow)
+    background-image: linear-gradient(to right, red, yellow);
   }
 }
 .background-image-conic {
@@ -846,10 +846,10 @@ ul {
 }
 @keyframes background-image-conic {
   from {
-    background-image: conic-gradient( red 45deg, green 90deg);
+    background-image: conic-gradient(red 45deg, green 90deg);
   }
   to {
-    background-image: conic-gradient( red 100deg, yellow 130deg);
+    background-image: conic-gradient(red 100deg, yellow 130deg);
   }
 }
 .color {
@@ -1006,6 +1006,52 @@ ul {
   to {
     color: blue;
     border-inline-end-color: yellow;
+  }
+}
+.scrollbar-color {
+  animation: scrollbar-color 3s infinite alternate;
+}
+@keyframes scrollbar-color {
+  from {
+    scrollbar-color: red;
+  }
+  to {
+    scrollbar-color: yellow;
+  }
+}
+.webkit-scroolbar-thumb {
+  height: 100px;
+  overflow: auto;
+}
+.webkit-scroolbar-thumb::-webkit-scrollbar {
+  width: 10px;
+}
+.webkit-scroolbar-thumb::-webkit-scrollbar-thumb {
+  background: red;
+  overflow: auto;
+}
+.webkit-scroolbar-track {
+  height: 100px;
+  overflow: auto;
+}
+.webkit-scroolbar-track::-webkit-scrollbar {
+  width: 10px;
+}
+.webkit-scroolbar-track::-webkit-scrollbar-track {
+  background: red;
+  overflow: auto;
+}
+.box-shadow {
+  animation: box-shadow 3s infinite alternate;
+  margin: 100px;
+}
+@keyframes box-shadow {
+  from {
+    box-shadow: 4px 8px 16px 0 rgba(255, 0, 255, 1);
+  }
+  to {
+    
+    box-shadow: 4px 8px 16px 0 rgba(255, 255, 0, 1);
   }
 }
 /* end mau sac */
