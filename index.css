@@ -3,6 +3,21 @@ html {
 }
 body {
   margin: 0px;
+  font-family: "Montserrat", sans-serif;
+}
+ul,
+li {
+  font-family: "Montserrat", sans-serif;
+}
+button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
 }
 .kichthuoc {
   width: 100px;
@@ -60,6 +75,47 @@ body {
 }
 .container .show {
   display: block;
+}
+#note {
+  background-color: greenyellow;
+  /* padding: 8px 16px; */
+  line-height: 40px;
+  margin: 10px;
+}
+#note.show {
+  animation: note-show 2s 1;
+}
+@keyframes note-show {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+#warning {
+  background-color: greenyellow;
+  /* padding: 8px 16px; */
+  line-height: 40px;
+  margin: 10px;
+}
+#warning.show {
+  animation: waning-show 2s 1;
+  border: 5px solid yellow;
+}
+@keyframes waning-show {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+#warning {
+  margin: 10px;
+  background-color: red;
+  color: white;
+  line-height: 40px;
 }
 .wrap-demo {
   border: 50px solid blue;
@@ -664,4 +720,292 @@ ul {
     flex-direction: column-reverse;
   }
 }
+.align-self {
+  border: 5px solid red;
+
+  display: flex;
+  height: 400px;
+}
+.align-self > div {
+  border: 1px solid gray;
+}
+.align-self > div:nth-child(3) {
+  border: 5px solid green;
+  animation: align-self 5s infinite;
+}
+@keyframes align-self {
+  20% {
+    align-self: flex-start;
+  }
+  40% {
+    align-self: center;
+  }
+  60% {
+    align-self: flex-end;
+  }
+  80% {
+    align-self: baseline;
+  }
+  100% {
+    align-self: stretch;
+  }
+}
+.align-content {
+  border: 5px solid red;
+
+  display: flex;
+  height: 400px;
+  flex-wrap: wrap;
+  animation: align-content 5s infinite;
+}
+.align-content > div {
+  border: 1px solid gray;
+}
+@keyframes align-content {
+  20% {
+    align-content: flex-start;
+  }
+  40% {
+    align-content: center;
+  }
+  60% {
+    align-content: flex-end;
+  }
+  80% {
+    align-content: space-around;
+  }
+  100% {
+    align-content: space-between;
+  }
+}
 /* end vị trí */
+/* mau sac */
+.background {
+  animation: backgrounds 2s infinite;
+}
+@keyframes backgrounds {
+  from {
+    background-color: red;
+    color: white;
+  }
+  to {
+    background-color: yellow;
+    color: black;
+  }
+}
+.background {
+  animation: backgrounds 2s infinite alternate;
+}
+@keyframes backgrounds {
+  from {
+    background: red;
+    color: white;
+  }
+  to {
+    background: yellow;
+    color: black;
+  }
+}
+.background-color {
+  animation: background-color 3s infinite;
+}
+@keyframes background-color {
+  from {
+    background-color: blue;
+  }
+  to {
+    background-color: green;
+  }
+}
+.background-image {
+  animation: background-image 3s infinite alternate;
+}
+@keyframes background-image {
+  from {
+    background-image: url("https://i.pravatar.cc");
+    background-size: cover;
+  }
+  to {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Hopetoun_falls.jpg/640px-Hopetoun_falls.jpg");
+    background-size: cover;
+  }
+}
+.background-image-linear {
+  animation: background-image-linear 3s infinite alternate;
+}
+@keyframes background-image-linear {
+  from {
+    background-image: linear-gradient(to right, red, green)
+  }
+  to {
+    background-image: linear-gradient(to right, red, yellow)
+  }
+}
+.background-image-conic {
+  animation: background-image-conic 3s infinite alternate;
+}
+@keyframes background-image-conic {
+  from {
+    background-image: conic-gradient( red 45deg, green 90deg);
+  }
+  to {
+    background-image: conic-gradient( red 100deg, yellow 130deg);
+  }
+}
+.color {
+  animation: color 3s infinite alternate;
+}
+@keyframes color {
+  from {
+    color: red;
+    font-weight: 900;
+  }
+  to {
+    color: blue;
+    font-weight: 900;
+  }
+}
+.border-color {
+  animation: border-color 3s infinite alternate;
+  border: 10px solid transparent;
+}
+@keyframes border-color {
+  from {
+    border-color: red;
+  }
+  to {
+    color: blue;
+    border-color: yellow;
+  }
+}
+.border-top-color {
+  animation: border-top-color 3s infinite alternate;
+  border-top: 10px solid;
+}
+@keyframes border-top-color {
+  from {
+    border-top-color: red;
+  }
+  to {
+    color: blue;
+    border-top-color: yellow;
+  }
+}
+.border-bottom-color {
+  animation: border-bottom-color 3s infinite alternate;
+  border-bottom: 10px solid;
+}
+@keyframes border-bottom-color {
+  from {
+    border-bottom-color: red;
+  }
+  to {
+    color: blue;
+    border-bottom-color: yellow;
+  }
+}
+.border-right-color {
+  animation: border-right-color 3s infinite alternate;
+  border-right: 10px solid;
+}
+@keyframes border-right-color {
+  from {
+    border-right-color: red;
+  }
+  to {
+    color: blue;
+    border-right-color: yellow;
+  }
+}
+.border-left-color {
+  animation: border-left-color 3s infinite alternate;
+  border-left: 10px solid;
+}
+@keyframes border-left-color {
+  from {
+    border-left-color: red;
+  }
+  to {
+    color: blue;
+    border-left-color: yellow;
+  }
+}
+.border-block-color {
+  animation: border-block-color 3s infinite alternate;
+  border-block: 10px solid;
+}
+@keyframes border-block-color {
+  from {
+    border-block-color: red;
+  }
+  to {
+    color: blue;
+    border-block-color: yellow;
+  }
+}
+.border-block-start-color {
+  animation: border-block-start-color 3s infinite alternate;
+  border-block-start: 10px solid;
+}
+@keyframes border-block-start-color {
+  from {
+    border-block-start-color: red;
+  }
+  to {
+    color: blue;
+    border-block-start-color: yellow;
+  }
+}
+.border-block-end-color {
+  animation: border-block-end-color 3s infinite alternate;
+  border-block-end: 10px solid;
+}
+@keyframes border-block-end-color {
+  from {
+    border-block-end-color: red;
+  }
+  to {
+    color: blue;
+    border-block-end-color: yellow;
+  }
+}
+.border-inline-color {
+  animation: border-inline-color 3s infinite alternate;
+  border-inline: 10px solid;
+}
+@keyframes border-inline-color {
+  from {
+    border-inline-color: red;
+  }
+  to {
+    color: blue;
+    border-inline-color: yellow;
+  }
+}
+.border-inline-start-color {
+  animation: border-inline-start-color 3s infinite alternate;
+  border-inline-start: 10px solid;
+}
+@keyframes border-inline-start-color {
+  from {
+    border-inline-start-color: red;
+  }
+  to {
+    color: blue;
+    border-inline-start-color: yellow;
+  }
+}
+.border-inline-end-color {
+  animation: border-inline-end-color 3s infinite alternate;
+  border-inline-end: 10px solid;
+}
+@keyframes border-inline-end-color {
+  from {
+    border-inline-end-color: red;
+  }
+  to {
+    color: blue;
+    border-inline-end-color: yellow;
+  }
+}
+/* end mau sac */

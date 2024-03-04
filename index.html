@@ -4,16 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>CSS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
     <div class="wrap-demo">
       <div id="demo" class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error sunt, molestiae mollitia nobis rem quas, repellat qui expedita labore doloribus excepturi ab atque libero reiciendis harum ea eum cumque architecto in aspernatur! Error ex molestiae inventore mollitia assumenda. Eos, harum architecto quisquam doloremque consequuntur hic voluptates voluptas ad officia expedita qui perspiciatis illum cumque voluptate quam nostrum totam explicabo aliquam! Est accusantium, accusamus libero aut eum ex tenetur veniam repellendus asperiores, deserunt praesentium facilis quibusdam. Atque ex in consequatur eaque sapiente distinctio maiores molestias saepe harum magni, architecto odit neque, eos, iure assumenda commodi sequi! Quae accusantium consectetur suscipit corrupti sit laborum veritatis alias, consequuntur optio nesciunt debitis sapiente? Asperiores quasi optio odit consequatur inventore facilis, quo tempora. Similique soluta iure iusto dolore totam sapiente eligendi voluptates molestias, reprehenderit labore porro vitae eaque perferendis provident corrupti maiores ea. Aliquam, totam. Unde distinctio magnam, repellendus ipsum recusandae quia asperiores ullam eaque. Officiis atque quo libero consequatur commodi quasi recusandae tenetur nesciunt assumenda impedit, deserunt nostrum? Esse id voluptatibus fugiat est neque quae obcaecati voluptas sunt adipisci rerum dignissimos quam architecto non soluta illo ipsum tenetur recusandae fuga molestiae nihil eius, expedita ad reiciendis ducimus? Vel molestias blanditiis cum, dolores ab quasi omnis laborum libero odio eum facere doloremque cupiditate debitis consequuntur cumque esse iure illo ex excepturi asperiores atque. Tempora quisquam adipisci, enim atque reprehenderit dignissimos vel impedit explicabo ab dolores deserunt sint rem iusto iure earum expedita, veritatis unde magni? Corrupti dolores, laborum hic totam ipsa unde quos nostrum recusandae beatae sed, provident voluptas suscipit vel maiores rerum voluptatibus eveniet omnis sint quis? Atque exercitationem illo quisquam velit delectus, reprehenderit, repellat natus eveniet assumenda quae, consequatur voluptates odio! Neque, natus quod consequatur sapiente tempore nobis tempora dolores maiores voluptate odio ab sint ipsa porro commodi at eveniet vero. Provident, aut.</div>
     </div>
+    <div id="note"></div>
+    <div id="warning"></div>
     <div class="wrap-control">
       <button id="controlkichthuoc" class="control">Kích thước</button>
       <button id="controlvitri" class="control">Vị trí</button>
+      <button id="controlmausac" class="control">Màu sắc</button>
     </div>
     <div class="container">
       <div id="kichthuoc" class="box">
@@ -21,7 +29,9 @@
         <p>Thuộc tính ảnh hưởng đến kích thước: Kích thước thực, thêm không gian bên ngoài, áp kiểu hiển thị, kích thước đường viền</p>
         <div class="attribute">
           <ul>
-            Đẩy kích thước thực
+            Đẩy
+            <strong>kích thước</strong>
+            thực
             <li><button>width</button></li>
             <li><button>height</button></li>
             <li><button>min-width</button></li>
@@ -32,7 +42,9 @@
             <li><button>box-sizing</button></li>
           </ul>
           <ul>
-            Thêm không gian bên ngoài
+            Thêm
+            <strong>không gian</strong>
+            bên ngoài
             <li><button>padding</button></li>
             <li><button>padding-top</button></li>
             <li><button>padding-right</button></li>
@@ -46,7 +58,8 @@
             <li><button>padding-inline-end</button></li>
           </ul>
           <ul>
-            Áp kiểu hiển thị
+            Áp
+            <strong>kiểu hiển thị</strong>
             <li><button>display-inline</button></li>
             <li><button>display-inline-block</button></li>
             <li><button>display-block</button></li>
@@ -60,7 +73,8 @@
             <li><button id="flexShrink">flex-shrink</button></li>
           </ul>
           <ul>
-            Kích thước đường viền
+            Kích thước
+            <strong>đường viền</strong>
             <li><button>border</button></li>
             <li><button>border-top-width</button></li>
             <li><button>border-right-width</button></li>
@@ -75,12 +89,13 @@
           </ul>
         </div>
       </div>
-      <div id="vitri" class="box show">
+      <div id="vitri" class="box">
         <h2>Vị trí</h2>
         <p>Thuộc tính ảnh hưởng đến vị trí:</p>
         <div class="attribute">
           <ul>
-            Dịch chuyển bằng canh lề
+            Dịch chuyển bằng
+            <strong>canh lề</strong>
             <li><button>margin</button></li>
             <li><button>margin-top</button></li>
             <li><button>margin-left</button></li>
@@ -90,10 +105,10 @@
             <li><button>margin-block-end</button></li>
             <li><button>margin-inline-start</button></li>
             <li><button>margin-inline-end</button></li>
-
           </ul>
           <ul>
-            Dịch chuyển bằng thuộc tính vị trí
+            Dịch chuyển bằng
+            <strong>thuộc tính vị trí</strong>
             <li><button>relative</button></li>
             <li><button>fixed</button></li>
             <li><button>absolute</button></li>
@@ -103,22 +118,59 @@
             <li><button>bottom</button></li>
           </ul>
           <ul>
-            Dịch chuyển bằng trôi phần tử
+            Dịch chuyển bằng
+            <strong>trôi phần tử</strong>
             <li><button id="float">float</button></li>
           </ul>
           <ul>
-            Dịch chuyển bằng flex
+            Dịch chuyển bằng
+            <strong>flex</strong>
             <li><button id="justify-content">justify-content</button></li>
             <li><button id="align-items">align-items</button></li>
             <li><button id="flex-wrap">flex-wrap</button></li>
             <li><button id="flex-direction">flex-direction</button></li>
-            <li><button>align-selft</button></li>
-            <li><button>align-content</button></li>
+            <li><button id="align-self">align-self</button></li>
+            <li><button id="align-content">align-content</button></li>
+          </ul>
+        </div>
+      </div>
+      <div id="mausac" class="box show">
+        <h2>Màu sắc</h2>
+        <p>Thuộc tính ảnh hưởng đến màu sắc:</p>
+        <div class="attribute">
+          <ul>
+            Tô
+            <strong>màu nền</strong>
+            <li><button>background</button></li>
+            <li><button>background-color</button></li>
+            <li><button>background-image</button></li>
+            <li><button>background-image-linear</button></li>
+            <li><button>background-image-conic</button></li>
+          </ul>
+          <ul>
+            Tô
+            <strong>màu chữ</strong>
+            <li><button>color</button></li>
+          </ul>
+          <ul>
+            Tô
+            <strong>màu viền</strong>
+            <li><button>border-color</button></li>
+            <li><button>border-top-color</button></li>
+            <li><button>border-right-color</button></li>
+            <li><button>border-bottom-color</button></li>
+            <li><button>border-left-color</button></li>
+            <li><button>border-block-color</button></li>
+            <li><button>border-block-start-color</button></li>
+            <li><button>border-block-end-color</button></li>
+            <li><button>border-inline-color</button></li>
+            <li><button>border-inline-start-color</button></li>
+            <li><button>border-inline-end-color</button></li>
           </ul>
         </div>
       </div>
     </div>
-    
+
     <script src="./main.js"></script>
   </body>
 </html>
