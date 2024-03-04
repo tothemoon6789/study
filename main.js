@@ -18,6 +18,22 @@ document.getElementById("flexShrink").addEventListener("click", function () {
   var demo = document.getElementById("demo");
   demo.innerHTML = html;
 });
+document.getElementById("float").addEventListener("click", function () {
+  var html = `<img src="https://i.pravatar.cc" width="100px" height="100px" style="object-fit: cover;" alt="">
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet sit quisquam deleniti officia reprehenderit eum quae impedit doloremque hic? Consectetur rerum magni repellendus delectus harum fugit fuga sapiente, odio impedit dolores incidunt quo beatae voluptatum. Labore necessitatibus aliquid ipsam facere. Earum consectetur vitae saepe totam! Beatae, nobis suscipit saepe rem consequuntur soluta sunt at illum atque omnis assumenda maxime labore repudiandae exercitationem! Quo praesentium possimus adipisci in labore tempora est. Quos nisi rem velit. Accusantium cum ut suscipit iusto, autem fuga tenetur vel necessitatibus nihil! Eos laboriosam repudiandae dolorum dignissimos voluptatum eveniet nihil vero aspernatur accusantium. Atque iste sapiente vero!</p>`;
+  var demo = document.getElementById("demo");
+  demo.innerHTML = html;
+});
+document.getElementById("justify-content").addEventListener("click", function () {
+  var html = `<div>mot</div><div>hai</div><div>ba</div><div>bon</div>`;
+  var demo = document.getElementById("demo");
+  demo.innerHTML = html;
+});
+document.getElementById("align-items").addEventListener("click", function () {
+  var html = `<div>mot</div><div>hai</div><div>ba</div><div>bon</div>`;
+  var demo = document.getElementById("demo");
+  demo.innerHTML = html;
+});
 (function () {
   var id = [ "kichthuoc", "vitri"];
   var control = [];

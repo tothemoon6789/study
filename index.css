@@ -318,8 +318,22 @@ ul {
 
 
 /* vị trí */
+.margin {
+  margin: auto;
+  border: 1px solid red;
+  animation: margin 2s infinite alternate;
+}
+@keyframes margin {
+  from {
+    max-width: 200px;
+  }
+  to {
+    max-width: 1000px;
+  }
+}
 .margin-top {
   margin-top: -20px;
+  border: 1px solid red;
   animation: margin-top 2s infinite alternate;
 }
 @keyframes margin-top {
@@ -331,6 +345,7 @@ ul {
   }
 }
 .margin-left {
+  border: 1px solid red;
   animation: margin-left 2s infinite alternate;
 }
 @keyframes margin-left {
@@ -342,6 +357,7 @@ ul {
   }
 }
 .margin-right {
+  border: 1px solid red;
   animation: margin-right 2s infinite alternate;
 }
 @keyframes margin-right {
@@ -353,6 +369,7 @@ ul {
   }
 }
 .margin-bottom {
+  border: 1px solid red;
   animation: margin-bottom 2s infinite alternate;
 }
 @keyframes margin-bottom {
@@ -363,8 +380,57 @@ ul {
     margin-bottom: 100px;
   }
 }
+.margin-block-start {
+  border: 1px solid red;
+  animation: margin-block-start 2s infinite alternate;
+}
+@keyframes margin-block-start {
+  from {
+    margin-block-start: -100px;
+  }
+  to {
+    margin-block-start: 100px;
+  }
+}
+.margin-block-end {
+  border: 1px solid red;
+  animation: margin-block-end 2s infinite alternate;
+}
+@keyframes margin-block-end {
+  from {
+    margin-block-end: -100px;
+  }
+  to {
+    margin-block-end: 100px;
+  }
+}
+.margin-inline-start {
+  border: 1px solid red;
+  animation: margin-inline-start 2s infinite alternate;
+}
+@keyframes margin-inline-start {
+  from {
+    margin-inline-start: -100px;
+  }
+  to {
+    margin-inline-start: 100px;
+  }
+}
+.margin-inline-end {
+  border: 1px solid red;
+  animation: margin-inline-end 2s infinite alternate;
+}
+@keyframes margin-inline-end {
+  from {
+    margin-inline-end: -100px;
+  }
+  to {
+    margin-inline-end: 100px;
+  }
+}
 .relative {
   position: relative;
+  border: 1px solid red;
   animation: relative 2s infinite alternate;
 }
 @keyframes relative {
@@ -389,7 +455,35 @@ ul {
     top:0;
   }
 }
+.fixed {
+  border: 1px solid red;
+  position: fixed;
+  animation: fixed 2s infinite alternate;
+}
+@keyframes fixed {
+  0% {
+    left: -100px;
+    top : 0;
+  }
+  25% {
+    left: -100px;
+    top : -100px;
+  }
+  50% {
+    left: 100px;
+    top : -100px;
+  }
+  75% {
+    bottom: 100px;
+    top : 100px;
+  }
+  100% {
+    left: -100px;
+    top:0;
+  }
+}
 .absolute {
+  border: 1px solid red;
   position: absolute;
   animation: absolute 2s infinite alternate;
 }
@@ -416,6 +510,7 @@ ul {
   }
 }
 .left {
+  border: 1px solid red;
   position: relative;
   animation: left 2s infinite alternate;
 }
@@ -428,6 +523,7 @@ ul {
   }
 }
 .top {
+  border: 1px solid red;
   position: relative;
   animation: top 2s infinite alternate;
 }
@@ -440,6 +536,7 @@ ul {
   }
 }
 .right {
+  border: 1px solid red;
   position: relative;
   animation: right 2s infinite alternate;
 }
@@ -452,6 +549,7 @@ ul {
   }
 }
 .bottom {
+  border: 1px solid red;
   position: relative;
   animation: bottom 2s infinite alternate;
 }
@@ -461,6 +559,63 @@ ul {
   }
   to {
     bottom: 100px;
+  }
+}
+.float > img {
+  float: right;
+  border: 1px solid red;
+}
+.justify-content {
+  display: flex;
+  animation: justify-content 6s infinite;
+  height: 200px;
+}
+.justify-content > div {
+  border: 1px solid red;
+}
+@keyframes justify-content {
+  0% {
+    justify-content: flex-start;
+  }
+  20% {
+    justify-content: space-evenly;
+  }
+  40% {
+    justify-content: space-around;
+  }
+  60% {
+    justify-content: space-between;
+  }
+  80% {
+    justify-content: center;
+  }
+  100% {
+    justify-content: flex-end;
+  }
+}
+.align-items {
+  display: flex;
+  animation: align-items 5s infinite;
+  height: 200px;
+}
+.align-items > div {
+  border: 1px solid red;
+}
+@keyframes align-items {
+  0% {
+    align-items: flex-start;
+  }
+  25% {
+    align-items: center;
+  }
+  50% {
+    align-items: flex-end;
+  }
+  75% {
+    align-items: stretch;
+  }
+  100% {
+    align-items: baseline;
   }
 }
 /* end vị trí */
