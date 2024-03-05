@@ -28,6 +28,12 @@ document.getElementById("float").addEventListener("click", function () {
   var demo = document.getElementById("demo");
   demo.innerHTML = html;
 });
+document.getElementById("text-align").addEventListener("click", function () {
+  clear();
+  var html = `<img src="https://i.pravatar.cc" width="100px" height="100px" style="object-fit: cover;" alt="">`;
+  var demo = document.getElementById("demo");
+  demo.innerHTML = html;
+});
 (function () {
   "use strict";
   var c = [
@@ -123,7 +129,7 @@ document.getElementById("float").addEventListener("click", function () {
   }
 })();
 (function () {
-  var id = ["kichthuoc", "vitri", "mausac","chuyendong"];
+  var id = ["kichthuoc","kieu","vitri", "mausac","chuyendong"];
   var control = [];
   id.forEach((e) => {
     control.push("control" + e);

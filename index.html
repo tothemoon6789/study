@@ -20,13 +20,14 @@
     <div id="note"></div>
     <div id="warning"></div>
     <div class="wrap-control">
-      <button id="controlkichthuoc" class="control">Kích thước</button>
-      <button id="controlvitri" class="control">Vị trí</button>
-      <button id="controlmausac" class="control">Màu sắc</button>
-      <button id="controlchuyendong" class="control">Chuyển động</button>
+      <button id="controlkichthuoc" class="control">Kích</button>
+      <button id="controlkieu" class="control">Kiểu</button>
+      <button id="controlvitri" class="control">Vị</button>
+      <button id="controlmausac" class="control">Màu</button>
+      <button id="controlchuyendong" class="control">Động</button>
     </div>
     <div class="container">
-      <div id="kichthuoc" class="box show">
+      <div id="kichthuoc" class="box">
         <h2>Kích Thước</h2>
         <p><em>Kiểu, kích, viền, không, hình</em></p>
         <div class="attribute">
@@ -90,7 +91,6 @@
             <li><button>padding-inline-end</button></li>
           </ul>
 
-          
           <ul>
             Đổi
             <strong>hình dạng</strong>
@@ -100,10 +100,39 @@
           </ul>
         </div>
       </div>
+      <div id="kieu" class="box show">
+        <h2>Kiểu</h2>
+        <p><em>Chữ,</em></p>
+        <div class="attribute">
+          <ul>
+            <strong>Kiểu chữ</strong>
+            <li><button>font-family</button></li>
+            <li><button>font-size</button></li>
+            <li><button>font-style</button></li>
+            <li><button>font-weight</button></li>
+            <li><button>text-decoration</button></li>
+            <li><button>text-transform</button></li>
+            <li><button>text-overflow</button></li>
+            <li><button>text-shadow</button></li>
+            <li><button>text-indent</button></li>
+            <li><button>text-justify</button></li>
+            <li><button>text-decoration-line</button></li>
+            <li><button>text-decoration-thickness</button></li>
+            <li><button>text-align-last</button></li>
+            <li><button>text-decoration-style</button></li>
+            <li><button>text-emphasis</button></li>
+            <li><button>text-emphasis-style</button></li>
+          </ul>
+        </div>
+      </div>
       <div id="vitri" class="box">
         <h2>Vị trí</h2>
         <p>Nền lề vị trôi lết</p>
         <div class="attribute">
+          <ul>
+            <h3>Chữ</h3>
+            <li><button>text-emphasis-position</button></li>
+          </ul>
           <ul>
             <h3>Nền</h3>
             <li><button>background-position</button></li>
@@ -121,6 +150,7 @@
             <li><button>margin-block-end</button></li>
             <li><button>margin-inline-start</button></li>
             <li><button>margin-inline-end</button></li>
+            <li><button id="text-align">text-align</button></li>
           </ul>
           <ul>
             <h3>Vị trí</h3>
@@ -146,19 +176,18 @@
             <li><button id="align-self">align-self</button></li>
             <li><button id="align-content">align-content</button></li>
           </ul>
-          
-          
         </div>
       </div>
       <div id="mausac" class="box">
         <h2>Màu sắc</h2>
         <p>Chữ nền viền kéo đổ</p>
         <div class="attribute">
-          
           <ul>
             Tô
             <strong>màu chữ</strong>
             <li><button>color</button></li>
+            <li><button>text-decoration-color</button></li>
+            <li><button>text-emphasis-color</button></li>
           </ul>
           <ul>
             Tô
@@ -196,7 +225,6 @@
             <li><button id="webkit-scroolbar-thumb">webkit-scroolbar-thumb</button></li>
             <li><button id="webkit-scroolbar-track">webkit-scroolbar-track</button></li>
           </ul>
-          
         </div>
       </div>
       <div id="chuyendong" class="box">

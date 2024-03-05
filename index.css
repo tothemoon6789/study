@@ -123,7 +123,7 @@ p {
   line-height: 40px;
 }
 .wrap-demo {
-  border: 50px solid blue;
+  border: 50px solid gray;
 }
 .wrap-control button {
   width: unset;
@@ -900,7 +900,6 @@ ul {
   from {
     background-position: bottom right;
   }
-  
 }
 .background-position-x {
   background-image: url("https://i.pravatar.cc");
@@ -914,7 +913,6 @@ ul {
   from {
     background-position-x: 100%;
   }
-  
 }
 .background-position-y {
   background-image: url("https://i.pravatar.cc");
@@ -928,9 +926,30 @@ ul {
   from {
     background-position-y: 100%;
   }
-  
 }
-
+.text-align {
+  animation: text-align 6s infinite;
+}
+@keyframes text-align {
+  20% {
+    text-align: start;
+  }
+  40% {
+    text-align: center;
+  }
+  60% {
+    text-align: end;
+  }
+  80% {
+    text-align: justify;
+  }
+  90% {
+    text-align: left;
+  }
+  100% {
+    text-align: right;
+  }
+}
 /* end vi tri */
 /* mau sac */
 .background {
@@ -1340,3 +1359,392 @@ ul {
 }
 
 /* end chuyen dong */
+/* kieu */
+.font-family {
+  animation: font-family 2s infinite alternate;
+  margin: 20px;
+  line-height: 30px;
+}
+@keyframes font-family {
+  50% {
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  100% {
+    font-family: 'Courier New', Courier, monospace;
+  }
+}
+.font-size {
+  animation: font-size 6s infinite alternate;
+  margin: 20px;
+  line-height: 30px;
+}
+@keyframes font-size {
+  0% {
+    font-size: 20px;
+  }
+  
+  100% {
+    font-size: 80px;
+    line-height: 80px;
+  }
+}
+.font-style {
+  animation: font-style 3s infinite alternate;
+  margin: 20px;
+  line-height: 30px;
+}
+@keyframes font-style {
+  30% {
+    font-style: normal;
+  }
+  60% {
+    font-style: italic;
+  }
+  100% {
+    font-style: oblique;
+  }
+
+}
+.font-weight {
+  animation: font-weight 6s infinite alternate;
+  margin: 20px;
+  line-height: 30px;
+}
+@keyframes font-weight {
+  0% {
+    font-weight: 100;
+  }
+  
+  100% {
+    font-weight: 900;
+  }
+}
+.text-decoration {
+  animation: text-decoration 6s infinite;
+  margin: 20px;
+  line-height: 30px;
+}
+@keyframes text-decoration {
+  25% {
+    text-decoration: overline;
+  }
+  50% {
+    text-decoration: line-through;
+  }
+  75% {
+    text-decoration: underline;
+  }
+  100% {
+    text-decoration: underline overline;
+  }
+}
+.text-transform {
+  animation: text-transform 6s infinite;
+  margin: 20px;
+  line-height: 30px;
+}
+@keyframes text-transform {
+  25% {
+    text-transform: uppercase;
+  }
+  50% {
+    text-transform: lowercase;
+  }
+  75% {
+    text-transform: capitalize;
+  }
+  100% {
+    text-transform: none;
+  }
+}
+.text-overflow {
+  animation: text-overflow 2s infinite;
+  margin: 20px;
+  line-height: 30px;
+  border: 1px solid red;
+  white-space: nowrap;
+  overflow: hidden;
+}
+@keyframes text-overflow {
+  50% {
+    text-overflow: clip;
+  }
+  100% {
+    text-overflow: ellipsis;
+  }
+}
+.text-shadow {
+  animation: text-shadow 2s infinite linear alternate;
+  font-size: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 100px;
+  font-weight: 900;
+}
+@keyframes text-shadow {
+  0% {
+    text-shadow: 0px 0px 0px black;
+  }
+  100% {
+    text-shadow: 10px 10px 15px gray;
+  }
+}
+.text-indent {
+  animation: text-indent 2s infinite linear alternate;
+  text-align: justify;
+}
+@keyframes text-indent {
+  0% {
+    text-indent: 10px;
+  }
+  100% {
+    text-indent: 200px;
+  }
+}
+.text-decoration-line {
+  animation: text-decoration-line 2s infinite linear alternate;
+  text-align: justify;
+}
+@keyframes text-decoration-line {
+  25% {
+    text-decoration: overline;
+  }
+  50% {
+    text-decoration: line-through;
+  }
+  75% {
+    text-decoration: underline;
+  }
+  100% {
+    text-decoration: underline overline;
+  }
+}
+.text-decoration-line {
+  animation: text-decoration-line 2s infinite linear alternate;
+}
+@keyframes text-decoration-line {
+  25% {
+    text-decoration-line: overline;
+  }
+  50% {
+    text-decoration-line: line-through;
+  }
+  75% {
+    text-decoration-line: underline;
+  }
+  100% {
+    text-decoration-line: underline overline;
+  }
+}
+.text-decoration-color {
+  text-decoration: underline;
+  text-decoration-thickness: 8px;
+  line-height: 40px;
+  animation: text-decoration-color 4s infinite linear alternate;
+}
+@keyframes text-decoration-color {
+  25% {
+    text-decoration-color: red;
+  }
+  50% {
+    text-decoration-color: green;
+  }
+  75% {
+    text-decoration-color: blue;
+  }
+  100% {
+    text-decoration-color: yellow;
+  }
+}
+.text-decoration-thickness {
+  text-decoration: underline;
+  text-decoration-thickness: 8px;
+  line-height: 40px;
+  animation: text-decoration-thickness 4s infinite linear alternate;
+}
+@keyframes text-decoration-thickness {
+  25% {
+    text-decoration-thickness: 8px;
+  }
+  50% {
+    text-decoration-thickness: 20px;
+  }
+  75% {
+    text-decoration-thickness: 30px;
+  }
+  100% {
+    text-decoration-thickness: 40px;
+    
+  }
+}
+.text-align-last {
+  text-align-last: 8px;
+  line-height: 40px;
+  animation: text-align-last 4s infinite linear alternate;
+}
+@keyframes text-align-last {
+  25% {
+    text-align-last: auto;
+  }
+  50% {
+    text-align-last: center;
+  }
+  75% {
+    text-align-last: justify;
+  }
+  100% {
+    text-align-last: right;
+    
+  }
+}
+.text-decoration-style {
+  line-height: 40px;
+  animation: text-decoration-style 4s infinite linear alternate;
+  text-decoration: underline;
+}
+@keyframes text-decoration-style {
+  16% {
+    text-decoration-style: none;
+  }
+  32% {
+    text-decoration-style: dashed;
+  }
+  48% {
+    text-decoration-style: dotted;
+  }
+  72% {
+    text-decoration-style: double;
+  }
+  80% {
+    text-decoration-style: wavy;
+    
+  }
+  100% {
+    text-decoration-style: solid;
+  }
+}
+.text-emphasis {
+  line-height: 40px;
+  animation: text-emphasis 4s infinite linear alternate;
+  text-decoration: underline;
+}
+@keyframes text-emphasis {
+  16% {
+    
+    text-emphasis: filled;
+  }
+  32% {
+    text-emphasis: open;
+  }
+  48% {
+    text-emphasis: double-circle black;
+  }
+  72% {
+    text-emphasis: triangle black;
+  }
+  
+}
+.text-emphasis-color {
+  line-height: 40px;
+  animation: text-emphasis-color 4s infinite linear alternate;
+  text-emphasis: triangle;
+}
+@keyframes text-emphasis-color {
+  16% {
+    
+    text-emphasis-color: red;
+  }
+  32% {
+    text-emphasis-color: blue;
+  }
+  48% {
+    text-emphasis-color: yellow;
+  }
+  72% {
+    text-emphasis-color: purple;
+    
+  }
+  
+}
+.text-emphasis-position {
+  line-height: 40px;
+  animation: text-emphasis-position 4s infinite linear alternate;
+  text-emphasis: triangle;
+}
+@keyframes text-emphasis-position {
+  16% {
+    text-emphasis-position: over;
+  }
+  32% {
+    text-emphasis-position: under;
+  }
+  48% {
+    writing-mode:vertical-rl;
+    text-emphasis-position: right;
+  }
+  72% {
+    writing-mode:vertical-rl;
+    text-emphasis-position: left;
+  }
+  
+}
+.text-emphasis-style {
+  line-height: 40px;
+  animation: text-emphasis-style 4s infinite linear alternate;
+  text-emphasis: triangle;
+}
+@keyframes text-emphasis-style {
+  16% {
+    text-emphasis-style: filled;
+  }
+  32% {
+    text-emphasis-style: open;
+  }
+  48% {
+    text-emphasis-style: double-circle;
+  }
+  72% {
+    text-emphasis-style: "#";
+    
+  }
+  
+}
+.text-justify {
+  line-height: 40px;
+  animation: text-justify 4s infinite linear alternate;
+}
+@keyframes text-justify {
+  10% {
+    text-justify: auto;
+  }
+  20% {
+    text-justify: distribute;
+  }
+  30% {
+    text-justify: distribute-all-lines;
+  }
+  40% {
+    text-justify: inter-cluster;
+    
+  }
+  50% {
+    text-justify: inter-ideograph;
+    
+  }
+  60% {
+    text-justify: inter-word;
+    
+  }
+  70% {
+    text-justify: kashida;
+    
+  }
+  80% {
+    text-justify: newspaper;
+    
+  }
+  
+}
+/* end kieu */
