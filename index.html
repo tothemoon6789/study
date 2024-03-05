@@ -16,18 +16,35 @@
     <div class="wrap-demo">
       <div id="demo" class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error sunt, molestiae mollitia nobis rem quas, repellat qui expedita labore doloribus excepturi ab atque libero reiciendis harum ea eum cumque architecto in aspernatur! Error ex molestiae inventore mollitia assumenda. Eos, harum architecto quisquam doloremque consequuntur hic voluptates voluptas ad officia expedita qui perspiciatis illum cumque voluptate quam nostrum totam explicabo aliquam! Est accusantium, accusamus libero aut eum ex tenetur veniam repellendus asperiores, deserunt praesentium facilis quibusdam. Atque ex in consequatur eaque sapiente distinctio maiores molestias saepe harum magni, architecto odit neque, eos, iure assumenda commodi sequi! Quae accusantium consectetur suscipit corrupti sit laborum veritatis alias, consequuntur optio nesciunt debitis sapiente? Asperiores quasi optio odit consequatur inventore facilis, quo tempora. Similique soluta iure iusto dolore totam sapiente eligendi voluptates molestias, reprehenderit labore porro vitae eaque perferendis provident corrupti maiores ea. Aliquam, totam. Unde distinctio magnam, repellendus ipsum recusandae quia asperiores ullam eaque. Officiis atque quo libero consequatur commodi quasi recusandae tenetur nesciunt assumenda impedit, deserunt nostrum? Esse id voluptatibus fugiat est neque quae obcaecati voluptas sunt adipisci rerum dignissimos quam architecto non soluta illo ipsum tenetur recusandae fuga molestiae nihil eius, expedita ad reiciendis ducimus? Vel molestias blanditiis cum, dolores ab quasi omnis laborum libero odio eum facere doloremque cupiditate debitis consequuntur cumque esse iure illo ex excepturi asperiores atque. Tempora quisquam adipisci, enim atque reprehenderit dignissimos vel impedit explicabo ab dolores deserunt sint rem iusto iure earum expedita, veritatis unde magni? Corrupti dolores, laborum hic totam ipsa unde quos nostrum recusandae beatae sed, provident voluptas suscipit vel maiores rerum voluptatibus eveniet omnis sint quis? Atque exercitationem illo quisquam velit delectus, reprehenderit, repellat natus eveniet assumenda quae, consequatur voluptates odio! Neque, natus quod consequatur sapiente tempore nobis tempora dolores maiores voluptate odio ab sint ipsa porro commodi at eveniet vero. Provident, aut.</div>
     </div>
+    <div id="total"></div>
     <div id="note"></div>
     <div id="warning"></div>
     <div class="wrap-control">
       <button id="controlkichthuoc" class="control">Kích thước</button>
       <button id="controlvitri" class="control">Vị trí</button>
       <button id="controlmausac" class="control">Màu sắc</button>
+      <button id="controlchuyendong" class="control">Chuyển động</button>
     </div>
     <div class="container">
-      <div id="kichthuoc" class="box">
+      <div id="kichthuoc" class="box show">
         <h2>Kích Thước</h2>
-        <p>Thuộc tính ảnh hưởng đến kích thước: Kích thước thực, thêm không gian bên ngoài, áp kiểu hiển thị, kích thước đường viền</p>
+        <p><em>Kiểu, kích, viền, không, hình</em></p>
         <div class="attribute">
+          <ul>
+            Áp
+            <strong>kiểu hiển thị</strong>
+            <li><button>display-inline</button></li>
+            <li><button>display-inline-block</button></li>
+            <li><button>display-block</button></li>
+            <li><button>display-flex</button></li>
+            <li><button>display-grid</button></li>
+            <li><button>display-table</button></li>
+            <li><button>display-inline-flex</button></li>
+            <li><button>display-inline-grid</button></li>
+            <li><button>display-inline-table</button></li>
+            <li><button id="flexGrow">flex-grow</button></li>
+            <li><button id="flexShrink">flex-shrink</button></li>
+          </ul>
           <ul>
             Đẩy
             <strong>kích thước</strong>
@@ -40,6 +57,21 @@
             <li><button>max-height</button></li>
             <li><button>aspect-ratio</button></li>
             <li><button>box-sizing</button></li>
+          </ul>
+          <ul>
+            Kích thước
+            <strong>đường viền</strong>
+            <li><button>border</button></li>
+            <li><button>border-top-width</button></li>
+            <li><button>border-right-width</button></li>
+            <li><button>border-bottom-width</button></li>
+            <li><button>border-left-width</button></li>
+            <li><button>border-block</button></li>
+            <li><button>border-block-start-width</button></li>
+            <li><button>border-block-end-width</button></li>
+            <li><button>border-inline-width</button></li>
+            <li><button>border-inline-start-width</button></li>
+            <li><button>border-inline-end-width</button></li>
           </ul>
           <ul>
             Thêm
@@ -57,45 +89,29 @@
             <li><button>padding-inline-start</button></li>
             <li><button>padding-inline-end</button></li>
           </ul>
+
+          
           <ul>
-            Áp
-            <strong>kiểu hiển thị</strong>
-            <li><button>display-inline</button></li>
-            <li><button>display-inline-block</button></li>
-            <li><button>display-block</button></li>
-            <li><button>display-flex</button></li>
-            <li><button>display-grid</button></li>
-            <li><button>display-table</button></li>
-            <li><button>display-inline-flex</button></li>
-            <li><button>display-inline-grid</button></li>
-            <li><button>display-inline-table</button></li>
-            <li><button id="flexGrow">flex-grow</button></li>
-            <li><button id="flexShrink">flex-shrink</button></li>
-          </ul>
-          <ul>
-            Kích thước
-            <strong>đường viền</strong>
-            <li><button>border</button></li>
-            <li><button>border-top-width</button></li>
-            <li><button>border-right-width</button></li>
-            <li><button>border-bottom-width</button></li>
-            <li><button>border-left-width</button></li>
-            <li><button>border-block</button></li>
-            <li><button>border-block-start-width</button></li>
-            <li><button>border-block-end-width</button></li>
-            <li><button>border-inline-width</button></li>
-            <li><button>border-inline-start-width</button></li>
-            <li><button>border-inline-end-width</button></li>
+            Đổi
+            <strong>hình dạng</strong>
+            <li><button>transform</button></li>
+            <li><button>rotate</button></li>
+            <li><button>scale</button></li>
           </ul>
         </div>
       </div>
       <div id="vitri" class="box">
         <h2>Vị trí</h2>
-        <p>Thuộc tính ảnh hưởng đến vị trí:</p>
+        <p>Nền lề vị trôi lết</p>
         <div class="attribute">
           <ul>
-            Dịch chuyển bằng
-            <strong>canh lề</strong>
+            <h3>Nền</h3>
+            <li><button>background-position</button></li>
+            <li><button>background-position-x</button></li>
+            <li><button>background-position-y</button></li>
+          </ul>
+          <ul>
+            <h3>Canh lề</h3>
             <li><button>margin</button></li>
             <li><button>margin-top</button></li>
             <li><button>margin-left</button></li>
@@ -107,8 +123,7 @@
             <li><button>margin-inline-end</button></li>
           </ul>
           <ul>
-            Dịch chuyển bằng
-            <strong>thuộc tính vị trí</strong>
+            <h3>Vị trí</h3>
             <li><button>relative</button></li>
             <li><button>fixed</button></li>
             <li><button>absolute</button></li>
@@ -116,15 +131,14 @@
             <li><button>top</button></li>
             <li><button>right</button></li>
             <li><button>bottom</button></li>
+            <li><button>translate</button></li>
           </ul>
           <ul>
-            Dịch chuyển bằng
-            <strong>trôi phần tử</strong>
+            <h3>Trôi</h3>
             <li><button id="float">float</button></li>
           </ul>
           <ul>
-            Dịch chuyển bằng
-            <strong>flex</strong>
+            <h3>flex</h3>
             <li><button id="justify-content">justify-content</button></li>
             <li><button id="align-items">align-items</button></li>
             <li><button id="flex-wrap">flex-wrap</button></li>
@@ -132,21 +146,15 @@
             <li><button id="align-self">align-self</button></li>
             <li><button id="align-content">align-content</button></li>
           </ul>
+          
+          
         </div>
       </div>
-      <div id="mausac" class="box show">
+      <div id="mausac" class="box">
         <h2>Màu sắc</h2>
-        <p>Thuộc tính ảnh hưởng đến màu sắc:</p>
+        <p>Chữ nền viền kéo đổ</p>
         <div class="attribute">
-          <ul>
-            Tô
-            <strong>màu nền</strong>
-            <li><button>background</button></li>
-            <li><button>background-color</button></li>
-            <li><button>background-image</button></li>
-            <li><button>background-image-linear</button></li>
-            <li><button>background-image-conic</button></li>
-          </ul>
+          
           <ul>
             Tô
             <strong>màu chữ</strong>
@@ -169,15 +177,51 @@
           </ul>
           <ul>
             Tô
-            <strong>màu thanh kéo</strong>
-            <li><button id="scrollbar-color">scrollbar-color</button></li>
-            <li><button id="webkit-scroolbar-thumb">webkit-scroolbar-thumb</button></li>
-            <li><button id="webkit-scroolbar-track">webkit-scroolbar-track</button></li>
+            <strong>màu nền</strong>
+            <li><button>background</button></li>
+            <li><button>background-color</button></li>
+            <li><button>background-image</button></li>
+            <li><button>background-image-linear</button></li>
+            <li><button>background-image-conic</button></li>
           </ul>
           <ul>
             Tô
             <strong>màu bóng đổ</strong>
             <li><button>box-shadow</button></li>
+          </ul>
+          <ul>
+            Tô
+            <strong>màu thanh kéo</strong>
+            <li><button id="scrollbar-color">scrollbar-color</button></li>
+            <li><button id="webkit-scroolbar-thumb">webkit-scroolbar-thumb</button></li>
+            <li><button id="webkit-scroolbar-track">webkit-scroolbar-track</button></li>
+          </ul>
+          
+        </div>
+      </div>
+      <div id="chuyendong" class="box">
+        <h2>Chuyển động</h2>
+        <p>a tran key</p>
+        <div class="attribute">
+          <ul>
+            Chuyển động bằng hệ
+            <strong>animation</strong>
+            <li><button>animation</button></li>
+            <li><button>animation-timing-function</button></li>
+            <li><button>animation-delay</button></li>
+            <li><button>animation-name</button></li>
+            <li><button>animation-duration</button></li>
+            <li><button>animation-play-state</button></li>
+            <li><button>animation-iteration-count</button></li>
+          </ul>
+          <ul>
+            Chuyển động bằng hệ
+            <strong>transition</strong>
+            <li><button id="transition">transition</button></li>
+            <li><button>transition-delay</button></li>
+            <li><button>transition-duration</button></li>
+            <li><button>transition-timing-function</button></li>
+            <li><button>transition-property</button></li>
           </ul>
         </div>
       </div>
