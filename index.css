@@ -1369,9 +1369,9 @@ ul {
   50% {
     font-family: "Montserrat", sans-serif;
   }
-  
+
   100% {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
   }
 }
 .font-size {
@@ -1383,7 +1383,7 @@ ul {
   0% {
     font-size: 20px;
   }
-  
+
   100% {
     font-size: 80px;
     line-height: 80px;
@@ -1404,7 +1404,6 @@ ul {
   100% {
     font-style: oblique;
   }
-
 }
 .font-weight {
   animation: font-weight 6s infinite alternate;
@@ -1415,7 +1414,7 @@ ul {
   0% {
     font-weight: 100;
   }
-  
+
   100% {
     font-weight: 900;
   }
@@ -1576,7 +1575,6 @@ ul {
   }
   100% {
     text-decoration-thickness: 40px;
-    
   }
 }
 .text-align-last {
@@ -1596,7 +1594,6 @@ ul {
   }
   100% {
     text-align-last: right;
-    
   }
 }
 .text-decoration-style {
@@ -1619,7 +1616,6 @@ ul {
   }
   80% {
     text-decoration-style: wavy;
-    
   }
   100% {
     text-decoration-style: solid;
@@ -1632,7 +1628,6 @@ ul {
 }
 @keyframes text-emphasis {
   16% {
-    
     text-emphasis: filled;
   }
   32% {
@@ -1644,7 +1639,6 @@ ul {
   72% {
     text-emphasis: triangle black;
   }
-  
 }
 .text-emphasis-color {
   line-height: 40px;
@@ -1653,7 +1647,6 @@ ul {
 }
 @keyframes text-emphasis-color {
   16% {
-    
     text-emphasis-color: red;
   }
   32% {
@@ -1664,9 +1657,7 @@ ul {
   }
   72% {
     text-emphasis-color: purple;
-    
   }
-  
 }
 .text-emphasis-position {
   line-height: 40px;
@@ -1681,14 +1672,13 @@ ul {
     text-emphasis-position: under;
   }
   48% {
-    writing-mode:vertical-rl;
+    writing-mode: vertical-rl;
     text-emphasis-position: right;
   }
   72% {
-    writing-mode:vertical-rl;
+    writing-mode: vertical-rl;
     text-emphasis-position: left;
   }
-  
 }
 .text-emphasis-style {
   line-height: 40px;
@@ -1707,10 +1697,9 @@ ul {
   }
   72% {
     text-emphasis-style: "#";
-    
   }
-  
 }
+
 .text-justify {
   line-height: 40px;
   animation: text-justify 4s infinite linear alternate;
@@ -1727,24 +1716,244 @@ ul {
   }
   40% {
     text-justify: inter-cluster;
-    
   }
   50% {
     text-justify: inter-ideograph;
-    
   }
   60% {
     text-justify: inter-word;
-    
   }
   70% {
     text-justify: kashida;
-    
   }
   80% {
     text-justify: newspaper;
+  }
+}
+
+.list-style ul {
+  line-height: 40px;
+  animation: list-style 8s infinite linear alternate;
+}
+@keyframes list-style {
+  16% {
+    list-style: square;
+  }
+  32% {
+    list-style: inside;
+  }
+  48% {
+    list-style: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/></svg>');
+  }
+  64% {
+    list-style: none;
+  }
+  80% {
+    list-style: georgian inside url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/></svg>');
+  }
+  96% {
+    list-style: georgian outside url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/></svg>');
+  }
+}
+
+.list-style-type ul {
+  animation: list-style-type 8s infinite linear alternate;
+}
+@keyframes list-style-type {
+  16% {
+    list-style-type: armenian;
+  }
+  32% {
+    list-style-type: circle;
+  }
+  48% {
+    list-style-type: decimal;
+  }
+  64% {
+    list-style-type: decimal-leading-zero;
+  }
+  80% {
+    list-style-type: disc;
+  }
+  96% {
+    list-style-type: georgian;
+  }
+}
+.list-style-position ul {
+  animation: list-style-position 2s infinite linear alternate;
+}
+@keyframes list-style-position {
+  50% {
+    list-style-position: inside;
+  }
+  100% {
+    list-style-position: outside;
+  }
+}
+.list-style-image ul {
+  list-style-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/></svg>');
+  animation: list-style-image 2s infinite linear alternate;
+}
+@keyframes list-style-image {
+  50% {
+    list-style-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/></svg>');
+  }
+  100% {
+    list-style-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>');
+  }
+}
+.mask-image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  animation: mask-image 3s infinite alternate;
+}
+@keyframes mask-image {
+  from {
+    mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/></svg>');
+    -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/></svg>');
+  }
+  to {
+    mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>');
+    -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>');
+  }
+}
+.mask-repeat {
+  /* width: 100%;
+  aspect-ratio: 1/1; */
+  mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/></svg>');
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/></svg>');
+  mask-size: 20%;
+  -webkit-mask-size: 20%;
+  animation: mask-repeat 4s infinite;
+}
+@keyframes mask-repeat {
+  25% {
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+  }
+  50% {
+    -webkit-mask-repeat:repeat;
+    mask-repeat: repeat;
+  }
+  75% {
+    -webkit-mask-repeat: repeat-x;
+    mask-repeat: repeat-x;
+  }
+  100% {
+    -webkit-mask-repeat: repeat-y;
+    mask-repeat: repeat-y;
+  }
+}
+.mask-size {
+  mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/></svg>');
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/></svg>');
+  animation: mask-size 3s infinite alternate;
+}
+@keyframes mask-size {
+  0% {
+    -webkit-mask-size: 20%;
+    mask-size: 20%;
+  }
+  100% {
+    -webkit-mask-size: 60%;
+    mask-size: 60%;
+  }
+}
+.mask-origin {
+  mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/></svg>');
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/></svg>');
+  animation: mask-origin 6s infinite alternate;
+  padding: 100px;
+  background-color: red;
+  border: 50px solid blue;
+  -webkit-mask-repeat: no-repeat;
+}
+@keyframes mask-origin {
+  33% {
+    -webkit-mask-origin: content-box;
+    mask-origin: content-box;
     
   }
-  
+  66% {
+    -webkit-mask-origin: padding-box;
+    mask-origin: padding-box;
+  }
+  99% {
+    -webkit-mask-origin: border-box;
+    mask-origin: border-box;
+  }
+}
+.mask-position {
+  mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/></svg>');
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"/></svg>');
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 20%;
+  mask-size: 20%;
+  -webkit-mask-origin: border-box;
+
+  animation: mask-position 6s infinite alternate;
+  padding: 100px;
+  background-color: red;
+  border: 50px solid blue;
+
+}
+@keyframes mask-position {
+  10% {
+    -webkit-mask-position: left top;
+    mask-position: left top;
+  }
+  20% {
+    -webkit-mask-position: center top;
+    mask-position: center top;
+  }
+  30% {
+    -webkit-mask-position: right top;
+    mask-position: right top;
+  }
+  40% {
+    -webkit-mask-position: right center;
+    mask-position: right center;
+  }
+  50% {
+    -webkit-mask-position: right bottom;
+    mask-position: right bottom;
+  }
+  60% {
+    -webkit-mask-position: center bottom;
+    mask-position: center bottom;
+  }
+  70% {
+    -webkit-mask-position: left bottom;
+    mask-position: left bottom;
+  }
+  80% {
+    -webkit-mask-position: left center;
+    mask-position: left center;
+  }
+  90% {
+    -webkit-mask-position: center center;
+    mask-position: center center;
+    
+  }
+}
+.outline {
+  animation: outline 6s infinite linear alternate;
+  border: 5px solid purple;
+}
+@keyframes outline {
+  25% {
+    outline: 5px solid red;
+  }
+  50% {
+    outline: 10px dashed blue;
+  }
+  75% {
+    outline: 10px double green;
+  }
+  100% {
+    outline: 25px dotted yellow;
+    
+  }
 }
 /* end kieu */
