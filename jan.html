@@ -1,55 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    
-  </style>
-</head>
-<body>
-  <button onclick="function0()" id="demo">BUTTON</button>
-  <script>
-    var demo = document.getElementById("demo");
-    demo.addEventListener("click",click2);
-    demo.addEventListener("click",click1);
-    demo.addEventListener("click",click4);
-    demo.addEventListener("click",click3);
-    demo.addEventListener("mouseover",mouseoverFunction);
-    demo.addEventListener("mouseenter",mouseenterFunction);
-    demo.addEventListener("dblclick",doubleClick);
-    
-    
-    function click2 (){
-      console.log("click2");
-    }
-    function click3 (){
-      console.log("click3");
-    }
-    function click4 (){
-      console.log("click4");
-    }
-    function function0(){
-      console.log("function0");
-    }
+<button onclick="openAndCloseWindow()">Thử</button>
 
+<script>
+function openAndCloseWindow() {
+  const myWindow = window.open("", "", "width=400,height=200");  // Tùy chỉnh kích thước (tùy chọn)
 
+  if (myWindow) {  // Kiểm tra xem cửa sổ có được mở thành công hay không
+    myWindow.document.open();
+    myWindow.document.write("<h1>Xin chào Thế giới!</h1>");
 
-
-    function click1 (){
-      console.log("click1");
-    }
-    function mouseoverFunction(){
-      console.log("mouseover");
-    }
-    function mouseenterFunction(){
-      console.log("mouseenterFunction");
-    }
-    function doubleClick(){
-      console.log("doubleClick");
-    }
-  </script>
-</body>
-</html>
+    // Thêm nút "Đóng" vào cửa sổ mới
+    const closeButton = document.createElement("button");
+    closeButton.textContent = "Đóng";
+    closeButton.onclick = function() {
+      myWindow.close();
+    };
+    myWindow.document.body.appendChild(closeButton);
+  } else {
+    alert("Không thể mở cửa sổ mới. Cửa sổ bật lên có thể bị chặn bởi trình duyệt của bạn.");
+  }
+}
+</script>

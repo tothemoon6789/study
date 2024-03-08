@@ -1,41 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Js</title>
     <link rel="stylesheet" href="./style.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="showing-box">
+      <div class="">
+        <h2>window.document.activeELement</h2>
+        <input type="text" /><button>Button</button>
+        <p>Bấm vào phần tử có thể active để in ra tagname</p>
+        <button class="start" onclick="activeELement(this)">START</button>
+        <div class="hide">
+          <hr />
+          <h2>Lưu ý:</h2>
+          <p class="note">Lấy phần tử bị active</p>
+          <p class="warning"></p>
+        </div>
+      </div>
+      <div class="">
+        <h2>window.document.addEventListener()</h2>
+        <p>Bấm vào phần tử có thể active để in ra tagname</p>
+        <button id="buttonDA">Button Chưa được gán sự kiện</button>
+        <hr />
+        <button class="start" onclick="documentAddEventListener(this)">START</button>
         <div class="">
-            <h2>document.activeELement</h2>
-            <input type="text" /><button>Button</button>
-            <p>Bấm vào phần tử có thể active để in ra tagname</p>
-            <button class="start" onclick="activeELement(this)">START</button>
-            <div class="hide">
-                <hr />
-                <h2>Lưu ý:</h2>
-                <p class="note">Lấy phần tử bị active</p>
-                <p class="warning"></p>
-            </div>
+          <hr />
+          <h2>Lưu ý:</h2>
+          <p class="note">Lưu ý: một phần tử có thể thêm nhiều addEventListner, các phần tử cùng cùng event khai báo trước chạy trước</p>
+          <p class="warning"></p>
         </div>
-        <div class="show">
-            <h2>document.addEventListener</h2>
-            <p>Bấm vào phần tử có thể active để in ra tagname</p>
-            <button id="buttonDA">Button Chưa được gán sự kiện</button>
-            <hr />
-            <button class="start" onclick="documentAddEventListener(this)">START</button>
-            <div class="">
-                <hr />
-                <h2>Lưu ý:</h2>
-                <p class="note">Lưu ý: một phần tử có thể thêm nhiều addEventListner, các phần tử cùng cùng event khai báo trước chạy trước </p>
-                <p class="warning"></p>
-            </div>
+      </div>
+      <div class="">
+        <h2>window.document.adoptNode()</h2>
+        <p>adoptNode nhận một phần tử từ một document khác, chẳng hạn document từ iframe</p>
+        <iframe id="iframeAdopt" src="https://nhatvuong.vn/bao-gaming.html" frameborder="0" height="400px"></iframe>
+        <hr />
+        <button class="start" disabled onclick="document_adoptNode()">START</button>
+        <div class="">
+          <hr />
+          <h2>Lưu ý:</h2>
+          <p class="note">Lưu ý: phần tử gốc bị di chuyển</p>
+          <p class="warning">Cảnh báo: dưới host vd thấy cảnh báo không có quyền try cập từ window</p>
         </div>
+      </div>
+      <div class="">
+        <h2>window.document.anchors</h2>
+        <p>Phương thức này không còn dùng nữa</p>
+        <button class="start" disabled onclick="">START</button>
+        <div class="hide">
+          <hr />
+          <h2>Lưu ý:</h2>
+          <p class="note">Lưu ý:</p>
+          <p class="warning">Cảnh báo: Phương thức này không còn dùng nữa</p>
+        </div>
+      </div>
+      <div class="">
+        <h2>window.document.applet</h2>
+        <p>Phương thức này không còn dùng nữa</p>
+        <button class="start" disabled onclick="">START</button>
+        <div class="hide">
+          <hr />
+          <h2>Lưu ý:</h2>
+          <p class="note">Lưu ý:</p>
+          <p class="warning">Cảnh báo:</p>
+        </div>
+      </div>
+      <div class="">
+        <h2>window.document.baseURI</h2>
+        <p>baseURI dùng để lấy đường dẫn của trang</p>
+        <button class="start" onclick="document_baseURI()">START</button>
+        <div class="">
+          <hr />
+          <h2>Lưu ý:</h2>
+          <p class="note">Lưu ý: Chỉ được đọc, ko gán được</p>
+          <p class="warning">Cảnh báo: Không hỗ trợ trong Internet Explore</p>
+        </div>
+      </div>
+      <div class="">
+        <h2>window.document.body</h2>
+        <p>dùng để lấy hoặc gán dữ liệu cho phần tử body</p>
+        <p>trong ví dụ bên dưới ta có thể nhận định như sau:</p>
+        <ul>
+          <li>document bản chất là một object</li>
+          <li>window.document.body bản chất cũng là một object object này là HTMLElement, được kế thừa toàn bộ thuộc tính và phương thức của một element</li>
+          <li>window.document.body.outerHTML là phương thức lấy các HTML của thẻ body</li>
+        </ul>
+        <ul>
+          <li>console.log(typeof document) //object</li>
+          <li>console.log(typeof window.document.body) //object</li>
+          <li>console.log(typeof window.document.body.outerHTML) //string</li>
+        </ul>
+
+        <button class="lay" onclick="document_body_lay()">LẤY</button>
+        <button class="gan" onclick="document_body_gan()">GÁN</button>
+        <div class="">
+          <hr />
+          <h2>Lưu ý:</h2>
+          <p class="note">Lưu ý: Phương thức window.document.body giống y như window.document.querySelector("body")</p>
+          <p class="warning">Cảnh báo: Toàn bộ dữ liệu của trang sẽ bị thay đổi khi bấm start</p>
+        </div>
+      </div>
+      <div class="">
+        <h2>window.document.charset</h2>
+        <p>window.document.charset không còn dùng nữa</p>
+      </div>
+      <div class="">
+        <h2>window.document.characterSet</h2>
+        <p>dùng để lấy kiểu ký tự để viết file html</p>
+        <button class="start" onclick="document_document_characterSet_lay()">START</button>
+        <div class="">
+          <hr />
+          <h2>Lưu ý:</h2>
+          <p class="note">Lưu ý: Chỉ được đọc, ko gán được</p>
+          <p class="warning"></p>
+        </div>
+      </div>
+      <div class="show">
+        <h2>window.document.close()</h2>
+        <p>Phương thức này khó tiếp cận do bảo mật của trình duyệt. dùng để THỰC THI đóng cửa sổ hiện tại.</p>
+        <button onclick="openAndCloseWindow()">Thử</button>
+
+        <script>
+          function openAndCloseWindow() {
+            const myWindow = window.open("", "", "width=400,height=200"); // Tùy chỉnh kích thước (tùy chọn)
+            if (myWindow) {
+              // Kiểm tra xem cửa sổ có được mở thành công hay không
+              myWindow.document.open();
+              myWindow.document.write("<h1>Xin chào Thế giới!</h1>");
+              // Thêm nút "Đóng" vào cửa sổ mới
+              const closeButton = document.createElement("button");
+              closeButton.textContent = "Đóng";
+              closeButton.onclick = function () {
+                myWindow.document.close();
+              };
+              myWindow.document.body.appendChild(closeButton);
+            } else {
+              alert("Không thể mở cửa sổ mới. Cửa sổ bật lên có thể bị chặn bởi trình duyệt của bạn.");
+            }
+          }
+        </script>
+      </div>
     </div>
     <hr />
     <h3 class="divide">Kết quả:</h3>
@@ -44,15 +153,22 @@
     <h3>Dòng lệnh thực thi:</h3>
     <div id="statement">statement...</div>
     <hr />
-    <button onclick="reload()">RELOAD</button>
+    <button onclick="reload()">RELOAD PAGE</button>
     <div class="control-box">
-        <ul>
-            Document Object
-            <li><button class="dom1">document.activeELement</button></li>
-            <li><button class="dom2">document.addEventListener</button></li>
-        </ul>
+      <ul>
+        Document Object
+        <li><button class="dom1">window.document.activeELement</button></li>
+        <li><button class="dom2">window.document.addEventListener()</button></li>
+        <li><button class="dom3">window.document.adoptNode()</button></li>
+        <li><button class="deprecated">window.document.anchors</button></li>
+        <li><button class="deprecated">window.document.applet</button></li>
+        <li><button class="dom4">window.document.baseURI</button></li>
+        <li><button class="dom1">window.document.body</button></li>
+        <li><button class="deprecated">window.document.charset</button></li>
+        <li><button class="dom3">window.document.characterSet</button></li>
+        <li><button class="dom1">window.document.close()</button></li>
+      </ul>
     </div>
     <script src="./main.js"></script>
-</body>
-
+  </body>
 </html>

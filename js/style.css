@@ -1,3 +1,9 @@
+html {
+
+    scroll-behavior: smooth;
+}
+body {
+}
 .showing-box > div {
     display: none;
   }
@@ -50,6 +56,29 @@
     border-inline: unset;
     border-block-end: unset;
   }
+  .dom3 {
+    border-top-width: 10px;
+    border-top: double !important;
+    border-top-color: green !important;
+    border-right-width: 10px;
+    border-right: solid !important;
+    border-right-color: green !important;
+    border-block-end: unset;
+    border-inline-start: unset;
+  }
+  .dom4 {
+    border-right: 4px double green;
+    border-top: 4px double green;
+    border-left: unset;
+    border-bottom: unset;
+    
+  }
   .divide {
     margin-top: 100px;
+  }
+  button.deprecated {
+    border: unset;
+    color: red;
+    text-decoration: line-through;
+    
   }
