@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Js</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
     <link rel="stylesheet" href="./style.css" />
   </head>
 
@@ -120,11 +121,10 @@
           <p class="warning"></p>
         </div>
       </div>
-      <div class="show">
+      <div class="">
         <h2>window.document.close()</h2>
         <p>Phương thức này khó tiếp cận do bảo mật của trình duyệt. dùng để THỰC THI đóng cửa sổ hiện tại.</p>
         <button onclick="openAndCloseWindow()">Thử</button>
-
         <script>
           function openAndCloseWindow() {
             const myWindow = window.open("", "", "width=400,height=200"); // Tùy chỉnh kích thước (tùy chọn)
@@ -145,16 +145,54 @@
           }
         </script>
       </div>
+      <div class="container">
+        <h2>window.document.cookie</h2>
+        <p>lấy cookie của trang web</p>
+        <ul>
+          <li>Cookie là một chuỗi (string)</li>
+          <li>Cookie được sử dụng cho client-server (browser-server), localStorage sử dụng cho client (browser)</li>
+          <li>Cookie có ngày hết hạn, localStorage không có ngày hết hạn</li>
+          <li>Cookie bị giới hạn 4kb lưu trữ / 1 domain, trong khi localStorage tới 5MB/1domain</li>
+        </ul>
+
+        <button class="btn btn-primary" onclick="test()">GET</button>
+
+        <button class="btn btn-outline-primary" onclick="">SET</button>
+
+        <div class="container">
+          <hr />
+          <h2>Lưu ý:</h2>
+          <div class="alert alert-success" role="alert">
+            <strong>success</strong>
+          </div>
+          <div class="alert alert-danger" role="alert">
+            <strong>Chưa có sử dụng set được, xem lại</strong>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <h2>window.document.createAttribute()</h2>
+        <p>Thực thi tạo mới một thuộc tính (hay còn gọi là attribute)</p>
+        <button class="btn btn-outline-primary" onclick="window_document_createAttribute()">Tạo mới</button>
+      </div>
+      <div class="container show">
+        <h2>window.document.createComment()</h2>
+        <p>Thực thi tạo mới một nút ghi chú và trả về nút ghi chú đó</p>
+        <button class="btn btn-outline-primary" onclick="window_document_createComment()">Tạo mới</button>
+      </div>
     </div>
+
     <hr />
-    <h3 class="divide">Kết quả:</h3>
-    <div id="result">result...</div>
-    <hr />
-    <h3>Dòng lệnh thực thi:</h3>
-    <div id="statement">statement...</div>
-    <hr />
-    <button onclick="reload()">RELOAD PAGE</button>
-    <div class="control-box">
+    <div class="container">
+      <h3 class="divide">Kết quả:</h3>
+      <div id="result">result...</div>
+      <hr />
+      <h3>Dòng lệnh thực thi:</h3>
+      <div id="statement">statement...</div>
+      <hr />
+      <button class="btn btn-danger" onclick="reload()">RELOAD PAGE</button>
+    </div>
+    <div class="container control-box">
       <ul>
         Document Object
         <li><button class="dom1">window.document.activeELement</button></li>
@@ -167,8 +205,55 @@
         <li><button class="deprecated">window.document.charset</button></li>
         <li><button class="dom3">window.document.characterSet</button></li>
         <li><button class="dom1">window.document.close()</button></li>
+        <li><button class="dom2">window.document.cookie</button></li>
+        <li><button class="dom1">window.document.createAttribute()</button></li>
+        <li><button class="dom1">window.document.createComment()</button></li>
       </ul>
     </div>
+    <div class="container">
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modelId">Performance</button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Performance</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">hi</div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        var p = window.document.querySelector('button[data-toggle="modal"]');
+        p.onclick = function () {
+          var i = 0;
+          var modalBody = window.document.querySelector("#modelId .modal-body");
+          var buttons = window.document.querySelectorAll(".control-box button");
+          console.log(buttons);
+          var i = window.setInterval(function () {
+            console.log("hi");
+            modalBody.innerHTML = buttons[i].innerHTML;
+            i++;
+            if (i== buttons.length) {
+              window.clearInterval(i);
+            }
+          }, 2000);
+        };
+      </script>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="./main.js"></script>
   </body>
 </html>

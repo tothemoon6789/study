@@ -61,3 +61,17 @@ function document_document_characterSet_lay() {
   result.innerText = window.document.characterSet;
   statement.innerText = "result.innerText = window.document.characterSet;";
 }
+function test() {
+  document.getElementById("result").innerText = window.document.cookie;
+}
+function window_document_createAttribute(){
+  var style = window.document.createAttribute("style");
+  window.document.getElementById("result").innerText = style;
+  window.document.getElementById("statement").innerText = 'var style = window.document.createAttribute("style");'
+}
+function window_document_createComment(){
+  var comment = window.document.createComment("Du lieu nay khong the hien ra ben ngoai");
+  window.document.querySelector("#result").innerHTML = comment;
+  window.document.querySelector("#result").appendChild(comment) = comment;
+  window.document.querySelector("#statement").innerHTML = `var comment = window.document.createComment("Du lieu nay khong the hien ra ben ngoai");`;
+}
