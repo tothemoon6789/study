@@ -1,54 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
     
-    <style>
-      ul {
-        list-style: none;
-        display: flex;
-      }
-      li {
-        outline: 20px dotted red;
-        padding: 50px;
-      }
-    </style>
-  </head>
-  <body>
-    <ul>
-      <li>
-        mo <a href=""><span></span></a>
-      </li>
-      <li>hai</li>
-      <li>ba</li>
-    </ul>
-    <div id="demo">demo</div>
-    <style>
-      .test {
-        border-width: 2px;
-        border-style: dotted;
-      }
-    </style>
-    <script>
-      var css = ` <style>
-        .border {
-            animation: myborder 2s infinite;
-            border:5px solid;
+  </style>
+</head>
+<body>
+  <button onclick="function0()" id="demo">BUTTON</button>
+  <script>
+    var demo = document.getElementById("demo");
+    demo.addEventListener("click",click2);
+    demo.addEventListener("click",click1);
+    demo.addEventListener("click",click4);
+    demo.addEventListener("click",click3);
+    demo.addEventListener("mouseover",mouseoverFunction);
+    demo.addEventListener("mouseenter",mouseenterFunction);
+    demo.addEventListener("dblclick",doubleClick);
+    
+    
+    function click2 (){
+      console.log("click2");
+    }
+    function click3 (){
+      console.log("click3");
+    }
+    function click4 (){
+      console.log("click4");
+    }
+    function function0(){
+      console.log("function0");
+    }
 
-        }
-    </style>
-    `;
-      document.querySelector("head").insertAdjacentHTML("afterbegin", css);
-      var all = document.querySelectorAll("body  *");
-      all.forEach((element, index) => {
-        element.classList.add("border");
-        element.style.animationDelay = index + "s";
-        element.insertAdjacentText("afterbegin",element.tagName);
-        console.log(element.tagName);
-      });
-    </script>
-  </body>
+
+
+
+    function click1 (){
+      console.log("click1");
+    }
+    function mouseoverFunction(){
+      console.log("mouseover");
+    }
+    function mouseenterFunction(){
+      console.log("mouseenterFunction");
+    }
+    function doubleClick(){
+      console.log("doubleClick");
+    }
+  </script>
+</body>
 </html>

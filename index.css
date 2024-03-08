@@ -1,3 +1,4 @@
+
 html {
   scroll-behavior: smooth;
 }
@@ -80,6 +81,39 @@ p {
 }
 .container .show {
   display: block;
+  animation: goright 1s ease-out;
+}
+.container .show button {
+  animation: gorightbutton 1s ease-out;
+}
+@keyframes goright {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes gorightbutton {
+  from {
+    opacity: 0;
+    transform: translateX(-1000%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+#kichthuoc, #vitri, #kieu, #mausac, #chuyendong {
+  /* transform: translateX(-100%); */
+  /* background-color: blue; */
+}
+#kieu.show {
+  /* transform: translateX(0);
+  background-color: red; */
 }
 #note {
   background-color: greenyellow;
@@ -147,6 +181,13 @@ button:focus {
   color: white;
   font-weight: 700;
 }
+button.multiple {
+  border-bottom: 5px solid red;
+      border-style: double;
+      border-left: none;
+      border-right: none;
+      border-top: none;
+}
 /* end button */
 /* list */
 ul {
@@ -155,6 +196,7 @@ ul {
 /* end list */
 /* class for js */
 
+/* kich thuoc */
 .width {
   width: 200px;
   background-color: red;
@@ -484,6 +526,148 @@ ul {
 .attribute ul li:first-of-type {
   margin-top: 20px;
 }
+.insert {
+  position: relative;
+  border: 1px solid red;
+  height: 500px;
+  
+  
+}
+.insert > div {
+  position: absolute;
+  animation: insert 2s infinite alternate;
+  background-color: red;
+}
+@keyframes insert {
+  from {
+    inset: 0px;
+  }
+  to {
+    inset: 40px;
+  }
+}
+.inset-block {
+  position: relative;
+  border: 1px solid red;
+  height: 500px;
+  
+  
+  
+}
+.inset-block > div {
+  position: absolute;
+  animation: inset-block 2s infinite alternate;
+  background-color: red;
+}
+@keyframes inset-block {
+  from {
+    inset-block: 0px;
+  }
+  to {
+    inset-block: 40px;
+  }
+}
+.inset-block-end {
+  position: relative;
+  border: 1px solid red;
+  height: 500px;
+}
+.inset-block-end > div {
+  position: absolute;
+  animation: inset-block-end 2s infinite alternate;
+  background-color: red;
+  
+}
+@keyframes inset-block-end {
+  from {
+    inset-block-end: 0px;
+    
+  }
+  to {
+    inset-block-end: 40px;
+  }
+}
+.inset-block-start {
+  position: relative;
+  border: 1px solid red;
+  height: 500px;
+}
+.inset-block-start > div {
+  position: absolute;
+  animation: inset-block-start 2s infinite alternate;
+  background-color: red;
+  
+}
+@keyframes inset-block-start {
+  from {
+    inset-block-start: 0px;
+    
+  }
+  to {
+    inset-block-start: 40px;
+  }
+}
+.inset-inline-end {
+  position: relative;
+  border: 1px solid red;
+  height: 500px;
+}
+.inset-inline-end > div {
+  position: absolute;
+  animation: inset-inline-end 2s infinite alternate;
+  background-color: red;
+  
+}
+@keyframes inset-inline-end {
+  from {
+    inset-inline-end: 0px;
+  }
+  to {
+    inset-inline-end: 40px;
+  }
+}
+.inset-inline-start {
+  position: relative;
+  border: 1px solid red;
+  height: 500px;
+}
+.inset-inline-start > div {
+  position: absolute;
+  animation: inset-inline-start 2s infinite alternate;
+  background-color: red;
+  
+}
+@keyframes inset-inline-start {
+  from {
+    inset-inline-start: 0px;
+    
+  }
+  to {
+    inset-inline-start: 40px;
+  }
+}
+.inset-inline {
+  position: relative;
+  border: 1px solid red;
+  height: 500px;
+}
+.inset-inline > div {
+  position: absolute;
+  animation: inset-inline 2s infinite alternate;
+  background-color: red;
+  
+}
+@keyframes inset-inline {
+  from {
+    inset-inline: 0px;
+    
+  }
+  to {
+    inset-inline: 40px;
+  }
+}
+
+/* end kich thuoc */
 
 /* vi tri */
 .margin {
@@ -1438,6 +1622,20 @@ ul {
     text-decoration: underline overline;
   }
 }
+.letter-spacing {
+  animation: letter-spacing 6s infinite alternate;
+  margin: 20px;
+  line-height: 30px;
+}
+@keyframes letter-spacing {
+  25% {
+    letter-spacing: 0px;
+    
+  }
+  100% {
+    letter-spacing: 10px;
+  }
+}
 .text-transform {
   animation: text-transform 6s infinite;
   margin: 20px;
@@ -1954,6 +2152,329 @@ ul {
   100% {
     outline: 25px dotted yellow;
     
+  }
+}
+.column-count {
+  animation: column-count 4s infinite linear alternate;
+}
+@keyframes column-count {
+  25% {
+    column-count: 1;
+  }
+  50% {
+    column-count: 2;
+  }
+  75% {
+    column-count: 3;
+  }
+  100% {
+    column-count: 4;
+    
+  }
+}
+.column-count {
+  animation: column-count 4s infinite linear alternate;
+}
+@keyframes column-count {
+  25% {
+    column-count: 1;
+  }
+  50% {
+    column-count: 2;
+  }
+  75% {
+    column-count: 3;
+  }
+  100% {
+    column-count: 4;
+    
+  }
+}
+.column-fill {
+  column-count: 3;
+  animation: column-fill 4s infinite linear alternate;
+  height: 500px;
+  
+}
+@keyframes column-fill {
+  25% {
+    column-fill: auto;
+  }
+  
+  100% {
+    column-fill: balance;
+    
+  }
+}
+.column-gap {
+  column-count: 3;
+  animation: column-gap 4s infinite linear alternate;
+  
+}
+@keyframes column-gap {
+  25% {
+    column-gap: 0px;
+  }
+  
+  100% {
+    column-gap: 50px;
+    
+  }
+}
+.column-rule {
+  column-count: 3;
+  animation: column-rule 4s infinite linear alternate;
+  
+}
+@keyframes column-rule {
+  25% {
+    column-rule: 1px solid red;
+  }
+  
+  100% {
+    column-rule: 10px solid red;
+    
+  }
+}
+.column-rule-color {
+  column-count: 3;
+  animation: column-rule-color 4s infinite linear alternate;
+  column-rule: 10px solid red;
+  
+}
+@keyframes column-rule-color {
+  25% {
+    column-rule-color:  red;
+  }
+  
+  100% {
+    column-rule-color:  blue;
+    
+  }
+}
+.column-rule-style {
+  column-count: 3;
+  animation: column-rule-style 4s infinite linear alternate;
+  column-rule: 10px solid red;
+  
+}
+@keyframes column-rule-style {
+  25% {
+    column-rule-style:  dashed;
+  }
+  
+  100% {
+    column-rule-style:  dotted;
+    
+  }
+}
+.column-rule-width {
+  column-count: 3;
+  animation: column-rule-width 4s infinite linear alternate;
+  column-rule: 10px solid red;
+  
+}
+@keyframes column-rule-width {
+  25% {
+    column-rule-width:  1px;
+  }
+  
+  100% {
+    column-rule-width:  10px;
+    
+  }
+}
+.column-span {
+  column-count: 3;
+  
+  column-rule: 10px solid red;
+  
+}
+.column-span h1 {
+  animation: column-span 2s infinite linear alternate;
+}
+@keyframes column-span {
+  25% {
+    column-span: initial;
+  }
+  
+  100% {
+    column-span:  all;
+    
+  }
+}
+.column-width {
+  
+  column-rule: 10px solid red;
+  animation: column-width 2s infinite linear alternate;
+  
+}
+
+@keyframes column-width {
+  25% {
+    column-width: 100px;
+  }
+  
+  100% {
+    column-width:  300px;
+    
+  }
+}
+.columns {
+  animation: columns 1s infinite linear alternate;
+}
+
+@keyframes columns {
+  0% {
+    columns: 80px 3;
+  }
+  
+  100% {
+    columns:  100px 4;
+    
+  }
+}
+.border-style {
+  animation: border-style 2s infinite alternate;
+}
+@keyframes border-style {
+  from {
+    border: 10px solid;
+    border-style: solid;
+  }
+  to {
+    border: 10px solid;
+    border-style: dashed;
+  }
+}
+.border-top-style {
+  animation: border-top-style 2s infinite alternate;
+}
+@keyframes border-top-style {
+  from {
+    border-top: 10px solid;
+    border-top-style: solid;
+  }
+  to {
+    border-top: 10px solid;
+    border-top-style: dashed;
+  }
+}
+.border-right-style {
+  animation: border-right-style 2s infinite alternate;
+}
+@keyframes border-right-style {
+  from {
+    border-right: 10px solid;
+    border-right-style: solid;
+  }
+  to {
+    border-right: 10px solid;
+    border-right-style: dashed;
+  }
+}
+.border-bottom-style {
+  animation: border-bottom-style 2s infinite alternate;
+}
+@keyframes border-bottom-style {
+  from {
+    border-bottom: 10px solid;
+    border-bottom-style: solid;
+  }
+  to {
+    border-bottom: 10px solid;
+    border-bottom-style: dashed;
+  }
+}
+.border-left-style {
+  animation: border-left-style 2s infinite alternate;
+}
+@keyframes border-left-style {
+  from {
+    border-left: 10px solid;
+    border-left-style: solid;
+  }
+  to {
+    border-left: 10px solid;
+    border-left-style: dashed;
+  }
+}
+.border-block-style {
+  animation: border-block-style 2s infinite alternate;
+}
+@keyframes border-block-style {
+  from {
+    border-block: 10px solid;
+    border-block-style: solid;
+  }
+  to {
+    border-block: 10px solid;
+    border-block-style: dashed;
+  }
+}
+.border-block-start-style {
+  animation: border-block-start-style 2s infinite alternate;
+}
+@keyframes border-block-start-style {
+  from {
+    border-block-start: 10px solid;
+    border-block-start-style: solid;
+  }
+  to {
+    border-block-start: 10px solid;
+    border-block-start-style: dashed;
+  }
+}
+.border-block-end-style {
+  animation: border-block-end-style 2s infinite alternate;
+}
+@keyframes border-block-end-style {
+  from {
+    border-block-end: 10px solid;
+    border-block-end-style: solid;
+  }
+  to {
+    border-block-end: 10px solid;
+    border-block-end-style: dashed;
+  }
+}
+.border-inline-style {
+  animation: border-inline-style 2s infinite alternate;
+}
+@keyframes border-inline-style {
+  from {
+    border-inline: 10px solid;
+    border-inline-style: solid;
+  }
+  to {
+    border-inline: 10px solid;
+    border-inline-style: dashed;
+  }
+}
+.border-inline-start-style {
+  animation: border-inline-start-style 2s infinite alternate;
+}
+@keyframes border-inline-start-style {
+  from {
+    border-inline-start: 10px solid;
+    border-inline-start-style: solid;
+  }
+  to {
+    border-inline-start: 10px solid;
+    border-inline-start-style: dashed;
+  }
+}
+.border-inline-end-style {
+  animation: border-inline-end-style 2s infinite alternate;
+}
+@keyframes border-inline-end-style {
+  from {
+    border-inline-end: 10px solid;
+    border-inline-end-style: solid;
+  }
+  to {
+    border-inline-end: 10px solid;
+    border-inline-end-style: dashed;
   }
 }
 /* end kieu */

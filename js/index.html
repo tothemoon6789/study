@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <div class="showing-box">
+        <div class="">
+            <h2>document.activeELement</h2>
+            <input type="text" /><button>Button</button>
+            <p>Bấm vào phần tử có thể active để in ra tagname</p>
+            <button class="start" onclick="activeELement(this)">START</button>
+            <div class="hide">
+                <hr />
+                <h2>Lưu ý:</h2>
+                <p class="note">Lấy phần tử bị active</p>
+                <p class="warning"></p>
+            </div>
+        </div>
+        <div class="show">
+            <h2>document.addEventListener</h2>
+            <p>Bấm vào phần tử có thể active để in ra tagname</p>
+            <button id="buttonDA">Button Chưa được gán sự kiện</button>
+            <hr />
+            <button class="start" onclick="documentAddEventListener(this)">START</button>
+            <div class="">
+                <hr />
+                <h2>Lưu ý:</h2>
+                <p class="note">Lưu ý: một phần tử có thể thêm nhiều addEventListner, các phần tử cùng cùng event khai báo trước chạy trước </p>
+                <p class="warning"></p>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <h3 class="divide">Kết quả:</h3>
+    <div id="result">result...</div>
+    <hr />
+    <h3>Dòng lệnh thực thi:</h3>
+    <div id="statement">statement...</div>
+    <hr />
+    <button onclick="reload()">RELOAD</button>
+    <div class="control-box">
+        <ul>
+            Document Object
+            <li><button class="dom1">document.activeELement</button></li>
+            <li><button class="dom2">document.addEventListener</button></li>
+        </ul>
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>

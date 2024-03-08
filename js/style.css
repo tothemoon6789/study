@@ -1,0 +1,55 @@
+.showing-box > div {
+    display: none;
+  }
+  .showing-box .show {
+    display: block;
+  }
+  .hide {
+    display: none;
+  }
+  .start {
+    width: 100%;
+    border: unset;
+    padding: 16px 32px;
+    cursor: pointer;
+  }
+  .control-box {
+    display: flex;
+    margin-top: 100px;
+  }
+  .control-box ul {
+    list-style: none;
+  }
+  .control-box ul li {
+    list-style-type: decimal;
+  }
+  .control-box button {
+    width: 100%;
+    /* border: unset; */
+    padding-block: 4px;
+    margin-top: 8px;
+    cursor: pointer;
+    text-align: left;
+  }
+  .control-box button:hover {
+    background-color: bisque;
+  }
+  .control-box button:focus {
+    background-color: bisque;
+  }
+  .dom1 {
+    border-top: 2px solid green !important;
+    border-inline: unset;
+    border-bottom: unset;
+    
+  }
+  .dom2 {
+    border-top-width: 10px;
+    border-top: double !important;
+    border-top-color: green !important;
+    border-inline: unset;
+    border-block-end: unset;
+  }
+  .divide {
+    margin-top: 100px;
+  }
