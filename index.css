@@ -10,11 +10,11 @@ ul,
 li {
   font-family: "Montserrat", sans-serif;
 }
-button {
+/* button {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 16px;
-}
+} */
 p {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
@@ -159,11 +159,11 @@ p {
 .wrap-demo {
   border: 50px solid gray;
 }
-.wrap-control button {
+/* .wrap-control button {
   width: unset;
-}
+} */
 /* button */
-button {
+/* button {
   padding: 8px 16px;
   margin: 8px;
   cursor: pointer;
@@ -171,22 +171,20 @@ button {
   box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.2);
   background-color: transparent;
   border: unset;
-}
-button:hover {
+} */
+/* button:hover {
   background-color: gray;
   color: white;
-}
-button:focus {
+} */
+/* button:focus {
   background-color: blue;
   color: white;
   font-weight: 700;
-}
+} */
 button.multiple {
   border-bottom: 5px solid red;
       border-style: double;
-      border-left: none;
-      border-right: none;
-      border-top: none;
+      
 }
 /* end button */
 /* list */

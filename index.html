@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
     <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
@@ -21,7 +21,7 @@
     <div id="total"></div>
     <!-- <p>nếu li thì viền gì, màu gì, nếu ul là viền gì màu gì, tao ghi chú fixed trên màn hình</p> -->
     <!-- <input type="text" name="copy-script-text" id="input-copy-script-test"> -->
-    <button id="copy-script-test">Copy SCRIPT TEST CSS</button>
+    <button class="btn btn-primary" id="copy-script-test">Copy SCRIPT TEST CSS</button>
     <div id="note"></div>
     <div id="warning"></div>
     <div class="wrap-control">
@@ -39,80 +39,79 @@
           <ul>
             Áp
             <strong>kiểu hiển thị</strong>
-            <li><button>display-inline</button></li>
-            <li><button>display-inline-block</button></li>
-            <li><button>display-block</button></li>
-            <li><button>display-flex</button></li>
-            <li><button>display-grid</button></li>
-            <li><button>display-table</button></li>
-            <li><button>display-inline-flex</button></li>
-            <li><button>display-inline-grid</button></li>
-            <li><button>display-inline-table</button></li>
-            <li><button id="flexGrow">flex-grow</button></li>
-            <li><button id="flexShrink">flex-shrink</button></li>
+            <li><button class="btn btn-outline-primary">display-inline</button></li>
+            <li><button class="btn btn-outline-primary">display-inline-block</button></li>
+            <li><button class="btn btn-outline-primary">display-block</button></li>
+            <li><button class="btn btn-outline-primary">display-flex</button></li>
+            <li><button class="btn btn-outline-primary">display-grid</button></li>
+            <li><button class="btn btn-outline-primary">display-table</button></li>
+            <li><button class="btn btn-outline-primary">display-inline-flex</button></li>
+            <li><button class="btn btn-outline-primary">display-inline-grid</button></li>
+            <li><button class="btn btn-outline-primary">display-inline-table</button></li>
+            <li><button class="btn btn-outline-primary" id="flexGrow">flex-grow</button></li>
+            <li><button class="btn btn-outline-primary" id="flexShrink">flex-shrink</button></li>
           </ul>
           <ul>
             Đẩy
             <strong>kích thước</strong>
             thực
-            <li><button>width</button></li>
-            <li><button>height</button></li>
-            <li><button>min-width</button></li>
-            <li><button>min-height</button></li>
-            <li><button>max-width</button></li>
-            <li><button>max-height</button></li>
-            <li><button>aspect-ratio</button></li>
-            <li><button>box-sizing</button></li>
+            <li><button class="btn btn-outline-primary">width</button></li>
+            <li><button class="btn btn-outline-primary">height</button></li>
+            <li><button class="btn btn-outline-primary">min-width</button></li>
+            <li><button class="btn btn-outline-primary">min-height</button></li>
+            <li><button class="btn btn-outline-primary">max-width</button></li>
+            <li><button class="btn btn-outline-primary">max-height</button></li>
+            <li><button class="btn btn-outline-primary">aspect-ratio</button></li>
+            <li><button class="btn btn-outline-primary">box-sizing</button></li>
           </ul>
           <ul>
             Kích thước
             <strong>đường viền</strong>
-            <li><button>border</button></li>
-            <li><button>border-top-width</button></li>
-            <li><button>border-right-width</button></li>
-            <li><button>border-bottom-width</button></li>
-            <li><button>border-left-width</button></li>
-            <li><button>border-block</button></li>
-            <li><button>border-block-start-width</button></li>
-            <li><button>border-block-end-width</button></li>
-            <li><button>border-inline-width</button></li>
-            <li><button>border-inline-start-width</button></li>
-            <li><button>border-inline-end-width</button></li>
+            <li><button class="btn btn-outline-primary">border</button></li>
+            <li><button class="btn btn-outline-primary">border-top-width</button></li>
+            <li><button class="btn btn-outline-primary">border-right-width</button></li>
+            <li><button class="btn btn-outline-primary">border-bottom-width</button></li>
+            <li><button class="btn btn-outline-primary">border-left-width</button></li>
+            <li><button class="btn btn-outline-primary">border-block</button></li>
+            <li><button class="btn btn-outline-primary">border-block-start-width</button></li>
+            <li><button class="btn btn-outline-primary">border-block-end-width</button></li>
+            <li><button class="btn btn-outline-primary">border-inline-width</button></li>
+            <li><button class="btn btn-outline-primary">border-inline-start-width</button></li>
+            <li><button class="btn btn-outline-primary">border-inline-end-width</button></li>
           </ul>
           <ul>
             Thêm
             <strong>không gian</strong>
             bên ngoài
-            <li><button>padding</button></li>
-            <li><button>padding-top</button></li>
-            <li><button>padding-right</button></li>
-            <li><button>padding-bottom</button></li>
-            <li><button>padding-left</button></li>
-            <li><button>padding-block</button></li>
-            <li><button>padding-block-start</button></li>
-            <li><button>padding-block-end</button></li>
-            <li><button>padding-inline</button></li>
-            <li><button>padding-inline-start</button></li>
-            <li><button>padding-inline-end</button></li>
+            <li><button class="btn btn-outline-primary">padding</button></li>
+            <li><button class="btn btn-outline-primary">padding-top</button></li>
+            <li><button class="btn btn-outline-primary">padding-right</button></li>
+            <li><button class="btn btn-outline-primary">padding-bottom</button></li>
+            <li><button class="btn btn-outline-primary">padding-left</button></li>
+            <li><button class="btn btn-outline-primary">padding-block</button></li>
+            <li><button class="btn btn-outline-primary">padding-block-start</button></li>
+            <li><button class="btn btn-outline-primary">padding-block-end</button></li>
+            <li><button class="btn btn-outline-primary">padding-inline</button></li>
+            <li><button class="btn btn-outline-primary">padding-inline-start</button></li>
+            <li><button class="btn btn-outline-primary">padding-inline-end</button></li>
           </ul>
 
           <ul>
             Đổi
             <strong>hình dạng</strong>
-            <li><button>transform</button></li>
-            <li><button>rotate</button></li>
-            <li><button>scale</button></li>
+            <li><button class="btn btn-outline-primary">transform</button></li>
+            <li><button class="btn btn-outline-primary">rotate</button></li>
+            <li><button class="btn btn-outline-primary">scale</button></li>
           </ul>
           <ul>
-            
             <strong>Đẩy cha</strong>
-            <li><button id="inset">inset</button></li>
-            <li><button id="inset-block">inset-block</button></li>
-            <li><button id="inset-block-start">inset-block-start</button></li>
-            <li><button id="inset-block-end">inset-block-end</button></li>
-            <li><button id="inset-inline">inset-inline</button></li>
-            <li><button id="inset-inline-start">inset-inline-start</button></li>
-            <li><button id="inset-inline-end">inset-inline-end</button></li>
+            <li><button class="btn btn-outline-primary" id="inset">inset</button></li>
+            <li><button class="btn btn-outline-primary" id="inset-block">inset-block</button></li>
+            <li><button class="btn btn-outline-primary" id="inset-block-start">inset-block-start</button></li>
+            <li><button class="btn btn-outline-primary" id="inset-block-end">inset-block-end</button></li>
+            <li><button class="btn btn-outline-primary" id="inset-inline">inset-inline</button></li>
+            <li><button class="btn btn-outline-primary" id="inset-inline-start">inset-inline-start</button></li>
+            <li><button class="btn btn-outline-primary" id="inset-inline-end">inset-inline-end</button></li>
           </ul>
         </div>
       </div>
@@ -122,73 +121,73 @@
         <div class="attribute">
           <ul>
             <strong>Kiểu chữ</strong>
-            <li><button>font-family</button></li>
-            <li><button>font-size</button></li>
-            <li><button>font-style</button></li>
-            <li><button>font-weight</button></li>
-            <li><button>text-decoration</button></li>
-            <li><button>text-transform</button></li>
-            <li><button>text-overflow</button></li>
-            <li><button>text-shadow</button></li>
-            <li><button>text-indent</button></li>
-            <li><button>text-justify</button></li>
-            <li><button>text-decoration-line</button></li>
-            <li><button>text-decoration-thickness</button></li>
-            <li><button>text-align-last</button></li>
-            <li><button>text-decoration-style</button></li>
-            <li><button>text-emphasis</button></li>
-            <li><button>text-emphasis-style</button></li>
-            <li><button>letter-spacing</button></li>
+            <li><button class="btn btn-outline-primary">font-family</button></li>
+            <li><button class="btn btn-outline-primary">font-size</button></li>
+            <li><button class="btn btn-outline-primary">font-style</button></li>
+            <li><button class="btn btn-outline-primary">font-weight</button></li>
+            <li><button class="btn btn-outline-primary">text-decoration</button></li>
+            <li><button class="btn btn-outline-primary">text-transform</button></li>
+            <li><button class="btn btn-outline-primary">text-overflow</button></li>
+            <li><button class="btn btn-outline-primary">text-shadow</button></li>
+            <li><button class="btn btn-outline-primary">text-indent</button></li>
+            <li><button class="btn btn-outline-primary">text-justify</button></li>
+            <li><button class="btn btn-outline-primary">text-decoration-line</button></li>
+            <li><button class="btn btn-outline-primary">text-decoration-thickness</button></li>
+            <li><button class="btn btn-outline-primary">text-align-last</button></li>
+            <li><button class="btn btn-outline-primary">text-decoration-style</button></li>
+            <li><button class="btn btn-outline-primary">text-emphasis</button></li>
+            <li><button class="btn btn-outline-primary">text-emphasis-style</button></li>
+            <li><button class="btn btn-outline-primary">letter-spacing</button></li>
           </ul>
           <ul>
             <strong>Danh sách</strong>
-            <li><button id="list-style">list-style</button></li>
-            <li><button id="list-style-type">list-style-type</button></li>
-            <li><button id="list-style-position">list-style-position</button></li>
-            <li><button id="list-style-image">list-style-image</button></li>
+            <li><button class="btn btn-outline-primary" id="list-style">list-style</button></li>
+            <li><button class="btn btn-outline-primary" id="list-style-type">list-style-type</button></li>
+            <li><button class="btn btn-outline-primary" id="list-style-position">list-style-position</button></li>
+            <li><button class="btn btn-outline-primary" id="list-style-image">list-style-image</button></li>
           </ul>
           <ul>
             <strong>border</strong>
-            <li><button>border-style</button></li>
-            <li><button>border-top-style</button></li>
-            <li><button>border-right-style</button></li>
-            <li><button>border-bottom-style</button></li>
-            <li><button>border-left-style</button></li>
-            <li><button>border-block-style</button></li>
-            <li><button>border-block-start-style</button></li>
-            <li><button>border-block-end-style</button></li>
-            <li><button>border-inline-style</button></li>
-            <li><button>border-inline-start-style</button></li>
-            <li><button>border-inline-end-style</button></li>
+            <li><button class="btn btn-outline-primary">border-style</button></li>
+            <li><button class="btn btn-outline-primary">border-top-style</button></li>
+            <li><button class="btn btn-outline-primary">border-right-style</button></li>
+            <li><button class="btn btn-outline-primary">border-bottom-style</button></li>
+            <li><button class="btn btn-outline-primary">border-left-style</button></li>
+            <li><button class="btn btn-outline-primary">border-block-style</button></li>
+            <li><button class="btn btn-outline-primary">border-block-start-style</button></li>
+            <li><button class="btn btn-outline-primary">border-block-end-style</button></li>
+            <li><button class="btn btn-outline-primary">border-inline-style</button></li>
+            <li><button class="btn btn-outline-primary">border-inline-start-style</button></li>
+            <li><button class="btn btn-outline-primary">border-inline-end-style</button></li>
           </ul>
           <ul>
             <strong>Mặt nạ</strong>
-            <li><button id="mask-image">mask-image</button></li>
-            <li><button id="mask-repeat">mask-repeat</button></li>
-            <li><button id="mask-size">mask-size</button></li>
-            <li><button id="mask-origin">mask-origin</button></li>
-            <li><button id="mask-position">mask-position</button></li>
-            <li><button id="mask-position-x">mask-position-x</button></li>
-            <li><button id="mask-position-y">mask-position-y</button></li>
-            <li><button id="mask-mode">mask-mode</button></li>
+            <li><button class="btn btn-outline-primary" id="mask-image">mask-image</button></li>
+            <li><button class="btn btn-outline-primary" id="mask-repeat">mask-repeat</button></li>
+            <li><button class="btn btn-outline-primary" id="mask-size">mask-size</button></li>
+            <li><button class="btn btn-outline-primary" id="mask-origin">mask-origin</button></li>
+            <li><button class="btn btn-outline-primary" id="mask-position">mask-position</button></li>
+            <li><button class="btn btn-outline-primary" id="mask-position-x">mask-position-x</button></li>
+            <li><button class="btn btn-outline-primary" id="mask-position-y">mask-position-y</button></li>
+            <li><button class="btn btn-outline-primary" id="mask-mode">mask-mode</button></li>
           </ul>
           <ul>
             <strong>outline</strong>
-            <li><button id="outline">outline</button></li>
+            <li><button class="btn btn-outline-primary" id="outline">outline</button></li>
           </ul>
           <ul>
             chuyển đổi 1 thành phần thành các
             <strong>column</strong>
-            <li><button>column-count</button></li>
-            <li><button id="column-fill">column-fill</button></li>
-            <li><button id="column-gap">column-gap</button></li>
-            <li><button id="column-rule">column-rule</button></li>
-            <li><button id="column-rule-color">column-rule-color</button></li>
-            <li><button id="column-rule-style">column-rule-style</button></li>
-            <li><button id="column-rule-width">column-rule-width</button></li>
-            <li><button id="column-span">column-span</button></li>
-            <li><button id="column-width">column-width</button></li>
-            <li><button id="columns">columns</button></li>
+            <li><button class="btn btn-outline-primary">column-count</button></li>
+            <li><button class="btn btn-outline-primary" id="column-fill">column-fill</button></li>
+            <li><button class="btn btn-outline-primary" id="column-gap">column-gap</button></li>
+            <li><button class="btn btn-outline-primary" id="column-rule">column-rule</button></li>
+            <li><button class="btn btn-outline-primary" id="column-rule-color">column-rule-color</button></li>
+            <li><button class="btn btn-outline-primary" id="column-rule-style">column-rule-style</button></li>
+            <li><button class="btn btn-outline-primary" id="column-rule-width">column-rule-width</button></li>
+            <li><button class="btn btn-outline-primary" id="column-span">column-span</button></li>
+            <li><button class="btn btn-outline-primary" id="column-width">column-width</button></li>
+            <li><button class="btn btn-outline-primary" id="columns">columns</button></li>
           </ul>
         </div>
       </div>
@@ -198,50 +197,50 @@
         <div class="attribute">
           <ul>
             <h3>Chữ</h3>
-            <li><button>text-emphasis-position</button></li>
+            <li><button class="btn btn-outline-primary">text-emphasis-position</button></li>
           </ul>
           <ul>
             <h3>Nền</h3>
-            <li><button>background-position</button></li>
-            <li><button>background-position-x</button></li>
-            <li><button>background-position-y</button></li>
+            <li><button class="btn btn-outline-primary">background-position</button></li>
+            <li><button class="btn btn-outline-primary">background-position-x</button></li>
+            <li><button class="btn btn-outline-primary">background-position-y</button></li>
           </ul>
           <ul>
             <h3>Canh lề</h3>
-            <li><button>margin</button></li>
-            <li><button>margin-top</button></li>
-            <li><button>margin-left</button></li>
-            <li><button>margin-right</button></li>
-            <li><button>margin-bottom</button></li>
-            <li><button>margin-block-start</button></li>
-            <li><button>margin-block-end</button></li>
-            <li><button>margin-inline-start</button></li>
-            <li><button>margin-inline-end</button></li>
-            <li><button id="text-align">text-align</button></li>
+            <li><button class="btn btn-outline-primary">margin</button></li>
+            <li><button class="btn btn-outline-primary">margin-top</button></li>
+            <li><button class="btn btn-outline-primary">margin-left</button></li>
+            <li><button class="btn btn-outline-primary">margin-right</button></li>
+            <li><button class="btn btn-outline-primary">margin-bottom</button></li>
+            <li><button class="btn btn-outline-primary">margin-block-start</button></li>
+            <li><button class="btn btn-outline-primary">margin-block-end</button></li>
+            <li><button class="btn btn-outline-primary">margin-inline-start</button></li>
+            <li><button class="btn btn-outline-primary">margin-inline-end</button></li>
+            <li><button class="btn btn-outline-primary" id="text-align">text-align</button></li>
           </ul>
           <ul>
             <h3>Vị trí</h3>
-            <li><button>relative</button></li>
-            <li><button>fixed</button></li>
-            <li><button>absolute</button></li>
-            <li><button>left</button></li>
-            <li><button>top</button></li>
-            <li><button>right</button></li>
-            <li><button>bottom</button></li>
-            <li><button>translate</button></li>
+            <li><button class="btn btn-outline-primary">relative</button></li>
+            <li><button class="btn btn-outline-primary">fixed</button></li>
+            <li><button class="btn btn-outline-primary">absolute</button></li>
+            <li><button class="btn btn-outline-primary">left</button></li>
+            <li><button class="btn btn-outline-primary">top</button></li>
+            <li><button class="btn btn-outline-primary">right</button></li>
+            <li><button class="btn btn-outline-primary">bottom</button></li>
+            <li><button class="btn btn-outline-primary">translate</button></li>
           </ul>
           <ul>
             <h3>Trôi</h3>
-            <li><button id="float">float</button></li>
+            <li><button class="btn btn-outline-primary" id="float">float</button></li>
           </ul>
           <ul>
             <h3>flex</h3>
-            <li><button id="justify-content">justify-content</button></li>
-            <li><button id="align-items">align-items</button></li>
-            <li><button id="flex-wrap">flex-wrap</button></li>
-            <li><button id="flex-direction">flex-direction</button></li>
-            <li><button id="align-self">align-self</button></li>
-            <li><button id="align-content">align-content</button></li>
+            <li><button class="btn btn-outline-primary" id="justify-content">justify-content</button></li>
+            <li><button class="btn btn-outline-primary" id="align-items">align-items</button></li>
+            <li><button class="btn btn-outline-primary" id="flex-wrap">flex-wrap</button></li>
+            <li><button class="btn btn-outline-primary" id="flex-direction">flex-direction</button></li>
+            <li><button class="btn btn-outline-primary" id="align-self">align-self</button></li>
+            <li><button class="btn btn-outline-primary" id="align-content">align-content</button></li>
           </ul>
         </div>
       </div>
@@ -252,45 +251,45 @@
           <ul>
             Tô
             <strong>màu chữ</strong>
-            <li><button>color</button></li>
-            <li><button>text-decoration-color</button></li>
-            <li><button>text-emphasis-color</button></li>
+            <li><button class="btn btn-outline-primary">color</button></li>
+            <li><button class="btn btn-outline-primary">text-decoration-color</button></li>
+            <li><button class="btn btn-outline-primary">text-emphasis-color</button></li>
           </ul>
           <ul>
             Tô
             <strong>màu viền</strong>
-            <li><button>border-color</button></li>
-            <li><button>border-top-color</button></li>
-            <li><button>border-right-color</button></li>
-            <li><button>border-bottom-color</button></li>
-            <li><button>border-left-color</button></li>
-            <li><button>border-block-color</button></li>
-            <li><button>border-block-start-color</button></li>
-            <li><button>border-block-end-color</button></li>
-            <li><button>border-inline-color</button></li>
-            <li><button>border-inline-start-color</button></li>
-            <li><button>border-inline-end-color</button></li>
+            <li><button class="btn btn-outline-primary">border-color</button></li>
+            <li><button class="btn btn-outline-primary">border-top-color</button></li>
+            <li><button class="btn btn-outline-primary">border-right-color</button></li>
+            <li><button class="btn btn-outline-primary">border-bottom-color</button></li>
+            <li><button class="btn btn-outline-primary">border-left-color</button></li>
+            <li><button class="btn btn-outline-primary">border-block-color</button></li>
+            <li><button class="btn btn-outline-primary">border-block-start-color</button></li>
+            <li><button class="btn btn-outline-primary">border-block-end-color</button></li>
+            <li><button class="btn btn-outline-primary">border-inline-color</button></li>
+            <li><button class="btn btn-outline-primary">border-inline-start-color</button></li>
+            <li><button class="btn btn-outline-primary">border-inline-end-color</button></li>
           </ul>
           <ul>
             Tô
             <strong>màu nền</strong>
-            <li><button>background</button></li>
-            <li><button>background-color</button></li>
-            <li><button>background-image</button></li>
-            <li><button>background-image-linear</button></li>
-            <li><button>background-image-conic</button></li>
+            <li><button class="btn btn-outline-primary">background</button></li>
+            <li><button class="btn btn-outline-primary">background-color</button></li>
+            <li><button class="btn btn-outline-primary">background-image</button></li>
+            <li><button class="btn btn-outline-primary">background-image-linear</button></li>
+            <li><button class="btn btn-outline-primary">background-image-conic</button></li>
           </ul>
           <ul>
             Tô
             <strong>màu bóng đổ</strong>
-            <li><button>box-shadow</button></li>
+            <li><button class="btn btn-outline-primary">box-shadow</button></li>
           </ul>
           <ul>
             Tô
             <strong>màu thanh kéo</strong>
-            <li><button id="scrollbar-color">scrollbar-color</button></li>
-            <li><button id="webkit-scroolbar-thumb">webkit-scroolbar-thumb</button></li>
-            <li><button id="webkit-scroolbar-track">webkit-scroolbar-track</button></li>
+            <li><button class="btn btn-outline-primary" id="scrollbar-color">scrollbar-color</button></li>
+            <li><button class="btn btn-outline-primary" id="webkit-scroolbar-thumb">webkit-scroolbar-thumb</button></li>
+            <li><button class="btn btn-outline-primary" id="webkit-scroolbar-track">webkit-scroolbar-track</button></li>
           </ul>
         </div>
       </div>
@@ -301,27 +300,29 @@
           <ul>
             Chuyển động bằng hệ
             <strong>animation</strong>
-            <li><button>animation</button></li>
-            <li><button>animation-timing-function</button></li>
-            <li><button>animation-delay</button></li>
-            <li><button>animation-name</button></li>
-            <li><button>animation-duration</button></li>
-            <li><button>animation-play-state</button></li>
-            <li><button>animation-iteration-count</button></li>
+            <li><button class="btn btn-outline-primary">animation</button></li>
+            <li><button class="btn btn-outline-primary">animation-timing-function</button></li>
+            <li><button class="btn btn-outline-primary">animation-delay</button></li>
+            <li><button class="btn btn-outline-primary">animation-name</button></li>
+            <li><button class="btn btn-outline-primary">animation-duration</button></li>
+            <li><button class="btn btn-outline-primary">animation-play-state</button></li>
+            <li><button class="btn btn-outline-primary">animation-iteration-count</button></li>
           </ul>
           <ul>
             Chuyển động bằng hệ
             <strong>transition</strong>
-            <li><button id="transition">transition</button></li>
-            <li><button>transition-delay</button></li>
-            <li><button>transition-duration</button></li>
-            <li><button>transition-timing-function</button></li>
-            <li><button>transition-property</button></li>
+            <li><button class="btn btn-outline-primary" id="transition">transition</button></li>
+            <li><button class="btn btn-outline-primary">transition-delay</button></li>
+            <li><button class="btn btn-outline-primary">transition-duration</button></li>
+            <li><button class="btn btn-outline-primary">transition-timing-function</button></li>
+            <li><button class="btn btn-outline-primary">transition-property</button></li>
           </ul>
         </div>
       </div>
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
     <script src="./main.js"></script>
   </body>
 </html>
