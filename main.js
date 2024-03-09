@@ -69,17 +69,21 @@ buttons.forEach((e) => {
     { id: "inset-inline", note: "<strong>Note</strong> Thằng này kiểu như thay thế cho top, right, bottom, left trong absolute và relative", warning: "<strong>WARNING !</strong> Phải set cha thành relative và có chiều cao, con là absolute", html: htmlInset, multiple: false },
     { id: "inset-inline-end", note: "<strong>Note</strong> Thằng này kiểu như thay thế cho top, right, bottom, left trong absolute và relative", warning: "<strong>WARNING !</strong> Phải set cha thành relative và có chiều cao, con là absolute", html: htmlInset, multiple: false },
     { id: "inset-inline-start", note: "<strong>Note</strong> Thằng này kiểu như thay thế cho top, right, bottom, left trong absolute và relative", warning: "<strong>WARNING !</strong> Phải set cha thành relative và có chiều cao, con là absolute", html: htmlInset, multiple: false },
-    { id: "column-fill", note: "", warning: "<strong>WARNING !</strong> Dùng chung với column-count, có thể thêm height", html:htmlText, multiple: true },
-    { id: "column-gap", note: "", warning: "<strong>WARNING !</strong> Dùng chung với column-count, có thể thêm height", html:htmlText, multiple: true },
-    { id: "column-rule", note: "", warning: "<strong>WARNING !</strong> Dùng chung với column-count, có thể thêm height", html:htmlText, multiple: true },
-    { id: "column-rule-color", note: "", warning: "<strong>WARNING !</strong> Dùng chung với column-count, có thể thêm height", html:htmlText, multiple: true },
-    { id: "column-rule-style", note: "", warning: "<strong>WARNING !</strong> Dùng chung với column-count, có thể thêm height", html:htmlText, multiple: true },
-    { id: "column-rule-width", note: "", warning: "<strong>WARNING !</strong> Dùng chung với column-count, có thể thêm height", html:htmlText, multiple: true },
-    { id: "column-span", note: "<strong>Note</strong> Span hiểu đơn giản là gom dòng, nghĩa là chỉ định 1 thành phần thay vì nằm trong 1 column thì có thể gom dòng lại", warning: "<strong>WARNING !</strong> Dùng chung với column-count, có thể thêm height", html:htmlColumn, multiple: true },
-    { id: "columns", note: "<strong>Note</strong> minimun and maximum", warning: "<strong>WARNING !</strong>columns có s, resize mới thấy hiệu ứng", html:htmlColumn, multiple: true },
+    { id: "column-fill", note: "", warning: "<strong>WARNING !</strong> Dùng chung với column-count, có thể thêm height", html: htmlText, multiple: true },
+    { id: "column-gap", note: "", warning: "<strong>WARNING !</strong> Dùng chung với column-count, có thể thêm height", html: htmlText, multiple: true },
+    { id: "column-rule", note: "", warning: "<strong>WARNING !</strong> Dùng chung với column-count, có thể thêm height", html: htmlText, multiple: true },
+    { id: "column-rule-color", note: "", warning: "<strong>WARNING !</strong> Dùng chung với column-count, có thể thêm height", html: htmlText, multiple: true },
+    { id: "column-rule-style", note: "", warning: "<strong>WARNING !</strong> Dùng chung với column-count, có thể thêm height", html: htmlText, multiple: true },
+    { id: "column-rule-width", note: "", warning: "<strong>WARNING !</strong> Dùng chung với column-count, có thể thêm height", html: htmlText, multiple: true },
+    { id: "column-span", note: "<strong>Note</strong> Span hiểu đơn giản là gom dòng, nghĩa là chỉ định 1 thành phần thay vì nằm trong 1 column thì có thể gom dòng lại", warning: "<strong>WARNING !</strong> Dùng chung với column-count, có thể thêm height", html: htmlColumn, multiple: true },
+    { id: "columns", note: "<strong>Note</strong> minimun and maximum", warning: "<strong>WARNING !</strong>columns có s, resize mới thấy hiệu ứng", html: htmlColumn, multiple: true },
   ];
   c.forEach(function (e) {
-    e.multiple === true ? (function(){document.getElementById(e.id).classList.add("multiple")})():"";
+    e.multiple === true
+      ? (function () {
+          document.getElementById(e.id).classList.add("multiple");
+        })()
+      : "";
     document.getElementById(e.id).addEventListener("click", function () {
       flex(e);
     });
@@ -103,7 +107,6 @@ buttons.forEach((e) => {
         })()
       : "";
     // in double
-    
   }
 })();
 
@@ -174,4 +177,65 @@ function clear() {
 `;
     navigator.clipboard.writeText(script);
   }
+})();
+(function () {
+  var byObject = document.getElementById("byObject");
+  byObject.onclick = function () {
+    "use strict";
+    var arr = [
+      { id: "btn-type-text", heading: "Thay đổi chữ" },
+      { id: "btn-type-background", heading: "Thay đổi nền" },
+      { id: "btn-type-dimension", heading: "Thay đổi kích thước" },
+      { id: "btn-type-border", heading: "Thay đổi đường viền" },
+      { id: "btn-type-padding", heading: "Thay đổi không gian" },
+      { id: "btn-type-outline", heading: "Thay đổi viền ngoài" },
+      { id: "btn-type-margin", heading: "Thay đổi khoảng cách 2 phần tử" },
+      { id: "btn-type-position", heading: "Thay đổi kiểu position" },
+      { id: "btn-type-display", heading: "Thay đổi Kiểu hiển thị" },
+      { id: "btn-type-flex", heading: "Thay đổi bố cục flex" },
+      { id: "btn-type-float", heading: "Thay đổi kiểu trôi" },
+      { id: "btn-type-transform", heading: "Thay đổi hình dạng" },
+      { id: "btn-type-mask", heading: "Thay đổi mặt nạ" },
+      { id: "btn-type-inset", heading: "Thay đổi khoảng cách cha con" },
+      { id: "btn-type-column", heading: "Thay đổi bố cục cột" },
+      { id: "btn-type-list", heading: "Thay đổi kiểu danh sách" },
+      { id: "btn-type-scrollbar", heading: "Thay đổi kiểu thanh kéo" },
+      { id: "btn-type-animation", heading: "Thay đổi kiểu chuyển động animation" },
+      { id: "btn-type-transition", heading: "Thay đổi kiểu chuyển động transition" },
+      { id: "btn-type-another", heading: "Thay đổi khác" },
+    ];
+    var buttons = document.querySelectorAll('button[class*="btn-type"]');
+    console.log(buttons);
+    var o = document.getElementById("object");
+
+    arr.forEach((e) => {
+      var ul = document.createElement("ul");
+      var h = document.createElement("h6");
+      var textNode = document.createTextNode(e.heading);
+      h.appendChild(textNode);
+      ul.appendChild(h);
+      ul.id = e.id;
+      o.appendChild(ul);
+    });
+    var index = 0;
+    buttons.forEach((btn) => {
+      console.log(btn);
+      arr.forEach((arg) => {
+        addButton(btn, arg.id);
+      });
+    });
+    function addButton(btn, id) {
+      btn.classList.contains(id) &&
+        (function () {
+          var li = document.createElement("li");
+          li.appendChild(btn);
+          document.getElementById(id).appendChild(li);
+          document.getElementById("dem").innerHTML = index;
+          index++;
+        })();
+    }
+    document.querySelector(".by-type").classList.add("d-none");
+  };
+  
+  
 })();

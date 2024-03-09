@@ -159,6 +159,7 @@ p {
 .wrap-demo {
   border: 50px solid gray;
 }
+
 /* .wrap-control button {
   width: unset;
 } */
@@ -2476,3 +2477,9 @@ ul {
   }
 }
 /* end kieu */
+/* object */
+#object button {
+  min-width: 200px !important;
+  text-align: left;
+}
+/* end object */
