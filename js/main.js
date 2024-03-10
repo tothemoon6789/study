@@ -15,6 +15,20 @@
     { id: "js11", id_heading: "document", version: "dom2", text: "window.document.cookie" },
     { id: "js12", id_heading: "document", version: "dom1", text: "window.document.createAttribute()" },
     { id: "js13", id_heading: "document", version: "dom1", text: "window.document.createComment()" },
+    { id: "js14", id_heading: "document", version: "dom1", text: "window.document.createDocumentFragment()" },
+    { id: "js15", id_heading: "document", version: "dom1", text: "window.document.createElement()" },
+    { id: "js16", id_heading: "document", version: "dom1", text: "window.document.createEvent()" },
+    { id: "js17", id_heading: "document", version: "dom1", text: "window.document.createTextNode()" },
+    { id: "js18", id_heading: "document", version: "dom1", text: "window.document.defaultView" },
+    { id: "js19", id_heading: "document", version: "dom1", text: "window.document.designMode" },
+    { id: "js20", id_heading: "document", version: "dom1", text: "window.document.doctype" },
+    { id: "js21", id_heading: "document", version: "dom1", text: "window.document.documentElement" },
+    { id: "js22", id_heading: "document", version: "dom1", text: "window.document.documentURI" },
+    { id: "js23", id_heading: "document", version: "dom2", text: "window.document.domain" },
+    { id: "js24", id_heading: "document", version: "deprecated", text: "window.document.domConfig" },
+    { id: "js25", id_heading: "document", version: "deprecated", text: "window.document.embeds" },
+    { id: "js26", id_heading: "document", version: "deprecated", text: "window.document.execCommand()" },
+    { id: "js27", id_heading: "document", version: "dom1", text: "window.document.forms" },
   ];
   var buttons = document.getElementById("control");
   var ul = window.document.createElement("ul");
@@ -22,6 +36,8 @@
     var li = window.document.createElement("li");
     var button = window.document.createElement("button");
     var buttonNode = window.document.createTextNode(element.text);
+    var div = document.getElementById(element.id);
+    div.insertAdjacentHTML("afterbegin",`<h3>${element.text}</h3>`);
     button.appendChild(buttonNode);
     button.className = "btn btn-outline-primary";
     button.addEventListener("click", function () {
@@ -37,66 +53,3 @@
   });
   buttons.appendChild(ul);
 })();
-function reload() {
-location.reload();
-}
-
-var result = window.document.getElementById("result");
-var statement = window.document.getElementById("statement");
-function activeELement(e) {
-var result = window.document.getElementById("result");
-window.document.getElementById("statement").innerText = `result.innerText = window.document.activeElement.tagName;`;
-window.document.querySelector("body").addEventListener("click", function () {
-// dòng lệnh chính
-result.innerText = window.document.activeElement.tagName;
-});
-}
-function documentAddEventListener(e) {
-var result = window.document.getElementById("result");
-window.document.getElementById("buttonDA").innerText = "Button ĐÃ ĐƯỢC GÁN SỰ KIỆN";
-result.innerText = "Không có kết quả để in ra, chỉ thêm sự kiện vào nút trên cùng";
-window.document.getElementById("statement").innerText = `window.document.getElementById("buttonDA").addEventListener("click", function (e) {
-alert("ĐÂY LÀ DÒNG CODE TRONG SỰ KIỆN ĐÃ ĐƯỢC THỰC THI");
-});`;
-// dòng lệnh chính
-window.document.getElementById("buttonDA").addEventListener("click", function (e) {
-alert("ĐÂY LÀ DÒNG CODE TRONG SỰ KIỆN ĐÃ ĐƯỢC THỰC THI");
-});
-}
-
-function document_baseURI() {
-// dong lenh chinh
-result.innerText = window.document.baseURI;
-statement.innerText = "result.innerText = window.document.baseURI;";
-}
-function document_body_gan() {
-// dong lenh chinh
-window.document.body.innerHTML = "toàn bộ dữ liệu của body đã bị thay thế";
-//   result.innerText = window.document.baseURI;
-//   statement.innerText = "result.innerText = window.document.baseURI;"
-}
-function document_body_lay() {
-// dong lenh chinh
-result.innerText = window.document.body.outerHTML;
-statement.innerText = "result.innerText = window.document.body.outerHTML;";
-}
-function document_document_characterSet_lay() {
-// dong lenh chinh
-
-result.innerText = window.document.characterSet;
-statement.innerText = "result.innerText = window.document.characterSet;";
-}
-function test() {
-document.getElementById("result").innerText = window.document.cookie;
-}
-function window_document_createAttribute(){
-var style = window.document.createAttribute("style");
-window.document.getElementById("result").innerText = style;
-window.document.getElementById("statement").innerText = 'var style = window.document.createAttribute("style");'
-}
-function window_document_createComment(){
-var comment = window.document.createComment("Du lieu nay khong the hien ra ben ngoai");
-window.document.querySelector("#result").innerHTML = comment;
-window.document.querySelector("#result").appendChild(comment) = comment;
-window.document.querySelector("#statement").innerHTML = `var comment = window.document.createComment("Du lieu nay khong the hien ra ben ngoai");`;
-}

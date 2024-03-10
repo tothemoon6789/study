@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>Js</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <div class="container">
       <div id="showing">
         <div id="js1" class="d-none">
-          <h2>window.document.activeELement</h2>
           <input type="text" /><button>Button</button>
           <p>Bấm vào phần tử có thể active để in ra tagname</p>
           <button class="start" onclick="activeELement(this)">START</button>
@@ -26,7 +26,6 @@
           </div>
         </div>
         <div id="js2" class="d-none">
-          <h2>window.document.addEventListener()</h2>
           <p>Bấm vào phần tử có thể active để in ra tagname</p>
           <button id="buttonDA">Button Chưa được gán sự kiện</button>
           <hr />
@@ -39,7 +38,6 @@
           </div>
         </div>
         <div id="js3" class="d-none">
-          <h2>window.document.adoptNode()</h2>
           <p>adoptNode nhận một phần tử từ một document khác, chẳng hạn document từ iframe</p>
           <iframe id="iframeAdopt" src="https://nhatvuong.vn/bao-gaming.html" frameborder="0" height="400px"></iframe>
           <hr />
@@ -52,7 +50,6 @@
           </div>
         </div>
         <div id="js4" class="d-none">
-          <h2>window.document.anchors</h2>
           <p>Phương thức này không còn dùng nữa</p>
           <button class="start" disabled onclick="">START</button>
           <div class="hide">
@@ -63,7 +60,6 @@
           </div>
         </div>
         <div id="js5" class="d-none">
-          <h2>window.document.applet</h2>
           <p>Phương thức này không còn dùng nữa</p>
           <button class="start" disabled onclick="">START</button>
           <div class="hide">
@@ -74,7 +70,6 @@
           </div>
         </div>
         <div id="js6" class="d-none">
-          <h2>window.document.baseURI</h2>
           <p>baseURI dùng để lấy đường dẫn của trang</p>
           <button class="start" onclick="document_baseURI()">START</button>
           <div class="">
@@ -84,9 +79,8 @@
             <p class="warning">Cảnh báo: Không hỗ trợ trong Internet Explore</p>
           </div>
         </div>
-        
+
         <div id="js7" class="d-none">
-          <h2>window.document.body</h2>
           <p>dùng để lấy kiểu ký tự để viết file html</p>
           <button class="start" onclick="document_document_characterSet_lay()">START</button>
           <div class="">
@@ -97,15 +91,12 @@
           </div>
         </div>
         <div id="js8" class="d-none">
-          <h2>window.document.charset</h2>
           <p>window.document.charset không còn dùng nữa</p>
         </div>
         <div id="js9" class="d-none">
-          <h2>window.document.characterSet</h2>
           <p>window.document.charset không còn dùng nữa</p>
         </div>
         <div id="js10" class="d-none">
-          <h2>window.document.close()</h2>
           <p>Phương thức này khó tiếp cận do bảo mật của trình duyệt. dùng để THỰC THI đóng cửa sổ hiện tại.</p>
           <button onclick="openAndCloseWindow()">Thử</button>
           <script>
@@ -129,7 +120,6 @@
           </script>
         </div>
         <div id="js11" class="d-none">
-          <h2>window.document.cookie</h2>
           <p>lấy cookie của trang web</p>
           <ul>
             <li>Cookie là một chuỗi (string)</li>
@@ -154,27 +144,107 @@
           </div>
         </div>
         <div id="js12" class="d-none">
-          <h2>window.document.createAttribute()</h2>
           <p>Thực thi tạo mới một thuộc tính (hay còn gọi là attribute)</p>
           <button class="btn btn-outline-primary" onclick="window_document_createAttribute()">Tạo mới</button>
         </div>
         <div id="js13" class="d-none">
-          <h2>window.document.createComment()</h2>
           <p>Thực thi tạo mới một nút ghi chú và trả về nút ghi chú đó</p>
           <button class="btn btn-outline-primary" onclick="window_document_createComment()">Tạo mới</button>
         </div>
+        <div id="js14" class="d-none">
+          <div class="alert alert-info" role="alert">
+            <strong>Thực thi tạo mới một nút ngoài màn hình</strong>
+          </div>
+          <button type="button" class="btn btn-primary" onclick="window_document_createDocumentFragment()">Play</button>
+        </div>
+        <div id="js15" class="d-none">
+          <div class="alert alert-info" role="alert">
+            <strong>Thực thi tạo mới một element</strong>
+          </div>
+          <button type="button" class="btn btn-primary" onclick="window_document_createElement()">Play</button>
+        </div>
+        <div id="js16" class="d-none">
+          <div class="alert alert-info" role="alert">
+            <strong>Thực thi tạo mới một event</strong>
+          </div>
+          <button type="button" class="btn btn-primary" onclick="window_document_createEvent()">Play</button>
+          <div id="window_document_createEvent_id" style="padding: 50px; background-color: yellow" onmouseover="this.innerHTML += '*';">*</div>
+        </div>
+        <div id="js17" class="d-none">
+          <div class="alert alert-info" role="alert">
+            <strong>Thực thi tạo mới một nút text</strong>
+          </div>
+          <button type="button" class="btn btn-primary" onclick="window_document_createTextNode()">Play</button>
+        </div>
+        <div id="js18" class="d-none">
+          <div class="alert alert-info" role="alert"><strong>window === document.defaultView //true</strong> lấy đối tượng window</div>
+          <button type="button" class="btn btn-primary" onclick="window_document_defaultView()">Play</button>
+        </div>
+        <div id="js19" class="d-none">
+          <div class="alert alert-info" role="alert">
+            <strong>Lấy hoặc gán chức năng desgin mode</strong>
+          </div>
+          <button type="button" class="btn btn-primary" onclick="window_document_designMode()">Play</button>
+        </div>
+
+        <div id="js20" class="d-none">
+          <div class="alert alert-info" role="alert">
+            <strong>Lấy kiểu doctype </strong>
+          </div>
+          <div class="alert alert-danger" role="alert"><strong>Cảnh báo: </strong> chỉ được lấy không được gán</div>
+          <button type="button" class="btn btn-primary" onclick="window_document_doctype()">Play</button>
+        </div>
+        <div id="js21" class="d-none">
+          <div class="alert alert-info" role="alert">
+            <strong>Dùng để lấy đối tượng document html</strong>
+          </div>
+          <div class="alert alert-danger" role="alert">
+            <strong>Read-only</strong>
+          </div>
+          <div class="alert alert-danger" role="alert"><strong>document === document.documentElement // false</strong> document.documentElement trả về thẻ html và nội dung của nó.</div>
+
+          <button type="button" class="btn btn-primary" onclick="window_document_documentElement()">Play</button>
+        </div>
+        <div id="js22" class="d-none">
+          <div class="alert alert-info" role="alert">Dùng để lấy hoặc gán địa chỉ của trang document</div>
+          <div class="alert alert-warning" role="alert"><strong>Cảnh báo: </strong> chưa thực hiện được phép gán</div>
+          <div class="alert alert-danger" role="alert"><strong>Nguy hiểm: </strong>không sử dụng được cho IE 11 trở xuống</div>
+          <button type="button" class="btn btn-primary" onclick="window_document_documentURI()">Play</button>
+        </div>
+        <div id="js23" class="d-none">
+          <div class="alert alert-info" role="alert">Dùng để lấy tên miền của trang web</div>
+          <button type="button" class="btn btn-primary" onclick="window_document_domain()">Play</button>
+        </div>
+        <div id="js24" class="d-none">
+          <div class="alert alert-danger" role="alert"><strong>domConfig</strong> không còn được dùng nữa</div>
+        </div>
+
+        <div id="js25" class="d-none">
+          <div class="alert alert-danger" role="alert"><strong>embeds</strong> hầu hết các trình duyệt không còn hỗ trợ nữa, thẻ này lúc trước dùng để nhúng img, iframe, video, audio</div>
+        </div>
+        <div id="js26" class="d-none">
+          <div class="alert alert-danger" role="alert"><strong>execCommand()</strong> không còn được dùng nữa</div>
+        </div>
+        <div id="js27" class="d-none">
+          <div class="alert alert-info" role="alert">Dùng để lấy toàn bộ thẻ form trong document</div>
+          <div class="alert alert-danger" role="alert">
+            <strong>Read-only !</strong>
+          </div>
+          <button onclick="window_document_forms()" type="button" class="btn btn-outline-primary">Play</button>
+        </div>
       </div>
       <div>
-        <h3 class="divide">Kết quả:</h3>
-        <div id="result">result...</div>
+        <h3>Kết quả:</h3>
+        <div id="result"></div>
         <hr />
         <h3>Dòng lệnh thực thi:</h3>
-        <div id="statement">statement...</div>
+        <div id="statement"></div>
         <hr />
       </div>
       <div id="control"></div>
       <button class="btn btn-danger" onclick="reload()">RELOAD PAGE</button>
     </div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -182,5 +252,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <script src="main.js"></script>
+    <script src="play.js"></script>
   </body>
 </html>
