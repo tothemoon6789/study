@@ -1,488 +1,509 @@
 (function () {
-  var data = [
+  var phan_loai = [
+    { id: "btn-type-text", heading: "Thay đổi chữ" },
+    { id: "btn-type-background", heading: "Thay đổi nền" },
+    { id: "btn-type-dimension", heading: "Thay đổi kích thước" },
+    { id: "btn-type-border", heading: "Thay đổi đường viền" },
+    { id: "btn-type-padding", heading: "Thay đổi không gian" },
+    { id: "btn-type-outline", heading: "Thay đổi viền ngoài" },
+    { id: "btn-type-margin", heading: "Thay đổi khoảng cách 2 phần tử" },
+    { id: "btn-type-position", heading: "Thay đổi kiểu position" },
+    { id: "btn-type-display", heading: "Thay đổi Kiểu hiển thị" },
+    { id: "btn-type-flex", heading: "Thay đổi bố cục flex" },
+    { id: "btn-type-float", heading: "Thay đổi kiểu trôi" },
+    { id: "btn-type-transform", heading: "Thay đổi hình dạng" },
+    { id: "btn-type-mask", heading: "Thay đổi mặt nạ" },
+    { id: "btn-type-inset", heading: "Thay đổi khoảng cách cha con" },
+    { id: "btn-type-column", heading: "Thay đổi bố cục cột" },
+    { id: "btn-type-list", heading: "Thay đổi kiểu danh sách" },
+    { id: "btn-type-scrollbar", heading: "Thay đổi kiểu thanh kéo" },
+    { id: "btn-type-animation", heading: "Thay đổi kiểu chuyển động animation" },
+    { id: "btn-type-transition", heading: "Thay đổi kiểu chuyển động transition" },
+    { id: "btn-type-another", heading: "Thay đổi khác" },
+  ];
+  var nut_bam = [
     {
-      id: "",
+      id: "font-family",
       class: "btn btn-outline-primary btn-type-text",
       text: "font-family",
     },
     {
-      id: "",
+      id: "font-size",
       class: "btn btn-outline-primary btn-type-text",
       text: "font-size",
     },
     {
-      id: "",
+      id: "font-style",
       class: "btn btn-outline-primary btn-type-text",
       text: "font-style",
     },
     {
-      id: "",
+      id: "font-weight",
       class: "btn btn-outline-primary btn-type-text",
       text: "font-weight",
     },
     {
-      id: "",
+      id: "text-decoration",
       class: "btn btn-outline-primary btn-type-text",
       text: "text-decoration",
     },
     {
-      id: "",
+      id: "text-transform",
       class: "btn btn-outline-primary btn-type-text",
       text: "text-transform",
     },
     {
-      id: "",
+      id: "text-overflow",
       class: "btn btn-outline-primary btn-type-text",
       text: "text-overflow",
     },
     {
-      id: "",
+      id: "text-shadow",
       class: "btn btn-outline-primary btn-type-text",
       text: "text-shadow",
     },
     {
-      id: "",
+      id: "text-indent",
       class: "btn btn-outline-primary btn-type-text",
       text: "text-indent",
     },
     {
-      id: "",
-      class: "btn btn-outline-primary btn-type-text",
+      id: "text-justify",
+      class: "btn btn-warning btn-type-text",
       text: "text-justify",
     },
     {
-      id: "",
+      id: "text-decoration-line",
       class: "btn btn-outline-primary btn-type-text",
       text: "text-decoration-line",
     },
     {
-      id: "",
+      id: "text-decoration-thickness",
       class: "btn btn-outline-primary btn-type-text",
       text: "text-decoration-thickness",
     },
     {
-      id: "",
+      id: "text-align-last",
       class: "btn btn-outline-primary btn-type-text",
       text: "text-align-last",
     },
     {
-      id: "",
+      id: "text-decoration-style",
       class: "btn btn-outline-primary btn-type-text",
       text: "text-decoration-style",
     },
     {
-      id: "",
+      id: "text-emphasis",
       class: "btn btn-outline-primary btn-type-text",
       text: "text-emphasis",
     },
     {
-      id: "",
+      id: "text-emphasis-style",
       class: "btn btn-outline-primary btn-type-text",
       text: "text-emphasis-style",
     },
     {
-      id: "",
+      id: "letter-spacing",
       class: "btn btn-outline-primary btn-type-text",
       text: "letter-spacing",
     },
     {
-      id: "",
-      class: "btn btn-outline-primary btn-type-text",
+      id: "text-emphasis-position",
+      class: "btn btn-warning btn-type-text",
       text: "text-emphasis-position",
     },
     {
-      id: "",
+      id: "color",
       class: "btn btn-outline-primary btn-type-text",
       text: "color",
     },
     {
-      id: "",
+      id: "text-decoration-color",
       class: "btn btn-outline-primary btn-type-text",
       text: "text-decoration-color",
     },
     {
-      id: "",
+      id: "text-emphasis-color",
       class: "btn btn-outline-primary btn-type-text",
       text: "text-emphasis-color",
     },
     {
-      id: "",
+      id: "background",
       class: "btn btn-outline-primary btn-type-background",
       text: "background",
     },
     {
-      id: "",
+      id: "background-color",
       class: "btn btn-outline-primary btn-type-background",
       text: "background-color",
     },
     {
-      id: "",
+      id: "background-image",
       class: "btn btn-outline-primary btn-type-background",
       text: "background-image",
     },
     {
-      id: "",
+      id: "background-size",
       class: "btn btn-outline-primary btn-type-background",
       text: "background-size",
     },
     {
-      id: "",
+      id: "background-attachment",
       class: "btn btn-outline-primary btn-type-background",
       text: "background-attachment",
     },
     {
-      id: "",
-      class: "btn btn-outline-primary btn-type-background",
+      id: "background-blend-mode",
+      class: "btn btn-warning btn-type-background",
       text: "background-blend-mode",
     },
     {
-      id: "",
-      class: "btn btn-outline-primary btn-type-background",
+      id: "background-clip",
+      class: "btn btn-warning btn-type-background",
       text: "background-clip",
     },
     {
-      id: "",
+      id: "background-origin",
       class: "btn btn-outline-primary btn-type-background",
       text: "background-origin",
     },
     {
-      id: "",
+      id: "background-repeat",
       class: "btn btn-outline-primary btn-type-background",
       text: "background-repeat",
     },
     {
-      id: "",
+      id: "background-position",
       class: "btn btn-outline-primary btn-type-background",
       text: "background-position",
     },
     {
-      id: "",
+      id: "background-position-x",
       class: "btn btn-outline-primary btn-type-background",
       text: "background-position-x",
     },
     {
-      id: "",
+      id: "background-position-y",
       class: "btn btn-outline-primary btn-type-background",
       text: "background-position-y",
     },
-
     {
-      id: "",
+      id: "background-image-linear",
       class: "btn btn-outline-primary btn-type-background",
       text: "background-image-linear",
     },
     {
-      id: "",
+      id: "background-image-conic",
       class: "btn btn-outline-primary btn-type-background",
       text: "background-image-conic",
     },
     {
-      id: "",
+      id: "width",
       class: "btn btn-outline-primary btn-type-dimension",
       text: "width",
     },
     {
-      id: "",
+      id: "height",
       class: "btn btn-outline-primary btn-type-dimension",
       text: "height",
     },
     {
-      id: "",
+      id: "min-width",
       class: "btn btn-outline-primary btn-type-dimension",
       text: "min-width",
     },
     {
-      id: "",
+      id: "min-height",
       class: "btn btn-outline-primary btn-type-dimension",
       text: "min-height",
     },
     {
-      id: "",
+      id: "max-width",
       class: "btn btn-outline-primary btn-type-dimension",
       text: "max-width",
     },
     {
-      id: "",
+      id: "max-height",
       class: "btn btn-outline-primary btn-type-dimension",
       text: "max-height",
     },
     {
-      id: "",
+      id: "aspect-ratio",
       class: "btn btn-outline-primary btn-type-dimension",
       text: "aspect-ratio",
     },
     {
-      id: "",
+      id: "box-sizing",
       class: "btn btn-outline-primary btn-type-dimension",
       text: "box-sizing",
     },
     {
-      id: "",
+      id: "border",
       class: "btn btn-outline-primary btn-type-border",
       text: "border",
     },
     {
-      id: "",
+      id: "border-top-width",
       class: "btn btn-outline-primary btn-type-border",
       text: "border-top-width",
     },
     {
-      id: "",
+      id: "border-right-width",
       class: "btn btn-outline-primary btn-type-border",
       text: "border-right-width",
     },
     {
-      id: "",
+      id: "border-bottom-width",
       class: "btn btn-outline-primary btn-type-border",
       text: "border-bottom-width",
     },
     {
-      id: "",
+      id: "border-left-width",
       class: "btn btn-outline-primary btn-type-border",
       text: "border-left-width",
     },
     {
-      id: "",
+      id: "border-block",
       class: "btn btn-outline-primary btn-type-border",
       text: "border-block",
     },
     {
-      id: "",
+      id: "border-block-start-width",
       class: "btn btn-outline-primary btn-type-border",
       text: "border-block-start-width",
     },
     {
-      id: "",
+      id: "border-block-end-width",
       class: "btn btn-outline-primary btn-type-border",
       text: "border-block-end-width",
     },
     {
-      id: "",
+      id: "border-inline-width",
       class: "btn btn-outline-primary btn-type-border",
       text: "border-inline-width",
     },
     {
-      id: "",
+      id: "border-inline-start-width",
       class: "btn btn-outline-primary btn-type-border",
       text: "border-inline-start-width",
     },
     {
-      id: "",
+      id: "border-inline-end-width",
       class: "btn btn-outline-primary btn-type-border",
       text: "border-inline-end-width",
     },
     {
-      id: "",
+      id: "border-style",
       class: "btn btn-outline-primary btn-type-border",
       text: "border-style",
     },
     {
-      id: "",
+      id: "border-top-style",
       class: "btn btn-outline-primary btn-type-border",
       text: "border-top-style",
     },
     {
-      id: "",
+      id: "border-right-style",
       class: "btn btn-outline-primary btn-type-border",
       text: "border-right-style",
     },
     {
-      id: "",
+      id: "border-bottom-style",
       class: "btn btn-outline-primary btn-type-border",
       text: "border-bottom-style",
     },
     {
-      id: "",
+      id: "border-left-style",
       class: "btn btn-outline-primary btn-type-border",
       text: "border-left-style",
     },
     {
-      id: "",
+      id: "border-block-style",
       class: "btn btn-outline-primary btn-type-border",
       text: "border-block-style",
     },
     {
-      id: "",
+      id: "border-block-start-style",
       class: "btn btn-outline-primary btn-type-border",
       text: "border-block-start-style",
     },
     {
-      id: "",
+      id: "border-block-end-style",
       class: "btn btn-outline-primary btn-type-border",
       text: "border-block-end-style",
     },
     {
-      id: "",
+      id: "border-inline-style",
       class: "btn btn-outline-primary btn-type-border",
       text: "border-inline-style",
     },
     {
-      id: "",
+      id: "border-inline-start-style",
       class: "btn btn-outline-primary btn-type-border",
       text: "border-inline-start-style",
     },
     {
-      id: "",
+      id: "border-inline-end-style",
       class: "btn btn-outline-primary btn-type-border",
       text: "border-inline-end-style",
     },
     {
-      id: "",
+      id: "border-color",
       class: "btn btn-outline-primary btn-type-border",
       text: "border-color",
     },
     {
-      id: "",
+      id: "border-top-color",
       class: "btn btn-outline-primary btn-type-border",
       text: "border-top-color",
     },
     {
-      id: "",
+      id: "border-right-color",
       class: "btn btn-outline-primary btn-type-border",
       text: "border-right-color",
     },
     {
-      id: "",
+      id: "border-bottom-color",
       class: "btn btn-outline-primary btn-type-border",
       text: "border-bottom-color",
     },
     {
-      id: "",
+      id: "border-left-color",
       class: "btn btn-outline-primary btn-type-border",
       text: "border-left-color",
     },
     {
-      id: "",
+      id: "border-block-color",
       class: "btn btn-outline-primary btn-type-border",
       text: "border-block-color",
     },
     {
-      id: "",
+      id: "border-block-start-color",
       class: "btn btn-outline-primary btn-type-border",
       text: "border-block-start-color",
     },
     {
-      id: "",
+      id: "border-block-end-color",
       class: "btn btn-outline-primary btn-type-border",
       text: "border-block-end-color",
     },
     {
-      id: "",
+      id: "border-inline-color",
       class: "btn btn-outline-primary btn-type-border",
       text: "border-inline-color",
     },
     {
-      id: "",
+      id: "border-inline-start-color",
       class: "btn btn-outline-primary btn-type-border",
       text: "border-inline-start-color",
     },
     {
-      id: "",
+      id: "border-inline-end-color",
       class: "btn btn-outline-primary btn-type-border",
       text: "border-inline-end-color",
     },
     {
-      id: "",
+      id: "padding",
       class: "btn btn-outline-primary btn-type-padding",
       text: "padding",
     },
     {
-      id: "",
+      id: "padding-top",
       class: "btn btn-outline-primary btn-type-padding",
       text: "padding-top",
     },
     {
-      id: "",
+      id: "padding-right",
       class: "btn btn-outline-primary btn-type-padding",
       text: "padding-right",
     },
     {
-      id: "",
+      id: "padding-bottom",
       class: "btn btn-outline-primary btn-type-padding",
       text: "padding-bottom",
     },
     {
-      id: "",
+      id: "padding-left",
       class: "btn btn-outline-primary btn-type-padding",
       text: "padding-left",
     },
     {
-      id: "",
+      id: "padding-block",
       class: "btn btn-outline-primary btn-type-padding",
       text: "padding-block",
     },
     {
-      id: "",
+      id: "padding-block-start",
       class: "btn btn-outline-primary btn-type-padding",
       text: "padding-block-start",
     },
     {
-      id: "",
+      id: "padding-block-end",
       class: "btn btn-outline-primary btn-type-padding",
       text: "padding-block-end",
     },
     {
-      id: "",
+      id: "padding-inline",
       class: "btn btn-outline-primary btn-type-padding",
       text: "padding-inline",
     },
     {
-      id: "",
+      id: "padding-inline-start",
       class: "btn btn-outline-primary btn-type-padding",
       text: "padding-inline-start",
     },
     {
-      id: "",
+      id: "padding-inline-end",
       class: "btn btn-outline-primary btn-type-padding",
       text: "padding-inline-end",
     },
     {
       id: "outline",
-      class: "btn btn-outline-primary btn-type-outline",
+      class: "btn btn-warning btn-type-outline",
       text: "outline",
     },
     {
-      id: "",
+      id: "margin",
       class: "btn btn-outline-primary btn-type-margin",
       text: "margin",
     },
     {
-      id: "",
+      id: "margin-top",
       class: "btn btn-outline-primary btn-type-margin",
       text: "margin-top",
     },
     {
-      id: "",
+      id: "margin-left",
       class: "btn btn-outline-primary btn-type-margin",
       text: "margin-left",
     },
     {
-      id: "",
+      id: "margin-right",
       class: "btn btn-outline-primary btn-type-margin",
       text: "margin-right",
     },
     {
-      id: "",
+      id: "margin-bottom",
       class: "btn btn-outline-primary btn-type-margin",
       text: "margin-bottom",
     },
     {
-      id: "",
+      id: "margin-block-start",
       class: "btn btn-outline-primary btn-type-margin",
       text: "margin-block-start",
     },
     {
-      id: "",
+      id: "margin-block-end",
       class: "btn btn-outline-primary btn-type-margin",
       text: "margin-block-end",
     },
     {
-      id: "",
+      id: "margin-inline-start",
       class: "btn btn-outline-primary btn-type-margin",
       text: "margin-inline-start",
     },
     {
-      id: "",
+      id: "margin-inline-end",
       class: "btn btn-outline-primary btn-type-margin",
       text: "margin-inline-end",
     },
@@ -492,93 +513,93 @@
       text: "text-align",
     },
     {
-      id: "",
+      id: "relative",
       class: "btn btn-outline-primary btn-type-position",
       text: "relative",
     },
     {
-      id: "",
+      id: "fixed",
       class: "btn btn-outline-primary btn-type-position",
       text: "fixed",
     },
     {
-      id: "",
+      id: "absolute",
       class: "btn btn-outline-primary btn-type-position",
       text: "absolute",
     },
     {
-      id: "",
+      id: "left",
       class: "btn btn-outline-primary btn-type-position",
       text: "left",
     },
     {
-      id: "",
+      id: "top",
       class: "btn btn-outline-primary btn-type-position",
       text: "top",
     },
     {
-      id: "",
+      id: "right",
       class: "btn btn-outline-primary btn-type-position",
       text: "right",
     },
     {
-      id: "",
+      id: "bottom",
       class: "btn btn-outline-primary btn-type-position",
       text: "bottom",
     },
     {
-      id: "",
+      id: "display-inline",
       class: "btn btn-outline-primary btn-type-display",
       text: "display-inline",
     },
     {
-      id: "",
+      id: "display-inline-block",
       class: "btn btn-outline-primary btn-type-display",
       text: "display-inline-block",
     },
     {
-      id: "",
+      id: "display-block",
       class: "btn btn-outline-primary btn-type-display",
       text: "display-block",
     },
     {
-      id: "",
+      id: "display-flex",
       class: "btn btn-outline-primary btn-type-display",
       text: "display-flex",
     },
     {
-      id: "",
-      class: "btn btn-outline-primary btn-type-display",
+      id: "display-grid",
+      class: "btn btn-danger btn-type-display",
       text: "display-grid",
     },
     {
-      id: "",
-      class: "btn btn-outline-primary btn-type-display",
+      id: "display-table",
+      class: "btn btn-danger btn-type-display",
       text: "display-table",
     },
     {
-      id: "",
-      class: "btn btn-outline-primary btn-type-display",
+      id: "display-inline-flex",
+      class: "btn btn-danger btn-type-display",
       text: "display-inline-flex",
     },
     {
-      id: "",
-      class: "btn btn-outline-primary btn-type-display",
+      id: "display-inline-grid",
+      class: "btn btn-danger btn-type-display",
       text: "display-inline-grid",
     },
     {
-      id: "",
-      class: "btn btn-outline-primary btn-type-display",
+      id: "display-inline-table",
+      class: "btn btn-danger btn-type-display",
       text: "display-inline-table",
     },
     {
-      id: "flexGrow",
-      class: "btn btn-outline-primary btn-type-flex multiple",
+      id: "flex-grow",
+      class: "btn btn-warning btn-type-flex multiple",
       text: "flex-grow",
     },
     {
-      id: "flexShrink",
-      class: "btn btn-outline-primary btn-type-flex multiple",
+      id: "flex-shrink",
+      class: "btn btn-warning btn-type-flex multiple",
       text: "flex-shrink",
     },
     {
@@ -608,36 +629,36 @@
     },
     {
       id: "align-content",
-      class: "btn btn-outline-primary btn-type-flex multiple",
+      class: "btn btn-warning btn-type-flex multiple",
       text: "align-content",
     },
     {
       id: "float",
-      class: "btn btn-outline-primary btn-type-float",
+      class: "btn btn-warning btn-type-float",
       text: "float",
     },
     {
-      id: "btn-type-float_clear",
-      class: "btn btn-outline-primary btn-type-float",
+      id: "clear",
+      class: "btn btn-warning btn-type-float",
       text: "clear",
     },
     {
-      id: "",
+      id: "transform",
       class: "btn btn-outline-primary btn-type-transform",
       text: "transform",
     },
     {
-      id: "",
+      id: "rotate",
       class: "btn btn-outline-primary btn-type-transform",
       text: "rotate",
     },
     {
-      id: "",
+      id: "scale",
       class: "btn btn-outline-primary btn-type-transform",
       text: "scale",
     },
     {
-      id: "",
+      id: "translate",
       class: "btn btn-outline-primary btn-type-transform",
       text: "translate",
     },
@@ -653,117 +674,117 @@
     },
     {
       id: "mask-size",
-      class: "btn btn-outline-primary btn-type-mask",
+      class: "btn btn-warning btn-type-mask",
       text: "mask-size",
     },
     {
       id: "mask-origin",
-      class: "btn btn-outline-primary btn-type-mask",
+      class: "btn btn-warning btn-type-mask",
       text: "mask-origin",
     },
     {
       id: "mask-position",
-      class: "btn btn-outline-primary btn-type-mask",
+      class: "btn btn-warning btn-type-mask",
       text: "mask-position",
     },
     {
       id: "mask-position-x",
-      class: "btn btn-outline-primary btn-type-mask",
+      class: "btn btn-warning btn-type-mask",
       text: "mask-position-x",
     },
     {
       id: "mask-position-y",
-      class: "btn btn-outline-primary btn-type-mask",
+      class: "btn btn-warning btn-type-mask",
       text: "mask-position-y",
     },
     {
       id: "mask-mode",
-      class: "btn btn-outline-primary btn-type-mask",
+      class: "btn btn-warning btn-type-mask",
       text: "mask-mode",
     },
     {
       id: "inset",
-      class: "btn btn-outline-primary btn-type-inset",
+      class: "btn btn-warning btn-type-inset",
       text: "inset",
     },
     {
       id: "inset-block",
-      class: "btn btn-outline-primary btn-type-inset",
+      class: "btn btn-warning btn-type-inset",
       text: "inset-block",
     },
     {
       id: "inset-block-start",
-      class: "btn btn-outline-primary btn-type-inset",
+      class: "btn btn-warning btn-type-inset",
       text: "inset-block-start",
     },
     {
       id: "inset-block-end",
-      class: "btn btn-outline-primary btn-type-inset",
+      class: "btn btn-warning btn-type-inset",
       text: "inset-block-end",
     },
     {
       id: "inset-inline",
-      class: "btn btn-outline-primary btn-type-inset",
+      class: "btn btn-warning btn-type-inset",
       text: "inset-inline",
     },
     {
       id: "inset-inline-start",
-      class: "btn btn-outline-primary btn-type-inset",
+      class: "btn btn-warning btn-type-inset",
       text: "inset-inline-start",
     },
     {
       id: "inset-inline-end",
-      class: "btn btn-outline-primary btn-type-inset",
+      class: "btn btn-warning btn-type-inset",
       text: "inset-inline-end",
     },
     {
-      id: "",
-      class: "btn btn-outline-primary btn-type-column",
+      id: "column-count",
+      class: "btn btn-warning btn-type-column",
       text: "column-count",
     },
     {
       id: "column-fill",
-      class: "btn btn-outline-primary btn-type-column multiple",
+      class: "btn btn-warning btn-type-column multiple",
       text: "column-fill",
     },
     {
       id: "column-gap",
-      class: "btn btn-outline-primary btn-type-column multiple",
+      class: "btn btn-warning btn-type-column multiple",
       text: "column-gap",
     },
     {
       id: "column-rule",
-      class: "btn btn-outline-primary btn-type-column multiple",
+      class: "btn btn-warning btn-type-column multiple",
       text: "column-rule",
     },
     {
       id: "column-rule-color",
-      class: "btn btn-outline-primary btn-type-column multiple",
+      class: "btn btn-warning btn-type-column multiple",
       text: "column-rule-color",
     },
     {
       id: "column-rule-style",
-      class: "btn btn-outline-primary btn-type-column multiple",
+      class: "btn btn-warning btn-type-column multiple",
       text: "column-rule-style",
     },
     {
       id: "column-rule-width",
-      class: "btn btn-outline-primary btn-type-column multiple",
+      class: "btn btn-warning btn-type-column multiple",
       text: "column-rule-width",
     },
     {
       id: "column-span",
-      class: "btn btn-outline-primary btn-type-column multiple",
+      class: "btn btn-warning btn-type-column multiple",
       text: "column-span",
     },
     {
       id: "column-width",
-      class: "btn btn-outline-primary btn-type-column",
+      class: "btn btn-warning btn-type-column",
       text: "column-width",
     },
     {
       id: "columns",
-      class: "btn btn-outline-primary btn-type-column multiple",
+      class: "btn btn-warning btn-type-column multiple",
       text: "columns",
     },
     {
@@ -783,56 +804,56 @@
     },
     {
       id: "list-style-image",
-      class: "btn btn-outline-primary btn-type-list",
+      class: "btn btn-warning btn-type-list",
       text: "list-style-image",
     },
     {
       id: "scrollbar-color",
-      class: "btn btn-outline-primary btn-type-scrollbar multiple",
+      class: "btn btn-warning btn-type-scrollbar multiple",
       text: "scrollbar-color",
     },
     {
       id: "webkit-scroolbar-thumb",
-      class: "btn btn-outline-primary btn-type-scrollbar multiple",
+      class: "btn btn-warning btn-type-scrollbar multiple",
       text: "webkit-scroolbar-thumb",
     },
     {
       id: "webkit-scroolbar-track",
-      class: "btn btn-outline-primary btn-type-scrollbar multiple",
+      class: "btn btn-warning btn-type-scrollbar multiple",
       text: "webkit-scroolbar-track",
     },
     {
-      id: "",
+      id: "animation",
       class: "btn btn-outline-primary btn-type-animation",
       text: "animation",
     },
     {
-      id: "",
+      id: "animation-timing-function",
       class: "btn btn-outline-primary btn-type-animation",
       text: "animation-timing-function",
     },
     {
-      id: "",
+      id: "animation-delay",
       class: "btn btn-outline-primary btn-type-animation",
       text: "animation-delay",
     },
     {
-      id: "",
+      id: "animation-name",
       class: "btn btn-outline-primary btn-type-animation",
       text: "animation-name",
     },
     {
-      id: "",
+      id: "animation-duration",
       class: "btn btn-outline-primary btn-type-animation",
       text: "animation-duration",
     },
     {
-      id: "",
+      id: "animation-play-state",
       class: "btn btn-outline-primary btn-type-animation",
       text: "animation-play-state",
     },
     {
-      id: "",
+      id: "animation-iteration-count",
       class: "btn btn-outline-primary btn-type-animation",
       text: "animation-iteration-count",
     },
@@ -842,159 +863,79 @@
       text: "transition",
     },
     {
-      id: "",
+      id: "transition-delay",
       class: "btn btn-outline-primary btn-type-transition",
       text: "transition-delay",
     },
     {
-      id: "",
+      id: "transition-duration",
       class: "btn btn-outline-primary btn-type-transition",
       text: "transition-duration",
     },
     {
-      id: "",
+      id: "transition-timing-function",
       class: "btn btn-outline-primary btn-type-transition",
       text: "transition-timing-function",
     },
     {
-      id: "",
+      id: "transition-property",
       class: "btn btn-outline-primary btn-type-transition",
       text: "transition-property",
     },
     {
-      id: "",
+      id: "box-shadow",
       class: "btn btn-outline-primary btn-type-another",
       text: "box-shadow",
     },
+    {
+      id: "all",
+      class: "btn btn-warning btn-type-another",
+      text: "all",
+    },
   ];
-  var arr = [
-    { id: "btn-type-text", heading: "Thay đổi chữ" },
-    { id: "btn-type-background", heading: "Thay đổi nền" },
-    { id: "btn-type-dimension", heading: "Thay đổi kích thước" },
-    { id: "btn-type-border", heading: "Thay đổi đường viền" },
-    { id: "btn-type-padding", heading: "Thay đổi không gian" },
-    { id: "btn-type-outline", heading: "Thay đổi viền ngoài" },
-    { id: "btn-type-margin", heading: "Thay đổi khoảng cách 2 phần tử" },
-    { id: "btn-type-position", heading: "Thay đổi kiểu position" },
-    { id: "btn-type-display", heading: "Thay đổi Kiểu hiển thị" },
-    { id: "btn-type-flex", heading: "Thay đổi bố cục flex" },
-    { id: "btn-type-float", heading: "Thay đổi kiểu trôi" },
-    { id: "btn-type-transform", heading: "Thay đổi hình dạng" },
-    { id: "btn-type-mask", heading: "Thay đổi mặt nạ" },
-    { id: "btn-type-inset", heading: "Thay đổi khoảng cách cha con" },
-    { id: "btn-type-column", heading: "Thay đổi bố cục cột" },
-    { id: "btn-type-list", heading: "Thay đổi kiểu danh sách" },
-    { id: "btn-type-scrollbar", heading: "Thay đổi kiểu thanh kéo" },
-    { id: "btn-type-animation", heading: "Thay đổi kiểu chuyển động animation" },
-    { id: "btn-type-transition", heading: "Thay đổi kiểu chuyển động transition" },
-    { id: "btn-type-another", heading: "Thay đổi khác" },
-  ];
-  var demo = document.getElementById("control-area");
-  arr.forEach((e) => {
-    var ul = document.createElement("ul");
-    var h = document.createElement("h6");
-    var textNode = document.createTextNode(e.heading);
-    h.appendChild(textNode);
-    ul.appendChild(h);
-    ul.id = e.id;
-    demo.appendChild(ul);
-  });
 
-  arr.forEach((e) => {
-    data.forEach((arg) => {
-      arg.class.includes(e.id) &&
+  var control_area = document.getElementById("control-area");
+  // thêm danh sách cho control area
+  phan_loai.forEach((loai) => {
+    var ul = document.createElement("ul");
+    var heading = document.createElement("h6");
+    var headingNode = document.createTextNode(loai.heading);
+    heading.appendChild(headingNode);
+    ul.appendChild(heading);
+    ul.id = loai.id;
+    control_area.appendChild(ul);
+  });
+  // thêm toàn bộ nút cho control area
+  phan_loai.forEach((loai) => {
+    nut_bam.forEach((nut) => {
+      nut.class.includes(loai.id) &&
         (function () {
           var li = document.createElement("li");
           var btn = document.createElement("button");
-          btn.className = arg.class;
-          btn.id = arg.id;
-          var textNode = document.createTextNode(arg.text);
+          btn.className = nut.class;
+          btn.id = nut.id;
+          var textNode = document.createTextNode(nut.text);
           btn.appendChild(textNode);
           li.appendChild(btn);
-          document.getElementById(e.id).appendChild(li);
+          document.getElementById(loai.id).appendChild(li);
         })();
     });
   });
 })();
+
+// gan su kien cho toan bo nút bấm
 (function () {
-  var byObject = document.getElementById("byObject");
-  byObject.onclick = function () {
-    "use strict";
-    var arr = [
-      { id: "btn-type-text", heading: "Thay đổi chữ" },
-      { id: "btn-type-background", heading: "Thay đổi nền" },
-      { id: "btn-type-dimension", heading: "Thay đổi kích thước" },
-      { id: "btn-type-border", heading: "Thay đổi đường viền" },
-      { id: "btn-type-padding", heading: "Thay đổi không gian" },
-      { id: "btn-type-outline", heading: "Thay đổi viền ngoài" },
-      { id: "btn-type-margin", heading: "Thay đổi khoảng cách 2 phần tử" },
-      { id: "btn-type-position", heading: "Thay đổi kiểu position" },
-      { id: "btn-type-display", heading: "Thay đổi Kiểu hiển thị" },
-      { id: "btn-type-flex", heading: "Thay đổi bố cục flex" },
-      { id: "btn-type-float", heading: "Thay đổi kiểu trôi" },
-      { id: "btn-type-transform", heading: "Thay đổi hình dạng" },
-      { id: "btn-type-mask", heading: "Thay đổi mặt nạ" },
-      { id: "btn-type-inset", heading: "Thay đổi khoảng cách cha con" },
-      { id: "btn-type-column", heading: "Thay đổi bố cục cột" },
-      { id: "btn-type-list", heading: "Thay đổi kiểu danh sách" },
-      { id: "btn-type-scrollbar", heading: "Thay đổi kiểu thanh kéo" },
-      { id: "btn-type-animation", heading: "Thay đổi kiểu chuyển động animation" },
-      { id: "btn-type-transition", heading: "Thay đổi kiểu chuyển động transition" },
-      { id: "btn-type-another", heading: "Thay đổi khác" },
-    ];
-
-    var buttons = document.querySelectorAll('button[class*="btn-type"]');
-    var data = [];
-    document.querySelector(".by-type").classList.add("d-none");
-    buttons.forEach((arg) => {
-      var obj = {};
-      obj.id = arg.id;
-      obj.class = arg.className;
-      obj.innerText = arg.innerText;
-      data.push(obj);
+  buttons = document.querySelectorAll("#control-area button");
+  buttons.forEach((e) => {
+    e.addEventListener("click", function () {
+      clear();
+      var control_area = document.getElementById("demo");
+      control_area.innerText = "Nhà báo – Nhà thơ Phạm Quốc Cường sinh năm 1980 tại Nam Đàn – Nghệ An, bút danh: Quốc Đô, Quốc Minh, Trà My, TQC, QM, HM. Phạm Quốc Cường hiện là Trưởng ban Pháp luật – Bạn đọc, thuộc Báo Pháp luật Việt Nam.Các tập thơ đã xuất bản: Viết cho người tình mơ; Anh chờ qua trăng; Tình hoa; Tình yêu còn lại; Khúc ca tình đời; Tuyển chọn 100 bài thơ tình và đời; Bước đời. Phạm Quốc Cường cũng là tác giả của nhiều ca khúc được yêu thíchCác giải thưởng: Tham gia chỉ đạo, biên tập, tổ chức xuất bản loạt bài của nhóm phóng viên Báo điện tử Pháp luật Việt Nam (Phapluatplus.vn) được trao giải C giải Báo chí Quốc gia năm 2016; Giải thưởng báo chí toàn quốc phòng, chống tham nhũng, tiêu cực các năm 2020-2021, 2022-2023; Giải thưởng báo chí toàn quốc về Quốc hội và Hội đồng nhân dân (Giải Diên Hồng, tháng 1 năm 2024); Các giải thưởng Báo chí Bộ, ngành, địa phương; Bằng khen, giấy khen của các Bộ, ngành Trung ương, và nhiều giải thưởng khác về văn hóa, nghệ thuật, thể thao.";
+      control_area.className = e.innerText;
+      control_area.scrollIntoView();
     });
-    console.log(typeof data);
-    var o = document.getElementById("object");
-
-    arr.forEach((e) => {
-      var ul = document.createElement("ul");
-      var h = document.createElement("h6");
-      var textNode = document.createTextNode(e.heading);
-      h.appendChild(textNode);
-      ul.appendChild(h);
-      ul.id = e.id;
-      o.appendChild(ul);
-    });
-    var index = 0;
-    buttons.forEach((btn) => {
-      arr.forEach((arg) => {
-        addButton(btn, arg.id);
-      });
-    });
-    function addButton(btn, id) {
-      btn.classList.contains(id) &&
-        (function () {
-          var li = document.createElement("li");
-          li.appendChild(btn);
-          document.getElementById(id).appendChild(li);
-          document.getElementById("dem").innerHTML = index;
-          index++;
-        })();
-    }
-    document.querySelector(".by-type").classList.add("d-none");
-  };
-})();
-// gan su kien cho toan bo button
-buttons = document.querySelectorAll("#control-area button");
-buttons.forEach((e) => {
-  e.addEventListener("click", function () {
-    clear();
-    var demo = document.getElementById("demo");
-    demo.innerText = "Nhà báo – Nhà thơ Phạm Quốc Cường sinh năm 1980 tại Nam Đàn – Nghệ An, bút danh: Quốc Đô, Quốc Minh, Trà My, TQC, QM, HM. Phạm Quốc Cường hiện là Trưởng ban Pháp luật – Bạn đọc, thuộc Báo Pháp luật Việt Nam.Các tập thơ đã xuất bản: Viết cho người tình mơ; Anh chờ qua trăng; Tình hoa; Tình yêu còn lại; Khúc ca tình đời; Tuyển chọn 100 bài thơ tình và đời; Bước đời. Phạm Quốc Cường cũng là tác giả của nhiều ca khúc được yêu thíchCác giải thưởng: Tham gia chỉ đạo, biên tập, tổ chức xuất bản loạt bài của nhóm phóng viên Báo điện tử Pháp luật Việt Nam (Phapluatplus.vn) được trao giải C giải Báo chí Quốc gia năm 2016; Giải thưởng báo chí toàn quốc phòng, chống tham nhũng, tiêu cực các năm 2020-2021, 2022-2023; Giải thưởng báo chí toàn quốc về Quốc hội và Hội đồng nhân dân (Giải Diên Hồng, tháng 1 năm 2024); Các giải thưởng Báo chí Bộ, ngành, địa phương; Bằng khen, giấy khen của các Bộ, ngành Trung ương, và nhiều giải thưởng khác về văn hóa, nghệ thuật, thể thao.";
-    demo.className = e.innerText;
-    demo.scrollIntoView();
   });
-});
+})();
 
 // xoa, in lai
 (function () {
@@ -1017,13 +958,17 @@ buttons.forEach((e) => {
   <li>Lorem ipsum dolor sit</li>
 </ul>
 `;
+
   var htmlImg = `<img src="https://i.pravatar.cc" alt="avatar">`;
   var htmlInset = `<div>Lorem ipsum dolor sitLorem ipsum dolor sitLorem ipsum dolor sit</div>`;
   var htmlColumn = "<h1>Đây là h1</h1>Lorem ipsum dolor sitLorem ipsum dolor sitLorem ipsum dolor sitLorem ipsum dolor sitLorem ipsum dolor sitLorem ipsum dolor sitLorem ipsum dolor sitLorem ipsum dolor sitLorem ipsum dolor sit";
+  var htmlAll = `<div class="box1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, exercitationem.</div>
+  <div class="box2">Lorem ipsum dolor sit amet.</div>
+  <div class="box3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>`;
   var c = [
     { id: "justify-content", note: "", warning: "<strong>Warning !</strong> justify-content Chỉ hoạt động khi còn không gian", html: htmlFlex, multiple: false },
-    { id: "flexGrow", note: "", warning: "", html: htmlFlex, multiple: true },
-    { id: "flexShrink", note: "", warning: "", html: htmlFlex, multiple: true },
+    { id: "flex-grow", note: "", warning: "", html: htmlFlex, multiple: true },
+    { id: "flex-shrink", note: "", warning: "", html: htmlFlex, multiple: true },
     { id: "align-items", note: "", warning: "", html: htmlFlex, multiple: true },
     { id: "flex-wrap", note: "", warning: "", html: htmlFlex, multiple: true },
     { id: "flex-direction", note: "", warning: "", html: htmlFlex, multiple: true },
@@ -1063,39 +1008,33 @@ buttons.forEach((e) => {
     { id: "column-rule-width", note: "", warning: "<strong>WARNING !</strong> Dùng chung với column-count, có thể thêm height", html: htmlText, multiple: true },
     { id: "column-span", note: "<strong>Note</strong> Span hiểu đơn giản là gom dòng, nghĩa là chỉ định 1 thành phần thay vì nằm trong 1 column thì có thể gom dòng lại", warning: "<strong>WARNING !</strong> Dùng chung với column-count, có thể thêm height", html: htmlColumn, multiple: true },
     { id: "columns", note: "<strong>Note</strong> minimun and maximum", warning: "<strong>WARNING !</strong>columns có s, resize mới thấy hiệu ứng", html: htmlColumn, multiple: true },
+    { id: "all", note: "<strong>Note:</strong> ", warning: "<strong>WARNING !</strong>", html: htmlAll, multiple: false },
   ];
   c.forEach(function (e) {
-    e.multiple === true &&
-      (function () {
-        document.getElementById(e.id).classList.add("multiple");
-      })();
-
-    document.getElementById(e.id).addEventListener("click", function () {
-      flex(e);
+    document.getElementById(e.id) && e.multiple === true && document.getElementById(e.id).classList.add("multiple");
+    document.getElementById(e.id) && document.getElementById(e.id).addEventListener("click", function(){
+      flex(e)
     });
   });
   function flex(e) {
     // xoá note
     clear();
     // in nội dung
-    var demo = document.getElementById("demo");
-    demo.innerHTML = e.html;
+    document.getElementById("demo").innerHTML = e.html;
     // in note
-    e.note !== ""
-      ? (function () {
-          document.getElementById("note").innerHTML = e.note;
-          document.getElementById("note").classList.add("show");
-        })()
-      : "";
-    e.wraning !== ""
-      ? (function () {
-          document.getElementById("warning").innerHTML = e.warning;
-        })()
-      : "";
+    e.note !== "" &&
+      (function () {
+        document.getElementById("note").innerHTML = e.note;
+        document.getElementById("note").classList.add("show");
+      })();
+
+    e.wraning !== "" &&
+      (function () {
+        document.getElementById("warning").innerHTML = e.warning;
+      })();
     // in double
   }
 })();
-
 // chuyen doi giua cac tab
 (function () {
   var id = ["kichthuoc", "kieu", "vitri", "mausac", "chuyendong"];
@@ -1116,15 +1055,10 @@ buttons.forEach((e) => {
     }
   });
 })();
-// xoa 2 dong not va warning
-function clear() {
-  document.getElementById("note").innerText = "";
-  document.getElementById("warning").innerText = "";
-}
 // in ra tong so button
 (function () {
   "use strit";
-  var total = document.querySelectorAll(".container button");
+  var total = document.querySelectorAll("#control-area button");
   document.getElementById("total").innerText = total.length;
 })();
 // copy script test css
@@ -1164,3 +1098,8 @@ function clear() {
     navigator.clipboard.writeText(script);
   }
 })();
+// xoa 2 dong not va warning
+function clear() {
+  document.getElementById("note").innerText = "";
+  document.getElementById("warning").innerText = "";
+}

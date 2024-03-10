@@ -135,3 +135,4 @@ function window_document_forms() {
     result.innerText = "Console log se thay";
     statement.innerText = 'var forms = window.document.forms;';
 }
+

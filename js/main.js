@@ -29,6 +29,11 @@
     { id: "js25", id_heading: "document", version: "deprecated", text: "window.document.embeds" },
     { id: "js26", id_heading: "document", version: "deprecated", text: "window.document.execCommand()" },
     { id: "js27", id_heading: "document", version: "dom1", text: "window.document.forms" },
+    { id: "js28", id_heading: "document", version: "dom2", text: "window.document.getElementById()" },
+    { id: "js29", id_heading: "document", version: "dom1", text: "window.document.getElementByClassName()" },
+    { id: "js30", id_heading: "document", version: "dom1", text: "window.document.getElementByName()" },
+    { id: "js31", id_heading: "document", version: "dom1", text: "window.document.getElementByTagName()" },
+    
   ];
   var buttons = document.getElementById("control");
   var ul = window.document.createElement("ul");
