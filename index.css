@@ -1,4 +1,3 @@
-
 html {
   scroll-behavior: smooth;
 }
@@ -107,7 +106,11 @@ p {
   }
 }
 
-#kichthuoc, #vitri, #kieu, #mausac, #chuyendong {
+#kichthuoc,
+#vitri,
+#kieu,
+#mausac,
+#chuyendong {
   /* transform: translateX(-100%); */
   /* background-color: blue; */
 }
@@ -184,8 +187,7 @@ p {
 } */
 button.multiple {
   border-bottom: 5px solid red;
-      border-style: double;
-      
+  border-style: double;
 }
 /* end button */
 /* list */
@@ -529,8 +531,6 @@ ul {
   position: relative;
   border: 1px solid red;
   height: 500px;
-  
-  
 }
 .insert > div {
   position: absolute;
@@ -549,9 +549,6 @@ ul {
   position: relative;
   border: 1px solid red;
   height: 500px;
-  
-  
-  
 }
 .inset-block > div {
   position: absolute;
@@ -575,12 +572,10 @@ ul {
   position: absolute;
   animation: inset-block-end 2s infinite alternate;
   background-color: red;
-  
 }
 @keyframes inset-block-end {
   from {
     inset-block-end: 0px;
-    
   }
   to {
     inset-block-end: 40px;
@@ -595,12 +590,10 @@ ul {
   position: absolute;
   animation: inset-block-start 2s infinite alternate;
   background-color: red;
-  
 }
 @keyframes inset-block-start {
   from {
     inset-block-start: 0px;
-    
   }
   to {
     inset-block-start: 40px;
@@ -615,7 +608,6 @@ ul {
   position: absolute;
   animation: inset-inline-end 2s infinite alternate;
   background-color: red;
-  
 }
 @keyframes inset-inline-end {
   from {
@@ -634,12 +626,10 @@ ul {
   position: absolute;
   animation: inset-inline-start 2s infinite alternate;
   background-color: red;
-  
 }
 @keyframes inset-inline-start {
   from {
     inset-inline-start: 0px;
-    
   }
   to {
     inset-inline-start: 40px;
@@ -654,12 +644,10 @@ ul {
   position: absolute;
   animation: inset-inline 2s infinite alternate;
   background-color: red;
-  
 }
 @keyframes inset-inline {
   from {
     inset-inline: 0px;
-    
   }
   to {
     inset-inline: 40px;
@@ -1082,6 +1070,136 @@ ul {
   }
   from {
     background-position: bottom right;
+  }
+}
+.background-size {
+  background-image: url("https://i.pravatar.cc");
+  animation: background-size 2s infinite;
+  height: 500px;
+}
+@keyframes background-size {
+  0% {
+    background-size: cover;
+  }
+  50% {
+    background-size: contain;
+  }
+  100% {
+    background-size: 20%;
+  }
+}
+.background-attachment {
+  background-image: url("https://i.pravatar.cc");
+  animation: background-attachment 10s infinite;
+  height: 500px;
+}
+@keyframes background-attachment {
+  0% {
+    background-attachment: fixed;
+  }
+  50% {
+    background-attachment: local;
+  }
+  100% {
+    background-attachment: scroll;
+  }
+}
+.background-clip {
+  background-color: yellow;
+  background-image: url("https://i.pravatar.cc");
+  animation: background-clip 3s infinite;
+  border: 20px solid red;
+  padding: 20px;
+
+  height: 500px;
+}
+@keyframes background-clip {
+  0% {
+    background-clip: border-box;
+  }
+  50% {
+    background-clip: padding-box;
+  }
+  100% {
+    background-clip: content-box;
+  }
+}
+.background-origin {
+  background-color: yellow;
+  background-image: url("https://i.pravatar.cc");
+  animation: background-origin 6s infinite;
+  border: 20px solid rgba(255, 0, 255, 0.2);
+  padding: 20px;
+
+  height: 500px;
+}
+@keyframes background-origin {
+  0% {
+    background-origin: border-box;
+  }
+  50% {
+    background-origin: padding-box;
+  }
+  100% {
+    background-origin: content-box;
+  }
+}
+.background-repeat {
+  background-color: yellow;
+  background-image: url("https://i.pravatar.cc");
+  animation: background-repeat 6s infinite;
+  border: 20px solid rgba(255, 0, 255, 0.2);
+  padding: 20px;
+  background-size: 100px;
+  height: 500px;
+}
+@keyframes background-repeat {
+  0% {
+    background-repeat: repeat;
+  }
+  33% {
+    background-repeat: repeat-x;
+  }
+  66% {
+    background-repeat: repeat-y;
+  }
+  100% {
+    background-repeat: no-repeat;
+  }
+}
+.background-blend-mode {
+  background-image: url("https://i.pravatar.cc"), url("https://img.freepik.com/free-vector/random-square-halftone-pattern_1409-1062.jpg");
+  animation: background-blend-mode 10s infinite;
+
+  height: 500px;
+}
+@keyframes background-blend-mode {
+  0% {
+    background-blend-mode: color;
+  }
+  10% {
+    background-blend-mode: color-burn;
+  }
+  20% {
+    background-blend-mode: color-dodge;
+  }
+  30% {
+    background-blend-mode: darken;
+  }
+  40% {
+    background-blend-mode: difference;
+  }
+  50% {
+    background-blend-mode: exclusion;
+  }
+  60% {
+    background-blend-mode: hard-light;
+  }
+  70% {
+    background-blend-mode: hue;
+  }
+  80% {
+    background-blend-mode: lighten;
   }
 }
 .background-position-x {
@@ -1629,7 +1747,6 @@ ul {
 @keyframes letter-spacing {
   25% {
     letter-spacing: 0px;
-    
   }
   100% {
     letter-spacing: 10px;
@@ -2029,7 +2146,7 @@ ul {
     mask-repeat: no-repeat;
   }
   50% {
-    -webkit-mask-repeat:repeat;
+    -webkit-mask-repeat: repeat;
     mask-repeat: repeat;
   }
   75% {
@@ -2069,7 +2186,6 @@ ul {
   33% {
     -webkit-mask-origin: content-box;
     mask-origin: content-box;
-    
   }
   66% {
     -webkit-mask-origin: padding-box;
@@ -2093,7 +2209,6 @@ ul {
   padding: 100px;
   background-color: red;
   border: 50px solid blue;
-
 }
 @keyframes mask-position {
   10% {
@@ -2131,7 +2246,6 @@ ul {
   90% {
     -webkit-mask-position: center center;
     mask-position: center center;
-    
   }
 }
 .outline {
@@ -2150,7 +2264,6 @@ ul {
   }
   100% {
     outline: 25px dotted yellow;
-    
   }
 }
 .column-count {
@@ -2168,7 +2281,6 @@ ul {
   }
   100% {
     column-count: 4;
-    
   }
 }
 .column-count {
@@ -2186,108 +2298,94 @@ ul {
   }
   100% {
     column-count: 4;
-    
   }
 }
 .column-fill {
   column-count: 3;
   animation: column-fill 4s infinite linear alternate;
   height: 500px;
-  
 }
 @keyframes column-fill {
   25% {
     column-fill: auto;
   }
-  
+
   100% {
     column-fill: balance;
-    
   }
 }
 .column-gap {
   column-count: 3;
   animation: column-gap 4s infinite linear alternate;
-  
 }
 @keyframes column-gap {
   25% {
     column-gap: 0px;
   }
-  
+
   100% {
     column-gap: 50px;
-    
   }
 }
 .column-rule {
   column-count: 3;
   animation: column-rule 4s infinite linear alternate;
-  
 }
 @keyframes column-rule {
   25% {
     column-rule: 1px solid red;
   }
-  
+
   100% {
     column-rule: 10px solid red;
-    
   }
 }
 .column-rule-color {
   column-count: 3;
   animation: column-rule-color 4s infinite linear alternate;
   column-rule: 10px solid red;
-  
 }
 @keyframes column-rule-color {
   25% {
-    column-rule-color:  red;
+    column-rule-color: red;
   }
-  
+
   100% {
-    column-rule-color:  blue;
-    
+    column-rule-color: blue;
   }
 }
 .column-rule-style {
   column-count: 3;
   animation: column-rule-style 4s infinite linear alternate;
   column-rule: 10px solid red;
-  
 }
 @keyframes column-rule-style {
   25% {
-    column-rule-style:  dashed;
+    column-rule-style: dashed;
   }
-  
+
   100% {
-    column-rule-style:  dotted;
-    
+    column-rule-style: dotted;
   }
 }
 .column-rule-width {
   column-count: 3;
   animation: column-rule-width 4s infinite linear alternate;
   column-rule: 10px solid red;
-  
 }
 @keyframes column-rule-width {
   25% {
-    column-rule-width:  1px;
+    column-rule-width: 1px;
   }
-  
+
   100% {
-    column-rule-width:  10px;
-    
+    column-rule-width: 10px;
   }
 }
 .column-span {
   column-count: 3;
-  
+
   column-rule: 10px solid red;
-  
 }
 .column-span h1 {
   animation: column-span 2s infinite linear alternate;
@@ -2296,27 +2394,23 @@ ul {
   25% {
     column-span: initial;
   }
-  
+
   100% {
-    column-span:  all;
-    
+    column-span: all;
   }
 }
 .column-width {
-  
   column-rule: 10px solid red;
   animation: column-width 2s infinite linear alternate;
-  
 }
 
 @keyframes column-width {
   25% {
     column-width: 100px;
   }
-  
+
   100% {
-    column-width:  300px;
-    
+    column-width: 300px;
   }
 }
 .columns {
@@ -2327,10 +2421,9 @@ ul {
   0% {
     columns: 80px 3;
   }
-  
+
   100% {
-    columns:  100px 4;
-    
+    columns: 100px 4;
   }
 }
 .border-style {
@@ -2478,7 +2571,7 @@ ul {
 }
 /* end kieu */
 /* object */
-#object button {
+#control-area button {
   min-width: 200px !important;
   text-align: left;
 }
