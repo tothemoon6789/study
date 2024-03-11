@@ -248,6 +248,11 @@
       text: "border-top-width",
     },
     {
+      id: "border-width",
+      class: "btn btn-outline-primary btn-type-border",
+      text: "border-width",
+    },
+    {
       id: "border-right-width",
       class: "btn btn-outline-primary btn-type-border",
       text: "border-right-width",
@@ -401,6 +406,81 @@
       id: "border-inline-end-color",
       class: "btn btn-outline-primary btn-type-border",
       text: "border-inline-end-color",
+    },
+    {
+      id: "border-start-start-radius",
+      class: "btn btn-outline-primary btn-type-border",
+      text: "border-start-start-radius",
+    },
+    {
+      id: "border-start-end-radius",
+      class: "btn btn-outline-primary btn-type-border",
+      text: "border-start-end-radius",
+    },
+    {
+      id: "border-end-start-radius",
+      class: "btn btn-outline-primary btn-type-border",
+      text: "border-end-start-radius",
+    },
+    {
+      id: "border-end-end-radius",
+      class: "btn btn-outline-primary btn-type-border",
+      text: "border-end-end-radius",
+    },
+    {
+      id: "border-image",
+      class: "btn btn-outline-primary btn-type-border",
+      text: "border-image",
+    },
+    {
+      id: "border-image-source",
+      class: "btn btn-outline-primary btn-type-border",
+      text: "border-image-source",
+    },
+    {
+      id: "border-image-width",
+      class: "btn btn-outline-primary btn-type-border",
+      text: "border-image-width",
+    },
+    {
+      id: "border-image-outset",
+      class: "btn btn-outline-primary btn-type-border",
+      text: "border-image-outset",
+    },
+    {
+      id: "border-image-slice",
+      class: "btn btn-outline-primary btn-type-border",
+      text: "border-image-slice",
+    },
+    {
+      id: "border-image-repeat",
+      class: "btn btn-outline-primary btn-type-border",
+      text: "border-image-repeat",
+    },
+    {
+      id: "border-radius",
+      class: "btn btn-outline-primary btn-type-border",
+      text: "border-radius",
+    },
+    {
+      id: "border-top-left-radius",
+      class: "btn btn-outline-primary btn-type-border",
+      text: "border-top-left-radius",
+    },
+    {
+      id: "border-top-right-radius",
+      class: "btn btn-outline-primary btn-type-border",
+      text: "border-top-right-radius",
+    },
+    {
+      id: "border-bottom-right-radius",
+      class: "btn btn-outline-primary btn-type-border",
+      text: "border-bottom-right-radius",
+    },
+    {
+      id: "border-bottom-left-radius",
+      class: "btn btn-outline-primary btn-type-border",
+      text: "border-bottom-left-radius",
     },
     {
       id: "padding",
@@ -828,6 +908,11 @@
       text: "animation",
     },
     {
+      id: "animation-direction",
+      class: "btn btn-warning btn-type-animation",
+      text: "animation-direction",
+    },
+    {
       id: "animation-timing-function",
       class: "btn btn-outline-primary btn-type-animation",
       text: "animation-timing-function",
@@ -836,6 +921,11 @@
       id: "animation-delay",
       class: "btn btn-outline-primary btn-type-animation",
       text: "animation-delay",
+    },
+    {
+      id: "animation-fill-mode",
+      class: "btn btn-warning btn-type-animation",
+      text: "animation-fill-mode",
     },
     {
       id: "animation-name",
@@ -891,6 +981,66 @@
       id: "all",
       class: "btn btn-warning btn-type-another",
       text: "all",
+    },
+    {
+      id: "accent-color",
+      class: "btn btn-warning btn-type-another",
+      text: "accent-color",
+    },
+    {
+      id: "backdrop-filter",
+      class: "btn btn-warning btn-type-another",
+      text: "backdrop-filter",
+    },
+    {
+      id: "backface-visibility",
+      class: "btn btn-warning btn-type-another",
+      text: "backface-visibility",
+    },
+    {
+      id: "block-size",
+      class: "btn btn-warning btn-type-another",
+      text: "block-size",
+    },
+    {
+      id: "border-collapse",
+      class: "btn btn-warning btn-type-another",
+      text: "border-collapse",
+    },
+    {
+      id: "box-decoration-break",
+      class: "btn btn-warning btn-type-another",
+      text: "box-decoration-break",
+    },
+    {
+      id: "box-reflect",
+      class: "btn btn-warning btn-type-another",
+      text: "box-reflect",
+    },
+    {
+      id: "caption-side",
+      class: "btn btn-warning btn-type-another",
+      text: "caption-side",
+    },
+    {
+      id: "caret-color",
+      class: "btn btn-warning btn-type-another",
+      text: "caret-color",
+    },
+    {
+      id: "clip",
+      class: "btn btn-warning btn-type-another deprecated",
+      text: "clip",
+    },
+    {
+      id: "clip-path",
+      class: "btn btn-warning btn-type-another",
+      text: "clip-path",
+    },
+    {
+      id: "content",
+      class: "btn btn-warning btn-type-another",
+      text: "content",
     },
   ];
 
@@ -958,6 +1108,21 @@
   <li>Lorem ipsum dolor sit</li>
 </ul>
 `;
+var htmlTable = `<table>
+<caption>Table 1.1 Customers</caption>
+<tr>
+  <th>Firstname</th>
+  <th>Lastname</th>
+</tr>
+<tr>
+  <td>Peter</td>
+  <td>Griffin</td>
+</tr>
+<tr>
+  <td>Lois</td>
+  <td>Griffin</td>
+</tr>
+</table>`;
 
   var htmlImg = `<img src="https://i.pravatar.cc" alt="avatar">`;
   var htmlInset = `<div>Lorem ipsum dolor sitLorem ipsum dolor sitLorem ipsum dolor sit</div>`;
@@ -965,6 +1130,12 @@
   var htmlAll = `<div class="box1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, exercitationem.</div>
   <div class="box2">Lorem ipsum dolor sit amet.</div>
   <div class="box3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>`;
+  var htmlAccentColor = `<input type="checkbox" name="" id="">
+  <input type="radio" name="" id="">
+  <input type="range" name="" id="">
+  <input type="text" name="" id="">`;
+  var htmlBoxDecorationBreak = '<span class="ex1">CSS<br>is<br>easy<br>to learn</span>';
+  var htmlCaretColor = '<input type="text" />';
   var c = [
     { id: "justify-content", note: "", warning: "<strong>Warning !</strong> justify-content Chỉ hoạt động khi còn không gian", html: htmlFlex, multiple: false },
     { id: "flex-grow", note: "", warning: "", html: htmlFlex, multiple: true },
@@ -1008,13 +1179,24 @@
     { id: "column-rule-width", note: "", warning: "<strong>WARNING !</strong> Dùng chung với column-count, có thể thêm height", html: htmlText, multiple: true },
     { id: "column-span", note: "<strong>Note</strong> Span hiểu đơn giản là gom dòng, nghĩa là chỉ định 1 thành phần thay vì nằm trong 1 column thì có thể gom dòng lại", warning: "<strong>WARNING !</strong> Dùng chung với column-count, có thể thêm height", html: htmlColumn, multiple: true },
     { id: "columns", note: "<strong>Note</strong> minimun and maximum", warning: "<strong>WARNING !</strong>columns có s, resize mới thấy hiệu ứng", html: htmlColumn, multiple: true },
-    { id: "all", note: "<strong>Note:</strong> ", warning: "<strong>WARNING !</strong>", html: htmlAll, multiple: false },
+    { id: "all", note: "Thay đổi toàn bộ thuộc tính trở áp dụng lên phần tử thành kế thừa hoặc như khởi tạo  ", warning: "<strong>WARNING !</strong>", html: htmlAll, multiple: false },
+    { id: "accent-color", note: "Thay đổi màu sắc của ô input khi được bấm chọn", warning: "", html: htmlAccentColor, multiple: false },
+    { id: "animation-fill-mode", note: "Thay đổi áp đặt trạng thái khi kết thúc chuyển động, sẽ trở thành trạng thái đầu backwards, hay kết thúc forwards hay tuỳ ở đâu nằm ở đó như both", warning: "", html: htmlText, multiple: false },
+    { id: "backdrop-filter", note: "", warning: "Cần 2 lớp chồng lên nhau, lớp trên phải có opacity và backdrop-filter ứng dụng lên lớp trên", html: htmlInset, multiple: false },
+    { id: "backface-visibility", note: "Thay đổi hiển thị hay không lớp phía sau của một phần tử", warning: "", html: htmlText, multiple: false },
+    { id: "block-size", note: "Thay đổi chiều cao của phần tử block, phù hợp với wrting-mode", warning: "", html: htmlText, multiple: false },
+    { id: "border-collapse", note: "Thay đổi hợp nhất border trong table", warning: "", html: htmlTable, multiple: false },
+    { id: "box-decoration-break", note: "", warning: "", html: htmlBoxDecorationBreak, multiple: false },
+    { id: "caption-side", note: "", warning: "", html: htmlTable, multiple: false },
+    { id: "caret-color", note: "", warning: "", html: htmlCaretColor, multiple: false },
+    { id: "clip-path", note: "Trang path: https://bennettfeely.com/clippy/", warning: "", html: htmlText, multiple: false },
   ];
   c.forEach(function (e) {
     document.getElementById(e.id) && e.multiple === true && document.getElementById(e.id).classList.add("multiple");
-    document.getElementById(e.id) && document.getElementById(e.id).addEventListener("click", function(){
-      flex(e)
-    });
+    document.getElementById(e.id) &&
+      document.getElementById(e.id).addEventListener("click", function () {
+        flex(e);
+      });
   });
   function flex(e) {
     // xoá note
@@ -1103,3 +1285,21 @@ function clear() {
   document.getElementById("note").innerText = "";
   document.getElementById("warning").innerText = "";
 }
+// function cho button
+document.getElementById("animation-direction").onclick = function () {
+  document.getElementById("demo").onanimationend = function () {
+    document.getElementById("demo").style.backgroundColor = "red";
+    document.getElementById("demo").style.animationDirection = "reverse";
+    document.getElementById("demo").style.animationIterationCount = 2;
+    document.getElementById("demo").onanimationend = function () {
+      document.getElementById("demo").style.backgroundColor = "yellow";
+      document.getElementById("demo").style.animationDirection = "alternate";
+      document.getElementById("demo").style.animationIterationCount = 3;
+      document.getElementById("demo").onanimationend = function () {
+        document.getElementById("demo").style.backgroundColor = "green";
+        document.getElementById("demo").style.animationDirection = "alternate-reverse";
+        document.getElementById("demo").style.animationIterationCount = 5;
+      };
+    };
+  };
+};
