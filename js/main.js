@@ -1,7 +1,7 @@
 (function () {
   "use strict";
   var heading = [{ id: "document", text: "Document Object" }];
-  var data = [
+  var buttons = [
     { id: "js1", id_heading: "document", version: "dom1", text: "window.document.activeELement" },
     { id: "js2", id_heading: "document", version: "dom2", text: "window.document.addEventListener()" },
     { id: "js3", id_heading: "document", version: "dom3", text: "window.document.adoptNode()" },
@@ -33,28 +33,51 @@
     { id: "js29", id_heading: "document", version: "dom1", text: "window.document.getElementByClassName()" },
     { id: "js30", id_heading: "document", version: "dom1", text: "window.document.getElementByName()" },
     { id: "js31", id_heading: "document", version: "dom1", text: "window.document.getElementByTagName()" },
-    
+    { id: "js32", id_heading: "document", version: "dom1", text: "window.document.hasFocus()" },
+    { id: "js33", id_heading: "document", version: "dom3", text: "window.document.head" },
+    { id: "js34", id_heading: "document", version: "dom1", text: "window.document.images" },
+    { id: "js35", id_heading: "document", version: "dom1", text: "window.document.implementation" },
+    { id: "js36", id_heading: "document", version: "dom2", text: "window.document.importNode()" },
+    { id: "js37", id_heading: "document", version: "deprecated", text: "window.document.inputEncoding" },
+    { id: "js38", id_heading: "document", version: "dom3", text: "window.document.lastModified" },
+    { id: "js39", id_heading: "document", version: "dom1", text: "window.document.links" },
+    { id: "js40", id_heading: "document", version: "dom2", text: "window.document.normalize()" },
+    { id: "js41", id_heading: "document", version: "deprecated", text: "window.document.mormalizeDocument()" },
+    { id: "js42", id_heading: "document", version: "dom1", text: "window.document.open()" },
+    { id: "js43", id_heading: "document", version: "dom1", text: "window.document.querySelector()" },
+    { id: "js44", id_heading: "document", version: "dom3", text: "window.document.querySelectorAll()" },
+    { id: "js45", id_heading: "document", version: "dom3", text: "window.document.readyState" },
+    { id: "js46", id_heading: "document", version: "dom3", text: "window.document.referrer" },
+    { id: "js47", id_heading: "document", version: "dom2", text: "window.document.removeEventListener()" },
+    { id: "js48", id_heading: "document", version: "deprecated", text: "window.document.renameNode()()" },
+    { id: "js49", id_heading: "document", version: "dom2", text: "window.document.scripts" },
+    { id: "js50", id_heading: "document", version: "deprecated", text: "window.document.strictErrorChecking" },
+    { id: "js51", id_heading: "document", version: "dom2", text: "window.document.title" },
+    { id: "js52", id_heading: "document", version: "dom1", text: "window.document.URL" },
+    { id: "js53", id_heading: "document", version: "dom1", text: "window.document.write()" },
+    { id: "js54", id_heading: "document", version: "dom1", text: "window.document.writeln()" },
   ];
-  var buttons = document.getElementById("control");
+  var buttons_control = document.getElementById("control");
   var ul = window.document.createElement("ul");
-  data.forEach((element) => {
+  buttons.forEach((btn) => {
     var li = window.document.createElement("li");
     var button = window.document.createElement("button");
-    var buttonNode = window.document.createTextNode(element.text);
-    var div = document.getElementById(element.id);
-    div.insertAdjacentHTML("afterbegin",`<h3>${element.text}</h3>`);
+    var buttonNode = window.document.createTextNode(btn.text);
+    var div = document.getElementById(btn.id);
+    div.insertAdjacentHTML("afterbegin",`<h3>${btn.text}</h3>`);
     button.appendChild(buttonNode);
     button.className = "btn btn-outline-primary";
+    button.classList.add(btn.version);
     button.addEventListener("click", function () {
       var childShowing = window.document.querySelectorAll("#showing > div");
       childShowing.forEach((arg) => {
         arg.classList.remove("d-block");
       });
-      document.getElementById(element.id).classList.add("d-block");
-      document.getElementById(element.id).scrollIntoView();
+      document.getElementById(btn.id).classList.add("d-block");
+      document.getElementById(btn.id).scrollIntoView();
     });
     li.appendChild(button);
     ul.appendChild(li);
   });
-  buttons.appendChild(ul);
+  buttons_control.appendChild(ul);
 })();

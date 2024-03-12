@@ -136,3 +136,58 @@ function window_document_forms() {
     statement.innerText = 'var forms = window.document.forms;';
 }
 
+function window_document_hasFocus(){
+    var focus = window.document.hasFocus();
+    result.innerText = focus;
+    statement.innerText = "var playButton = window.document.hasFocus;"
+}
+function window_document_head(){
+    var head = window.document.head;
+    result.innerText = head.outerHTML;
+    statement.innerText = "var head = window.document.head;";
+}
+function window_document_images(){
+    var images = window.document.images;
+    var string = JSON.stringify(images);
+    result.innerText = string;
+    statement.innerText = "var images = window.document.images;";
+}
+function window_document_implementation(){
+    var implementation = window.document.implementation;
+    var string = JSON.stringify(implementation);
+    result.innerText = string;
+    statement.innerText = "var implementation = window.document.implementation;";
+}
+function window_document_importNode(){
+    result.innerText = "Khong the truy cap do chinh sach bao mat";
+}
+
+function window_document_lastModified(){
+ var lastModified = window.document.lastModified;
+    result.innerText = lastModified;
+    statement.innerText = "var lastModified = window.document.lastModified;";
+}
+function window_document_links(){
+ var links = window.document.links;
+    result.innerText = JSON.stringify(links);
+    statement.innerText = "var links = window.document.links;";
+}
+function window_document_normalize(){
+ 
+}
+function window_document_open(){
+    var myWindow = window.open();
+    myWindow.document.open();
+    myWindow.document.write("<h1>Hi pHMAM NGOC LINH</h1>");
+    statement.innerText = "var myWindow = window.open();myWindow.document.open();";
+}
+function window_document_referrer(){
+    var referrer = window.document.referrer;
+    
+    result.innerText = referrer;
+    statement.innerText = "var referrer = window.document.referrer;";
+}
+function window_document_removeEventListener(){
+    alert("xoa");
+    window.document.getElementById("js47Button").removeEventListener(window_document_removeEventListener);
+}

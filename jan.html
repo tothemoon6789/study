@@ -1,282 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Title</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-  </head>
-  <body>
-    <div class="container">
-      <div id="showing">
-        <div id="js1" class="d-none">
-          <h2>window.document.activeELement</h2>
-          <input type="text" /><button>Button</button>
-          <p>Bấm vào phần tử có thể active để in ra tagname</p>
-          <button class="start" onclick="activeELement(this)">START</button>
-          <div class="hide">
-            <hr />
-            <h2>Lưu ý:</h2>
-            <p class="note">Lấy phần tử bị active</p>
-            <p class="warning"></p>
-          </div>
-        </div>
-        <div id="js2" class="d-none">
-          <h2>window.document.addEventListener()</h2>
-          <p>Bấm vào phần tử có thể active để in ra tagname</p>
-          <button id="buttonDA">Button Chưa được gán sự kiện</button>
-          <hr />
-          <button class="start" onclick="documentAddEventListener(this)">START</button>
-          <div class="">
-            <hr />
-            <h2>Lưu ý:</h2>
-            <p class="note">Lưu ý: một phần tử có thể thêm nhiều addEventListner, các phần tử cùng cùng event khai báo trước chạy trước</p>
-            <p class="warning"></p>
-          </div>
-        </div>
-        <div id="js3" class="d-none">
-          <h2>window.document.adoptNode()</h2>
-          <p>adoptNode nhận một phần tử từ một document khác, chẳng hạn document từ iframe</p>
-          <iframe id="iframeAdopt" src="https://nhatvuong.vn/bao-gaming.html" frameborder="0" height="400px"></iframe>
-          <hr />
-          <button class="start" disabled onclick="document_adoptNode()">START</button>
-          <div class="">
-            <hr />
-            <h2>Lưu ý:</h2>
-            <p class="note">Lưu ý: phần tử gốc bị di chuyển</p>
-            <p class="warning">Cảnh báo: dưới host vd thấy cảnh báo không có quyền try cập từ window</p>
-          </div>
-        </div>
-        <div id="js4" class="d-none">
-          <h2>window.document.anchors</h2>
-          <p>Phương thức này không còn dùng nữa</p>
-          <button class="start" disabled onclick="">START</button>
-          <div class="hide">
-            <hr />
-            <h2>Lưu ý:</h2>
-            <p class="note">Lưu ý:</p>
-            <p class="warning">Cảnh báo: Phương thức này không còn dùng nữa</p>
-          </div>
-        </div>
-        <div id="js5" class="d-none">
-          <h2>window.document.applet</h2>
-          <p>Phương thức này không còn dùng nữa</p>
-          <button class="start" disabled onclick="">START</button>
-          <div class="hide">
-            <hr />
-            <h2>Lưu ý:</h2>
-            <p class="note">Lưu ý:</p>
-            <p class="warning">Cảnh báo:</p>
-          </div>
-        </div>
-        <div id="js6" class="d-none">
-          <h2>window.document.baseURI</h2>
-          <p>baseURI dùng để lấy đường dẫn của trang</p>
-          <button class="start" onclick="document_baseURI()">START</button>
-          <div class="">
-            <hr />
-            <h2>Lưu ý:</h2>
-            <p class="note">Lưu ý: Chỉ được đọc, ko gán được</p>
-            <p class="warning">Cảnh báo: Không hỗ trợ trong Internet Explore</p>
-          </div>
-        </div>
-        <div id="js6" class="d-none">
-          <h2>window.document.charset</h2>
-          <p>window.document.charset không còn dùng nữa</p>
-        </div>
-        <div id="js7" class="d-none">
-          <h2>window.document.characterSet</h2>
-          <p>dùng để lấy kiểu ký tự để viết file html</p>
-          <button class="start" onclick="document_document_characterSet_lay()">START</button>
-          <div class="">
-            <hr />
-            <h2>Lưu ý:</h2>
-            <p class="note">Lưu ý: Chỉ được đọc, ko gán được</p>
-            <p class="warning"></p>
-          </div>
-        </div>
-        <div id="js8" class="d-none">
-          <h2>window.document.close()</h2>
-          <p>Phương thức này khó tiếp cận do bảo mật của trình duyệt. dùng để THỰC THI đóng cửa sổ hiện tại.</p>
-          <button onclick="openAndCloseWindow()">Thử</button>
-          <script>
-            function openAndCloseWindow() {
-              const myWindow = window.open("", "", "width=400,height=200"); // Tùy chỉnh kích thước (tùy chọn)
-              if (myWindow) {
-                // Kiểm tra xem cửa sổ có được mở thành công hay không
-                myWindow.document.open();
-                myWindow.document.write("<h1>Xin chào Thế giới!</h1>");
-                // Thêm nút "Đóng" vào cửa sổ mới
-                const closeButton = document.createElement("button");
-                closeButton.textContent = "Đóng";
-                closeButton.onclick = function () {
-                  myWindow.document.close();
-                };
-                myWindow.document.body.appendChild(closeButton);
-              } else {
-                alert("Không thể mở cửa sổ mới. Cửa sổ bật lên có thể bị chặn bởi trình duyệt của bạn.");
-              }
-            }
-          </script>
-        </div>
-        <div id="js9" class="d-none">
-          <h2>window.document.cookie</h2>
-          <p>lấy cookie của trang web</p>
-          <ul>
-            <li>Cookie là một chuỗi (string)</li>
-            <li>Cookie được sử dụng cho client-server (browser-server), localStorage sử dụng cho client (browser)</li>
-            <li>Cookie có ngày hết hạn, localStorage không có ngày hết hạn</li>
-            <li>Cookie bị giới hạn 4kb lưu trữ / 1 domain, trong khi localStorage tới 5MB/1domain</li>
-          </ul>
-
-          <button class="btn btn-primary" onclick="test()">GET</button>
-
-          <button class="btn btn-outline-primary" onclick="">SET</button>
-
-          <div class="container">
-            <hr />
-            <h2>Lưu ý:</h2>
-            <div class="alert alert-success" role="alert">
-              <strong>success</strong>
-            </div>
-            <div class="alert alert-danger" role="alert">
-              <strong>Chưa có sử dụng set được, xem lại</strong>
-            </div>
-          </div>
-        </div>
-        <div id="js10" class="d-none">
-          <h2>window.document.createAttribute()</h2>
-          <p>Thực thi tạo mới một thuộc tính (hay còn gọi là attribute)</p>
-          <button class="btn btn-outline-primary" onclick="window_document_createAttribute()">Tạo mới</button>
-        </div>
-        <div id="js11" class="d-none">
-          <h2>window.document.createComment()</h2>
-          <p>Thực thi tạo mới một nút ghi chú và trả về nút ghi chú đó</p>
-          <button class="btn btn-outline-primary" onclick="window_document_createComment()">Tạo mới</button>
-        </div>
-      </div>
-      <div>
-        <h3 class="divide">Kết quả:</h3>
-        <div id="result">result...</div>
-        <hr />
-        <h3>Dòng lệnh thực thi:</h3>
-        <div id="statement">statement...</div>
-        <hr />
-      </div>
-      <div id="control"></div>
-      <button class="btn btn-danger" onclick="reload()">RELOAD PAGE</button>
-    </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-    <script>
-      (function () {
-        "use strict";
-        var heading = [{ id: "document", text: "Document Object" }];
-        var data = [
-          { id: "js1", id_heading: "document", version: "dom1", text: "window.document.activeELement" },
-          { id: "js2", id_heading: "document", version: "dom2", text: "window.document.addEventListener()" },
-          { id: "js3", id_heading: "document", version: "dom3", text: "window.document.adoptNode()" },
-          { id: "js4", id_heading: "document", version: "deprecated", text: "window.document.anchors" },
-          { id: "js5", id_heading: "document", version: "deprecated", text: "window.document.applet" },
-          { id: "js6", id_heading: "document", version: "dom4", text: "window.document.baseURI" },
-          { id: "js7", id_heading: "document", version: "dom1", text: "window.document.body" },
-          { id: "js8", id_heading: "document", version: "deprecated", text: "window.document.charset" },
-          { id: "js9", id_heading: "document", version: "dom3", text: "window.document.characterSet" },
-          { id: "js10", id_heading: "document", version: "dom1", text: "window.document.close()" },
-          { id: "js11", id_heading: "document", version: "dom2", text: "window.document.cookie" },
-          { id: "js12", id_heading: "document", version: "dom1", text: "window.document.createAttribute()" },
-          { id: "js13", id_heading: "document", version: "dom1", text: "window.document.createComment()" },
-        ];
-        var buttons = document.getElementById("control");
-        var ul = window.document.createElement("ul");
-        data.forEach((element) => {
-          var li = window.document.createElement("li");
-          var button = window.document.createElement("button");
-          var buttonNode = window.document.createTextNode(element.text);
-          button.appendChild(buttonNode);
-          button.className = "btn btn-outline-primary";
-          button.addEventListener("click", function () {
-            var childShowing = window.document.querySelectorAll("#showing > div");
-            childShowing.forEach((arg) => {
-              arg.classList.remove("d-block");
-            });
-            document.getElementById(element.id).classList.add("d-block");
-          });
-          li.appendChild(button);
-          ul.appendChild(li);
-        });
-        buttons.appendChild(ul);
-      })();
-      function reload() {
-  location.reload();
-}
-
-var result = window.document.getElementById("result");
-var statement = window.document.getElementById("statement");
-function activeELement(e) {
-  var result = window.document.getElementById("result");
-  window.document.getElementById("statement").innerText = `result.innerText = window.document.activeElement.tagName;`;
-  window.document.querySelector("body").addEventListener("click", function () {
-    // dòng lệnh chính
-    result.innerText = window.document.activeElement.tagName;
-  });
-}
-function documentAddEventListener(e) {
-  var result = window.document.getElementById("result");
-  window.document.getElementById("buttonDA").innerText = "Button ĐÃ ĐƯỢC GÁN SỰ KIỆN";
-  result.innerText = "Không có kết quả để in ra, chỉ thêm sự kiện vào nút trên cùng";
-  window.document.getElementById("statement").innerText = `window.document.getElementById("buttonDA").addEventListener("click", function (e) {
-      alert("ĐÂY LÀ DÒNG CODE TRONG SỰ KIỆN ĐÃ ĐƯỢC THỰC THI");
-    });`;
-  // dòng lệnh chính
-  window.document.getElementById("buttonDA").addEventListener("click", function (e) {
-    alert("ĐÂY LÀ DÒNG CODE TRONG SỰ KIỆN ĐÃ ĐƯỢC THỰC THI");
-  });
-}
-
-function document_baseURI() {
-  // dong lenh chinh
-  result.innerText = window.document.baseURI;
-  statement.innerText = "result.innerText = window.document.baseURI;";
-}
-function document_body_gan() {
-  // dong lenh chinh
-  window.document.body.innerHTML = "toàn bộ dữ liệu của body đã bị thay thế";
-  //   result.innerText = window.document.baseURI;
-  //   statement.innerText = "result.innerText = window.document.baseURI;"
-}
-function document_body_lay() {
-  // dong lenh chinh
-  result.innerText = window.document.body.outerHTML;
-  statement.innerText = "result.innerText = window.document.body.outerHTML;";
-}
-function document_document_characterSet_lay() {
-  // dong lenh chinh
-  
-  result.innerText = window.document.characterSet;
-  statement.innerText = "result.innerText = window.document.characterSet;";
-}
-function test() {
-  document.getElementById("result").innerText = window.document.cookie;
-}
-function window_document_createAttribute(){
-  var style = window.document.createAttribute("style");
-  window.document.getElementById("result").innerText = style;
-  window.document.getElementById("statement").innerText = 'var style = window.document.createAttribute("style");'
-}
-function window_document_createComment(){
-  var comment = window.document.createComment("Du lieu nay khong the hien ra ben ngoai");
-  window.document.querySelector("#result").innerHTML = comment;
-  window.document.querySelector("#result").appendChild(comment) = comment;
-  window.document.querySelector("#statement").innerHTML = `var comment = window.document.createComment("Du lieu nay khong the hien ra ben ngoai");`;
-}
-    </script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    
+    .box {
+      display: flex;
+      
+    }
+    .item {
+      width: 300px;
+      background-color: red;
+      border: 2px solid blue;
+      outline: 6px dotted cyan;
+      box-sizing: border-box;
+      flex-grow: 1;
+    }
+    .item:nth-child(2){
+      flex-shrink: 3;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="item">1</div>
+    <div class="item">1</div>
+    <div class="item">1</div>
+    <div class="item">1</div>
+  </div>
+</body>
 </html>

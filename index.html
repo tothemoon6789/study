@@ -15,47 +15,245 @@
     <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-sm navbar-light bg-light">
-      <a class="navbar-brand" href="#">REVIEW</a>
-      <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-          aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button> 
-      <div class="collapse navbar-collapse" id="collapsibleNavId">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="./js/index.html">JS</a>
-          </li>
-        </ul>
+    <div class="container">
+      <a href="./js/index.html">js</a>
+      <div class="wrap-demo">
+        <div id="demo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error sunt, molestiae mollitia nobis rem quas, repellat qui expedita labore doloribus excepturi ab atque libero reiciendis harum ea eum cumque architecto in aspernatur! Error ex molestiae inventore mollitia assumenda. Eos, harum architecto quisquam doloremque consequuntur hic voluptates voluptas ad officia expedita qui perspiciatis illum cumque voluptate quam nostrum totam explicabo aliquam! Est accusantium, accusamus libero aut eum ex tenetur veniam repellendus asperiores, deserunt praesentium facilis quibusdam. Atque ex in consequatur eaque sapiente distinctio maiores molestias saepe harum magni, architecto odit neque, eos, iure assumenda commodi sequi! Quae accusantium consectetur suscipit corrupti sit laborum veritatis alias, consequuntur optio nesciunt debitis sapiente? Asperiores quasi optio odit consequatur inventore facilis, quo tempora. Similique soluta iure iusto dolore totam sapiente eligendi voluptates molestias, reprehenderit labore porro vitae eaque perferendis provident corrupti maiores ea. Aliquam, totam. Unde distinctio magnam, repellendus ipsum recusandae quia asperiores ullam eaque. Officiis atque quo libero consequatur commodi quasi recusandae tenetur nesciunt assumenda impedit, deserunt nostrum? Esse id voluptatibus fugiat est neque quae obcaecati voluptas sunt adipisci rerum dignissimos quam architecto non soluta illo ipsum tenetur recusandae fuga molestiae nihil eius, expedita ad reiciendis ducimus? Vel molestias blanditiis cum, dolores ab quasi omnis laborum libero odio eum facere doloremque cupiditate debitis consequuntur cumque esse iure illo ex excepturi asperiores atque. Tempora quisquam adipisci, enim atque reprehenderit dignissimos vel impedit explicabo ab dolores deserunt sint rem iusto iure earum expedita, veritatis unde magni? Corrupti dolores, laborum hic totam ipsa unde quos nostrum recusandae beatae sed, provident voluptas suscipit vel maiores rerum voluptatibus eveniet omnis sint quis? Atque exercitationem illo quisquam velit delectus, reprehenderit, repellat natus eveniet assumenda quae, consequatur voluptates odio! Neque, natus quod consequatur sapiente tempore nobis tempora dolores maiores voluptate odio ab sint ipsa porro commodi at eveniet vero. Provident, aut.</div>
       </div>
-    </nav>
-    <div class="wrap-demo">
-      <div id="demo" class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error sunt, molestiae mollitia nobis rem quas, repellat qui expedita labore doloribus excepturi ab atque libero reiciendis harum ea eum cumque architecto in aspernatur! Error ex molestiae inventore mollitia assumenda. Eos, harum architecto quisquam doloremque consequuntur hic voluptates voluptas ad officia expedita qui perspiciatis illum cumque voluptate quam nostrum totam explicabo aliquam! Est accusantium, accusamus libero aut eum ex tenetur veniam repellendus asperiores, deserunt praesentium facilis quibusdam. Atque ex in consequatur eaque sapiente distinctio maiores molestias saepe harum magni, architecto odit neque, eos, iure assumenda commodi sequi! Quae accusantium consectetur suscipit corrupti sit laborum veritatis alias, consequuntur optio nesciunt debitis sapiente? Asperiores quasi optio odit consequatur inventore facilis, quo tempora. Similique soluta iure iusto dolore totam sapiente eligendi voluptates molestias, reprehenderit labore porro vitae eaque perferendis provident corrupti maiores ea. Aliquam, totam. Unde distinctio magnam, repellendus ipsum recusandae quia asperiores ullam eaque. Officiis atque quo libero consequatur commodi quasi recusandae tenetur nesciunt assumenda impedit, deserunt nostrum? Esse id voluptatibus fugiat est neque quae obcaecati voluptas sunt adipisci rerum dignissimos quam architecto non soluta illo ipsum tenetur recusandae fuga molestiae nihil eius, expedita ad reiciendis ducimus? Vel molestias blanditiis cum, dolores ab quasi omnis laborum libero odio eum facere doloremque cupiditate debitis consequuntur cumque esse iure illo ex excepturi asperiores atque. Tempora quisquam adipisci, enim atque reprehenderit dignissimos vel impedit explicabo ab dolores deserunt sint rem iusto iure earum expedita, veritatis unde magni? Corrupti dolores, laborum hic totam ipsa unde quos nostrum recusandae beatae sed, provident voluptas suscipit vel maiores rerum voluptatibus eveniet omnis sint quis? Atque exercitationem illo quisquam velit delectus, reprehenderit, repellat natus eveniet assumenda quae, consequatur voluptates odio! Neque, natus quod consequatur sapiente tempore nobis tempora dolores maiores voluptate odio ab sint ipsa porro commodi at eveniet vero. Provident, aut.</div>
+      <div id="result">
+        <div data-for="font-family" class="d-none">font-family</div>
+        <div data-for="font-size" class="d-none"></div>
+        <div data-for="font-style" class="d-none"></div>
+        <div data-for="font-weight" class="d-none">font-weight</div>
+        <div data-for="text-decoration" class="d-none"></div>
+        <div data-for="text-transform" class="d-none"></div>
+        <div data-for="text-overflow" class="d-none"></div>
+        <div data-for="text-shadow" class="d-none"></div>
+        <div data-for="text-indent" class="d-none"></div>
+        <div data-for="text-justify" class="d-none">
+          <div class="alert alert-warning" role="alert">Chỉ hoạt động khi đã thiết lập <strong>text-align:justify</strong></div>
+        </div>
+        <div data-for="text-decoration-line" class="d-none"></div>
+        <div data-for="text-decoration-thickness" class="d-none"></div>
+        <div data-for="text-align-last" class="d-none"></div>
+        <div data-for="text-decoration-style" class="d-none"></div>
+        <div data-for="text-emphasis" class="d-none"></div>
+        <div data-for="text-emphasis-style" class="d-none"></div>
+        <div data-for="letter-spacing" class="d-none"></div>
+        <div data-for="text-emphasis-position" class="d-none">
+          <div class="alert alert-warning" role="alert">Chỉ hoạt động khi đã thiết lập <strong>text-emphasis:triangle</strong></div>
+        </div>
+        <div data-for="color" class="d-none"></div>
+        <div data-for="text-decoration-color" class="d-none"></div>
+        <div data-for="text-emphasis-color" class="d-none"></div>
+        <div data-for="background" class="d-none"></div>
+        <div data-for="background-color" class="d-none"></div>
+        <div data-for="background-image" class="d-none"></div>
+        <div data-for="background-size" class="d-none"></div>
+        <div data-for="background-attachment" class="d-none"></div>
+        <div data-for="background-blend-mode" class="d-none"></div>
+        <div data-for="background-clip" class="d-none"></div>
+        <div data-for="background-origin" class="d-none"></div>
+        <div data-for="background-repeat" class="d-none"></div>
+        <div data-for="background-position" class="d-none"></div>
+        <div data-for="background-position-x" class="d-none"></div>
+        <div data-for="background-position-y" class="d-none"></div>
+        <div data-for="background-image-linear" class="d-none"></div>
+        <div data-for="background-image-conic" class="d-none"></div>
+        <div data-for="width" class="d-none"></div>
+        <div data-for="height" class="d-none"></div>
+        <div data-for="min-width" class="d-none"></div>
+        <div data-for="min-height" class="d-none"></div>
+        <div data-for="max-width" class="d-none"></div>
+        <div data-for="max-height" class="d-none"></div>
+        <div data-for="aspect-ratio" class="d-none"></div>
+        <div data-for="box-sizing" class="d-none"></div>
+        <div data-for="border" class="d-none"></div>
+        <div data-for="border-top-width" class="d-none"></div>
+        <div data-for="border-width" class="d-none"></div>
+        <div data-for="border-right-width" class="d-none"></div>
+        <div data-for="border-bottom-width" class="d-none"></div>
+        <div data-for="border-left-width" class="d-none"></div>
+        <div data-for="border-block" class="d-none"></div>
+        <div data-for="border-block-start-width" class="d-none"></div>
+        <div data-for="border-block-end-width" class="d-none"></div>
+        <div data-for="border-inline-width" class="d-none"></div>
+        <div data-for="border-inline-start-width" class="d-none"></div>
+        <div data-for="border-inline-end-width" class="d-none"></div>
+        <div data-for="border-style" class="d-none"></div>
+        <div data-for="border-top-style" class="d-none"></div>
+        <div data-for="border-right-style" class="d-none"></div>
+        <div data-for="border-bottom-style" class="d-none"></div>
+        <div data-for="border-left-style" class="d-none"></div>
+        <div data-for="border-block-style" class="d-none"></div>
+        <div data-for="border-block-start-style" class="d-none"></div>
+        <div data-for="border-block-end-style" class="d-none"></div>
+        <div data-for="border-inline-style" class="d-none"></div>
+        <div data-for="border-inline-start-style" class="d-none"></div>
+        <div data-for="border-inline-end-style" class="d-none"></div>
+        <div data-for="border-color" class="d-none"></div>
+        <div data-for="border-top-color" class="d-none"></div>
+        <div data-for="border-right-color" class="d-none"></div>
+        <div data-for="border-bottom-color" class="d-none"></div>
+        <div data-for="border-left-color" class="d-none"></div>
+        <div data-for="border-block-color" class="d-none"></div>
+        <div data-for="border-block-start-color" class="d-none"></div>
+        <div data-for="border-block-end-color" class="d-none"></div>
+        <div data-for="border-inline-color" class="d-none"></div>
+        <div data-for="border-inline-start-color" class="d-none"></div>
+        <div data-for="border-inline-end-color" class="d-none"></div>
+        <div data-for="border-start-start-radius" class="d-none"></div>
+        <div data-for="border-start-end-radius" class="d-none"></div>
+        <div data-for="border-end-start-radius" class="d-none"></div>
+        <div data-for="border-end-end-radius" class="d-none"></div>
+        <div data-for="border-image" class="d-none"></div>
+        <div data-for="border-image-source" class="d-none"></div>
+        <div data-for="border-image-width" class="d-none"></div>
+        <div data-for="border-image-outset" class="d-none"></div>
+        <div data-for="border-image-slice" class="d-none"></div>
+        <div data-for="border-image-repeat" class="d-none"></div>
+        <div data-for="border-radius" class="d-none"></div>
+        <div data-for="border-top-left-radius" class="d-none"></div>
+        <div data-for="border-top-right-radius" class="d-none"></div>
+        <div data-for="border-bottom-right-radius" class="d-none"></div>
+        <div data-for="border-bottom-left-radius" class="d-none"></div>
+        <div data-for="padding" class="d-none"></div>
+        <div data-for="padding-top" class="d-none"></div>
+        <div data-for="padding-right" class="d-none"></div>
+        <div data-for="padding-bottom" class="d-none"></div>
+        <div data-for="padding-left" class="d-none"></div>
+        <div data-for="padding-block" class="d-none"></div>
+        <div data-for="padding-block-start" class="d-none"></div>
+        <div data-for="padding-block-end" class="d-none"></div>
+        <div data-for="padding-inline" class="d-none"></div>
+        <div data-for="padding-inline-start" class="d-none"></div>
+        <div data-for="padding-inline-end" class="d-none"></div>
+        <div data-for="outline" class="d-none"></div>
+        <div data-for="margin" class="d-none"></div>
+        <div data-for="margin-top" class="d-none"></div>
+        <div data-for="margin-left" class="d-none"></div>
+        <div data-for="margin-right" class="d-none"></div>
+        <div data-for="margin-bottom" class="d-none"></div>
+        <div data-for="margin-block-start" class="d-none"></div>
+        <div data-for="margin-block-end" class="d-none"></div>
+        <div data-for="margin-inline-start" class="d-none"></div>
+        <div data-for="margin-inline-end" class="d-none"></div>
+        <div data-for="text-align" class="d-none"></div>
+        <div data-for="relative" class="d-none"></div>
+        <div data-for="fixed" class="d-none"></div>
+        <div data-for="absolute" class="d-none"></div>
+        <div data-for="left" class="d-none"></div>
+        <div data-for="top" class="d-none"></div>
+        <div data-for="right" class="d-none"></div>
+        <div data-for="bottom" class="d-none"></div>
+        <div data-for="display-inline" class="d-none"></div>
+        <div data-for="display-inline-block" class="d-none"></div>
+        <div data-for="display-block" class="d-none"></div>
+        <div data-for="display-flex" class="d-none"></div>
+        <div data-for="display-grid" class="d-none"></div>
+        <div data-for="display-table" class="d-none"></div>
+        <div data-for="display-inline-flex" class="d-none"></div>
+        <div data-for="display-inline-grid" class="d-none"></div>
+        <div data-for="display-inline-table" class="d-none"></div>
+        <div data-for="flex-grow" class="d-none"></div>
+        <div data-for="flex-shrink" class="d-none"></div>
+        <div data-for="justify-content" class="d-none"></div>
+        <div data-for="align-items" class="d-none"></div>
+        <div data-for="flex-wrap" class="d-none"></div>
+        <div data-for="flex-direction" class="d-none"></div>
+        <div data-for="align-self" class="d-none"></div>
+        <div data-for="align-content" class="d-none"></div>
+        <div data-for="float" class="d-none"></div>
+        <div data-for="clear" class="d-none"></div>
+        <div data-for="transform" class="d-none"></div>
+        <div data-for="rotate" class="d-none"></div>
+        <div data-for="scale" class="d-none"></div>
+        <div data-for="translate" class="d-none"></div>
+        <div data-for="mask-image" class="d-none"></div>
+        <div data-for="mask-repeat" class="d-none"></div>
+        <div data-for="mask-size" class="d-none"></div>
+        <div data-for="mask-origin" class="d-none"></div>
+        <div data-for="mask-position" class="d-none"></div>
+        <div data-for="mask-position-x" class="d-none"></div>
+        <div data-for="mask-position-y" class="d-none"></div>
+        <div data-for="mask-mode" class="d-none"></div>
+        <div data-for="inset" class="d-none"></div>
+        <div data-for="inset-block" class="d-none"></div>
+        <div data-for="inset-block-start" class="d-none"></div>
+        <div data-for="inset-block-end" class="d-none"></div>
+        <div data-for="inset-inline" class="d-none"></div>
+        <div data-for="inset-inline-start" class="d-none"></div>
+        <div data-for="inset-inline-end" class="d-none"></div>
+        <div data-for="column-count" class="d-none"></div>
+        <div data-for="column-fill" class="d-none"></div>
+        <div data-for="column-gap" class="d-none"></div>
+        <div data-for="column-rule" class="d-none"></div>
+        <div data-for="column-rule-color" class="d-none"></div>
+        <div data-for="column-rule-style" class="d-none"></div>
+        <div data-for="column-rule-width" class="d-none"></div>
+        <div data-for="column-span" class="d-none"></div>
+        <div data-for="column-width" class="d-none"></div>
+        <div data-for="columns" class="d-none"></div>
+        <div data-for="list-style" class="d-none"></div>
+        <div data-for="list-style-type" class="d-none"></div>
+        <div data-for="list-style-position" class="d-none"></div>
+        <div data-for="list-style-image" class="d-none"></div>
+        <div data-for="scrollbar-color" class="d-none"></div>
+        <div data-for="webkit-scroolbar-thumb" class="d-none"></div>
+        <div data-for="webkit-scroolbar-track" class="d-none"></div>
+        <div data-for="animation" class="d-none"></div>
+        <div data-for="animation-direction" class="d-none"></div>
+        <div data-for="animation-timing-function" class="d-none"></div>
+        <div data-for="animation-delay" class="d-none"></div>
+        <div data-for="animation-fill-mode" class="d-none"></div>
+        <div data-for="animation-name" class="d-none"></div>
+        <div data-for="animation-duration" class="d-none"></div>
+        <div data-for="animation-play-state" class="d-none"></div>
+        <div data-for="animation-iteration-count" class="d-none"></div>
+        <div data-for="transition" class="d-none"></div>
+        <div data-for="transition-delay" class="d-none"></div>
+        <div data-for="transition-duration" class="d-none"></div>
+        <div data-for="transition-timing-function" class="d-none"></div>
+        <div data-for="transition-property" class="d-none"></div>
+        <div data-for="box-shadow" class="d-none"></div>
+        <div data-for="all" class="d-none"></div>
+        <div data-for="accent-color" class="d-none"></div>
+        <div data-for="backdrop-filter" class="d-none"></div>
+        <div data-for="backface-visibility" class="d-none"></div>
+        <div data-for="block-size" class="d-none"></div>
+        <div data-for="border-collapse" class="d-none"></div>
+        <div data-for="box-decoration-break" class="d-none"></div>
+        <div data-for="box-reflect" class="d-none"></div>
+        <div data-for="caption-side" class="d-none"></div>
+        <div data-for="caret-color" class="d-none"></div>
+        <div data-for="clip" class="d-none"></div>
+        <div data-for="clip-path" class="d-none"></div>
+        <div data-for="content" class="d-none">content</div>
+      </div>
+      <div id="total"></div>
+      <!-- <p>nếu li thì viền gì, màu gì, nếu ul là viền gì màu gì, tao ghi chú fixed trên màn hình</p> -->
+      <!-- <input type="text" name="copy-script-text" id="input-copy-script-test"> -->
+      <button class="btn btn-primary d-none" id="copy-script-test">Copy SCRIPT TEST CSS</button>
+      <div id="note"></div>
+      <div id="warning"></div>
+      <div class="wrap-control d-none">
+        <button id="controlkichthuoc" class="control">Kích</button>
+        <button id="controlkieu" class="control">Kiểu</button>
+        <button id="controlvitri" class="control">Vị</button>
+        <button id="controlmausac" class="control">Màu</button>
+        <button id="controlchuyendong" class="control">Động</button>
+      </div>
+      <div class="by-object">
+        <div id="dem"></div>
+        <div id="object" class="d-flex"></div>
+      </div>
+      <div id="control-area" class="d-flex"></div>
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-secondary" onclick="resizeButtonToSmall()">Small</button>
+        <button type="button" class="btn btn-secondary" onclick="resizeButtonToMiddle()">Middle</button>
+        <button type="button" class="btn btn-secondary" onclick="resizeButtonToLarge()">Large</button>
+      </div>
     </div>
-    <div id="total"></div>
-    <!-- <p>nếu li thì viền gì, màu gì, nếu ul là viền gì màu gì, tao ghi chú fixed trên màn hình</p> -->
-    <!-- <input type="text" name="copy-script-text" id="input-copy-script-test"> -->
-    <button class="btn btn-primary d-none" id="copy-script-test">Copy SCRIPT TEST CSS</button>
-    <div id="note"></div>
-    <div id="warning"></div>
-    <div class="wrap-control d-none">
-      <button id="controlkichthuoc" class="control">Kích</button>
-      <button id="controlkieu" class="control">Kiểu</button>
-      <button id="controlvitri" class="control">Vị</button>
-      <button id="controlmausac" class="control">Màu</button>
-      <button id="controlchuyendong" class="control">Động</button>
-    </div>
-    <div class="container by-object ">
-      <div id="dem"></div>
-      <div id="object" class="d-flex"></div>
-    </div>
-    <div id="control-area" class="container d-flex">
-
-    </div>
-
-    
-    
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>

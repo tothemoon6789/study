@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css" />
@@ -233,41 +233,134 @@
           <button onclick="window_document_forms()" type="button" class="btn btn-outline-primary">Play</button>
         </div>
         <div id="js28" class="d-none">
-          <div class="alert alert-info" role="alert">
-            Lấy một phần tử thông qua ID
-          </div>
-          <div class="alert alert-warning" role="alert">
-            Trả về null nếu tìm không ra
-          </div>
+          <div class="alert alert-info" role="alert">Lấy một phần tử thông qua ID</div>
+          <div class="alert alert-warning" role="alert">Trả về null nếu tìm không ra</div>
         </div>
         <div id="js29" class="d-none">
-          <div class="alert alert-info" role="alert">
-            Lấy danh sách các phần tử có cùng class
-          </div>
+          <div class="alert alert-info" role="alert">Lấy danh sách các phần tử có cùng class</div>
           <div class="alert alert-danger" role="alert">
             <strong>Read-only !</strong>
           </div>
         </div>
         <div id="js30" class="d-none">
-          <div class="alert alert-info" role="alert">
-            Lấy danh sách các phần tử thông qua thuộc tính <strong>name</strong> của element
-          </div>
+          <div class="alert alert-info" role="alert">Lấy danh sách các phần tử thông qua thuộc tính <strong>name</strong> của element</div>
         </div>
         <div id="js31" class="d-none">
-          <div class="alert alert-info" role="alert">
-            Lấy danh sách các phần tử thông qua tên thẻ
-          </div>
+          <div class="alert alert-info" role="alert">Lấy danh sách các phần tử thông qua tên thẻ</div>
           <div class="alert alert-danger" role="alert">
             <strong>Read-only !</strong>
           </div>
         </div>
         <div id="js32" class="d-none">
-          <div class="alert alert-info" role="alert">
-            Lấy boolean nếu document có hoặc không có focus()
-          </div>
+          <div class="alert alert-info" role="alert">Lấy boolean nếu document có hoặc không có focus()</div>
           <div class="alert alert-danger" role="alert">
             <strong>Read-only !</strong>
           </div>
+          <div class="form-group">
+            <label for="">EX</label>
+            <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Place holder" />
+            <small id="helpId" class="form-text text-muted">Help text</small>
+          </div>
+          <button type="button" class="btn btn-primary" onclick="window_document_hasFocus()">Play</button>
+        </div>
+        <div id="js33" class="d-none">
+          <div class="alert alert-info" role="alert">Lấy thẻ head</div>
+          <button type="button" class="btn btn-primary" onclick="window_document_head()">Play</button>
+        </div>
+        <div id="js34" class="d-none">
+          <div class="alert alert-info" role="alert">Lấy toàn bộ thẻ img trong document</div>
+          <img src="../asset/images/border-image-1.png" alt="" srcset="" />
+          <img src="../asset/images/border-image-2.webp" alt="" srcset="" />
+          <img src="../asset/images/image.jpeg" alt="" srcset="" />
+          <button type="button" class="btn btn-primary" onclick="window_document_images()">Play</button>
+        </div>
+        <div id="js35" class="d-none">
+          <div class="alert alert-info" role="alert">Lấy đối tượng DOMimplementation</div>
+          <button type="button" class="btn btn-primary" onclick="window_document_implementation()">Play</button>
+        </div>
+        <div id="js36" class="d-none">
+          <div class="alert alert-info" role="alert">Nạp 1 phần tử từ iframe</div>
+          <iframe id="importNodeIframe" src="https://nhatvuong.vn/" frameborder="0"></iframe>
+          <div id="importNodeIframeDiv"></div>
+          <button type="button" class="btn btn-primary" onclick="window_document_importNode()">Play</button>
+        </div>
+        <div id="js37" class="d-none"></div>
+        <div id="js38" class="d-none">
+          <div class="alert alert-info" role="alert">Lấy thời gian cuối cùng trang web được chỉnh sửa</div>
+          <button type="button" class="btn btn-primary" onclick="window_document_lastModified()">Play</button>
+        </div>
+        <div id="js39" class="d-none">
+          <div class="alert alert-info" role="alert">Lấy danh sách toàn bộ link của trang</div>
+          <button type="button" class="btn btn-primary" onclick="window_document_normalize()">Play</button>
+        </div>
+        <div id="js40" class="d-none">
+          <div class="alert alert-info" role="alert">Thực thi hợp nhất các nút text gần nhau, xoá các nút text rỗng</div>
+        </div>
+        <div id="js41" class="d-none">
+          <div class="alert alert-info" role="alert">Không còn được dùng nữa</div>
+        </div>
+        <div id="js42" class="d-none">
+          <div class="alert alert-info" role="alert">Thực thi mở một cửa sổ mới</div>
+          <button type="button" class="btn btn-primary" onclick="window_document_open()">Play</button>
+        </div>
+        <div id="js43" class="d-none">
+          <div class="alert alert-info" role="alert">Thực thi lấy danh sách 1 phần tử đầu tiên trong danh sách</div>
+          <button type="button" class="btn btn-primary" onclick="window_document_open()">Play</button>
+        </div>
+        <div id="js44" class="d-none">
+          <div class="alert alert-info" role="alert">Thực thi lấy danh sách các phần tử</div>
+          <button type="button" class="btn btn-primary" onclick="window_document_open()">Play</button>
+        </div>
+        <div id="js45" class="d-none">
+          <div class="alert alert-danger" role="alert">Phương thức này thực ra chưa hiểu</div>
+          <button type="button" class="btn btn-primary" onclick="">Play</button>
+        </div>
+        <div id="js46" class="d-none">
+          <div class="alert alert-info" role="alert">Lấy đường dẫn đã load trang web</div>
+          <button type="button" class="btn btn-primary" onclick="window_document_referrer()">Play</button>
+        </div>
+        <div id="js47" class="d-none">
+          <div class="alert alert-info" role="alert">Thực thi xoá sự kiện cho một đối tượng element</div>
+          <div class="alert alert-danger" role="alert">Hiện tại chưa remove được khi gán sự kiện trong html bằng onclick</div>
+          <button id="js47Button" type="button" class="btn btn-primary" onclick="window_document_removeEventListener()">Play</button>
+        </div>
+        <div id="js48" class="d-none">
+          <div class="alert alert-info" role="alert">renameNode() không còn dùng nữa</div>
+        </div>
+        <div id="js49" class="d-none">
+          <div class="alert alert-info" role="alert">Lấy danh sách toàn bộ element script trong trang web</div>
+        </div>
+        <div id="js50" class="d-none">
+          <div class="alert alert-info" role="alert">strictErrorChecking không còn dùng nữa</div>
+        </div>
+
+        <div id="js51" class="d-none">
+          <div class="alert alert-info" role="alert">Lấy hoặc gán tiêu đề trang</div>
+          <button type="button" class="btn btn-primary" onclick=" document.title = 'Tieu de da bi thay doi';this.innerHTML = document.title">Gán</button>
+        </div>
+        <div id="js52" class="d-none">
+          <div class="alert alert-info" role="alert">Lấy đường dẫn đến trang web</div>
+          <button type="button" class="btn btn-primary" onclick="this.innerHTML = document.URL">Play</button>
+        </div>
+        <div id="js53" class="d-none">
+          <div class="alert alert-info" role="alert">In ra màn hình document không xuống dòng</div>
+          <button type="button" class="btn btn-primary" onclick="document.write('xin chao')">Play</button>
+        </div>
+        <div id="js54" class="d-none">
+          <div class="alert alert-info" role="alert">In ra màn hình document có xuống dòng</div>
+          <div class="alert alert-danger" role="alert">
+            Test không thể xuống dòng !
+          </div>
+          <button type="button" class="btn btn-primary" onclick="window_document_writeln()">Play</button>
+          <script>
+            function window_document_writeln() {
+              document.write("Hello World!");
+              document.write("Have a nice day!");
+              document.write("<br>");
+              document.writeln("Hello World!");
+              document.writeln("Have a nice day!");
+            }
+          </script>
         </div>
       </div>
       <div>
