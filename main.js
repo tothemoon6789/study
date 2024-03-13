@@ -1,25 +1,26 @@
 (function () {
   var phan_loai = [
-    { id: "btn-type-text", heading: "Thay đổi chữ" },
-    { id: "btn-type-background", heading: "Thay đổi nền" },
-    { id: "btn-type-dimension", heading: "Thay đổi kích thước" },
-    { id: "btn-type-border", heading: "Thay đổi đường viền" },
-    { id: "btn-type-padding", heading: "Thay đổi không gian" },
-    { id: "btn-type-outline", heading: "Thay đổi viền ngoài" },
-    { id: "btn-type-margin", heading: "Thay đổi khoảng cách 2 phần tử" },
-    { id: "btn-type-position", heading: "Thay đổi kiểu position" },
-    { id: "btn-type-display", heading: "Thay đổi Kiểu hiển thị" },
-    { id: "btn-type-flex", heading: "Thay đổi bố cục flex" },
-    { id: "btn-type-float", heading: "Thay đổi kiểu trôi" },
-    { id: "btn-type-transform", heading: "Thay đổi hình dạng" },
-    { id: "btn-type-mask", heading: "Thay đổi mặt nạ" },
-    { id: "btn-type-inset", heading: "Thay đổi khoảng cách cha con" },
-    { id: "btn-type-column", heading: "Thay đổi bố cục cột" },
-    { id: "btn-type-list", heading: "Thay đổi kiểu danh sách" },
-    { id: "btn-type-scrollbar", heading: "Thay đổi kiểu thanh kéo" },
-    { id: "btn-type-animation", heading: "Thay đổi kiểu chuyển động animation" },
-    { id: "btn-type-transition", heading: "Thay đổi kiểu chuyển động transition" },
-    { id: "btn-type-another", heading: "Thay đổi khác" },
+    // { id: "btn-type-text", heading: "Thay đổi chữ" },
+    // { id: "btn-type-background", heading: "Thay đổi nền" },
+    // { id: "btn-type-dimension", heading: "Thay đổi kích thước" },
+    // { id: "btn-type-border", heading: "Thay đổi đường viền" },
+    // { id: "btn-type-padding", heading: "Thay đổi không gian" },
+    // { id: "btn-type-outline", heading: "Thay đổi viền ngoài" },
+    // { id: "btn-type-margin", heading: "Thay đổi khoảng cách 2 phần tử" },
+    // { id: "btn-type-position", heading: "Thay đổi kiểu position" },
+    // { id: "btn-type-display", heading: "Thay đổi Kiểu hiển thị" },
+    // { id: "btn-type-flex", heading: "Thay đổi bố cục flex" },
+    { id: "btn-type-grid", heading: "Thay đổi bố cục lưới grid" },
+    // { id: "btn-type-float", heading: "Thay đổi kiểu trôi" },
+    // { id: "btn-type-transform", heading: "Thay đổi hình dạng" },
+    // { id: "btn-type-mask", heading: "Thay đổi mặt nạ" },
+    // { id: "btn-type-inset", heading: "Thay đổi khoảng cách cha con" },
+    // { id: "btn-type-column", heading: "Thay đổi bố cục cột" },
+    // { id: "btn-type-list", heading: "Thay đổi kiểu danh sách" },
+    // { id: "btn-type-scrollbar", heading: "Thay đổi kiểu thanh kéo" },
+    // { id: "btn-type-animation", heading: "Thay đổi kiểu chuyển động animation" },
+    // { id: "btn-type-transition", heading: "Thay đổi kiểu chuyển động transition" },
+    // { id: "btn-type-another", heading: "Thay đổi khác" },
   ];
   var nut_bam = [
     {
@@ -69,7 +70,7 @@
     },
     {
       id: "text-justify",
-      class: "btn btn-warning btn-type-text",
+      class: "btn btn-outline-primary btn-type-text",
       text: "text-justify",
     },
     {
@@ -94,7 +95,7 @@
     },
     {
       id: "text-emphasis",
-      class: "btn btn-danger btn-type-text",
+      class: "btn btn-outline-primary btn-type-text",
       text: "text-emphasis",
     },
     {
@@ -109,7 +110,7 @@
     },
     {
       id: "text-emphasis-position",
-      class: "btn btn-warning btn-type-text",
+      class: "btn btn-outline-primary btn-type-text",
       text: "text-emphasis-position",
     },
     {
@@ -154,12 +155,12 @@
     },
     {
       id: "background-blend-mode",
-      class: "btn btn-warning btn-type-background",
+      class: "btn btn-outline-primary btn-type-background",
       text: "background-blend-mode",
     },
     {
       id: "background-clip",
-      class: "btn btn-warning btn-type-background",
+      class: "btn btn-outline-primary btn-type-background",
       text: "background-clip",
     },
     {
@@ -789,32 +790,32 @@
     },
     {
       id: "inset-block",
-      class: "btn btn-warning btn-type-inset",
+      class: "btn btn-outline-primary btn-type-inset",
       text: "inset-block",
     },
     {
       id: "inset-block-start",
-      class: "btn btn-warning btn-type-inset",
+      class: "btn btn-outline-primary btn-type-inset",
       text: "inset-block-start",
     },
     {
       id: "inset-block-end",
-      class: "btn btn-warning btn-type-inset",
+      class: "btn btn-outline-primary btn-type-inset",
       text: "inset-block-end",
     },
     {
       id: "inset-inline",
-      class: "btn btn-warning btn-type-inset",
+      class: "btn btn-outline-primary btn-type-inset",
       text: "inset-inline",
     },
     {
       id: "inset-inline-start",
-      class: "btn btn-warning btn-type-inset",
+      class: "btn btn-outline-primary btn-type-inset",
       text: "inset-inline-start",
     },
     {
       id: "inset-inline-end",
-      class: "btn btn-warning btn-type-inset",
+      class: "btn btn-outline-primary btn-type-inset",
       text: "inset-inline-end",
     },
     {
@@ -909,7 +910,7 @@
     },
     {
       id: "animation-direction",
-      class: "btn btn-warning btn-type-animation",
+      class: "btn btn-outline-primary btn-type-animation",
       text: "animation-direction",
     },
     {
@@ -924,7 +925,7 @@
     },
     {
       id: "animation-fill-mode",
-      class: "btn btn-warning btn-type-animation",
+      class: "btn btn-outline-primary btn-type-animation",
       text: "animation-fill-mode",
     },
     {
@@ -979,12 +980,12 @@
     },
     {
       id: "all",
-      class: "btn btn-warning btn-type-another",
+      class: "btn btn-outline-primary btn-type-another",
       text: "all",
     },
     {
       id: "accent-color",
-      class: "btn btn-warning btn-type-another",
+      class: "btn btn-outline-primary btn-type-another",
       text: "accent-color",
     },
     {
@@ -999,12 +1000,12 @@
     },
     {
       id: "block-size",
-      class: "btn btn-warning btn-type-another",
+      class: "btn btn-outline-primary btn-type-another",
       text: "block-size",
     },
     {
       id: "border-collapse",
-      class: "btn btn-warning btn-type-another",
+      class: "btn btn-outline-primary btn-type-another",
       text: "border-collapse",
     },
     {
@@ -1019,12 +1020,12 @@
     },
     {
       id: "caption-side",
-      class: "btn btn-warning btn-type-another",
+      class: "btn btn-outline-primary btn-type-another",
       text: "caption-side",
     },
     {
       id: "caret-color",
-      class: "btn btn-warning btn-type-another",
+      class: "btn btn-outline-primary btn-type-another",
       text: "caret-color",
     },
     {
@@ -1039,8 +1040,93 @@
     },
     {
       id: "content",
-      class: "btn btn-warning btn-type-another",
+      class: "btn btn-outline-primary btn-type-another",
       text: "content",
+    },
+    {
+      id: "grid",
+      class: "btn btn-danger btn-type-grid",
+      text: "grid",
+    },
+    {
+      id: "grid-area",
+      class: "btn btn-danger btn-type-grid",
+      text: "grid-area",
+    },
+    {
+      id: "grid-auto-columns",
+      class: "btn btn-danger btn-type-grid",
+      text: "grid-auto-columns",
+    },
+    {
+      id: "grid-auto-flow",
+      class: "btn btn-danger btn-type-grid",
+      text: "grid-auto-flow",
+    },
+    {
+      id: "grid-auto-rows",
+      class: "btn btn-danger btn-type-grid",
+      text: "grid-auto-rows",
+    },
+    {
+      id: "grid-template",
+      class: "btn btn-danger btn-type-grid",
+      text: "grid-template",
+    },
+    {
+      id: "grid-template-columns",
+      class: "btn btn-danger btn-type-grid",
+      text: "grid-template-columns",
+    },
+    {
+      id: "grid-template-rows",
+      class: "btn btn-danger btn-type-grid",
+      text: "grid-template-rows",
+    },
+    {
+      id: "grid-template-area",
+      class: "btn btn-danger btn-type-grid",
+      text: "grid-template-area",
+    },
+    {
+      id: "grid-column",
+      class: "btn btn-danger btn-type-grid",
+      text: "grid-column",
+    },
+    {
+      id: "grid-column-start",
+      class: "btn btn-danger btn-type-grid",
+      text: "grid-column-start",
+    },
+    {
+      id: "grid-column-end",
+      class: "btn btn-danger btn-type-grid",
+      text: "grid-column-end",
+    },
+    {
+      id: "grid-column-gap",
+      class: "btn btn-danger btn-type-grid",
+      text: "grid-column-gap",
+    },
+    {
+      id: "grid-row",
+      class: "btn btn-danger btn-type-grid",
+      text: "grid-row",
+    },
+    {
+      id: "grid-row-start",
+      class: "btn btn-danger btn-type-grid",
+      text: "grid-row-start",
+    },
+    {
+      id: "grid-row-end",
+      class: "btn btn-danger btn-type-grid",
+      text: "grid-row-end",
+    },
+    {
+      id: "grid-row-gap",
+      class: "btn btn-danger btn-type-grid",
+      text: "grid-row-gap",
     },
   ];
   

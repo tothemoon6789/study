@@ -10,6 +10,7 @@ body {
 #control ul li{
   list-style: decimal;
 }
+
 .deprecated {
   text-decoration: line-through;
   text-decoration-color: black;

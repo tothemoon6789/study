@@ -6,26 +6,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    
     .box {
-      display: flex;
-      
+      display: grid;
+      grid-template-columns: repeat(5,1fr);
     }
-    .item {
-      width: 300px;
+    .one {
+      grid-area: 1/1/ span 2 / span 2;
       background-color: red;
-      border: 2px solid blue;
-      outline: 6px dotted cyan;
-      box-sizing: border-box;
-      flex-grow: 1;
     }
-    .item:nth-child(2){
-      flex-shrink: 3;
+    .two {
+      grid-area: two;
+      background-color: yellow;
     }
+
   </style>
+
 </head>
 <body>
   <div class="box">
+    <div class="item one">1</div>
+    <div class="item">1</div>
+    <div class="item">1</div>
+    <div class="item">1</div>
+    <div class="item">1</div>
+    <div class="item two">1</div>
+    <div class="item">1</div>
+    <div class="item">1</div>
+    <div class="item">1</div>
+    <div class="item">1</div>
+    <div class="item">1</div>
+    <div class="item">1</div>
+    <div class="item">1</div>
+    <div class="item">1</div>
     <div class="item">1</div>
     <div class="item">1</div>
     <div class="item">1</div>

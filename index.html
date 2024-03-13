@@ -229,6 +229,687 @@
         <div data-for="clip" class="d-none"></div>
         <div data-for="clip-path" class="d-none"></div>
         <div data-for="content" class="d-none">content</div>
+        <div data-for="grid" class="d-none">
+          <div class="text-danger p-3" style="font-weight: 700">Trên cha</div>
+          <div class="alert alert-info" role="alert"><strong>grid</strong> là thuộc tính viết tắc cho toàn bộ các thuộc tính <strong>grid-</strong></div>
+          <div class="alert alert-warning" role="alert">Thuộc tính <strong>grid</strong> chỉ hoạt động khi đã set <strong>display:grid</strong> cho <strong>container</strong></div>
+          <style>
+            .grid-container {
+              display: grid;
+              grid: 1fr 1fr / 1fr 1fr;
+            }
+          </style>
+          <div class="grid-container">
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+          </div>
+        </div>
+        <div data-for="grid-area" class="d-block">
+          <img src="./asset/images/grid-area-default.svg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+          <h5>Định nghĩa</h5>
+          <div class="alert alert-info" role="alert">
+            Thuộc tính <strong>grid-area</strong> thay đổi bố cục của phần tử con
+          </div>
+          <h5>Cách dùng</h5>
+          <div class="text-danger p-3" style="font-weight: 700">Trên con</div>
+          
+          <div class="alert alert-info" role="alert"> <span class="text-danger">Đặt tên cho con <strong>không có dấu nháy</strong></span></div>
+          <div class="alert alert-warning" role="alert"> Chỉ hoạt động khi đã set <strong>display:grid</strong> và phải <strong>thiết lập đầu đủ hàng và cột</strong> trên phần tử cha</div>
+          <img src="./asset/images/grid-area.svg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+          <div class="alert alert-danger" role="alert">Giá trị <strong>1 / 2 / span 2 / span 3</strong> có nghĩa là hàng bắt đầu là 1, cột bắt đầu là 1, <strong>span 2</strong> có nghĩa là gộp thêm 2 cột nữa tính từ cột đầu tiên, <strong>span 3</strong> có nghĩa là gộp thêm ba hàng nữa tính từ hàng đầu tiên</div>
+          <h5>Cú pháp</h5>
+          <div class="alert alert-info" role="alert">
+            grid-area: <strong>hàng bắt đầu</strong> <strong><strong>/</strong></strong> <strong>cột bắt đầu</strong> <strong><strong>/</strong></strong> <strong>hàng kết thúc</strong> <strong><strong>/</strong></strong> <strong>cột kết thúc</strong> 
+          </div>
+          <img src="./asset/images/grid-area-span.svg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+          <h5>Ví dụ</h5>
+          <div class="alert alert-info" role="alert">
+            grid-area: <strong>1</strong> <strong><strong>/</strong></strong> <strong>1</strong> <strong><strong>/</strong></strong> <strong>3</strong> <strong><strong>/</strong></strong> <strong>3</strong> 
+          </div>
+          <div class="alert alert-info" role="alert">
+            grid-area: <strong>1</strong> <strong><strong>/</strong></strong> <strong>1</strong> <strong><strong>/</strong></strong> <strong>span 3</strong> <strong><strong>/</strong></strong> <strong>span 3</strong> 
+          </div>
+          <style>
+            .grid-area {
+              display: grid;
+              grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+            .grid-area > div {
+              background-color: coral;
+              text-align: center;
+            }
+            .grid-area .item:nth-of-type(4) {
+              background-color: yellow;
+              grid-area: 1 / 1 / span 3 / span 3;
+            }
+          </style>
+          <div class="grid-area">
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+          </div>
+        </div>
+        <div data-for="grid-auto-columns" class="d-none">
+          <div class="text-danger p-3" style="font-weight: 700">Trên cha</div>
+          <div class="alert alert-info" role="alert">Thuộc tính grid-auto-columns nhận các giá trị sau: <strong>auto</strong>, <strong>max-content</strong>, <strong>min-content</strong>, <strong>50px</strong>, <strong>30%</strong></div>
+          <div class="alert alert-warning" role="alert">
+            <strong>Chỉ có hiệu ứng khi kích thước item chưa được thiết lập</strong>
+          </div>
+          <div class="alert alert-danger" role="alert"><strong>Không hoạt động</strong> chung với grid-template-columns</div>
+          <div class="alert alert-danger" role="alert"><strong>Hình như thuộc tính grid-auto-columns</strong> chỉ hoạt động chung với <strong>grid-area</strong> khi dùng grid-area thiết lập cho từng item.</div>
+          <style>
+            .grid-container-2 {
+              display: grid;
+              grid-auto-columns: 100px;
+            }
+            .grid-container-2 > div {
+              background-color: red;
+            }
+            .grid-container-2 .item-2 {
+              all: initial;
+              background-color: yellow;
+            }
+            .grid-container-2 .item:nth-child(1) {
+              grid-area: 1/1/2/2;
+            }
+            .grid-container-2 .item:nth-child(2) {
+              grid-area: 1/2/2/3;
+            }
+            .grid-container-2 .item:nth-child(3) {
+              grid-area: 1/3/2/4;
+            }
+            .grid-container-2 .item:nth-child(4) {
+              grid-area: 2/1/3/2;
+            }
+            .grid-container-2 .item:nth-child(5) {
+              grid-area: 2/2/3/3;
+            }
+          </style>
+          <div class="grid-container-2">
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item-2">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+          </div>
+        </div>
+        <div data-for="grid-auto-flow" class="d-none">
+          <div class="text-danger p-3" style="font-weight: 700">Trên cha</div>
+          <div class="alert alert-info" role="alert">grid-auto-flow <strong>row</strong>, <strong>column</strong>, <strong>dense</strong>, <strong>row dense</strong>, <strong>column dense</strong></div>
+          <div class="p-3">
+            Dùng chung với
+            <ul>
+              <li>display:grid</li>
+              <li>grid-template-columns: auto auto auto;</li>
+              <li>grid-template-rows: auto auto;</li>
+            </ul>
+          </div>
+          <style>
+            .grid-container-3 {
+              display: grid;
+              grid-template-columns: auto auto auto;
+              grid-template-rows: auto auto;
+              grid-auto-flow: column;
+            }
+          </style>
+          <div class="grid-container-3">
+            <div class="item1">1</div>
+            <div class="item2">2</div>
+            <div class="item3">3</div>
+            <div class="item4">4</div>
+          </div>
+        </div>
+        <div data-for="grid-auto-rows" class="d-none">
+          <div class="text-danger p-3" style="font-weight: 700">Trên cha</div>
+          <div class="alert alert-danger" role="alert">Bị ghi đè bởi <strong>grid-template-rows</strong></div>
+          <div class="alert alert-danger" role="alert">Chỉ có hiệu ứng khi kích thước không được thiết lập</div>
+          <div class="alert alert-info" role="alert">grid-auto-flow <strong>auto</strong>, <strong>max-content</strong>, <strong>min-content</strong>, <strong>length</strong></div>
+
+          <style>
+            .grid-container-5 .item1 {
+              grid-area: 1 / 1 / 2 / 2;
+            }
+            .grid-container-5 .item2 {
+              grid-area: 1 / 2 / 2 / 3;
+            }
+            .grid-container-5 .item3 {
+              grid-area: 1 / 3 / 2 / 4;
+            }
+            .grid-container-5 .item4 {
+              grid-area: 2 / 1 / 3 / 2;
+            }
+            .grid-container-5 .item5 {
+              grid-area: 2 / 2 / 3 / 3;
+            }
+            .grid-container-5 .item6 {
+              grid-area: 2 / 3 / 3 / 4;
+            }
+            .grid-container-5 {
+              display: grid;
+              grid-auto-rows: 150px;
+            }
+          </style>
+          <div class="grid-container-5">
+            <div class="item1">1</div>
+            <div class="item2">2</div>
+            <div class="item3">3</div>
+            <div class="item4">4</div>
+            <div class="item5">4</div>
+            <div class="item56">4</div>
+          </div>
+        </div>
+        <div data-for="grid-template" class="d-none">
+          <h1>grid template chua sua, dai dien cho 3 thanh pham template</h1>
+          <div class="text-danger p-3" style="font-weight: 700">Trên cha</div>
+          <div class="alert alert-danger" role="alert">
+            <strong>Giá trị cách nhau không có phẩy</strong>
+          </div>
+          <div class="alert alert-warning" role="alert">
+            Dùng chung với <strong>display:grid</strong>
+          </div>
+          <div class="alert alert-info" role="alert">
+            grid-template-columns: <strong>repeat(5,1fr)</strong>
+          </div>
+          <style>
+            .container-grid-template-columns {
+              display: grid;
+              grid-template-columns: auto auto;
+            }
+          </style>
+          <div class="container-grid-template-columns">
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+          </div>
+        </div>
+        <div data-for="grid-template-columns" class="d-none">
+          <div class="text-danger p-3" style="font-weight: 700">Trên cha</div>
+          <div class="alert alert-danger" role="alert">
+            <strong>Giá trị cách nhau không có phẩy</strong>
+          </div>
+          <div class="alert alert-warning" role="alert">
+            Dùng chung với <strong>display:grid</strong>
+          </div>
+          <div class="alert alert-info" role="alert">
+            grid-template-columns: <strong>repeat(5,1fr)</strong>
+          </div>
+          <style>
+            .container-grid-template-columns {
+              display: grid;
+              grid-template-columns: auto auto;
+            }
+          </style>
+          <div class="container-grid-template-columns">
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+          </div>
+        </div>
+        <div data-for="grid-template-rows" class="d-none">
+          <div class="alert alert-info" role="alert">
+            grid-template-rows chỉ thay đổi chiều cao của phần tử <strong>có thể thay đổi số hàng</strong>
+          </div>
+          <div class="text-danger p-3" style="font-weight: 700">Trên cha</div>
+          
+          <div class="alert alert-danger" role="alert">
+            <strong>Giá trị cách nhau không có phẩy</strong>
+          </div>
+          <div class="alert alert-warning" role="alert">
+            dùng chung: <strong>display:grid</strong>, <strong>grid-template-columns</strong> HOẶC <strong>grid-auto-flow</strong>
+          </div>
+          <div class="alert alert-info" role="alert">
+            grid-template-rows: <strong>none</strong> | <strong>auto</strong> | <strong>max-content</strong> | <strong>min-content</strong> | <strong>length</strong>
+          </div>
+          <style>
+            .container-grid-template-rows {
+              display: grid;
+              grid-template-rows: 1fr 1fr;
+              grid-auto-flow: column;
+            }
+          </style>
+          <div class="container-grid-template-rows">
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+          </div>
+        </div>
+        <div data-for="grid-template-area" class="d-none">
+          <h5>Định nghĩa</h5>
+          <div class="alert alert-info" role="alert">
+            <strong>grid-template-area</strong> thay đổi cách chia bố cục cho toàn bộ thành phần con và một vài thành phần con
+          </div>
+          <h5>Cách dùng</h5>
+          <div class="text-danger p-3" style="font-weight: 700">Trên cha</div>
+          
+          <div class="alert alert-danger" role="alert">
+            Giá trị cách nhau không có phẩy ví dụ: <strong>"item item item . . . "</strong> <strong>"item item item . . . "</strong>
+          </div>
+          
+          <div class="alert alert-warning" role="alert">
+            Dùng chung: <strong>display:grid</strong>, <strong>grid-area</strong>
+          </div>
+          
+          
+          <h5>Cú pháp</h5>
+          <div class="alert alert-info" role="alert">
+            grid-template-area:  <strong>none</strong> | <strong>"itemNames"</strong>
+          </div>
+          <h5>Giá trị thật</h5>
+          <div class="alert alert-info" role="alert">
+            grid-template-area: <strong>"myArea myArea . . . "</strong>
+          </div>
+          <style>
+            .grid-template-areas {
+              display: grid;
+              grid-template-areas: 
+              "item item item . . . "
+              "item item item . . . "
+              "item item item . . . "
+              ;
+            }
+            .grid-template-areas .one {
+
+            }
+          </style>
+          <div class=".grid-template-areas">
+            <div class="item one">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+          </div>
+        </div>
+        <div data-for="grid-column-start" class="d-none">
+          <h1>chua lam , </h1>
+          <div class="alert alert-info" role="alert">
+            grid-template-area
+          </div>
+          <div class="text-danger p-3" style="font-weight: 700">Trên cha</div>
+          
+          <div class="alert alert-danger" role="alert">
+            <strong>Giá trị cách nhau không có phẩy</strong>
+          </div>
+          <div class="alert alert-warning" role="alert">
+            dùng chung: <strong>display:grid</strong>, <strong>grid-area</strong>
+          </div>
+          <div class="alert alert-info" role="alert">
+            grid-template-area: <strong>"myArea myArea . . . "</strong>
+          </div>
+          <style>
+            .container-grid-template-rows {
+              display: grid;
+              grid-template-rows: 1fr 1fr;
+              grid-auto-flow: column;
+            }
+          </style>
+          <div class="container-grid-template-rows">
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+          </div>
+        </div>
+        <div data-for="grid-column-end" class="d-none">
+          <h1>chua lam , grid-column-end</h1>
+          <div class="alert alert-info" role="alert">
+            grid-template-area
+          </div>
+          <div class="text-danger p-3" style="font-weight: 700">Trên cha</div>
+          
+          <div class="alert alert-danger" role="alert">
+            <strong>Giá trị cách nhau không có phẩy</strong>
+          </div>
+          <div class="alert alert-warning" role="alert">
+            dùng chung: <strong>display:grid</strong>, <strong>grid-area</strong>
+          </div>
+          <div class="alert alert-info" role="alert">
+            grid-template-area: <strong>"myArea myArea . . . "</strong>
+          </div>
+          <style>
+            .container-grid-template-rows {
+              display: grid;
+              grid-template-rows: 1fr 1fr;
+              grid-auto-flow: column;
+            }
+          </style>
+          <div class="container-grid-template-rows">
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+          </div>
+        </div>
+        <div data-for="grid-column" class="d-none">
+          <h1>chua lam </h1>
+          <div class="alert alert-info" role="alert">
+            grid-template-area
+          </div>
+          <div class="text-danger p-3" style="font-weight: 700">Trên cha</div>
+          
+          <div class="alert alert-danger" role="alert">
+            <strong>Giá trị cách nhau không có phẩy</strong>
+          </div>
+          <div class="alert alert-warning" role="alert">
+            dùng chung: <strong>display:grid</strong>, <strong>grid-area</strong>
+          </div>
+          <div class="alert alert-info" role="alert">
+            grid-template-area: <strong>"myArea myArea . . . "</strong>
+          </div>
+          <style>
+            .container-grid-template-rows {
+              display: grid;
+              grid-template-rows: 1fr 1fr;
+              grid-auto-flow: column;
+            }
+          </style>
+          <div class="container-grid-template-rows">
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+          </div>
+        </div>
+        <div data-for="grid-column-gap" class="d-none">
+          <h1>chua lam grid-column-gap </h1>
+          <div class="alert alert-info" role="alert">
+            grid-template-area
+          </div>
+          <div class="text-danger p-3" style="font-weight: 700">Trên cha</div>
+          
+          <div class="alert alert-danger" role="alert">
+            <strong>Giá trị cách nhau không có phẩy</strong>
+          </div>
+          <div class="alert alert-warning" role="alert">
+            dùng chung: <strong>display:grid</strong>, <strong>grid-area</strong>
+          </div>
+          <div class="alert alert-info" role="alert">
+            grid-template-area: <strong>"myArea myArea . . . "</strong>
+          </div>
+          <style>
+            .container-grid-template-rows {
+              display: grid;
+              grid-template-rows: 1fr 1fr;
+              grid-auto-flow: column;
+            }
+          </style>
+          <div class="container-grid-template-rows">
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+          </div>
+        </div>
+        <div data-for="grid-row-start" class="d-none">
+          <h1>chua lam grid-row-start</h1>
+          <div class="alert alert-info" role="alert">
+            grid-template-area
+          </div>
+          <div class="text-danger p-3" style="font-weight: 700">Trên cha</div>
+          
+          <div class="alert alert-danger" role="alert">
+            <strong>Giá trị cách nhau không có phẩy</strong>
+          </div>
+          <div class="alert alert-warning" role="alert">
+            dùng chung: <strong>display:grid</strong>, <strong>grid-area</strong>
+          </div>
+          <div class="alert alert-info" role="alert">
+            grid-template-area: <strong>"myArea myArea . . . "</strong>
+          </div>
+          <style>
+            .container-grid-template-rows {
+              display: grid;
+              grid-template-rows: 1fr 1fr;
+              grid-auto-flow: column;
+            }
+          </style>
+          <div class="container-grid-template-rows">
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+          </div>
+        </div>
+        <div data-for="grid-row-end" class="d-none">
+          <h1>chua lam grid-row-end</h1>
+          <div class="alert alert-info" role="alert">
+            grid-template-area
+          </div>
+          <div class="text-danger p-3" style="font-weight: 700">Trên cha</div>
+          
+          <div class="alert alert-danger" role="alert">
+            <strong>Giá trị cách nhau không có phẩy</strong>
+          </div>
+          <div class="alert alert-warning" role="alert">
+            dùng chung: <strong>display:grid</strong>, <strong>grid-area</strong>
+          </div>
+          <div class="alert alert-info" role="alert">
+            grid-template-area: <strong>"myArea myArea . . . "</strong>
+          </div>
+          <style>
+            .container-grid-template-rows {
+              display: grid;
+              grid-template-rows: 1fr 1fr;
+              grid-auto-flow: column;
+            }
+          </style>
+          <div class="container-grid-template-rows">
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+          </div>
+        </div>
+        <div data-for="grid-row" class="d-none">
+          <h1>chua lam grid-row</h1>
+          <div class="alert alert-info" role="alert">
+            grid-template-area
+          </div>
+          <div class="text-danger p-3" style="font-weight: 700">Trên cha</div>
+          
+          <div class="alert alert-danger" role="alert">
+            <strong>Giá trị cách nhau không có phẩy</strong>
+          </div>
+          <div class="alert alert-warning" role="alert">
+            dùng chung: <strong>display:grid</strong>, <strong>grid-area</strong>
+          </div>
+          <div class="alert alert-info" role="alert">
+            grid-template-area: <strong>"myArea myArea . . . "</strong>
+          </div>
+          <style>
+            .container-grid-template-rows {
+              display: grid;
+              grid-template-rows: 1fr 1fr;
+              grid-auto-flow: column;
+            }
+          </style>
+          <div class="container-grid-template-rows">
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+          </div>
+        </div>
+        <div data-for="grid-row-gap" class="d-none">
+          <h1>chua lam grid-row-gap</h1>
+          <div class="alert alert-info" role="alert">
+            grid-template-area
+          </div>
+          <div class="text-danger p-3" style="font-weight: 700">Trên cha</div>
+          
+          <div class="alert alert-danger" role="alert">
+            <strong>Giá trị cách nhau không có phẩy</strong>
+          </div>
+          <div class="alert alert-warning" role="alert">
+            dùng chung: <strong>display:grid</strong>, <strong>grid-area</strong>
+          </div>
+          <div class="alert alert-info" role="alert">
+            grid-template-area: <strong>"myArea myArea . . . "</strong>
+          </div>
+          <style>
+            .container-grid-template-rows {
+              display: grid;
+              grid-template-rows: 1fr 1fr;
+              grid-auto-flow: column;
+            }
+          </style>
+          <div class="container-grid-template-rows">
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+          </div>
+        </div>
+        <div data-for="grid-gap" class="d-none">
+          <h1>chua lam grid-gap</h1>
+          <div class="alert alert-info" role="alert">
+            grid-template-area
+          </div>
+          <div class="text-danger p-3" style="font-weight: 700">Trên cha</div>
+          
+          <div class="alert alert-danger" role="alert">
+            <strong>Giá trị cách nhau không có phẩy</strong>
+          </div>
+          <div class="alert alert-warning" role="alert">
+            dùng chung: <strong>display:grid</strong>, <strong>grid-area</strong>
+          </div>
+          <div class="alert alert-info" role="alert">
+            grid-template-area: <strong>"myArea myArea . . . "</strong>
+          </div>
+          <style>
+            .container-grid-template-rows {
+              display: grid;
+              grid-template-rows: 1fr 1fr;
+              grid-auto-flow: column;
+            }
+          </style>
+          <div class="container-grid-template-rows">
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+            <div class="item">1</div>
+          </div>
+        </div>
+        <div data-for="rem" class="d-none">
+          <div class="alert alert-info" role="alert">
+            5rem = 5 x fontsize của html
+          </div>
+        </div>
+        <div data-for="em" class="d-none">
+          <div class="alert alert-info" role="alert">
+            5rem = 5 x fontsize của chính nó
+          </div>
+        </div>
+
       </div>
       <div id="total"></div>
       <!-- <p>nếu li thì viền gì, màu gì, nếu ul là viền gì màu gì, tao ghi chú fixed trên màn hình</p> -->
