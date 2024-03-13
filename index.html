@@ -198,9 +198,102 @@
         <div data-for="list-style-type" class="d-none"></div>
         <div data-for="list-style-position" class="d-none"></div>
         <div data-for="list-style-image" class="d-none"></div>
-        <div data-for="scrollbar-color" class="d-none"></div>
-        <div data-for="webkit-scroolbar-thumb" class="d-none"></div>
-        <div data-for="webkit-scroolbar-track" class="d-none"></div>
+        <div data-for="webkit-scrollbar" class="d-none">
+          <div class="alert alert-info" role="alert"><strong>::-webkit-scrollbar</strong> là pseodo class, ám chỉ cho cả tràn x và tràn y</div>
+          <div class="alert alert-info" role="alert"><strong>width:10px</strong> thiết lập bề rộng phần tử tràn x, <strong>height:30px</strong>thiết lập chiều cao tràn y</div>
+          <div class="p-3 text-danger">Hoạt động <strong>trên phần tử</strong> bị scroll</div>
+
+          <div class="alert alert-warning" role="alert">Chỉ có hiệu ứng khi dùng chung với <strong>::-webkit-scrollbar-thumb</strong> hoặc <strong>::-webkit-scrollbar-track</strong></div>
+        </div>
+        <div data-for="webkit-scrollbar-thumb" class="d-none">
+          <div class="alert alert-info" role="alert"><strong>::-webkit-scrollbar-thumb</strong> thay đổi nút kéo và là pseodo class</div>
+          <div class="p-3 text-danger">Hoạt động <strong>trên phần tử</strong> bị scroll</div>
+          <div class="p-3 text-danger">Không thể set width</div>
+          <div class="alert alert-warning" role="alert">Chỉ có hiệu ứng khi dùng chung với <strong>::-webkit-scrollbar</strong> và phải set width cho ::-webkit-scrollbar</div>
+          <h5>Một số thuộc tính dùng trong lớp giả này</h5>
+          <ul>
+            <li>background</li>
+            <li>background-color</li>
+            <li>border-radius</li>
+            <li>box-shadow: inset 0 0 5px grey; sử dụng cho track rất đẹp</li>
+            <li>border: 1px solid blue</li>
+          </ul>
+          <style>
+            .webkit-scrollbar-thumb {
+              height: clamp(300px, 70vh, 400px);
+              overflow-y: scroll;
+            }
+            .webkit-scrollbar-thumb::-webkit-scrollbar {
+              width: 10px;
+            }
+            .webkit-scrollbar-thumb::-webkit-scrollbar-thumb {
+              background-color: red;
+              border-radius: 20px;
+            }
+          </style>
+          <div class="webkit-scrollbar-thumb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quod suscipit aspernatur, incidunt aliquid ipsa dolore tenetur veritatis quae dignissimos quibusdam libero ratione, magni quis placeat, consequatur quo itaque ea dolores voluptates at quia vel odio? Natus quo at praesentium inventore laborum asperiores in repellendus libero! Rerum, explicabo ex aliquam eaque impedit rem minima delectus! Repellendus sequi alias itaque doloremque, voluptates a reprehenderit quis debitis obcaecati in perferendis adipisci quibusdam id animi error eveniet enim hic tempore deserunt quo officiis illo exercitationem aperiam facilis? Eaque sunt commodi officiis, adipisci alias ab voluptatum. Ea odio, delectus numquam voluptas excepturi voluptatem aut facere non earum dolorem vero? Reprehenderit quia nostrum enim dolores deserunt nesciunt, id praesentium nulla quisquam consequuntur facilis dicta asperiores veritatis sit dignissimos. Commodi repudiandae quia esse cumque natus odit quo nisi? Quis quisquam assumenda adipisci explicabo ad odit fugit. Tempore dignissimos blanditiis deserunt a harum exercitationem suscipit recusandae maxime animi qui delectus doloremque rem, quidem laborum earum reprehenderit repudiandae provident non? Rem corrupti quo excepturi cumque minus quae rerum dignissimos odio magni reprehenderit, quis deserunt possimus ut? Atque dignissimos alias labore consequatur dolorem tempora hic, excepturi repellendus vitae dolore eum iste aut suscipit ducimus distinctio reiciendis magni sit commodi ad beatae. Ex nam vitae tempora velit corporis ipsam earum, dicta sit sint eligendi alias atque reiciendis nobis omnis eveniet rem animi accusantium, amet officiis illo consectetur, quas molestias impedit quibusdam. Illo vel a nostrum doloribus, id sit voluptatem hic animi quis laborum odio, rerum nulla consequuntur cum est possimus, harum qui repellendus corporis quasi culpa sapiente. Quibusdam quae praesentium similique saepe quo eveniet eum nostrum autem veniam iste aperiam animi aliquid totam facere culpa amet eos esse, porro tempora fugiat voluptatum! Excepturi quod odio autem doloribus voluptate amet tempora, in itaque consequuntur reprehenderit voluptates fugiat dicta totam. Neque libero odio magni placeat, sequi deserunt blanditiis repellendus dolore esse optio voluptas. Itaque, alias ut! Possimus, magni? Est cumque quidem, delectus quas consequatur provident assumenda harum saepe. Ipsum exercitationem ea sint, quibusdam modi consequuntur doloremque fugiat atque similique inventore facere rerum? Aliquam nostrum vero consectetur! Necessitatibus doloribus accusamus nobis dolore maxime laudantium nihil, suscipit harum culpa alias itaque commodi officiis eius dolorum tempora provident? Eos nostrum corporis quasi totam in sint. Exercitationem explicabo cumque fuga pariatur ipsum sint beatae necessitatibus deleniti dolorem maiores, non hic fugit. Natus tenetur dolores distinctio, optio placeat eos hic dolor quis dolorum similique veritatis necessitatibus, itaque cum quidem quisquam voluptatem doloribus sint soluta. Fugit laudantium accusamus expedita reprehenderit porro ipsa ratione minus? Incidunt modi, ipsa, totam quasi quod quibusdam omnis adipisci libero fugiat esse nam atque tempora excepturi ex, consectetur dolorem dicta dolor veniam maiores perspiciatis fuga sed. Ad voluptas, excepturi modi quo obcaecati dolor mollitia eaque natus quae rem? Accusantium dolores suscipit veritatis at, possimus dolor. Sapiente quis dolorum quam enim deserunt ratione aliquam, at voluptas aliquid iure eligendi corporis totam molestiae voluptatum est debitis doloribus veniam. Aliquam velit molestias illo odit doloremque dolorum ducimus hic quidem aliquid voluptas, iste repellat architecto repellendus corrupti doloribus?</div>
+        </div>
+        <div data-for="webkit-scrollbar-track" class="d-none">
+          <style>
+            .webkit-scrollbar-track {
+              height: clamp(300px, 70vh, 400px);
+              overflow-y: scroll;
+            }
+            .webkit-scrollbar-track::-webkit-scrollbar {
+              width: 10px;
+            }
+            .webkit-scrollbar-track::-webkit-scrollbar-thumb {
+              background-color: red;
+              border-radius: 20px;
+            }
+            .webkit-scrollbar-track::-webkit-scrollbar-track {
+              border-radius: 20px;
+              box-shadow: inset 2px 4px 8px 0 rgba(0, 0, 0, 0.2);
+            }
+          </style>
+          <div class="webkit-scrollbar-track">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quod suscipit aspernatur, incidunt aliquid ipsa dolore tenetur veritatis quae dignissimos quibusdam libero ratione, magni quis placeat, consequatur quo itaque ea dolores voluptates at quia vel odio? Natus quo at praesentium inventore laborum asperiores in repellendus libero! Rerum, explicabo ex aliquam eaque impedit rem minima delectus! Repellendus sequi alias itaque doloremque, voluptates a reprehenderit quis debitis obcaecati in perferendis adipisci quibusdam id animi error eveniet enim hic tempore deserunt quo officiis illo exercitationem aperiam facilis? Eaque sunt commodi officiis, adipisci alias ab voluptatum. Ea odio, delectus numquam voluptas excepturi voluptatem aut facere non earum dolorem vero? Reprehenderit quia nostrum enim dolores deserunt nesciunt, id praesentium nulla quisquam consequuntur facilis dicta asperiores veritatis sit dignissimos. Commodi repudiandae quia esse cumque natus odit quo nisi? Quis quisquam assumenda adipisci explicabo ad odit fugit. Tempore dignissimos blanditiis deserunt a harum exercitationem suscipit recusandae maxime animi qui delectus doloremque rem, quidem laborum earum reprehenderit repudiandae provident non? Rem corrupti quo excepturi cumque minus quae rerum dignissimos odio magni reprehenderit, quis deserunt possimus ut? Atque dignissimos alias labore consequatur dolorem tempora hic, excepturi repellendus vitae dolore eum iste aut suscipit ducimus distinctio reiciendis magni sit commodi ad beatae. Ex nam vitae tempora velit corporis ipsam earum, dicta sit sint eligendi alias atque reiciendis nobis omnis eveniet rem animi accusantium, amet officiis illo consectetur, quas molestias impedit quibusdam. Illo vel a nostrum doloribus, id sit voluptatem hic animi quis laborum odio, rerum nulla consequuntur cum est possimus, harum qui repellendus corporis quasi culpa sapiente. Quibusdam quae praesentium similique saepe quo eveniet eum nostrum autem veniam iste aperiam animi aliquid totam facere culpa amet eos esse, porro tempora fugiat voluptatum! Excepturi quod odio autem doloribus voluptate amet tempora, in itaque consequuntur reprehenderit voluptates fugiat dicta totam. Neque libero odio magni placeat, sequi deserunt blanditiis repellendus dolore esse optio voluptas. Itaque, alias ut! Possimus, magni? Est cumque quidem, delectus quas consequatur provident assumenda harum saepe. Ipsum exercitationem ea sint, quibusdam modi consequuntur doloremque fugiat atque similique inventore facere rerum? Aliquam nostrum vero consectetur! Necessitatibus doloribus accusamus nobis dolore maxime laudantium nihil, suscipit harum culpa alias itaque commodi officiis eius dolorum tempora provident? Eos nostrum corporis quasi totam in sint. Exercitationem explicabo cumque fuga pariatur ipsum sint beatae necessitatibus deleniti dolorem maiores, non hic fugit. Natus tenetur dolores distinctio, optio placeat eos hic dolor quis dolorum similique veritatis necessitatibus, itaque cum quidem quisquam voluptatem doloribus sint soluta. Fugit laudantium accusamus expedita reprehenderit porro ipsa ratione minus? Incidunt modi, ipsa, totam quasi quod quibusdam omnis adipisci libero fugiat esse nam atque tempora excepturi ex, consectetur dolorem dicta dolor veniam maiores perspiciatis fuga sed. Ad voluptas, excepturi modi quo obcaecati dolor mollitia eaque natus quae rem? Accusantium dolores suscipit veritatis at, possimus dolor. Sapiente quis dolorum quam enim deserunt ratione aliquam, at voluptas aliquid iure eligendi corporis totam molestiae voluptatum est debitis doloribus veniam. Aliquam velit molestias illo odit doloremque dolorum ducimus hic quidem aliquid voluptas, iste repellat architecto repellendus corrupti doloribus?</div>
+        </div>
+        <div data-for="webkit-scrollbar-corner" class="d-none">
+          <style>
+            .webkit-scrollbar-corner {
+              height: clamp(300px, 70vh, 400px);
+              overflow-y: scroll;
+              overflow-x: scroll;
+            }
+            .webkit-scrollbar-corner::-webkit-scrollbar {
+              width: 8px;
+              height: 8px;
+            }
+            @media (min-width:786px) {
+              .webkit-scrollbar-corner::-webkit-scrollbar {
+                height: 0px !important;
+              }
+              
+            }
+            .webkit-scrollbar-corner::-webkit-scrollbar-thumb {
+              background-color: rgb(142, 19, 19);
+              border-radius: 20px;
+            }
+            .webkit-scrollbar-corner::-webkit-scrollbar-track {
+              border-radius: 20px;
+              box-shadow: inset 2px 4px 8px 0 rgba(0, 0, 0, 0.2);
+              background-color: rgba(154, 153, 153, 0.6);
+            }
+            .webkit-scrollbar-corner::-webkit-scrollbar-corner {
+              background: transparent;
+              /* background-color: red; */
+              width: 0;
+              height: 0;
+              border-left: 16px solid gray;
+              border-top: 16px solid gray;
+              border-bottom: 16px solid transparent;
+              border-right: 16px solid transparent;
+            }
+          </style>
+          <div class="webkit-scrollbar-corner">
+            <div style="width: 700px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quod suscipit aspernatur, incidunt aliquid ipsa dolore tenetur veritatis quae dignissimos quibusdam libero ratione, magni quis placeat, consequatur quo itaque ea dolores voluptates at quia vel odio? Natus quo at praesentium inventore laborum asperiores in repellendus libero! Rerum, explicabo ex aliquam eaque impedit rem minima delectus! Repellendus sequi alias itaque doloremque, voluptates a reprehenderit quis debitis obcaecati in perferendis adipisci quibusdam id animi error eveniet enim hic tempore deserunt quo officiis illo exercitationem aperiam facilis? Eaque sunt commodi officiis, adipisci alias ab voluptatum. Ea odio, delectus numquam voluptas excepturi voluptatem aut facere non earum dolorem vero? Reprehenderit quia nostrum enim dolores deserunt nesciunt, id praesentium nulla quisquam consequuntur facilis dicta asperiores veritatis sit dignissimos. Commodi repudiandae quia esse cumque natus odit quo nisi? Quis quisquam assumenda adipisci explicabo ad odit fugit. Tempore dignissimos blanditiis deserunt a harum exercitationem suscipit recusandae maxime animi qui delectus doloremque rem, quidem laborum earum reprehenderit repudiandae provident non? Rem corrupti quo excepturi cumque minus quae rerum dignissimos odio magni reprehenderit, quis deserunt possimus ut? Atque dignissimos alias labore consequatur dolorem tempora hic, excepturi repellendus vitae dolore eum iste aut suscipit ducimus distinctio reiciendis magni sit commodi ad beatae. Ex nam vitae tempora velit corporis ipsam earum, dicta sit sint eligendi alias atque reiciendis nobis omnis eveniet rem animi accusantium, amet officiis illo consectetur, quas molestias impedit quibusdam. Illo vel a nostrum doloribus, id sit voluptatem hic animi quis laborum odio, rerum nulla consequuntur cum est possimus, harum qui repellendus corporis quasi culpa sapiente. Quibusdam quae praesentium similique saepe quo eveniet eum nostrum autem veniam iste aperiam animi aliquid totam facere culpa amet eos esse, porro tempora fugiat voluptatum! Excepturi quod odio autem doloribus voluptate amet tempora, in itaque consequuntur reprehenderit voluptates fugiat dicta totam. Neque libero odio magni placeat, sequi deserunt blanditiis repellendus dolore esse optio voluptas. Itaque, alias ut! Possimus, magni? Est cumque quidem, delectus quas consequatur provident assumenda harum saepe. Ipsum exercitationem ea sint, quibusdam modi consequuntur doloremque fugiat atque similique inventore facere rerum? Aliquam nostrum vero consectetur! Necessitatibus doloribus accusamus nobis dolore maxime laudantium nihil, suscipit harum culpa alias itaque commodi officiis eius dolorum tempora provident? Eos nostrum corporis quasi totam in sint. Exercitationem explicabo cumque fuga pariatur ipsum sint beatae necessitatibus deleniti dolorem maiores, non hic fugit. Natus tenetur dolores distinctio, optio placeat eos hic dolor quis dolorum similique veritatis necessitatibus, itaque cum quidem quisquam voluptatem doloribus sint soluta. Fugit laudantium accusamus expedita reprehenderit porro ipsa ratione minus? Incidunt modi, ipsa, totam quasi quod quibusdam omnis adipisci libero fugiat esse nam atque tempora excepturi ex, consectetur dolorem dicta dolor veniam maiores perspiciatis fuga sed. Ad voluptas, excepturi modi quo obcaecati dolor mollitia eaque natus quae rem? Accusantium dolores suscipit veritatis at, possimus dolor. Sapiente quis dolorum quam enim deserunt ratione aliquam, at voluptas aliquid iure eligendi corporis totam molestiae voluptatum est debitis doloribus veniam. Aliquam velit molestias illo odit doloremque dolorum ducimus hic quidem aliquid voluptas, iste repellat architecto repellendus corrupti doloribus?</div>
+          </div>
+        </div>
         <div data-for="animation" class="d-none"></div>
         <div data-for="animation-direction" class="d-none"></div>
         <div data-for="animation-timing-function" class="d-none"></div>
@@ -253,30 +346,30 @@
             <div class="item">1</div>
           </div>
         </div>
-        <div data-for="grid-area" class="d-block">
-          <img src="./asset/images/grid-area-default.svg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+        <div data-for="grid-area" class="d-none">
+          <img src="./asset/images/grid-area-default.svg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="" />
           <h5>Định nghĩa</h5>
-          <div class="alert alert-info" role="alert">
-            Thuộc tính <strong>grid-area</strong> thay đổi bố cục của phần tử con
-          </div>
+          <div class="alert alert-info" role="alert">Thuộc tính <strong>grid-area</strong> thay đổi bố cục của phần tử con</div>
           <h5>Cách dùng</h5>
           <div class="text-danger p-3" style="font-weight: 700">Trên con</div>
-          
-          <div class="alert alert-info" role="alert"> <span class="text-danger">Đặt tên cho con <strong>không có dấu nháy</strong></span></div>
-          <div class="alert alert-warning" role="alert"> Chỉ hoạt động khi đã set <strong>display:grid</strong> và phải <strong>thiết lập đầu đủ hàng và cột</strong> trên phần tử cha</div>
-          <img src="./asset/images/grid-area.svg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+
+          <div class="alert alert-info" role="alert">
+            <span class="text-danger">Đặt tên cho con <strong>không có dấu nháy</strong></span>
+          </div>
+          <div class="alert alert-warning" role="alert">Chỉ hoạt động khi đã set <strong>display:grid</strong> và phải <strong>thiết lập đầu đủ hàng và cột</strong> trên phần tử cha</div>
+          <img src="./asset/images/grid-area.svg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="" />
           <div class="alert alert-danger" role="alert">Giá trị <strong>1 / 2 / span 2 / span 3</strong> có nghĩa là hàng bắt đầu là 1, cột bắt đầu là 1, <strong>span 2</strong> có nghĩa là gộp thêm 2 cột nữa tính từ cột đầu tiên, <strong>span 3</strong> có nghĩa là gộp thêm ba hàng nữa tính từ hàng đầu tiên</div>
           <h5>Cú pháp</h5>
           <div class="alert alert-info" role="alert">
-            grid-area: <strong>hàng bắt đầu</strong> <strong><strong>/</strong></strong> <strong>cột bắt đầu</strong> <strong><strong>/</strong></strong> <strong>hàng kết thúc</strong> <strong><strong>/</strong></strong> <strong>cột kết thúc</strong> 
+            grid-area: <strong>hàng bắt đầu</strong> <strong><strong>/</strong></strong> <strong>cột bắt đầu</strong> <strong><strong>/</strong></strong> <strong>hàng kết thúc</strong> <strong><strong>/</strong></strong> <strong>cột kết thúc</strong>
           </div>
-          <img src="./asset/images/grid-area-span.svg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+          <img src="./asset/images/grid-area-span.svg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="" />
           <h5>Ví dụ</h5>
           <div class="alert alert-info" role="alert">
-            grid-area: <strong>1</strong> <strong><strong>/</strong></strong> <strong>1</strong> <strong><strong>/</strong></strong> <strong>3</strong> <strong><strong>/</strong></strong> <strong>3</strong> 
+            grid-area: <strong>1</strong> <strong><strong>/</strong></strong> <strong>1</strong> <strong><strong>/</strong></strong> <strong>3</strong> <strong><strong>/</strong></strong> <strong>3</strong>
           </div>
           <div class="alert alert-info" role="alert">
-            grid-area: <strong>1</strong> <strong><strong>/</strong></strong> <strong>1</strong> <strong><strong>/</strong></strong> <strong>span 3</strong> <strong><strong>/</strong></strong> <strong>span 3</strong> 
+            grid-area: <strong>1</strong> <strong><strong>/</strong></strong> <strong>1</strong> <strong><strong>/</strong></strong> <strong>span 3</strong> <strong><strong>/</strong></strong> <strong>span 3</strong>
           </div>
           <style>
             .grid-area {
@@ -421,12 +514,8 @@
           <div class="alert alert-danger" role="alert">
             <strong>Giá trị cách nhau không có phẩy</strong>
           </div>
-          <div class="alert alert-warning" role="alert">
-            Dùng chung với <strong>display:grid</strong>
-          </div>
-          <div class="alert alert-info" role="alert">
-            grid-template-columns: <strong>repeat(5,1fr)</strong>
-          </div>
+          <div class="alert alert-warning" role="alert">Dùng chung với <strong>display:grid</strong></div>
+          <div class="alert alert-info" role="alert">grid-template-columns: <strong>repeat(5,1fr)</strong></div>
           <style>
             .container-grid-template-columns {
               display: grid;
@@ -452,12 +541,8 @@
           <div class="alert alert-danger" role="alert">
             <strong>Giá trị cách nhau không có phẩy</strong>
           </div>
-          <div class="alert alert-warning" role="alert">
-            Dùng chung với <strong>display:grid</strong>
-          </div>
-          <div class="alert alert-info" role="alert">
-            grid-template-columns: <strong>repeat(5,1fr)</strong>
-          </div>
+          <div class="alert alert-warning" role="alert">Dùng chung với <strong>display:grid</strong></div>
+          <div class="alert alert-info" role="alert">grid-template-columns: <strong>repeat(5,1fr)</strong></div>
           <style>
             .container-grid-template-columns {
               display: grid;
@@ -479,20 +564,14 @@
           </div>
         </div>
         <div data-for="grid-template-rows" class="d-none">
-          <div class="alert alert-info" role="alert">
-            grid-template-rows chỉ thay đổi chiều cao của phần tử <strong>có thể thay đổi số hàng</strong>
-          </div>
+          <div class="alert alert-info" role="alert">grid-template-rows chỉ thay đổi chiều cao của phần tử <strong>có thể thay đổi số hàng</strong></div>
           <div class="text-danger p-3" style="font-weight: 700">Trên cha</div>
-          
+
           <div class="alert alert-danger" role="alert">
             <strong>Giá trị cách nhau không có phẩy</strong>
           </div>
-          <div class="alert alert-warning" role="alert">
-            dùng chung: <strong>display:grid</strong>, <strong>grid-template-columns</strong> HOẶC <strong>grid-auto-flow</strong>
-          </div>
-          <div class="alert alert-info" role="alert">
-            grid-template-rows: <strong>none</strong> | <strong>auto</strong> | <strong>max-content</strong> | <strong>min-content</strong> | <strong>length</strong>
-          </div>
+          <div class="alert alert-warning" role="alert">dùng chung: <strong>display:grid</strong>, <strong>grid-template-columns</strong> HOẶC <strong>grid-auto-flow</strong></div>
+          <div class="alert alert-info" role="alert">grid-template-rows: <strong>none</strong> | <strong>auto</strong> | <strong>max-content</strong> | <strong>min-content</strong> | <strong>length</strong></div>
           <style>
             .container-grid-template-rows {
               display: grid;
@@ -516,40 +595,27 @@
         </div>
         <div data-for="grid-template-area" class="d-none">
           <h5>Định nghĩa</h5>
-          <div class="alert alert-info" role="alert">
-            <strong>grid-template-area</strong> thay đổi cách chia bố cục cho toàn bộ thành phần con và một vài thành phần con
-          </div>
+          <div class="alert alert-info" role="alert"><strong>grid-template-area</strong> thay đổi cách chia bố cục cho toàn bộ thành phần con và một vài thành phần con</div>
           <h5>Cách dùng</h5>
           <div class="text-danger p-3" style="font-weight: 700">Trên cha</div>
-          
-          <div class="alert alert-danger" role="alert">
-            Giá trị cách nhau không có phẩy ví dụ: <strong>"item item item . . . "</strong> <strong>"item item item . . . "</strong>
-          </div>
-          
-          <div class="alert alert-warning" role="alert">
-            Dùng chung: <strong>display:grid</strong>, <strong>grid-area</strong>
-          </div>
-          
-          
+
+          <div class="alert alert-danger" role="alert">Giá trị cách nhau không có phẩy ví dụ: <strong>"item item item . . . "</strong> <strong>"item item item . . . "</strong></div>
+
+          <div class="alert alert-warning" role="alert">Dùng chung: <strong>display:grid</strong>, <strong>grid-area</strong></div>
+
           <h5>Cú pháp</h5>
-          <div class="alert alert-info" role="alert">
-            grid-template-area:  <strong>none</strong> | <strong>"itemNames"</strong>
-          </div>
+          <div class="alert alert-info" role="alert">grid-template-area: <strong>none</strong> | <strong>"itemNames"</strong></div>
           <h5>Giá trị thật</h5>
-          <div class="alert alert-info" role="alert">
-            grid-template-area: <strong>"myArea myArea . . . "</strong>
-          </div>
+          <div class="alert alert-info" role="alert">grid-template-area: <strong>"myArea myArea . . . "</strong></div>
           <style>
             .grid-template-areas {
               display: grid;
-              grid-template-areas: 
-              "item item item . . . "
-              "item item item . . . "
-              "item item item . . . "
-              ;
+              grid-template-areas:
+                "item item item . . . "
+                "item item item . . . "
+                "item item item . . . ";
             }
             .grid-template-areas .one {
-
             }
           </style>
           <div class=".grid-template-areas">
@@ -567,21 +633,15 @@
           </div>
         </div>
         <div data-for="grid-column-start" class="d-none">
-          <h1>chua lam , </h1>
-          <div class="alert alert-info" role="alert">
-            grid-template-area
-          </div>
+          <h1>chua lam ,</h1>
+          <div class="alert alert-info" role="alert">grid-template-area</div>
           <div class="text-danger p-3" style="font-weight: 700">Trên cha</div>
-          
+
           <div class="alert alert-danger" role="alert">
             <strong>Giá trị cách nhau không có phẩy</strong>
           </div>
-          <div class="alert alert-warning" role="alert">
-            dùng chung: <strong>display:grid</strong>, <strong>grid-area</strong>
-          </div>
-          <div class="alert alert-info" role="alert">
-            grid-template-area: <strong>"myArea myArea . . . "</strong>
-          </div>
+          <div class="alert alert-warning" role="alert">dùng chung: <strong>display:grid</strong>, <strong>grid-area</strong></div>
+          <div class="alert alert-info" role="alert">grid-template-area: <strong>"myArea myArea . . . "</strong></div>
           <style>
             .container-grid-template-rows {
               display: grid;
@@ -605,20 +665,14 @@
         </div>
         <div data-for="grid-column-end" class="d-none">
           <h1>chua lam , grid-column-end</h1>
-          <div class="alert alert-info" role="alert">
-            grid-template-area
-          </div>
+          <div class="alert alert-info" role="alert">grid-template-area</div>
           <div class="text-danger p-3" style="font-weight: 700">Trên cha</div>
-          
+
           <div class="alert alert-danger" role="alert">
             <strong>Giá trị cách nhau không có phẩy</strong>
           </div>
-          <div class="alert alert-warning" role="alert">
-            dùng chung: <strong>display:grid</strong>, <strong>grid-area</strong>
-          </div>
-          <div class="alert alert-info" role="alert">
-            grid-template-area: <strong>"myArea myArea . . . "</strong>
-          </div>
+          <div class="alert alert-warning" role="alert">dùng chung: <strong>display:grid</strong>, <strong>grid-area</strong></div>
+          <div class="alert alert-info" role="alert">grid-template-area: <strong>"myArea myArea . . . "</strong></div>
           <style>
             .container-grid-template-rows {
               display: grid;
@@ -641,21 +695,15 @@
           </div>
         </div>
         <div data-for="grid-column" class="d-none">
-          <h1>chua lam </h1>
-          <div class="alert alert-info" role="alert">
-            grid-template-area
-          </div>
+          <h1>chua lam</h1>
+          <div class="alert alert-info" role="alert">grid-template-area</div>
           <div class="text-danger p-3" style="font-weight: 700">Trên cha</div>
-          
+
           <div class="alert alert-danger" role="alert">
             <strong>Giá trị cách nhau không có phẩy</strong>
           </div>
-          <div class="alert alert-warning" role="alert">
-            dùng chung: <strong>display:grid</strong>, <strong>grid-area</strong>
-          </div>
-          <div class="alert alert-info" role="alert">
-            grid-template-area: <strong>"myArea myArea . . . "</strong>
-          </div>
+          <div class="alert alert-warning" role="alert">dùng chung: <strong>display:grid</strong>, <strong>grid-area</strong></div>
+          <div class="alert alert-info" role="alert">grid-template-area: <strong>"myArea myArea . . . "</strong></div>
           <style>
             .container-grid-template-rows {
               display: grid;
@@ -678,21 +726,15 @@
           </div>
         </div>
         <div data-for="grid-column-gap" class="d-none">
-          <h1>chua lam grid-column-gap </h1>
-          <div class="alert alert-info" role="alert">
-            grid-template-area
-          </div>
+          <h1>chua lam grid-column-gap</h1>
+          <div class="alert alert-info" role="alert">grid-template-area</div>
           <div class="text-danger p-3" style="font-weight: 700">Trên cha</div>
-          
+
           <div class="alert alert-danger" role="alert">
             <strong>Giá trị cách nhau không có phẩy</strong>
           </div>
-          <div class="alert alert-warning" role="alert">
-            dùng chung: <strong>display:grid</strong>, <strong>grid-area</strong>
-          </div>
-          <div class="alert alert-info" role="alert">
-            grid-template-area: <strong>"myArea myArea . . . "</strong>
-          </div>
+          <div class="alert alert-warning" role="alert">dùng chung: <strong>display:grid</strong>, <strong>grid-area</strong></div>
+          <div class="alert alert-info" role="alert">grid-template-area: <strong>"myArea myArea . . . "</strong></div>
           <style>
             .container-grid-template-rows {
               display: grid;
@@ -716,20 +758,14 @@
         </div>
         <div data-for="grid-row-start" class="d-none">
           <h1>chua lam grid-row-start</h1>
-          <div class="alert alert-info" role="alert">
-            grid-template-area
-          </div>
+          <div class="alert alert-info" role="alert">grid-template-area</div>
           <div class="text-danger p-3" style="font-weight: 700">Trên cha</div>
-          
+
           <div class="alert alert-danger" role="alert">
             <strong>Giá trị cách nhau không có phẩy</strong>
           </div>
-          <div class="alert alert-warning" role="alert">
-            dùng chung: <strong>display:grid</strong>, <strong>grid-area</strong>
-          </div>
-          <div class="alert alert-info" role="alert">
-            grid-template-area: <strong>"myArea myArea . . . "</strong>
-          </div>
+          <div class="alert alert-warning" role="alert">dùng chung: <strong>display:grid</strong>, <strong>grid-area</strong></div>
+          <div class="alert alert-info" role="alert">grid-template-area: <strong>"myArea myArea . . . "</strong></div>
           <style>
             .container-grid-template-rows {
               display: grid;
@@ -753,20 +789,14 @@
         </div>
         <div data-for="grid-row-end" class="d-none">
           <h1>chua lam grid-row-end</h1>
-          <div class="alert alert-info" role="alert">
-            grid-template-area
-          </div>
+          <div class="alert alert-info" role="alert">grid-template-area</div>
           <div class="text-danger p-3" style="font-weight: 700">Trên cha</div>
-          
+
           <div class="alert alert-danger" role="alert">
             <strong>Giá trị cách nhau không có phẩy</strong>
           </div>
-          <div class="alert alert-warning" role="alert">
-            dùng chung: <strong>display:grid</strong>, <strong>grid-area</strong>
-          </div>
-          <div class="alert alert-info" role="alert">
-            grid-template-area: <strong>"myArea myArea . . . "</strong>
-          </div>
+          <div class="alert alert-warning" role="alert">dùng chung: <strong>display:grid</strong>, <strong>grid-area</strong></div>
+          <div class="alert alert-info" role="alert">grid-template-area: <strong>"myArea myArea . . . "</strong></div>
           <style>
             .container-grid-template-rows {
               display: grid;
@@ -790,20 +820,14 @@
         </div>
         <div data-for="grid-row" class="d-none">
           <h1>chua lam grid-row</h1>
-          <div class="alert alert-info" role="alert">
-            grid-template-area
-          </div>
+          <div class="alert alert-info" role="alert">grid-template-area</div>
           <div class="text-danger p-3" style="font-weight: 700">Trên cha</div>
-          
+
           <div class="alert alert-danger" role="alert">
             <strong>Giá trị cách nhau không có phẩy</strong>
           </div>
-          <div class="alert alert-warning" role="alert">
-            dùng chung: <strong>display:grid</strong>, <strong>grid-area</strong>
-          </div>
-          <div class="alert alert-info" role="alert">
-            grid-template-area: <strong>"myArea myArea . . . "</strong>
-          </div>
+          <div class="alert alert-warning" role="alert">dùng chung: <strong>display:grid</strong>, <strong>grid-area</strong></div>
+          <div class="alert alert-info" role="alert">grid-template-area: <strong>"myArea myArea . . . "</strong></div>
           <style>
             .container-grid-template-rows {
               display: grid;
@@ -827,20 +851,14 @@
         </div>
         <div data-for="grid-row-gap" class="d-none">
           <h1>chua lam grid-row-gap</h1>
-          <div class="alert alert-info" role="alert">
-            grid-template-area
-          </div>
+          <div class="alert alert-info" role="alert">grid-template-area</div>
           <div class="text-danger p-3" style="font-weight: 700">Trên cha</div>
-          
+
           <div class="alert alert-danger" role="alert">
             <strong>Giá trị cách nhau không có phẩy</strong>
           </div>
-          <div class="alert alert-warning" role="alert">
-            dùng chung: <strong>display:grid</strong>, <strong>grid-area</strong>
-          </div>
-          <div class="alert alert-info" role="alert">
-            grid-template-area: <strong>"myArea myArea . . . "</strong>
-          </div>
+          <div class="alert alert-warning" role="alert">dùng chung: <strong>display:grid</strong>, <strong>grid-area</strong></div>
+          <div class="alert alert-info" role="alert">grid-template-area: <strong>"myArea myArea . . . "</strong></div>
           <style>
             .container-grid-template-rows {
               display: grid;
@@ -864,20 +882,14 @@
         </div>
         <div data-for="grid-gap" class="d-none">
           <h1>chua lam grid-gap</h1>
-          <div class="alert alert-info" role="alert">
-            grid-template-area
-          </div>
+          <div class="alert alert-info" role="alert">grid-template-area</div>
           <div class="text-danger p-3" style="font-weight: 700">Trên cha</div>
-          
+
           <div class="alert alert-danger" role="alert">
             <strong>Giá trị cách nhau không có phẩy</strong>
           </div>
-          <div class="alert alert-warning" role="alert">
-            dùng chung: <strong>display:grid</strong>, <strong>grid-area</strong>
-          </div>
-          <div class="alert alert-info" role="alert">
-            grid-template-area: <strong>"myArea myArea . . . "</strong>
-          </div>
+          <div class="alert alert-warning" role="alert">dùng chung: <strong>display:grid</strong>, <strong>grid-area</strong></div>
+          <div class="alert alert-info" role="alert">grid-template-area: <strong>"myArea myArea . . . "</strong></div>
           <style>
             .container-grid-template-rows {
               display: grid;
@@ -900,16 +912,11 @@
           </div>
         </div>
         <div data-for="rem" class="d-none">
-          <div class="alert alert-info" role="alert">
-            5rem = 5 x fontsize của html
-          </div>
+          <div class="alert alert-info" role="alert">5rem = 5 x fontsize của html</div>
         </div>
         <div data-for="em" class="d-none">
-          <div class="alert alert-info" role="alert">
-            5rem = 5 x fontsize của chính nó
-          </div>
+          <div class="alert alert-info" role="alert">5rem = 5 x fontsize của chính nó</div>
         </div>
-
       </div>
       <div id="total"></div>
       <!-- <p>nếu li thì viền gì, màu gì, nếu ul là viền gì màu gì, tao ghi chú fixed trên màn hình</p> -->

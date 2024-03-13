@@ -1760,17 +1760,7 @@ ul {
     scrollbar-color: yellow;
   }
 }
-.webkit-scroolbar-thumb {
-  height: 100px;
-  overflow: auto;
-}
-.webkit-scroolbar-thumb::-webkit-scrollbar {
-  width: 10px;
-}
-.webkit-scroolbar-thumb::-webkit-scrollbar-thumb {
-  background: red;
-  overflow: auto;
-}
+
 .webkit-scroolbar-track {
   height: 100px;
   overflow: auto;
@@ -2852,12 +2842,31 @@ ul {
 }
 /* end kieu */
 /* object */
+#control-area {
+  max-width: 100%;
+  overflow: scroll;
+  height: 60vh;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
 #control-area button {
   min-width: 200px !important;
   text-align: left;
 }
 /* end object */
 /* another */
+#control-area::-webkit-scrollbar {
+  width: 8px;
+  height: 10px;
+}
+#control-area::-webkit-scrollbar-thumb {
+  background-color: red;
+  border-radius: 20px;
+}
+#control-area::-webkit-scrollbar-track {
+  border-radius: 20px;
+  box-shadow: inset 2px 2px 4px 0 rgba(0, 0, 0, 0.3);
+}
 .all {
   color: red;
   font-weight: 900;
