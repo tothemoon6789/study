@@ -190,4 +190,7 @@ function window_document_referrer(){
 function window_document_removeEventListener(){
     alert("xoa");
     window.document.getElementById("js47Button").removeEventListener(window_document_removeEventListener);
+    
 }
+
+

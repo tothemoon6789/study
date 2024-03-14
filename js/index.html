@@ -13,7 +13,7 @@
 
   <body>
     <div class="container">
-      <div id="showing">
+      <div id="showing" class="mt-5">
         <div id="js1" class="d-none">
           <input type="text" /><button>Button</button>
           <p>Bấm vào phần tử có thể active để in ra tagname</p>
@@ -39,7 +39,8 @@
         </div>
         <div id="js3" class="d-none">
           <p>adoptNode nhận một phần tử từ một document khác, chẳng hạn document từ iframe</p>
-          <iframe id="iframeAdopt" src="https://nhatvuong.vn/bao-gaming.html" frameborder="0" height="400px"></iframe>
+          <strong>danger</strong>them the nhatvuong moi
+          <!-- <iframe id="iframeAdopt" src="https://nhatvuong.vn/bao-gaming.html" frameborder="0" height="400px"></iframe> -->
           <hr />
           <button class="start" disabled onclick="document_adoptNode()">START</button>
           <div class="">
@@ -280,7 +281,10 @@
         </div>
         <div id="js36" class="d-none">
           <div class="alert alert-info" role="alert">Nạp 1 phần tử từ iframe</div>
-          <iframe id="importNodeIframe" src="https://nhatvuong.vn/" frameborder="0"></iframe>
+          <div class="alert alert-danger" role="alert">
+            <strong>danger</strong>them the nhatvuong moi
+          </div>
+          <!-- <iframe id="importNodeIframe" src="https://nhatvuong.vn/" frameborder="0"></iframe> -->
           <div id="importNodeIframeDiv"></div>
           <button type="button" class="btn btn-primary" onclick="window_document_importNode()">Play</button>
         </div>
@@ -348,9 +352,7 @@
         </div>
         <div id="js54" class="d-none">
           <div class="alert alert-info" role="alert">In ra màn hình document có xuống dòng</div>
-          <div class="alert alert-danger" role="alert">
-            Test không thể xuống dòng !
-          </div>
+          <div class="alert alert-danger" role="alert">Test không thể xuống dòng !</div>
           <button type="button" class="btn btn-primary" onclick="window_document_writeln()">Play</button>
           <script>
             function window_document_writeln() {
@@ -362,6 +364,139 @@
             }
           </script>
         </div>
+        <div id="js55" class="d-none">
+          <div class="alert alert-danger" role="alert">Hạn chế dùng vì confit với những access key khác</div>
+        </div>
+        <div id="js56" class="d-none">
+          <div class="alert alert-info" role="alert">Thêm một nút phía sau một element</div>
+          <h5>Cú pháp</h5>
+          <div class="alert alert-info" role="alert"><strong>element.appendChild(node)</strong> hoặc <strong>node.appendChild(node)</strong></div>
+        </div>
+        <div id="js57" class="d-none">
+          <div class="alert alert-info" role="alert" id="123" tab-index="-1" position="5" style="background-color: aliceblue">Lấy danh sách các thuộc tính trong 1 phần tử <strong>NamedNodeMap</strong> kể cả class, id , style</div>
+        </div>
+        <div id="js58" class="d-none">
+          <div class="alert alert-info">Xoá tập trung (focus) lên phần tử</div>
+          <h5>Cú pháp</h5>
+          <div class="alert alert-info" role="alert">
+            <strong>HTMLELementObject.blur()</strong>
+          </div>
+          <input type="text" /><br />
+          <button type="button" onclick="document.querySelector('js58 input').blur()" class="btn btn-primary mt-3">Play</button>
+        </div>
+        <div id="js59" class="d-none">
+          <div class="alert alert-info" role="alert">Lấy số lượng con của 1 element (chỉ đếm trong nhánh chính);</div>
+          <h5>Cú pháp</h5>
+          <div class="alert alert-info" role="alert">
+            <strong>element.childElementCount</strong>
+          </div>
+        </div>
+        <div id="js60" class="d-none">
+          <div id="noid" class="alert alert-info" role="alert">Lấy danh sách các nút con trực tiếp - <strong>NodeList</strong>, có nút chữ, có nút ghi chú</div>
+          <div class="alert alert-warning" role="alert">
+            Danh sách trả về có nút chữ, nên có thể dùng js để thay đổi. Còn nếu gọi children, không thể thay đổi nút chữ do nút chữ không được trả về
+          </div>
+          <h5>Cú pháp</h5>
+          <div class="alert alert-info" role="alert">
+            <strong>element.childNode<strong class="text-danger">s</strong></strong>
+          </div>
+        </div>
+        <div id="js61" class="d-none">
+          <div class="alert alert-info" role="alert">
+            Lấy danh sách các nút element - <strong>HTMLCollection</strong> của một phần tử <span class="text-danger">Danh sách <strong>không có</strong> nút text, nút comment</span>
+          </div>
+          
+        </div>
+        <div id="js62" class="d-none">
+          <div class="alert alert-info" role="alert">
+            Lấy danh sách các class - <strong>DOMTokenList</strong> của một phần tử 
+          </div>
+          <h5>Thao tác</h5>
+          <div class="jumbotron">
+            <h1 class="display-4">Danh sách</h1>
+            <ul>
+              <li>add()</li>
+              <li>remove()</li>
+              <li>toggle()</li>
+              <li>contains()</li>
+              <li>replace()</li>
+              <li>values()</li>
+              <li>entries()</li>
+              <li>forEach()</li>
+              <li>item()</li>
+              <li>keys()</li>
+              <li>length</li>
+              <li>supports()</li>
+              <li>value</li>
+            </ul>
+            <hr class="my-4">
+            <p>Cu tèo cu tí đi bán xôi</p>
+            <p class="lead">
+              <a class="btn btn-primary btn-lg" href="#" role="button" onclick="this.parentElement.previousSibling.previousSibling.innerText='Đùa tí thôi! Chẳng có gì xảy ra cả.'">Bấm cái đi</a>
+            </p>
+          </div>
+        </div>
+        <div id="js63" class="d-none">
+          <div class="alert alert-info" role="alert">
+            Lấy hoặc gán giá trị - <strong>string</strong> của class trong một phần tử
+          </div>
+          <h5>Cú pháp</h5>
+          <div class="alert alert-info" role="alert">
+            <strong>HTMLElementObject.className</strong> hoặc <strong>HTMLElementObject.className = "class-name"</strong>
+          </div>
+          
+        </div>
+        <div id="js64" class="d-none">
+          <div class="alert alert-info" role="alert">
+            Dùng để bấm ảo lên một element để active input hoặc bấm nút ...
+          </div>
+          <h5>Cú pháp</h5>
+          <div class="alert alert-info" role="alert">
+            element.click();
+          </div>
+          
+        </div>
+        <div id="js65" class="d-none">
+          <div class="alert alert-info" role="alert">
+            Lấy <strong>độ rộng</strong> của element từ biên ngoài padding trái cho đến biên ngoài padding phải
+          </div>
+          <img src="../asset/images/clientElement.svg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+        </div>
+        <div id="js66" class="d-none">
+          <div class="alert alert-info" role="alert">
+            Lấy <strong>độ rộng</strong> của element từ biên ngoài padding trên cho đến biên ngoài padding dưới
+          </div>
+          <img src="../asset/images/clientElement.svg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+        </div>
+        <div id="js67" class="d-none">
+          <div class="alert alert-info" role="alert">
+            Lấy <strong>độ rộng</strong> đường viền bên trên phần tử
+          </div>
+          <img src="../asset/images/clientElement.svg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+        </div>
+        <div id="js68" class="d-none">
+          <div class="alert alert-info" role="alert">
+            Lấy <strong>độ rộng</strong> đường viền bên trái phần tử
+          </div>
+          <img src="../asset/images/clientElement.svg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+        </div>
+        <div id="js69" class="d-none">
+          <h5>Cú pháp</h5>
+          <div class="alert alert-info" role="alert">
+            node.<strong>cloneNode</strong>(<strong>false</strong> - Không copy đám con cháu | <strong>true</strong> - Có copy đám con cháu - <strong>Hay là bộ lòng</strong>) 
+          </div>
+
+          <h5>Ví dụ</h5>
+          var node = document.getElementById("demo").firstChid; <br>
+          var nodeToBeClone = node.<strong>cloneNode()</strong>; // true -> Có copy đám con chau<br>
+          document.body.appendChild(nodeToBeClone);
+          <h5>Lưu ý:</h5>
+          ví dụ có: <br>
+          div#demo chứa p,a,span.. <br>
+          <strong>node.cloneNode(false)</strong> hoặc <strong>node.cloneNode()</strong> : <span>chỉ trả về div#demo</span> <br>
+          <strong>node.cloneNode(<span class="text-danger">true</span>)</strong> : <span>trả về div#demo có chứa đám p,a,span (<strong class="text-danger">có chứa bộ lòng</strong>)</span> <br>
+        
+        </div>
       </div>
       <div>
         <h3>Kết quả:</h3>
@@ -371,7 +506,7 @@
         <div id="statement"></div>
         <hr />
       </div>
-      <div id="control"></div>
+      <div id="control" class="d-flex"></div>
       <button class="btn btn-danger" onclick="reload()">RELOAD PAGE</button>
     </div>
 

@@ -1422,3 +1422,5 @@ function resizeButtonToMiddle() {
     btn.classList.add("btn-md");
   });
 }
+// var a = document.querySelectorAll(".ws-table-all a");
+// console.log(a)
