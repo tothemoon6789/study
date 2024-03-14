@@ -129,6 +129,26 @@
       text: "text-emphasis-color",
     },
     {
+      id: "word-wrap",
+      class: "btn btn-warning btn-type-text",
+      text: "word-wrap",
+    },
+    {
+      id: "word-spacing",
+      class: "btn btn-warning btn-type-text",
+      text: "word-spacing",
+    },
+    {
+      id: "word-break",
+      class: "btn btn-warning btn-type-text",
+      text: "word-break",
+    },
+    {
+      id: "vertical-align",
+      class: "btn btn-warning btn-type-text",
+      text: "vertical-align",
+    },
+    {
       id: "background",
       class: "btn btn-outline-primary btn-type-background",
       text: "background",
@@ -540,8 +560,28 @@
     },
     {
       id: "outline",
-      class: "btn btn-warning btn-type-outline",
+      class: "btn btn-outline-primary btn-type-outline",
       text: "outline",
+    },
+    {
+      id: "outline-color",
+      class: "btn btn-outline-primary btn-type-outline",
+      text: "outline-color",
+    },
+    {
+      id: "outline-style",
+      class: "btn btn-outline-primary btn-type-outline",
+      text: "outline-style",
+    },
+    {
+      id: "outline-width",
+      class: "btn btn-outline-primary btn-type-outline",
+      text: "outline-width",
+    },
+    {
+      id: "outline-offset",
+      class: "btn btn-warning btn-type-outline",
+      text: "outline-offset",
     },
     {
       id: "margin",
@@ -627,6 +667,11 @@
       id: "bottom",
       class: "btn btn-outline-primary btn-type-position",
       text: "bottom",
+    },
+    {
+      id: "z-index",
+      class: "btn btn-outline-primary btn-type-position",
+      text: "z-index",
     },
     {
       id: "display-inline",
@@ -715,12 +760,12 @@
     },
     {
       id: "float",
-      class: "btn btn-warning btn-type-float",
+      class: "btn btn-outline-primary btn-type-float",
       text: "float",
     },
     {
       id: "clear",
-      class: "btn btn-warning btn-type-float",
+      class: "btn btn-outline-primary btn-type-float",
       text: "clear",
     },
     {
@@ -785,7 +830,7 @@
     },
     {
       id: "inset",
-      class: "btn btn-warning btn-type-inset",
+      class: "btn btn-outline-primary btn-type-inset",
       text: "inset",
     },
     {
@@ -885,22 +930,22 @@
     },
     {
       id: "list-style-image",
-      class: "btn btn-warning btn-type-list",
+      class: "btn btn-outline-primary btn-type-list",
       text: "list-style-image",
     },
     {
       id: "webkit-scrollbar",
-      class: "btn btn-warning btn-type-scrollbar multiple",
+      class: "btn btn-outline-primary btn-type-scrollbar multiple",
       text: "webkit-scrollbar",
     },
     {
       id: "webkit-scrollbar-thumb",
-      class: "btn btn-warning btn-type-scrollbar multiple",
+      class: "btn btn-outline-primary btn-type-scrollbar multiple",
       text: "webkit-scrollbar-thumb",
     },
     {
       id: "webkit-scrollbar-track",
-      class: "btn btn-warning btn-type-scrollbar multiple",
+      class: "btn btn-outline-primary btn-type-scrollbar multiple",
       text: "webkit-scrollbar-track",
     },
     {
@@ -995,12 +1040,12 @@
     },
     {
       id: "backdrop-filter",
-      class: "btn btn-warning btn-type-another",
+      class: "btn btn-outline-primary btn-type-another",
       text: "backdrop-filter",
     },
     {
       id: "backface-visibility",
-      class: "btn btn-warning btn-type-another",
+      class: "btn btn-outline-primary btn-type-another",
       text: "backface-visibility",
     },
     {
@@ -1035,12 +1080,12 @@
     },
     {
       id: "clip",
-      class: "btn btn-warning btn-type-another deprecated",
+      class: "btn btn-outline-primary btn-type-another deprecated",
       text: "clip",
     },
     {
       id: "clip-path",
-      class: "btn btn-warning btn-type-another",
+      class: "btn btn-outline-primary btn-type-another",
       text: "clip-path",
     },
     {
@@ -1048,6 +1093,17 @@
       class: "btn btn-outline-primary btn-type-another",
       text: "content",
     },
+    {
+      id: "cursor",
+      class: "btn btn-outline-primary btn-type-another",
+      text: "cursor",
+    },
+    {
+      id: "writing-mode",
+      class: "btn btn-outline-primary btn-type-another",
+      text: "writing-mode",
+    },
+    
     {
       id: "grid",
       class: "btn btn-danger btn-type-grid",
@@ -1284,7 +1340,7 @@
     { id: "box-decoration-break", note: "", warning: "", html: htmlBoxDecorationBreak, multiple: false },
     { id: "caption-side", note: "", warning: "", html: htmlTable, multiple: false },
     { id: "caret-color", note: "", warning: "", html: htmlCaretColor, multiple: false },
-    { id: "clip-path", note: "Trang path: https://bennettfeely.com/clippy/", warning: "", html: htmlText, multiple: false },
+   
   ];
   c.forEach(function (e) {
     // document.getElementById(e.id) && e.multiple === true && document.getElementById(e.id).classList.add("multiple");

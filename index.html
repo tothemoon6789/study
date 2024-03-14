@@ -46,6 +46,47 @@
         <div data-for="color" class="d-none"></div>
         <div data-for="text-decoration-color" class="d-none"></div>
         <div data-for="text-emphasis-color" class="d-none"></div>
+        <div data-for="word-wrap" class="d-none">
+          <h5>Định nghĩa</h5>
+          <div class="alert alert-info" role="alert">
+            Thay đổi kiểu hiển thị của <strong>1 chữ quá dài tràn viền</strong> có nên tràn ra không hay <strong>break</strong> - xuống dòng.
+          </div>
+          <h5>Cú pháp</h5>
+          <div class="alert alert-info" role="alert">
+            word-wrap: <strong>normal</strong> | <strong>break-word</strong> | <strong>initial</strong> | <strong>inherit</strong>;
+          </div>
+        </div>
+        <div data-for="word-spacing" class="d-none">
+          <h5>Định nghĩa</h5>
+          <div class="alert alert-info" role="alert">
+            Thay đổi <strong>khoảng cách</strong> giữa hai chữ
+          </div>
+          <h5>Cú pháp</h5>
+          <div class="alert alert-info" role="alert">
+            word-spacing: <strong>normal</strong> | <strong>length</strong> | <strong>initial</strong> | <strong>inherit</strong>;
+          </div>
+          <div class="text-danger p-3">default: <strong>normal</strong></div>
+        </div>
+        <div data-for="word-break" class="d-none">
+          <h5>Định nghĩa</h5>
+          <div class="alert alert-info" role="alert">
+            Chữ nên phản ứng như thế nào nếu tiến đến gặp giới hạn của dòng
+          </div>
+          <h5>Cú pháp</h5>
+          <div class="alert alert-info" role="alert">
+            word-break: <strong>normal</strong> | <strong>break-all</strong> | <strong>keep-all</strong> | <strong>break-word</strong> | <strong>initial</strong> | <strong>inherit</strong>; 
+          </div>
+          <div class="text-danger p-3">default: <strong>normal</strong></div>
+        </div>
+        <div data-for="vertical-align" class="d-none">
+          <h5>Định nghĩa</h5>
+          <div class="alert alert-info" role="alert">
+            Căn chỉnh phần tử theo chiều cao của dòng
+          </div>
+          <div class="text-danger">Thay đổi vị trí căn chỉnh theo <span class="display-6"><strong>font-size</strong></span> của phần tử cha</div>
+          <div class="text-danger">Trong trường hợp không có hiệu ứng bởi vì: <strong style="text-decoration: line-through;">kích thước phần tử con bằng hoặc lớn hơn</strong> kích thước phần tử cha, vì vậy phải giảm lại bằng font-size của con hoặc thay đổi width height như của img</div>
+          <div class="text-danger p-3">default: <strong>baseline</strong></div>
+        </div>
         <div data-for="background" class="d-none"></div>
         <div data-for="background-color" class="d-none"></div>
         <div data-for="background-image" class="d-none"></div>
@@ -146,6 +187,15 @@
         <div data-for="top" class="d-none"></div>
         <div data-for="right" class="d-none"></div>
         <div data-for="bottom" class="d-none"></div>
+        <div data-for="z-index" class="d-none">
+          <h5>Cú pháp</h5>
+          <div class="alert alert-info" role="alert">
+            z-index: <strong>auto</strong>| <strong>number</strong>|<strong>initial</strong>|<strong>inherit</strong>;
+          </div>
+          <ul>
+            <li><strong>auto</strong>: set bằng với cha</li>
+          </ul>
+        </div>
         <div data-for="display-inline" class="d-none"></div>
         <div data-for="display-inline-block" class="d-none"></div>
         <div data-for="display-block" class="d-none"></div>
@@ -316,12 +366,60 @@
         <div data-for="block-size" class="d-none"></div>
         <div data-for="border-collapse" class="d-none"></div>
         <div data-for="box-decoration-break" class="d-none"></div>
-        <div data-for="box-reflect" class="d-none"></div>
+        <div data-for="box-reflect" class="d-none">
+          <div class="text-danger p-3">Không hoạt động trên <strong>firefox</strong></div>
+          <h5>Cú pháp</h5>
+          <div class="alert alert-info" role="alert">
+            -webkit-box-reflect: <strong>none</strong> | <strong>above</strong> | <strong>right</strong> | <strong>below</strong> | <strong>left</strong> | <strong>initial</strong> | <strong>inherit</strong>
+          </div>
+        </div>
         <div data-for="caption-side" class="d-none"></div>
         <div data-for="caret-color" class="d-none"></div>
         <div data-for="clip" class="d-none"></div>
-        <div data-for="clip-path" class="d-none"></div>
+        <div data-for="clip-path" class="d-none">
+          <div class="alert alert-primary" role="alert">
+            <strong>Links</strong> <a href="https://bennettfeely.com/clippy/" target="_blank" class="alert-link">Trang web path</a>
+          </div>
+          <style>
+
+          
+          .clip-path {
+            width: 300px;
+            aspect-ratio: 1/1;
+            overflow: hidden;
+            background-image: url(./asset/images/image.jpeg);
+            clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+            transition: all 0.2s;
+            background-repeat: no-repeat;
+            background-size: cover;
+      
+          }
+          .clip-path:hover {
+            clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 28% 100%, 56% 50%, 29% 0);
+          }
+        </style>
+        <div class="clip-path">
+    
+        </div>
+        </div>
         <div data-for="content" class="d-none">content</div>
+        <div data-for="cursor" class="d-none">
+          <h5>Cú pháp</h5>
+          <div class="alert alert-info" role="alert">
+            cursor: <strong>alias</strong> | <strong>all-scroll</strong> | <strong>auto</strong> | <strong>cell</strong> | <strong>col-resize</strong> | <strong>context-menu</strong> | <strong>copy</strong> | <strong>crosshair</strong> | <strong>default</strong> | <strong>e-resize</strong> | <strong>ew-resize</strong> | <strong>grab</strong> | <strong>grabbing</strong> | <strong>help</strong> | <strong>move</strong> | <strong>n-resize</strong> | <strong>ne-resize</strong> | <strong>nesw-resize</strong> | <strong>ns-resize</strong> | <strong>nw-resize</strong> | <strong>nwse-resize</strong> | <strong>no-drop</strong> | <strong>none</strong> | <strong>not-allowed</strong> | <strong>pointer</strong> | <strong>progress</strong> | <strong>row-resize</strong> | <strong>s-resize</strong> | <strong>wait</strong> | <strong>zoom-in</strong> | <strong>zoom-out</strong>
+          </div>
+
+        </div>
+        <div data-for="writing-mode" class="d-none">
+            <div class="alert alert-info" role="alert">
+              writing-mode: <strong>horizontal-tb</strong> | <strong>vertical-rl</strong> | <strong>vertical-lr</strong>
+            </div>
+            <ul>
+              <li>Để cho nội dung trôi từ trái sang phải, từ trên xuống dưới</li>
+              <li>Để nội dung trôi từ trên xuống dưới, hoặc từ phải sang trái</li>
+              <li>Để nội dung trôi từ trên xuống dưới, từ trái sang phải</li>
+            </ul>
+        </div>
         <div data-for="grid" class="d-none">
           <div class="text-danger p-3" style="font-weight: 700">Trên cha</div>
           <div class="alert alert-info" role="alert"><strong>grid</strong> là thuộc tính viết tắc cho toàn bộ các thuộc tính <strong>grid-</strong></div>

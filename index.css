@@ -3001,18 +3001,7 @@ to {
   caret-color: blue;
 }
 }
-.clip-path {
-  animation: clip-path 2s infinite;
-  background-image: url("./asset/images/image.jpeg");
-}
-@keyframes clip-path {
-from {
-  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
-}
-to {
-  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
-}
-}
+
 .content {
   position: relative;
 }
