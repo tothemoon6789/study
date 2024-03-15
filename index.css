@@ -195,6 +195,7 @@ button.multiple {
   border-bottom: 5px solid red;
   border-style: double;
 }
+
 /* end button */
 /* list */
 ul {
@@ -3027,4 +3028,24 @@ to {
 /* end another */
 .deprecated {
   text-decoration: line-through;
+}
+#control-area button.x-small {
+  border: initial;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 60px !important;
+  min-width: unset !important;
+  font-size: 8px;
+  padding: 2px 4px;
+}
+#control-area ul.x-small {
+  list-style: none;
+  padding-left: 0px !important;
+}
+#control-area h6.x-small {
+  font-size: 8px;
+}
+#control-area {
+  padding-top: 20px;
 }

@@ -149,6 +149,11 @@
       text: "vertical-align",
     },
     {
+      id: "user-select",
+      class: "btn btn-warning btn-type-text",
+      text: "user-select",
+    },
+    {
       id: "background",
       class: "btn btn-outline-primary btn-type-background",
       text: "background",
@@ -1476,6 +1481,23 @@ function resizeButtonToMiddle() {
     btn.classList.remove("btn-sm");
     btn.classList.remove("btn-lg");
     btn.classList.add("btn-md");
+  });
+}
+function resizeButtonToVerrySmall() {
+  var buttons = document.querySelectorAll("#control-area button");
+  var uls = document.querySelectorAll("#control-area ul");
+  var headings = document.querySelectorAll("#control-area h6");
+  headings.forEach((heading) => {
+    heading.classList.add("x-small");
+  })
+  uls.forEach((ul) => {
+     ul.classList.add("x-small");
+  })
+  buttons.forEach((btn) => {
+    btn.classList.remove("btn-sm");
+    btn.classList.remove("btn-lg");
+    btn.classList.remove("btn-md");
+    btn.classList.add("x-small");
   });
 }
 // var a = document.querySelectorAll(".ws-table-all a");
