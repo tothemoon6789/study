@@ -3048,6 +3048,7 @@ to {
   margin-top: 5px;
   font-weight: 400;
 }
+
 #control-area  button[button-type="btn-md"]{
   border: initial;
   max-width: 150px !important;

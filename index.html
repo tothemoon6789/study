@@ -213,10 +213,166 @@
         <div data-for="float" class="d-none"></div>
         <div data-for="clear" class="d-none"></div>
         <div data-for="transform" class="d-none"></div>
-        <div data-for="transform-origin" class="d-block">
+        <div data-for="transform-origin" class="d-none">
+          <div class="alert alert-info" role="alert">
+            Chỉ định toạ độ quay. Để dễ hiểu, hãy định vị toạ độ - <strong>origin</strong> ở một điểm <strong style="color: red; font-weight: 900;">so với chính nó</strong>, <strong>góc trên bên trái</strong> của <strong style="color: red; font-weight: 900;">chính nó</strong> là gốc toạ độ 0% 0%, sau đó tưởng tượng hình được quay gắn liền với mặt phẳng, tiếp theo, ghim cái mặt phẳng đó với toạ độ đã định trước và quay cái mặt phẳng đó. Kết quả sẽ hiển thị.
+          </div>
+          <h6>Cú pháp</h6>
+          transform-origin: <strong>x-axis y-axis z-axis</strong> | <strong>initial</strong> | <strong>inherit</strong>;
+          <ul>
+            <li>x-axis: <strong>left</strong> | <strong>center</strong> | <strong>right</strong> | <strong>length</strong> | <strong>%</strong></li>
+            <li>y-axis: <strong>top</strong> | <strong>center</strong> | <strong>bottom</strong> | <strong>length</strong> | <strong>%</strong></li>
+            <li>z-axis: <strong>length</strong><span><strong class="text-danger"> Được set trong transform-style:preverse-3d</strong></span></li>
+          </ul>
 
+          <div class="box-transform-origin">
+            <div class="item"></div>
+          </div>
+          <button class="btn btn-primary mt-3" id="box-transform-origin-1">Thay đổi gốc toạ độ</button>
+          <button class="btn btn-outline-primary mt-3" id="box-transform-origin-2">Xoá sự kiện</button>
+          <style>
+            .box-transform-origin {
+              width: 200px;
+              height: 200px;
+              background-color: aliceblue;
+              position: relative;
+            }
+            .box-transform-origin .item{
+              position: absolute;
+              width: 150px;
+              aspect-ratio: 1/1;
+              background-color: yellowgreen;
+              transform-origin: 0% 0%;
+              animation: box-transform-origin 2s infinite alternate;
+              
+            }
+            @keyframes box-transform-origin {
+              from {
+                transform: rotate(0deg);
+              }
+              to {
+                transform: rotate(360deg);
+              }
+            }
+          </style>
+          <script>
+            var btn1 = document.getElementById("box-transform-origin-1");
+            var btn2 = document.getElementById("box-transform-origin-2");
+            btn1.addEventListener("click",changeTransformOrigin);
+            btn1.removeEventListener("click",changeTransformOrigin);
+            function changeTransformOrigin(){
+              var origin = [
+                "top left",
+                "top left",
+                "top left",
+                "top left",
+              ]
+            }
+          </script>
         </div>
-        <div data-for="transform-style" class="d-block"></div>
+        <div data-for="transform-style" class="d-block">
+          <style>
+            div[id^="transform-style"] {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+            #transform-style1 {
+              width: 100vw;
+              height: 50vh;
+              background-image: linear-gradient(to right, rgb(230, 202, 202), rgb(185, 222, 185))
+            }
+            img {
+              width: 200px;
+              height: 200px;
+              object-fit: cover;
+              border-radius: 50%;
+            }
+            #transform-style1 {
+              position: relative;
+              
+            }
+            #transform-style2 {
+              width: 200px;
+              height: 200px;
+              position: absolute;
+              background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), yellow);
+              transform-style: preserve-3d;
+              animation: rota 2s infinite ease-in-out alternate;
+              transition: all 2s;
+              transform-origin: center center -100px;
+              transform: rotateX(2deg) rotateY(0deg);
+              cursor: progress;
+            }
+            #transform-style2:hover {
+              transform: rotateX(20deg) rotateY(360deg);
+            }
+            @keyframes rota {
+              from {
+                transform: rotateX(2deg) rotateY(0deg);
+              }
+              to {
+                transform: rotateX(20deg) rotateY(360deg);
+              }
+            }
+            #transform-style3 {
+              width: 200px;
+              height: 200px;
+              position: absolute;
+              top: 0px;
+              background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), yellow);
+              transform: rotateY(90deg);
+              transform-origin: top left;
+            }
+            #transform-style4 {
+              width: 200px;
+              height: 200px;
+              position: absolute;
+              top: 0px;
+              background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), yellow);
+              transform: rotateY(-90deg);
+              transform-origin: top right;
+            }
+            #transform-style5 {
+              width: 200px;
+              height: 200px;
+              position: absolute;
+              top: 0px;
+              background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), yellow);
+              transform: rotateX(-90deg);
+              transform-origin: top left;
+            }
+            #transform-style6 {
+              width: 200px;
+              height: 200px;
+              position: absolute;
+              bottom: 0px;
+              background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), yellow);
+              transform: rotateX(90deg);
+              transform-origin: bottom left;
+            }
+            #transform-style7 {
+              width: 200px;
+              height: 200px;
+              position: absolute;
+              bottom: 0px;
+              left: 0px;
+              background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), yellow);
+              transform: translateZ(-200px);
+              transform-origin: bottom right;
+            }
+          </style>
+          <div id="transform-style1">
+            <div id="transform-style2">
+              2
+              <div id="transform-style3"><img src="./asset/images/image.jpeg" alt="" srcset="" /></div>
+              <div id="transform-style4">4</div>
+              <div id="transform-style5">5</div>
+              <div id="transform-style6">6</div>
+              <div id="transform-style7">7</div>
+            </div>
+          </div>
+        </div>
         <div data-for="rotate" class="d-none"></div>
         <div data-for="scale" class="d-none"></div>
         <div data-for="translate" class="d-none"></div>
