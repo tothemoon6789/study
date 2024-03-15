@@ -1,26 +1,26 @@
 (function () {
   var phan_loai = [
-    { id: "btn-type-text", heading: "Thay đổi chữ" },
-    { id: "btn-type-background", heading: "Thay đổi nền" },
-    { id: "btn-type-dimension", heading: "Thay đổi kích thước" },
-    { id: "btn-type-border", heading: "Thay đổi đường viền" },
-    { id: "btn-type-padding", heading: "Thay đổi không gian" },
-    { id: "btn-type-outline", heading: "Thay đổi viền ngoài" },
-    { id: "btn-type-margin", heading: "Thay đổi khoảng cách 2 phần tử" },
-    { id: "btn-type-position", heading: "Thay đổi kiểu position" },
-    { id: "btn-type-display", heading: "Thay đổi Kiểu hiển thị" },
-    { id: "btn-type-flex", heading: "Thay đổi bố cục flex" },
-    { id: "btn-type-grid", heading: "Thay đổi bố cục lưới grid" },
-    { id: "btn-type-float", heading: "Thay đổi kiểu trôi" },
-    { id: "btn-type-transform", heading: "Thay đổi hình dạng" },
-    { id: "btn-type-mask", heading: "Thay đổi mặt nạ" },
-    { id: "btn-type-inset", heading: "Thay đổi khoảng cách cha con" },
-    { id: "btn-type-column", heading: "Thay đổi bố cục cột" },
-    { id: "btn-type-list", heading: "Thay đổi kiểu danh sách" },
-    { id: "btn-type-scrollbar", heading: "Thay đổi kiểu thanh kéo" },
-    { id: "btn-type-animation", heading: "Thay đổi kiểu chuyển động animation" },
-    { id: "btn-type-transition", heading: "Thay đổi kiểu chuyển động transition" },
-    { id: "btn-type-another", heading: "Thay đổi khác" },
+    { id: "btn-type-text", heading: "Chữ" },
+    { id: "btn-type-background", heading: "Nền" },
+    { id: "btn-type-dimension", heading: "Kích thước" },
+    { id: "btn-type-border", heading: "đường viền" },
+    { id: "btn-type-padding", heading: "không gian" },
+    { id: "btn-type-outline", heading: "viền ngoài" },
+    { id: "btn-type-margin", heading: "Margin" },
+    { id: "btn-type-position", heading: "kiểu position" },
+    { id: "btn-type-display", heading: "Kiểu hiển thị" },
+    { id: "btn-type-flex", heading: "bố cục flex" },
+    { id: "btn-type-grid", heading: "lưới grid" },
+    { id: "btn-type-float", heading: "kiểu trôi" },
+    { id: "btn-type-transform", heading: "hình dạng" },
+    { id: "btn-type-mask", heading: "mặt nạ" },
+    { id: "btn-type-inset", heading: "khoảng cách cha con" },
+    { id: "btn-type-column", heading: "Cột" },
+    { id: "btn-type-list", heading: "Danh sách" },
+    { id: "btn-type-scrollbar", heading: "Thanh kéo" },
+    { id: "btn-type-animation", heading: "Animation" },
+    { id: "btn-type-transition", heading: "Transition" },
+    { id: "btn-type-another", heading: "khác" },
   ];
   var nut_bam = [
     {
@@ -1461,25 +1461,52 @@ document.getElementById("animation-direction").onclick = function () {
 };
 function resizeButtonToSmall() {
   var buttons = document.querySelectorAll("#control-area button");
+  var uls = document.querySelectorAll("#control-area ul");
+  var headings = document.querySelectorAll("#control-area h6");
+  headings.forEach((heading) => {
+    heading.classList.remove("x-small");
+  })
+  uls.forEach((ul) => {
+     ul.classList.remove("x-small");
+  })
   buttons.forEach((btn) => {
     btn.classList.remove("btn-lg");
     btn.classList.remove("btn-md");
+    btn.classList.remove("x-small");
     btn.classList.add("btn-sm");
   });
 }
 function resizeButtonToLarge() {
   var buttons = document.querySelectorAll("#control-area button");
+  var uls = document.querySelectorAll("#control-area ul");
+  var headings = document.querySelectorAll("#control-area h6");
+  headings.forEach((heading) => {
+    heading.classList.remove("x-small");
+  })
+  uls.forEach((ul) => {
+     ul.classList.remove("x-small");
+  })
   buttons.forEach((btn) => {
     btn.classList.remove("btn-sm");
     btn.classList.remove("btn-md");
+    btn.classList.remove("x-small");
     btn.classList.add("btn-lg");
   });
 }
 function resizeButtonToMiddle() {
   var buttons = document.querySelectorAll("#control-area button");
+  var uls = document.querySelectorAll("#control-area ul");
+  var headings = document.querySelectorAll("#control-area h6");
+  headings.forEach((heading) => {
+    heading.classList.remove("x-small");
+  })
+  uls.forEach((ul) => {
+     ul.classList.remove("x-small");
+  })
   buttons.forEach((btn) => {
     btn.classList.remove("btn-sm");
     btn.classList.remove("btn-lg");
+    btn.classList.remove("x-small");
     btn.classList.add("btn-md");
   });
 }

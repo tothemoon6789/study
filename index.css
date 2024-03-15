@@ -3031,13 +3031,16 @@ to {
 }
 #control-area button.x-small {
   border: initial;
-  white-space: nowrap;
+  /* white-space: nowrap;
   text-overflow: ellipsis;
-  overflow: hidden;
+  overflow: hidden; */
   max-width: 60px !important;
   min-width: unset !important;
   font-size: 8px;
   padding: 2px 4px;
+  margin-top: 5px;
+  font-weight: 500;
+
 }
 #control-area ul.x-small {
   list-style: none;
@@ -3045,6 +3048,8 @@ to {
 }
 #control-area h6.x-small {
   font-size: 8px;
+  writing-mode: vertical-lr;
+  text-transform: capitalize;
 }
 #control-area {
   padding-top: 20px;
