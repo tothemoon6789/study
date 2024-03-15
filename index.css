@@ -3030,7 +3030,7 @@ to {
   text-decoration: line-through;
 }
 
-button[button-type="x-small"]{
+#control-area button[button-type="x-small"]{
   border: initial;
   max-width: 60px !important;
   min-width: unset !important;
@@ -3039,7 +3039,7 @@ button[button-type="x-small"]{
   margin-top: 5px;
   font-weight: 500;
 }
-button[button-type="btn-sm"]{
+#control-area  button[button-type="btn-sm"]{
   border: initial;
   max-width: 150px !important;
   min-width: unset !important;
@@ -3048,7 +3048,7 @@ button[button-type="btn-sm"]{
   margin-top: 5px;
   font-weight: 400;
 }
-button[button-type="btn-md"]{
+#control-area  button[button-type="btn-md"]{
   border: initial;
   max-width: 150px !important;
   min-width: unset !important;
