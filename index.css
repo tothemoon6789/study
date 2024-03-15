@@ -2847,7 +2847,7 @@ ul {
   max-width: 100%;
   overflow: scroll;
   height: 60vh;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid rgb(0, 255, 38, 0.2);
   border-radius: 5px;
 }
 #control-area button {
@@ -2857,16 +2857,16 @@ ul {
 /* end object */
 /* another */
 #control-area::-webkit-scrollbar {
-  width: 8px;
-  height: 10px;
+  width: 6px;
+  height: 6px;
 }
 #control-area::-webkit-scrollbar-thumb {
-  background-color: red;
+  background-color: rgb(0, 255, 38);
   border-radius: 20px;
 }
 #control-area::-webkit-scrollbar-track {
   border-radius: 20px;
-  box-shadow: inset 2px 2px 4px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: inset 2px 2px 4px 0 rgb(0, 255, 38, 0.2);
 }
 .all {
   color: red;
@@ -3029,18 +3029,36 @@ to {
 .deprecated {
   text-decoration: line-through;
 }
-#control-area button.x-small {
+
+button[button-type="x-small"]{
   border: initial;
-  /* white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden; */
   max-width: 60px !important;
   min-width: unset !important;
   font-size: 8px;
   padding: 2px 4px;
   margin-top: 5px;
   font-weight: 500;
-
+}
+button[button-type="btn-sm"]{
+  border: initial;
+  max-width: 150px !important;
+  min-width: unset !important;
+  font-size: 12px;
+  padding: 4px 8px;
+  margin-top: 5px;
+  font-weight: 400;
+}
+button[button-type="btn-md"]{
+  border: initial;
+  max-width: 150px !important;
+  min-width: unset !important;
+  font-size: 16px;
+  padding: 6px 12px;
+  margin-top: 5px;
+  font-weight: 400;
+}
+button[button-type="btn-lg"]{
+  border: initial;
 }
 #control-area ul.x-small {
   list-style: none;

@@ -75,7 +75,7 @@
           <div class="text-danger">Trong trường hợp không có hiệu ứng bởi vì: <strong style="text-decoration: line-through">kích thước phần tử con bằng hoặc lớn hơn</strong> kích thước phần tử cha, vì vậy phải giảm lại bằng font-size của con hoặc thay đổi width height như của img</div>
           <div class="text-danger p-3">default: <strong>baseline</strong></div>
         </div>
-        <div id="user-select" class="d-block">
+        <div id="user-select" class="d-none">
           <h5>Cú pháp</h5>
           user-select: <strong>auto</strong> | <strong>none</strong> | <strong>text</strong> | <strong>all</strong>;
           <ul>
@@ -213,6 +213,10 @@
         <div data-for="float" class="d-none"></div>
         <div data-for="clear" class="d-none"></div>
         <div data-for="transform" class="d-none"></div>
+        <div data-for="transform-origin" class="d-block">
+          
+        </div>
+        <div data-for="transform-style" class="d-block"></div>
         <div data-for="rotate" class="d-none"></div>
         <div data-for="scale" class="d-none"></div>
         <div data-for="translate" class="d-none"></div>
@@ -1017,7 +1021,7 @@
       </div>
       <div id="control-area" class="d-flex"></div>
       <div class="btn-group" role="group" aria-label="Basic example">
-        <button type="button" class="btn btn-secondary" onclick="resizeButtonToVerrySmall()">X Small</button>
+        <button id="btn-to-small-default" type="button" class="btn btn-secondary" onclick="resizeButtonToVerrySmall()">X Small</button>
         <button type="button" class="btn btn-secondary" onclick="resizeButtonToSmall()">Small</button>
         <button type="button" class="btn btn-secondary" onclick="resizeButtonToMiddle()">Middle</button>
         <button type="button" class="btn btn-secondary" onclick="resizeButtonToLarge()">Large</button>

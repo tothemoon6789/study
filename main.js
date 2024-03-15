@@ -779,6 +779,16 @@
       text: "transform",
     },
     {
+      id: "transform-origin",
+      class: "btn btn-outline-primary btn-type-transform",
+      text: "transform-origin",
+    },
+    {
+      id: "transform-style",
+      class: "btn btn-outline-primary btn-type-transform",
+      text: "transform-style",
+    },
+    {
       id: "rotate",
       class: "btn btn-outline-primary btn-type-transform",
       text: "rotate",
@@ -1470,10 +1480,7 @@ function resizeButtonToSmall() {
      ul.classList.remove("x-small");
   })
   buttons.forEach((btn) => {
-    btn.classList.remove("btn-lg");
-    btn.classList.remove("btn-md");
-    btn.classList.remove("x-small");
-    btn.classList.add("btn-sm");
+    btn.setAttribute("button-type","btn-sm");
   });
 }
 function resizeButtonToLarge() {
@@ -1487,10 +1494,7 @@ function resizeButtonToLarge() {
      ul.classList.remove("x-small");
   })
   buttons.forEach((btn) => {
-    btn.classList.remove("btn-sm");
-    btn.classList.remove("btn-md");
-    btn.classList.remove("x-small");
-    btn.classList.add("btn-lg");
+    btn.setAttribute("button-type","btn-lg");
   });
 }
 function resizeButtonToMiddle() {
@@ -1504,10 +1508,7 @@ function resizeButtonToMiddle() {
      ul.classList.remove("x-small");
   })
   buttons.forEach((btn) => {
-    btn.classList.remove("btn-sm");
-    btn.classList.remove("btn-lg");
-    btn.classList.remove("x-small");
-    btn.classList.add("btn-md");
+    btn.setAttribute("button-type","btn-md");
   });
 }
 function resizeButtonToVerrySmall() {
@@ -1521,11 +1522,10 @@ function resizeButtonToVerrySmall() {
      ul.classList.add("x-small");
   })
   buttons.forEach((btn) => {
-    btn.classList.remove("btn-sm");
-    btn.classList.remove("btn-lg");
-    btn.classList.remove("btn-md");
-    btn.classList.add("x-small");
+    btn.setAttribute("button-type","x-small");
   });
 }
 // var a = document.querySelectorAll(".ws-table-all a");
 // console.log(a)
+var btnSmallDefault = document.getElementById("btn-to-small-default");
+btnSmallDefault.click();
