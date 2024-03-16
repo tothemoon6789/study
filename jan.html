@@ -1,113 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      div[id^="transform-style"] {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      #transform-style1 {
-        width: 100vw;
-        height: 100vh;
-        background-color: red;
-      }
-      img {
-        width: 200px;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 50%;
-      }
-      #transform-style1 {
-        position: relative;
-        
-      }
-      #transform-style2 {
-        width: 200px;
-        height: 200px;
-        position: absolute;
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), yellow);
-        transform-style: preserve-3d;
-        animation: rota 2s infinite ease-in-out alternate;
-        transition: all 2s;
-        transform-origin: center center -100px;
-        transform: rotateX(2deg) rotateY(0deg);
-        cursor: progress;
-      }
-      #transform-style2:hover {
-        transform: rotateX(20deg) rotateY(360deg);
-      }
-      @keyframes rota {
-        from {
-          transform: rotateX(2deg) rotateY(0deg);
-        }
-        to {
-          transform: rotateX(20deg) rotateY(360deg);
-        }
-      }
-      #transform-style3 {
-        width: 200px;
-        height: 200px;
-        position: absolute;
-        top: 0px;
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), yellow);
-        transform: rotateY(90deg);
-        transform-origin: top left;
-      }
-      #transform-style4 {
-        width: 200px;
-        height: 200px;
-        position: absolute;
-        top: 0px;
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), yellow);
-        transform: rotateY(-90deg);
-        transform-origin: top right;
-      }
-      #transform-style5 {
-        width: 200px;
-        height: 200px;
-        position: absolute;
-        top: 0px;
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), yellow);
-        transform: rotateX(-90deg);
-        transform-origin: top left;
-      }
-      #transform-style6 {
-        width: 200px;
-        height: 200px;
-        position: absolute;
-        bottom: 0px;
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), yellow);
-        transform: rotateX(90deg);
-        transform-origin: bottom left;
-      }
-      #transform-style7 {
-        width: 200px;
-        height: 200px;
-        position: absolute;
-        bottom: 0px;
-        left: 0px;
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), yellow);
-        transform: translateZ(-200px);
-        transform-origin: bottom right;
-      }
-    </style>
-    <div id="transform-style1">
-      <div id="transform-style2">
-        2
-        <div id="transform-style3"><img src="./asset/images/image.jpeg" alt="" srcset="" /></div>
-        <div id="transform-style4">4</div>
-        <div id="transform-style5">5</div>
-        <div id="transform-style6">6</div>
-        <div id="transform-style7">7</div>
-      </div>
-    </div>
-  <!-- </head>
-  <body> -->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box1 {
+      /* width: 200px;
+      height: 200px; */
+      background-color: yellow;
+    }
+    .box2 {
+      /* width: 200px; */
+      /* height: 200px; */
+      background-color: red;
+      border: 10px solid blue;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+</div>
+<div id="demo" class="box1">sua di
+
+<button onclick="console.log(box1.outerText)">click</button>
+
+
+  <script>
+    var x = "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti asperiores sequi enim numquam? Minima iure quis saepe ab explicabo eveniet quos, itaque libero, at, et ipsum harum eaque sed deleniti.";
+    var y = Array.from(x);
+
+    console.log(window.document.getElementById("demo"))
+    document.getElementById("demo").dir = "rtl";
     
-  <!-- </body> -->
+    document.getElementById("demo").insertAdjacentText("beforeend","ok")
+ 
+  </script>
+</body>
 </html>

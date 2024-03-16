@@ -590,7 +590,7 @@
     },
     {
       id: "margin",
-      class: "btn btn-outline-primary btn-type-margin",
+      class: "btn btn-danger btn-type-margin",
       text: "margin",
     },
     {

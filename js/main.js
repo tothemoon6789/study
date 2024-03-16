@@ -74,7 +74,17 @@
     { id: "js67", id_heading: "element", order:0, version: "dom1", text: "element.clientTop" },
     { id: "js68", id_heading: "element", order:0, version: "dom1", text: "element.clientLeft" },
     { id: "js69", id_heading: "element", order:0, version: "dom1", text: "element.cloneNode()" },
+    { id: "js70", id_heading: "element", order:0, version: "dom1", text: "element.closest()" },
+    { id: "js71", id_heading: "element", order:0, version: "dom1", text: "element.compareDocumentPosition()" },
+    { id: "js72", id_heading: "element", order:0, version: "dom1", text: "element.contains()" },
+    { id: "js73", id_heading: "element", order:0, version: "dom1", text: "element.contentEditable" },
+    { id: "js74", id_heading: "element", order:0, version: "dom1", text: "element.dir" },
+    { id: "js75", id_heading: "element", order:0, version: "dom1", text: "element.firstChild" },
+    { id: "js76", id_heading: "element", order:0, version: "dom3", text: "element.firstElementChild" },
+    { id: "js77", id_heading: "element", order:0, version: "dom2", text: "element.focus()" },
   ];
+
+  document.getElementById("total") && (function(){document.getElementById("total").innerText = buttons.length})();
   var control_area = document.getElementById("control");
   heading.forEach((header) => {
     var ul = window.document.createElement("ul");

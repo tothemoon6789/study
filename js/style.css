@@ -72,3 +72,7 @@ body {
   margin-top: 5px;
   border: initial;
 }
+
+#showing h5 {
+  color: darkgrey;
+}

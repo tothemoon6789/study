@@ -169,7 +169,26 @@
         <div data-for="padding-inline-start" class="d-none"></div>
         <div data-for="padding-inline-end" class="d-none"></div>
         <div data-for="outline" class="d-none"></div>
-        <div data-for="margin" class="d-none"></div>
+        <div data-for="margin" class="d-none">
+          <div class="alert alert-danger" role="alert">Kiểm tra lại ví dụ phía bên dưới, vấn đề nằm ở tại sao margin thành phần bên trong nhưng chỉ thụt vào phía bên trái</div>
+          <style>
+            .box1 {
+              width: 400px;
+              height: 400px;
+              background-color: yellow;
+            }
+            .box2 {
+              width: 200px;
+              height: 200px;
+              background-color: red;
+              border: 10px solid blue;
+              margin: 20px;
+            }
+          </style>
+          <div class="box1">
+            <div class="box2"></div>
+          </div>
+        </div>
         <div data-for="margin-top" class="d-none"></div>
         <div data-for="margin-left" class="d-none"></div>
         <div data-for="margin-right" class="d-none"></div>
@@ -214,15 +233,15 @@
         <div data-for="clear" class="d-none"></div>
         <div data-for="transform" class="d-none"></div>
         <div data-for="transform-origin" class="d-none">
-          <div class="alert alert-info" role="alert">
-            Chỉ định toạ độ quay. Để dễ hiểu, hãy định vị toạ độ - <strong>origin</strong> ở một điểm <strong style="color: red; font-weight: 900;">so với chính nó</strong>, <strong>góc trên bên trái</strong> của <strong style="color: red; font-weight: 900;">chính nó</strong> là gốc toạ độ 0% 0%, sau đó tưởng tượng hình được quay gắn liền với mặt phẳng, tiếp theo, ghim cái mặt phẳng đó với toạ độ đã định trước và quay cái mặt phẳng đó. Kết quả sẽ hiển thị.
-          </div>
+          <div class="alert alert-info" role="alert">Chỉ định toạ độ quay. Để dễ hiểu, hãy định vị toạ độ - <strong>origin</strong> ở một điểm <strong style="color: red; font-weight: 900">so với chính nó</strong>, <strong>góc trên bên trái</strong> của <strong style="color: red; font-weight: 900">chính nó</strong> là gốc toạ độ 0% 0%, sau đó tưởng tượng hình được quay gắn liền với mặt phẳng, tiếp theo, ghim cái mặt phẳng đó với toạ độ đã định trước và quay cái mặt phẳng đó. Kết quả sẽ hiển thị.</div>
           <h6>Cú pháp</h6>
           transform-origin: <strong>x-axis y-axis z-axis</strong> | <strong>initial</strong> | <strong>inherit</strong>;
           <ul>
             <li>x-axis: <strong>left</strong> | <strong>center</strong> | <strong>right</strong> | <strong>length</strong> | <strong>%</strong></li>
             <li>y-axis: <strong>top</strong> | <strong>center</strong> | <strong>bottom</strong> | <strong>length</strong> | <strong>%</strong></li>
-            <li>z-axis: <strong>length</strong><span><strong class="text-danger"> Được set trong transform-style:preverse-3d</strong></span></li>
+            <li>
+              z-axis: <strong>length</strong><span><strong class="text-danger"> Được set trong transform-style:preverse-3d</strong></span>
+            </li>
           </ul>
 
           <div class="box-transform-origin">
@@ -237,14 +256,13 @@
               background-color: aliceblue;
               position: relative;
             }
-            .box-transform-origin .item{
+            .box-transform-origin .item {
               position: absolute;
               width: 150px;
               aspect-ratio: 1/1;
               background-color: yellowgreen;
               transform-origin: 0% 0%;
               animation: box-transform-origin 2s infinite alternate;
-              
             }
             @keyframes box-transform-origin {
               from {
@@ -258,22 +276,15 @@
           <script>
             var btn1 = document.getElementById("box-transform-origin-1");
             var btn2 = document.getElementById("box-transform-origin-2");
-            btn1.addEventListener("click",changeTransformOrigin);
-            btn1.removeEventListener("click",changeTransformOrigin);
-            function changeTransformOrigin(){
-              var origin = [
-                "top left",
-                "top left",
-                "top left",
-                "top left",
-              ]
+            btn1.addEventListener("click", changeTransformOrigin);
+            btn1.removeEventListener("click", changeTransformOrigin);
+            function changeTransformOrigin() {
+              var origin = ["top left", "top left", "top left", "top left"];
             }
           </script>
         </div>
         <div data-for="transform-style" class="d-block">
-          <div class="alert alert-info" role="alert">
-            Được dùng để đánh dấu phần tử hiển thị 3d
-          </div>
+          <div class="alert alert-info" role="alert">Được dùng để đánh dấu phần tử hiển thị 3d</div>
           <div class="text-danger p3">Chỉ có hiệu ứng khi các phần tử transform là phần tử con</div>
           <h6>Cú pháp</h6>
           transform-style: flat|preserve-3d|initial|inherit;
@@ -286,7 +297,7 @@
             #transform-style1 {
               width: 100vw;
               height: 50vh;
-              background-image: linear-gradient(to right, rgb(230, 202, 202), rgb(185, 222, 185))
+              background-image: linear-gradient(to right, rgb(230, 202, 202), rgb(185, 222, 185));
             }
             img {
               width: 200px;
@@ -296,7 +307,6 @@
             }
             #transform-style1 {
               position: relative;
-              
             }
             #transform-style2 {
               width: 200px;
