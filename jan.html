@@ -7,18 +7,20 @@
   <title>Document</title>
 </head>
 <body>
-  <div id="demo" data-for = "ok">
-    <div class="box1">Lorem ipsum dolor sit amet.</div>
-    <div class="box2">Lorem, ipsum.</div>
+  <div>mot</div>
+  <div>hai</div>
+  <div id="demo">
+    <div>ba</div>
+    <div>bon 
+      <div>nam</div>
+      <div>sau</div>
+    </div>
   </div>
-  <button>click</button>
-  <div id="conc">asf</div>
   <script>
-    var c = document.getElementById("conc").firstChild;
-    console.log(c.hasChildNodes());
-    document.getElementsByTagName("button")[0].onclick = (e) => {
-      
-    }
+    var demo = document.getElementById("demo");
+    var body = document.querySelector("body");
+    console.log(body.getElementsByTagName("div"));
+    console.log(demo.getElementsByTagName("div"));
   </script>
 </body>
 </html>
