@@ -366,7 +366,7 @@
           <div class="alert alert-danger" role="alert">Hạn chế dùng vì confit với những access key khác</div>
         </div>
         <div id="js56" class="d-none">
-          <div class="alert alert-info" role="alert">Thêm một nút phía sau một element</div>
+          <div class="alert alert-info" role="alert">Thêm một nút trước thẻ đóng một element</div>
           <h5>Cú pháp</h5>
           <div class="alert alert-info" role="alert"><strong>element.appendChild(node)</strong> hoặc <strong>node.appendChild(node)</strong></div>
         </div>
@@ -383,7 +383,7 @@
           <button type="button" onclick="document.querySelector('js58 input').blur()" class="btn btn-primary mt-3">Play</button>
         </div>
         <div id="js59" class="d-none">
-          <div class="alert alert-info" role="alert">Lấy số lượng con của 1 element (chỉ đếm trong nhánh chính);</div>
+          <div class="alert alert-info" role="alert">Đếm số lượng con của 1 element (chỉ đếm trong nhánh chính);</div>
           <h5>Cú pháp</h5>
           <div class="alert alert-info" role="alert">
             <strong>element.childElementCount</strong>
@@ -529,22 +529,24 @@
           <div class="alert alert-info" role="alert"><strong>Lấy hướng viết của chữ</strong> hoặc <strong>gán hướng viết của chữ</strong></div>
           <h5>Cú pháp</h5>
           <ul>
-            <li>Lấy: <span>element<strong>.dir</strong></span></li>
-            <li>Gán: <span>element<strong>.dir</strong> = "<strong>ltr</strong> | <strong>rtl</strong> | <strong>auto</strong> "</></li>
+            <li>
+              Lấy: <span>element<strong>.dir</strong></span>
+            </li>
+            <li>
+              Gán: <span>element<strong>.dir</strong> = "<strong>ltr</strong> | <strong>rtl</strong> | <strong>auto</strong> "</span>
+            </li>
           </ul>
-          
-          
+
           <div class="form-group my-3">
             <label for="demo-js74">Form viết</label>
-            <input type="text"
-              class="form-control" name="demo-js74" id="demo-js74" aria-describedby="helpId" placeholder="Thử viết vào đây">
+            <input type="text" class="form-control" name="demo-js74" id="demo-js74" aria-describedby="helpId" placeholder="Thử viết vào đây" />
           </div>
-          
+
           <button class="btn btn-outline-primary btn-sm" onclick="this.innerText = document.getElementById('demo-js74').dir">Lấy hướng chữ</button>
           <button class="btn btn-outline-primary btn-sm" onclick="document.getElementById('demo-js74').dir = 'ltr';">Từ trái sang phải</button>
           <button class="btn btn-outline-primary btn-sm" onclick="document.getElementById('demo-js74').dir = 'rtl';">Từ phải sang trái</button>
           <button class="btn btn-outline-primary btn-sm" onclick="document.getElementById('demo-js74').dir = 'auto';">Auto</button>
-          
+
           <h5 class="mt-3">Tham số</h5>
           <ul>
             <li><strong>ltr</strong> : hướng từ trái sang phải <strong>default</strong></li>
@@ -564,28 +566,32 @@
           <em class="ml-2">element<strong>.firstChild</strong></em> hoặc <em>node<strong>.firstChild</strong></em>
           <h5>Lưu ý</h5>
           <div class="text-danger m-2"><strong>Read-only !</strong></div>
-          <div class="text-danger mx-2">Giống với <strong>childNode<span style="text-decoration: underline; color: black;text-decoration-thickness: 3px;">s</span>[0]</strong> </div>
+          <div class="text-danger mx-2">
+            Giống với <strong>childNode<span style="text-decoration: underline; color: black; text-decoration-thickness: 3px">s</span>[0]</strong>
+          </div>
           <div class="text-danger mx-2">Trả về <strong>Node Object</strong> or <strong>null</strong> nếu tìm không thấy</div>
         </div>
         <div id="js76" class="d-none">
-          <div class="alert alert-info" role="alert">Lấy <strong><span class="text-danger">element</span> con</strong> đầu tiên</div>
+          <div class="alert alert-info" role="alert">
+            Lấy <strong><span class="text-danger">element</span> con</strong> đầu tiên
+          </div>
           <h5>Cú pháp</h5>
-          <em class="ml-2">element<strong>.first<span class="text-danger">element</span>Child</strong></em>
+          <em class="ml-2"
+            >element<strong>.first<span class="text-danger">element</span>Child</strong></em
+          >
           <h5>Lưu ý</h5>
           <div class="text-danger m-2"><strong>Read-only !</strong></div>
-          <div class="mx-2">Giống với <strong>children[0]</strong> </div>
+          <div class="mx-2">Giống với <strong>children[0]</strong></div>
           <div class="mx-2">Trả về <strong class="text-danger">First Child Element</strong> or <strong>null</strong> nếu tìm không thấy</div>
-          <div class="">Không có thuộc tính: <strong class="display-3" style="text-decoration:line-through">node.firstElementChild</strong></div>
+          <div class="">Không có thuộc tính: <strong class="display-3" style="text-decoration: line-through">node.firstElementChild</strong></div>
         </div>
         <div id="js77" class="d-none">
-          <div class="alert alert-info" role="alert">
-            <strong>Tập trung</strong> vào 1 element có khả năng tập trung
-          </div>
+          <div class="alert alert-info" role="alert"><strong>Tập trung</strong> vào 1 element có khả năng tập trung</div>
           <div class="form-group">
             <label for="demo-js77-input">Text</label>
-            <input type="text" class="form-control" name="demo-js77-input" id="demo-js77-input" aria-describedby="helpId" placeholder="Writing something !">
+            <input type="text" class="form-control" name="demo-js77-input" id="demo-js77-input" aria-describedby="helpId" placeholder="Writing something !" />
           </div>
-          <button id="demo-js77-button" class="btn btn-outline-danger">Không có chức năng</button><br>
+          <button id="demo-js77-button" class="btn btn-outline-danger">Không có chức năng</button><br />
           <style>
             #demo-js77-link {
               border: 1px solid blue;
@@ -599,16 +605,162 @@
               outline-offset: 2px;
             }
           </style>
-          <a href="#" id="demo-js77-link" class="p-3 d-inline-block mt-3">Đây là link</a><br>
-          
+          <a href="#" id="demo-js77-link" class="p-3 d-inline-block mt-3">Đây là link</a><br />
+
           <div class="btn-group mt-3" role="group" aria-label="">
             <button type="button" class="btn btn-outline-primary" onclick="document.getElementById('demo-js77-input').focus()">Focus input</button>
             <button type="button" class="btn btn-outline-primary" onclick="document.getElementById('demo-js77-button').focus()">Focus button</button>
             <button type="button" class="btn btn-outline-primary" onclick="document.getElementById('demo-js77-link').focus()">Focus link</button>
           </div>
-          
+
           <h5>Cú pháp</h5>
           element<strong>.focus()</strong>
+        </div>
+        <div id="js78" class="d-none">
+          <div class="alert alert-info" role="alert">Lấy giá trị của thuộc tính thẻ</div>
+          <h5>Cú pháp</h5>
+          <pre>element.<strong>getAttribute(name)</strong></pre>
+          <h5>Return</h5>
+          Giá trị trả về là <code>string</code> nếu không tìm thấy trả về <code>null</code><br />
+          Vẫn có thể sử dụng <span style="color: red; text-decoration: line-through">node.getAttribute(name)</span> nhưng nếu node là text thì lỗi sẽ bị ném ra. Vì vậy: lời khuyên là <span class="display-4" style="text-decoration: line-through; text-decoration-color: red">KHÔNG DÙNG</span>
+          <div class="text-danger">Sự khác nhau giữa <code>element.getAttribute()</code> và <code>element.getAttributeNode()</code> đó là thằng 1 trả về giá trị của một node attribute, thằng 2 trả về đối tượng đó</div>
+          <div class="text-primary">W3school khuyên dùng <code>element.getAttribute()</code> sẽ dễ hơn.</div>
+          <h5>Ví dụ</h5>
+
+          <pre class="example">
+              <div class="lop-123" id="demo-js78" onclick="myTestFunction()" position="-1" data-for = "jan">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, nesciunt.
+              </div>
+              <div id="result-js78"></div>
+              <script>
+                var js78 = document.getElementById("demo-js78");
+                document.getElementById("result-js78").insertAdjacentText("beforeend"," Kết quả: id "+js78.getAttribute("id"));
+                document.getElementById("result-js78").insertAdjacentText("beforeend"," Kết quả: class "+js78.getAttribute("class"));
+                document.getElementById("result-js78").insertAdjacentText("beforeend"," Kết quả: position "+js78.getAttribute("position"));
+                document.getElementById("result-js78").insertAdjacentText("beforeend"," Kết quả: data-for "+js78.getAttribute("data-for"));
+                document.getElementById("result-js78").insertAdjacentText("beforeend"," Kết quả: onclick "+js78.getAttribute("onclick"));
+              </script>
+          </pre>
+
+          <h5>Code</h5>
+          <pre class="code"></pre>
+          <script>
+            document.querySelector("#js78 .code").innerText = document.querySelector("#js78 .example").innerHTML;
+          </script>
+        </div>
+        <div id="js79" class="d-none">
+          <img src="../asset/images/get-bouding-client-rect.svg" alt="" srcset="" />
+          <h5>Trả về</h5>
+          <pre>
+            DOMRect
+          </pre>
+          <style>
+            #demo-js79 {
+              width: 100px;
+              height: 100px;
+              background-color: red;
+              border: 0px solid blue;
+            }
+          </style>
+          <div id="demo-js79"></div>
+          <div id="resultJs79"></div>
+          <script>
+            var element = document.getElementById("demo-js79");
+            var variable_demo_js79 = 0;
+
+            setInterval(() => {
+              var resultJs79 = document.getElementById("resultJs79");
+              var rectE = element.getBoundingClientRect();
+              element.style.borderTopWidth = variable_demo_js79 + "px";
+              var html = "";
+              html += "element.clientLeft = " + element.clientLeft + "_________________";
+              html += "element.clientTop = " + element.clientTop + "_________________";
+              html += "element.clientHeight = " + element.clientHeight + "_________________";
+              html += "element.clientWidth = " + element.clientWidth + "_________________";
+              html += "element.offsetWidth = " + element.offsetWidth + "_________________";
+              html += "element.offsetHeight = " + element.offsetHeight + "_________________";
+              html += "element.getBoudingClientRect().left  = " + rectE.left + "_________________";
+              html += "element.getBoudingClientRect().top  = " + rectE.top + "_________________";
+              html += "element.getBoudingClientRect().x  = " + rectE.x + "_________________";
+              html += "element.getBoudingClientRect()y.  = " + rectE.y + "_________________";
+              html += "element.getBoudingClientRect().bottom  = " + rectE.bottom + "_________________";
+              html += "element.getBoudingClientRect().right  = " + rectE.right + "_________________";
+              html += "element.getBoudingClientRect().width  = " + rectE.width + "_________________";
+              html += "element.getBoudingClientRect().height  = " + rectE.height + "_________________";
+              console.log(rectE);
+              resultJs79.innerText = html;
+              variable_demo_js79++;
+            }, 200);
+          </script>
+        </div>
+        <div id="js80" class="d-none">
+          <div class="alert alert-info" role="alert">
+            Khoảng trống bên trái giữa đường border cha offset và đường border con bị offset. Lưu ý trường hợp absolute và relative, cha là relative chứ không phải cha lồng vào nó.
+          </div>
+          <img src="../asset/images/offsetLeft-and-offsetTop.svg" alt="" srcset="">
+        </div>
+        <div id="js81" class="d-none">
+          <div class="alert alert-info" role="alert">
+            Khoảng trống bên trên giữa đường border cha offset và đường border con bị offset. 
+          </div>
+          <div class="text-danger">
+            Lưu ý trường hợp absolute và relative, cha là relative chứ không phải cha lồng vào nó.
+          </div>
+          <img src="../asset/images/offsetLeft-and-offsetTop.svg" alt="" srcset="">
+        </div>
+        <div id="js82" class="d-none">
+          <div class="alert alert-info" role="alert">
+            Lấy elment offset cha. Ví dụ: thằng con absolute thì thằng offsetParent là thằng cha relative
+          </div>
+          <div class="text-danger">Lưu ý trường hợp absolute và relative, cha là relative chứ không phải cha lồng vào nó.</div>
+        </div>
+        <div id="js83" class="d-none">
+          <div class="alert alert-info" role="alert">
+            Lấy element dưới dạng string hoặc gán elment đó thành 1 element mới. outerHTML là HTML bao gồm toàn bộ element. Điều này khác với innerHTML
+          </div>
+        </div>
+        <div id="js84" class="d-none">
+          <div class="alert alert-info" role="alert">
+            Lấy đối tượng node của element. 
+          </div>
+          <div class="text-danger">Sự khác nhau giữa <code>element.getAttribute()</code> và <code>element.getAttributeNode()</code> đó là thằng 1 trả về giá trị của một node attribute, thằng 2 trả về đối tượng đó</div>
+          <div class="text-primary">W3school khuyên dùng <code>element.getAttribute()</code> sẽ dễ hơn.</div>
+        </div>
+        <div id="js85" class="d-none">
+          Đã học bên Document Object
+        </div>
+        <div id="js86" class="d-none">
+          Đã học bên Document Object
+        </div>
+        <div id="js87" class="d-none">
+          <h5>Định nghĩa</h5>
+          Kiểm tra có hoặc không có 1 thuộc tính (attribute) tồn tại trong 1 element
+          <h5>Cú pháp</h5>
+          <code>element.hasAttribute(name)</code>
+          <h5>Trả về</h5>
+          <code>Boolean</code>
+        </div>
+        <div id="js88" class="d-none">
+          <h5>Định nghĩa</h5>
+          Kiểm tra element có thuộc tính nào không, hay có nghĩa là có attribute nào không. Khác với <code>element.hasAttribute(name)</code> ở chỗ thằng 1 thì kiểm tra có cái nào không, còn thằng 2 thì kiểm tra có cái đó không !
+          <h5>Cú pháp</h5>
+          <code>element.hasAttribute<strong style="color:black">s</strong>()</code> <br>
+          hoặc <br>
+          <code>node.hasAttribute<strong style="color:black">s</strong>()</code> <br>
+
+          <h5>Trả về</h5>
+          <code>Boolean</code>
+        </div>
+        <div id="js89" class="d-none">
+          <h5>Định nghĩa</h5>
+          Kiểm tra element có nút con nào không, hay có nghĩa là có node con nào không. 
+          <h5>Cú pháp</h5>
+          <code>element.hasChildNode<strong style="color:black">s</strong>()</code> <br>
+          hoặc (test thì thấy ok, nhưng không thấy w3school đề cập) <br>
+          <code>node.hasChildNode<strong style="color:black">s</strong>()</code> <br>
+
+          <h5>Trả về</h5>
+          <code>Boolean</code>
         </div>
       </div>
       <div>

@@ -73,6 +73,8 @@
             Thay đổi vị trí căn chỉnh theo <span class="display-6"><strong>font-size</strong></span> của phần tử cha
           </div>
           <div class="text-danger">Trong trường hợp không có hiệu ứng bởi vì: <strong style="text-decoration: line-through">kích thước phần tử con bằng hoặc lớn hơn</strong> kích thước phần tử cha, vì vậy phải giảm lại bằng font-size của con hoặc thay đổi width height như của img</div>
+          <h5>Lưu ý</h5>
+          <span>Hai phần tử block hiển thị inline-block, 1 phần tử cao, 1 phần tử thấp, chúng ta có thể dùng <span class="text-danger display-3">vertical-aligin</span> cho phần tử thấp</span>
           <div class="text-danger p-3">default: <strong>baseline</strong></div>
         </div>
         <div id="user-select" class="d-none">
@@ -212,7 +214,80 @@
             <li><strong>auto</strong>: set bằng với cha</li>
           </ul>
         </div>
-        <div data-for="display-inline" class="d-none"></div>
+        <div data-for="display-inline" class="d-block">
+          <h5>display : inline</h5>
+          <h5>Nhận xét</h5>
+          <ul>
+            <li><em>Hiển thị :</em> Element có giá trị display inline hoặc inline-* đều hiển thị <strong>trên 1 dòng</strong>.</li>
+            <li><em>Chiều rộng :</em> Vì không set được width, min-width, max-width nên, nội dung đủ nhiều để xuống dòng thì phần tử này cố gắng tăng chiều rộng <strong>gần bằng với phần tử cha</strong> rồi xuống dòng vì không có chỗ nhét nữa <span style="text-decoration: line-through; color: red;">không phải tăng độ rộng bằng với phần tử rộng nhất</span>. Ngược lại, nội dung ít không đủ 1 dòng thì <strong>nội dung tới đâu thì phần tử rộng đến đó</strong>.</li>
+            <li><em>Chiều cao :</em> của 1 dòng inline được hiểu là <strong>chiều cao của phần tử cao nhất</strong>, chiều cao của phần tử inline là chiều cao của chính nó</li>
+            <li>
+              <em >Responsive cha display-inline</em>  :
+              <ol type="A">
+                <li><em style="text-decoration:underline">Con display:inline | inline-* :</em> Tăng độ rộng màn hình, chữ hoặc phần tử inline kế tiếp bị <strong>nổi lên trên và trôi về</strong> khoảng trống cuối dòng bên trên nếu độ rộng của phần tử inline kế tiếp nhỏ hơn bằng khoảng trống đó (theo hướng chữ hoặc canh lề trái phải), và ngược lại khi co nhỏ màn hình thì <strong>chìm xuống dưới và trôi về</strong> hướng của chữ (hoặc canh lề trái phải - thông thường là ltr) nếu bên khoảng trống nhỏ hơn chiều rộng phần tử inline kế tiếp</li>
+                <li><em style="text-decoration:underline">Con display: block | flex | grid  :</em> Tăng độ rộng màn hình, phần tử con kế <strong>xuống dòng và nằm riêng biệt thành 1 khối</strong></li>
+              </ol>
+            </li>
+            <li><em>Phần tử anh em bên trên: là khối</em> thì phần tử bên dưới là inline thì phần tử bên dưới sẽ <strong>xuống dòng</strong> </li>
+            <li style="color:red"><em>Cha là body :</em> cha body, đến con là inline thì con cố gắng rộng bằng với body là 100vw rồi xuống dòng. Nếu phần tử cháu rộng hơn cha chì cháu sẽ bị tràn ra ngoài</li>
+          </ul>
+          <table class="table table-striped table-responsive">
+            <thead class="thead-inverse">
+              <tr>
+                <th>inline</th>
+                <th>Trạng thái</th>
+                <th>Thu nhỏ</th>
+                <th>To lên</th>
+              </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td scope="row">Cha</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td><div style="width: 50%; text-align: right;">Anh</div></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td><div style="width: 50%; text-align: right;"><strong>Con</strong></div></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td><div style="width: 100%; text-align: right;">Cháu 1</div></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td><div style="width: 100%; text-align: right;">Cháu 2</div></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td><div style="width: 100%; text-align: right;">Cháu 3</div></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td><div style="width: 50%; text-align: right;">Em</div></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+          </table>
+          <h5>display : inline-block</h5>
+          <h5>Nhận xét</h5>
+        </div>
         <div data-for="display-inline-block" class="d-none"></div>
         <div data-for="display-block" class="d-none"></div>
         <div data-for="display-flex" class="d-none"></div>
@@ -283,7 +358,7 @@
             }
           </script>
         </div>
-        <div data-for="transform-style" class="d-block">
+        <div data-for="transform-style" class="d-none">
           <div class="alert alert-info" role="alert">Được dùng để đánh dấu phần tử hiển thị 3d</div>
           <div class="text-danger p3">Chỉ có hiệu ứng khi các phần tử transform là phần tử con</div>
           <h6>Cú pháp</h6>
@@ -516,7 +591,25 @@
             <div style="width: 700px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quod suscipit aspernatur, incidunt aliquid ipsa dolore tenetur veritatis quae dignissimos quibusdam libero ratione, magni quis placeat, consequatur quo itaque ea dolores voluptates at quia vel odio? Natus quo at praesentium inventore laborum asperiores in repellendus libero! Rerum, explicabo ex aliquam eaque impedit rem minima delectus! Repellendus sequi alias itaque doloremque, voluptates a reprehenderit quis debitis obcaecati in perferendis adipisci quibusdam id animi error eveniet enim hic tempore deserunt quo officiis illo exercitationem aperiam facilis? Eaque sunt commodi officiis, adipisci alias ab voluptatum. Ea odio, delectus numquam voluptas excepturi voluptatem aut facere non earum dolorem vero? Reprehenderit quia nostrum enim dolores deserunt nesciunt, id praesentium nulla quisquam consequuntur facilis dicta asperiores veritatis sit dignissimos. Commodi repudiandae quia esse cumque natus odit quo nisi? Quis quisquam assumenda adipisci explicabo ad odit fugit. Tempore dignissimos blanditiis deserunt a harum exercitationem suscipit recusandae maxime animi qui delectus doloremque rem, quidem laborum earum reprehenderit repudiandae provident non? Rem corrupti quo excepturi cumque minus quae rerum dignissimos odio magni reprehenderit, quis deserunt possimus ut? Atque dignissimos alias labore consequatur dolorem tempora hic, excepturi repellendus vitae dolore eum iste aut suscipit ducimus distinctio reiciendis magni sit commodi ad beatae. Ex nam vitae tempora velit corporis ipsam earum, dicta sit sint eligendi alias atque reiciendis nobis omnis eveniet rem animi accusantium, amet officiis illo consectetur, quas molestias impedit quibusdam. Illo vel a nostrum doloribus, id sit voluptatem hic animi quis laborum odio, rerum nulla consequuntur cum est possimus, harum qui repellendus corporis quasi culpa sapiente. Quibusdam quae praesentium similique saepe quo eveniet eum nostrum autem veniam iste aperiam animi aliquid totam facere culpa amet eos esse, porro tempora fugiat voluptatum! Excepturi quod odio autem doloribus voluptate amet tempora, in itaque consequuntur reprehenderit voluptates fugiat dicta totam. Neque libero odio magni placeat, sequi deserunt blanditiis repellendus dolore esse optio voluptas. Itaque, alias ut! Possimus, magni? Est cumque quidem, delectus quas consequatur provident assumenda harum saepe. Ipsum exercitationem ea sint, quibusdam modi consequuntur doloremque fugiat atque similique inventore facere rerum? Aliquam nostrum vero consectetur! Necessitatibus doloribus accusamus nobis dolore maxime laudantium nihil, suscipit harum culpa alias itaque commodi officiis eius dolorum tempora provident? Eos nostrum corporis quasi totam in sint. Exercitationem explicabo cumque fuga pariatur ipsum sint beatae necessitatibus deleniti dolorem maiores, non hic fugit. Natus tenetur dolores distinctio, optio placeat eos hic dolor quis dolorum similique veritatis necessitatibus, itaque cum quidem quisquam voluptatem doloribus sint soluta. Fugit laudantium accusamus expedita reprehenderit porro ipsa ratione minus? Incidunt modi, ipsa, totam quasi quod quibusdam omnis adipisci libero fugiat esse nam atque tempora excepturi ex, consectetur dolorem dicta dolor veniam maiores perspiciatis fuga sed. Ad voluptas, excepturi modi quo obcaecati dolor mollitia eaque natus quae rem? Accusantium dolores suscipit veritatis at, possimus dolor. Sapiente quis dolorum quam enim deserunt ratione aliquam, at voluptas aliquid iure eligendi corporis totam molestiae voluptatum est debitis doloribus veniam. Aliquam velit molestias illo odit doloremque dolorum ducimus hic quidem aliquid voluptas, iste repellat architecto repellendus corrupti doloribus?</div>
           </div>
         </div>
-        <div data-for="animation" class="d-none"></div>
+        <div data-for="animation" class="d-none">
+          <div class="p3 text-danger">Lỗi giật giật này thường do chưa set left từ ban đầu, set left là trượt mượt liền</div>
+          <style>
+            .demo-animation1 {
+              position: relative;
+              animation: demo-animation1 0.5s infinite forwards;
+              /* left: 0px; */
+            }
+            @keyframes demo-animation1 {
+              form {
+                left: 0px;
+              }
+              to {
+                left: 100px;
+              }
+            }
+          </style>
+          <button class="demo-animation1">click</button>
+        </div>
         <div data-for="animation-direction" class="d-none"></div>
         <div data-for="animation-timing-function" class="d-none"></div>
         <div data-for="animation-delay" class="d-none"></div>

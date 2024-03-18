@@ -5,37 +5,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <style>
-    .box1 {
-      /* width: 200px;
-      height: 200px; */
-      background-color: yellow;
-    }
-    .box2 {
-      /* width: 200px; */
-      /* height: 200px; */
-      background-color: red;
-      border: 10px solid blue;
-      margin: 20px;
-    }
-  </style>
 </head>
 <body>
-</div>
-<div id="demo" class="box1">sua di
-
-<button onclick="console.log(box1.outerText)">click</button>
-
-
+  <div id="demo" data-for = "ok">
+    <div class="box1">Lorem ipsum dolor sit amet.</div>
+    <div class="box2">Lorem, ipsum.</div>
+  </div>
+  <button>click</button>
+  <div id="conc">asf</div>
   <script>
-    var x = "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti asperiores sequi enim numquam? Minima iure quis saepe ab explicabo eveniet quos, itaque libero, at, et ipsum harum eaque sed deleniti.";
-    var y = Array.from(x);
-
-    console.log(window.document.getElementById("demo"))
-    document.getElementById("demo").dir = "rtl";
-    
-    document.getElementById("demo").insertAdjacentText("beforeend","ok")
- 
+    var c = document.getElementById("conc").firstChild;
+    console.log(c.hasChildNodes());
+    document.getElementsByTagName("button")[0].onclick = (e) => {
+      
+    }
   </script>
 </body>
 </html>
