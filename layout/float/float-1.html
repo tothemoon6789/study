@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .aside {
+        float: left;
+        width: calc(25% - 8px);
+        min-height: 100vh;
+        display: none;
+        background-color: yellow;
+        margin-right: 8px;
+      }
+      .item {
+        box-sizing: border-box;
+        width: 50%;
+        aspect-ratio: 3/4;
+        float: left;
+        background-color: yellow;
+        padding: 2px;
+        
+      }
+      .box .card {
+        overflow: hidden;
+        text-overflow: clip;
+        padding: 10px;
+      }
+
+      .box > .item:nth-child(odd) > div {
+        background-color: red;
+        height: 100%;
+      }
+
+      .box > .item:nth-child(even) > div {
+        background-color: blue;
+        height: 100%;
+      }
+      @media (min-width: 786px) {
+        .item {
+          width: calc(100% / 3);
+        }
+        
+      }
+      @media (min-width: 992px) {
+        .item {
+          width: calc((100% - 25%) / 4);
+        }
+        .aside {
+            display: block;
+        }
+      }
+      @media (min-width: 1200px) {
+        .item {
+            width: calc((100% - 25%) / 5);
+        }
+        .aside {
+            display: block;
+        }
+      }
+      .clear {
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="aside">
+        <ul>
+          <li><a href="#">Something</a></li>
+          <li><a href="#">Something</a></li>
+          <li><a href="#">Something</a></li>
+          <li><a href="#">Something</a></li>
+          <li><a href="#">Something</a></li>
+          <li><a href="#">Something</a></li>
+          <li><a href="#">Something</a></li>
+          <li><a href="#">Something</a></li>
+          <li><a href="#">Something</a></li>
+          <li><a href="#">Something</a></li>
+          <li><a href="#">Something</a></li>
+          <li><a href="#">Something</a></li>
+          <li><a href="#">Something</a></li>
+          <li><a href="#">Something</a></li>
+          <li><a href="#">Something</a></li>
+          <li><a href="#">Something</a></li>
+          <li><a href="#">Something</a></li>
+          <li><a href="#">Something</a></li>
+          <li><a href="#">Something</a></li>
+        </ul>
+      </div>
+      <div class="box">
+        <div class="item">
+          <div class="card">Lorem ipsum dolor sit amet.</div>
+        </div>
+        <div class="item">
+          <div class="card"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui ullam ipsum, quo nemo explicabo esse earum sunt ipsa facere atque aperiam laborum sed! Dolores odit harum magni! Ullam placeat nobis laudantium quod nemo minima cumque, doloribus dicta a velit! Molestias quasi fugit doloribus quidem praesentium quae sunt quo qui amet quibusdam maxime molestiae aliquam, tempora, provident atque aut libero iusto? Aliquam dolor omnis quibusdam temporibus. Illo, reprehenderit facilis. Voluptatibus impedit blanditiis, neque mollitia sed modi veniam nobis dolorum tempore laudantium minima odit commodi tempora accusamus sequi exercitationem molestiae non natus omnis beatae id laborum! Iusto facilis mollitia beatae sed magnam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque accusantium nulla nam rerum alias veritatis odio recusandae incidunt fugit officia temporibus, officiis dolor magni praesentium dolorem voluptates sapiente quasi ab? Lorem ipsum dolor sit amet.</div>
+        </div>
+        <div class="item">
+          <div class="card">Lorem ipsum dolor sit amet.</div>
+        </div>
+        <div class="item">
+          <div class="card">Lorem ipsum dolor sit amet.</div>
+        </div>
+        <div class="item">
+          <div class="card">Lorem ipsum dolor sit amet.</div>
+        </div>
+        <div class="item">
+          <div class="card">Lorem ipsum dolor sit amet.</div>
+        </div>
+        <div class="item">
+          <div class="card">Lorem ipsum dolor sit amet.</div>
+        </div>
+        <div class="item">
+          <div class="card">Lorem ipsum dolor sit amet.</div>
+        </div>
+        <div class="item">
+          <div class="card">Lorem ipsum dolor sit amet.</div>
+        </div>
+        <div class="item">
+          <div class="card">Lorem ipsum dolor sit amet.</div>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </body>
+</html>

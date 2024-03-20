@@ -1,26 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <div>mot</div>
-  <div>hai</div>
-  <div id="demo">
-    <div>ba</div>
-    <div>bon 
-      <div>nam</div>
-      <div>sau</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .display-flex {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="display-flex">
+      <table>
+        <thead>
+          <tr>
+            <th>tr-th</th>
+            <th>tr-th</th>
+            <th>tr-th</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>tr-td</td>
+            <td>tr-td</td>
+            <td>tr-td</td>
+          </tr>
+          <tr>
+            <td>tr-td</td>
+            <td>tr-td</td>
+            <td>tr-td</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-  </div>
-  <script>
-    var demo = document.getElementById("demo");
-    var body = document.querySelector("body");
-    console.log(body.getElementsByTagName("div"));
-    console.log(demo.getElementsByTagName("div"));
-  </script>
-</body>
+  </body>
 </html>

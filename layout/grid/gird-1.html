@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrap {
+        display: block;
+        grid-template-columns: 1fr 3fr;
+        background-color: rgb(206, 206, 206);
+      }
+      .box {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-content: flex-start;
+        row-gap: 4px;
+        column-gap: 4px;
+      }
+
+      .aside {
+        min-height: 100vh;
+        display: none;
+      }
+      @media (min-width: 576px) {
+        .box {
+          grid-template-columns: repeat(3, 1fr) !important;
+        }
+      }
+      @media (min-width: 786px) {
+        .box {
+          grid-template-columns: repeat(4, 1fr) !important;
+        }
+      }
+      @media (min-width: 992px) {
+        .box {
+          grid-template-columns: repeat(5, 1fr) !important;
+        }
+        .wrap {
+          display: grid !important;
+        }
+        .aside {
+          display: block;
+        }
+      }
+      @media (min-width: 1200px) {
+        .box {
+          grid-template-columns: repeat(5, 1fr) !important;
+        }
+      }
+      .item {
+        overflow: hidden;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+      }
+      .item > div {
+        overflow: hidden;
+      }
+      .item h3 {
+        text-align: center;
+      }
+      .item p {
+        padding-left: 8px;
+        margin-top: 0px;
+      }
+      .item .wrap-action-button {
+        text-align: right;
+        padding: 8px 16px;
+      }
+      .item img {
+        width: 100%;
+        aspect-ratio: 4/3;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="aside">
+        <ul>
+          <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+          <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+          <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+          <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+          <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+        </ul>
+      </div>
+      <div class="box">
+        <div class="item">
+          <div class="wrap-img">
+            <img src="../../asset/images/image.jpeg" alt="" />
+          </div>
+          <div class="wrap-header">
+            <h3>Lorem, ipsum dolor.</h3>
+          </div>
+          <div class="wrap-content">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, obcaecati?</p>
+          </div>
+          <div class="wrap-action-button">
+            <button>+ Giỏ hàng</button>
+          </div>
+        </div>
+        <div class="item">
+          <div class="wrap-img">
+            <img src="../../asset/images/image.jpeg" alt="" />
+          </div>
+          <div class="wrap-header">
+            <h3>Lorem, ipsum dolor.</h3>
+          </div>
+          <div class="wrap-content">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, obcaecati?</p>
+          </div>
+          <div class="wrap-action-button">
+            <button>+ Giỏ hàng</button>
+          </div>
+        </div>
+        <div class="item">
+          <div class="wrap-img">
+            <img src="../../asset/images/image.jpeg" alt="" />
+          </div>
+          <div class="wrap-header">
+            <h3>Lorem, ipsum dolor.</h3>
+          </div>
+          <div class="wrap-content">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, obcaecati?</p>
+          </div>
+          <div class="wrap-action-button">
+            <button>+ Giỏ hàng</button>
+          </div>
+        </div>
+        <div class="item">
+          <div class="wrap-img">
+            <img src="../../asset/images/image.jpeg" alt="" />
+          </div>
+          <div class="wrap-header">
+            <h3>Lorem, ipsum dolor.</h3>
+          </div>
+          <div class="wrap-content">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, obcaecati?</p>
+          </div>
+          <div class="wrap-action-button">
+            <button>+ Giỏ hàng</button>
+          </div>
+        </div>
+        <div class="item">
+          <div class="wrap-img">
+            <img src="../../asset/images/image.jpeg" alt="" />
+          </div>
+          <div class="wrap-header">
+            <h3>Lorem, ipsum dolor.</h3>
+          </div>
+          <div class="wrap-content">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, obcaecati?</p>
+          </div>
+          <div class="wrap-action-button">
+            <button>+ Giỏ hàng</button>
+          </div>
+        </div>
+        <div class="item">
+          <div class="wrap-img">
+            <img src="../../asset/images/image.jpeg" alt="" />
+          </div>
+          <div class="wrap-header">
+            <h3>Lorem, ipsum dolor.</h3>
+          </div>
+          <div class="wrap-content">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, obcaecati?</p>
+          </div>
+          <div class="wrap-action-button">
+            <button>+ Giỏ hàng</button>
+          </div>
+        </div>
+        <div class="item">
+          <div class="wrap-img">
+            <img src="../../asset/images/image.jpeg" alt="" />
+          </div>
+          <div class="wrap-header">
+            <h3>Lorem, ipsum dolor.</h3>
+          </div>
+          <div class="wrap-content">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, obcaecati?</p>
+          </div>
+          <div class="wrap-action-button">
+            <button>+ Giỏ hàng</button>
+          </div>
+        </div>
+        <div class="item">
+          <div class="wrap-img">
+            <img src="../../asset/images/image.jpeg" alt="" />
+          </div>
+          <div class="wrap-header">
+            <h3>Lorem, ipsum dolor.</h3>
+          </div>
+          <div class="wrap-content">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, obcaecati?</p>
+          </div>
+          <div class="wrap-action-button">
+            <button>+ Giỏ hàng</button>
+          </div>
+        </div>
+        <div class="item">
+          <div class="wrap-img">
+            <img src="../../asset/images/image.jpeg" alt="" />
+          </div>
+          <div class="wrap-header">
+            <h3>Lorem, ipsum dolor.</h3>
+          </div>
+          <div class="wrap-content">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, obcaecati?</p>
+          </div>
+          <div class="wrap-action-button">
+            <button>+ Giỏ hàng</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

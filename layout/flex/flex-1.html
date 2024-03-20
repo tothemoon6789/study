@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        --column-gap: 2px;
+        --row-gap: 2px;
+        --column: 2;
+      }
+      body {
+        padding: 0px;
+        margin: 0px;
+      }
+      .box {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 2px;
+        row-gap: 2px;
+      }
+
+      .box > div {
+        box-sizing: border-box;
+        padding: 20px;
+        flex: 1 0 calc(100% / var(--column) - var(--column-gap) * (var(--column) - 1));
+        aspect-ratio: 3/4;
+        overflow: hidden;
+        background-color: yellow;
+      }
+
+      @media (min-width: 768px) {
+        :root {
+          --column: 3;
+        }
+        .box > div {
+          flex: 1 0 calc(100% / var(--column) - var(--column-gap) * (var(--column) - 1));
+        }
+      }
+      @media (min-width: 992px) {
+        :root {
+          --column: 4;
+        }
+        .box > div {
+          flex: 1 0 calc(100% / var(--column) - var(--column-gap) * (var(--column) - 1));
+        }
+      }
+      .wrap {
+        display: flex;
+      }
+      .aside {
+        display: none;
+        background-color: green;
+      }
+      @media (min-width: 992px) {
+        .aside {
+          display: block;
+        }
+      }
+      .wrap .aside {
+        flex: 0 0 25%;
+      }
+    </style>
+    <!-- viet chuong trinh khi bam vao hinh -->
+    <style>
+      .item img {
+        width: 100%;
+        cursor: pointer;
+      }
+      .show {
+        transition: all 2s ease-in-out;
+        transform: scale(2);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="aside">
+        <ul>
+          <li><a href="#">Mo con co</a></li>
+          <li><a href="#">Mo con co</a></li>
+          <li><a href="#">Mo con co</a></li>
+          <li><a href="#">Mo con co</a></li>
+          <li><a href="#">Mo con co</a></li>
+          <li><a href="#">Mo con co</a></li>
+          <li><a href="#">Mo con co</a></li>
+          <li><a href="#">Mo con co</a></li>
+          <li><a href="#">Mo con co</a></li>
+          <li><a href="#">Mo con co</a></li>
+          <li><a href="#">Mo con co</a></li>
+          <li><a href="#">Mo con co</a></li>
+          <li><a href="#">Mo con co</a></li>
+          <li><a href="#">Mo con co</a></li>
+          <li><a href="#">Mo con co</a></li>
+          <li><a href="#">Mo con co</a></li>
+          <li><a href="#">Mo con co</a></li>
+        </ul>
+      </div>
+      <div class="box">
+        <div class="item"><img src="../../asset/images/image.jpeg" alt="" /></div>
+      </div>
+    </div>
+    <script>
+      var items = document.querySelectorAll(".box > .item img");
+      items.forEach((image) => {
+        image.onclick = function () {
+          // console.log(image);
+          image.classList.toggle("show");
+        };
+      });
+    </script>
+  </body>
+</html>

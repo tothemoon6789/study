@@ -214,22 +214,22 @@
             <li><strong>auto</strong>: set bằng với cha</li>
           </ul>
         </div>
-        <div data-for="display-inline" class="d-block">
+        <div data-for="display-inline" class="d-none">
           <h5>display : inline</h5>
           <h5>Nhận xét</h5>
           <ul>
             <li><em>Hiển thị :</em> Element có giá trị display inline hoặc inline-* đều hiển thị <strong>trên 1 dòng</strong>.</li>
-            <li><em>Chiều rộng :</em> Vì không set được width, min-width, max-width nên, nội dung đủ nhiều để xuống dòng thì phần tử này cố gắng tăng chiều rộng <strong>gần bằng với phần tử cha</strong> rồi xuống dòng vì không có chỗ nhét nữa <span style="text-decoration: line-through; color: red;">không phải tăng độ rộng bằng với phần tử rộng nhất</span>. Ngược lại, nội dung ít không đủ 1 dòng thì <strong>nội dung tới đâu thì phần tử rộng đến đó</strong>.</li>
+            <li><em>Chiều rộng :</em> Vì không set được width, min-width, max-width nên, nội dung đủ nhiều để xuống dòng thì phần tử này cố gắng tăng chiều rộng <strong>gần bằng với phần tử cha</strong> rồi xuống dòng vì không có chỗ nhét nữa <span style="text-decoration: line-through; color: red">không phải tăng độ rộng bằng với phần tử rộng nhất</span>. Ngược lại, nội dung ít không đủ 1 dòng thì <strong>nội dung tới đâu thì phần tử rộng đến đó</strong>.</li>
             <li><em>Chiều cao :</em> của 1 dòng inline được hiểu là <strong>chiều cao của phần tử cao nhất</strong>, chiều cao của phần tử inline là chiều cao của chính nó</li>
             <li>
-              <em >Responsive cha display-inline</em>  :
+              <em>Responsive cha display-inline</em> :
               <ol type="A">
-                <li><em style="text-decoration:underline">Con display:inline | inline-* :</em> Tăng độ rộng màn hình, chữ hoặc phần tử inline kế tiếp bị <strong>nổi lên trên và trôi về</strong> khoảng trống cuối dòng bên trên nếu độ rộng của phần tử inline kế tiếp nhỏ hơn bằng khoảng trống đó (theo hướng chữ hoặc canh lề trái phải), và ngược lại khi co nhỏ màn hình thì <strong>chìm xuống dưới và trôi về</strong> hướng của chữ (hoặc canh lề trái phải - thông thường là ltr) nếu bên khoảng trống nhỏ hơn chiều rộng phần tử inline kế tiếp</li>
-                <li><em style="text-decoration:underline">Con display: block | flex | grid  :</em> Tăng độ rộng màn hình, phần tử con kế <strong>xuống dòng và nằm riêng biệt thành 1 khối</strong></li>
+                <li><em style="text-decoration: underline">Con display:inline | inline-* :</em> Tăng độ rộng màn hình, chữ hoặc phần tử inline kế tiếp bị <strong>nổi lên trên và trôi về</strong> khoảng trống cuối dòng bên trên nếu độ rộng của phần tử inline kế tiếp nhỏ hơn bằng khoảng trống đó (theo hướng chữ hoặc canh lề trái phải), và ngược lại khi co nhỏ màn hình thì <strong>chìm xuống dưới và trôi về</strong> hướng của chữ (hoặc canh lề trái phải - thông thường là ltr) nếu bên khoảng trống nhỏ hơn chiều rộng phần tử inline kế tiếp</li>
+                <li><em style="text-decoration: underline">Con display: block | flex | grid :</em> Tăng độ rộng màn hình, phần tử con kế <strong>xuống dòng và nằm riêng biệt thành 1 khối</strong></li>
               </ol>
             </li>
-            <li><em>Phần tử anh em bên trên: là khối</em> thì phần tử bên dưới là inline thì phần tử bên dưới sẽ <strong>xuống dòng</strong> </li>
-            <li style="color:red"><em>Cha là body :</em> cha body, đến con là inline thì con cố gắng rộng bằng với body là 100vw rồi xuống dòng. Nếu phần tử cháu rộng hơn cha chì cháu sẽ bị tràn ra ngoài</li>
+            <li><em>Phần tử anh em bên trên: là khối</em> thì phần tử bên dưới là inline thì phần tử bên dưới sẽ <strong>xuống dòng</strong></li>
+            <li style="color: red"><em>Cha là body :</em> cha body, đến con là inline thì con cố gắng rộng bằng với body là 100vw rồi xuống dòng. Nếu phần tử cháu rộng hơn cha chì cháu sẽ bị tràn ra ngoài</li>
           </ul>
           <table class="table table-striped table-responsive">
             <thead class="thead-inverse">
@@ -239,58 +239,109 @@
                 <th>Thu nhỏ</th>
                 <th>To lên</th>
               </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td scope="row">Cha</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td><div style="width: 50%; text-align: right;">Anh</div></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td><div style="width: 50%; text-align: right;"><strong>Con</strong></div></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td><div style="width: 100%; text-align: right;">Cháu 1</div></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td><div style="width: 100%; text-align: right;">Cháu 2</div></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td><div style="width: 100%; text-align: right;">Cháu 3</div></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td><div style="width: 50%; text-align: right;">Em</div></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-              </tbody>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row">Cha</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td><div style="width: 50%; text-align: right">Anh</div></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>
+                  <div style="width: 50%; text-align: right"><strong>Con</strong></div>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td><div style="width: 100%; text-align: right">Cháu 1</div></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td><div style="width: 100%; text-align: right">Cháu 2</div></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td><div style="width: 100%; text-align: right">Cháu 3</div></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td><div style="width: 50%; text-align: right">Em</div></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
           </table>
           <h5>display : inline-block</h5>
           <h5>Nhận xét</h5>
         </div>
         <div data-for="display-inline-block" class="d-none"></div>
         <div data-for="display-block" class="d-none"></div>
-        <div data-for="display-flex" class="d-none"></div>
+        <div data-for="display-flex" class="d-block">
+          <h5>
+
+            Các giá trị mặc định tác động lên thẻ cha có display:flex
+          </h5>
+
+          <ul>
+            <li><code>flex-wrap:nowarp</code></li>
+            <li><code>flex-direction:row</code></li>
+            <li>
+              <code>justify-content:normal Có nghĩa là flex-start</code><strong style="color: red">CĂN CHỈNH NỘI DUNG TRONG 1 DÒNG THEO CHIỀU NGANG <span style="font-size: 40px">Nếu còn khoảng trống của dòng đó</span></strong>
+            </li>
+            <li>
+              <code>align-items:normal có nghĩa là stretch - căng ra bằng với cha flex</code> <strong style="color: red">CĂN CHỈNH NỘI DUNG TRONG <span class="display-2">1 DÒNG</span></strong>
+            </li>
+            <li>
+              <code>align-content:</code><strong style="color: red">CĂN CHỈNH NỘI DUNG TRONG <span class="display-2">NHIỀU DÒNG</span></strong>
+            </li>
+            <li><code>align-self:auto có nghĩa là stretch - căng ra bằng với cha flex</code></li>
+          </ul>
+          Đối với phần tử con của display:flex Cảnh giác: <span class="text-danger">Toàn bộ các thẻ elemnet đều đã có sẵn kèm theo đã có hơn 340 thuộc tính css. Khi viết nó ra thì có thể thiểu là bật nó lên. Chứ không phải thêm mới vào hoặc có suy nghĩ là thằng này có thằng kía không có</span>
+          <ul>
+            <li>
+              kiểu hiển thị của flex phụ thuộc theo flex-basis. Có 2 trường hợp, auto và set cứng. Ở mặc định, flex-basis = auto thì có thể set toàn bộ grow 1 và 1 cái nào đó là 2 3, gì đó. thì cái bị set 2 3 sẽ có độ rộng bằng 2 3 lần các item còn lại. nhưng khi nạp dữ liệu vào các item thì <strong class="display-2">bể layout</strong> item sẽ cố gắng cân đối lại để tổng các item không lớn hơn 100% và chiều cao của nội dung item tương đối với nhau. Lúc này,
+              <div class="text-danger">flex shrink không hoạt động với auto, Trường hợp 2 set cứng flex basis thì nếu không có dữ liệu thì basin</div>
+            </li>
+
+            <li>Các con có giá trị mặc định flex-basis:auto</li>
+            <li>Các con có giá trị mặc định flex-grow:0</li>
+            <li>Các con có giá trị mặc định flex-shrink:1</li>
+            <li>3 giá trị của thẻ con này lúc nào cũng đi chung, chỉ set 1 nhưng thực sự cả 3 cũng đã thực thi vì cả 3 đều có giá trị mặc định</li>
+            <li>Có thể set đơn lẻ basis grow va shrink nhưng nên set chung lại cho dễ quản lý.</li>
+            <li><code>flex:0,0,200px;</code> (các thẻ còn lại là auto) toàn bộ các thẻ con hoặc 1 thẻ con đơn lẻ phải bằng 200px, co lại rất nhỏ hoặc thì flexwrap wrap thì sẽ xuống dòng hoặc nowrap thì sẽ bị tràn. Thế thôi. Khi có nhiều thẻ con mà chỉ có 1 thẻ set flex:0,0,200px; thì các thẻ con còn lại sẽ có bề rộng theo nội dung và giản nở rộng ra cho bằng cha và xuống dòng của chính nó.</li>
+          </ul>
+          Lưu ý riêng cho thằng align-content: không có flex-wrap:warp thì nó sẽ không hoạt động, Vì nó chỉ sắp xếp cho nhiều dòng và chiều cao của cha lớn hơn chiều cao tổng các dòng
+          <h5>Hành vi mặc định đám con</h5>
+          <ul>
+            <li>Các thẻ con có độ rộng bằng với nội dung</li>
+            <li>Có thể set height cho cha flex, và thằng con mặc định sẽ căng ra cho cao bằng cha vì mặc định <code>align-item:stretch</code></li>
+            <li>Thẻ cha flex chiếm 100% kích thước cha. bật border và background lên sẽ thấy</li>
+            <li>Các thẻ cháu có hành vi như chính nó trên một không gian mặc định, có nghĩa là inline thì lên xuống dòng và xu hướng lệnh về bên trái, còn các thẻ cháu block thì chỉ rộng bằng phần nội dung lớn nhất -- ở đây đang nói trường hợp mặc định <code>align-item:stretch</code></li>
+            <li>Với thẻ cha đầu tiên set flex-wrap:wrap (khong set jus align ...) chỉ nó với displayflex thì các thẻ con sẽ bằng với nội dung và xuống dòng được, phản ứng giống y như thẻ con biến thành inline và các thẻ con cũng là inline</li>
+            <li>kết hợp <code>display:flex</code> <code>flex-wrap:wrap</code> <code>align-items:top</code> thì phản ứng y như thẻ cha inline, và có set vertial-align, chỉ khác vertial-align không có tính năng stretch</li>
+            <li>Thẻ <code>align-content</code> kết hợp <code>display:flex</code> không có hiệu ứng, kết hợp thêm <code>flex-wrap:wrap</code> cũng không có hiệu ứng, nhưng kết hợp thêm chiều cao của phần tử cha <code>height:1000px</code> vượt quá nội dung thì hiệu ứng xảy ra. Hay nói cách khác: align-content chỉ dùng được với displayflex, flex-warp, và chiều cao đủ lớn để biểu hiện</li>
+            <li>Khi xếp bố cục lưới item dạng flexbox mà set width cứng cho các con thì khoảng cách của các con không có, nếu có thì khoảng cách đó được tự tạo ra do <code>justify-content</code> và <code>align-content</code></li>
+            <li>Khi set width cho con + flex-warp:wrap, rộng màn hình to ra thì con sẽ giữ kích thước không đổi và nhảy lên dòng, co màn hình đến nhỏ nhất thì đầu tiên item được setwwidth sẽ bị co lại có width nhỏ hơn, width của item là width của content chạm tới biên của phần tử cha</li>
+            <li>Khi set width cho con + flex-warp:no-warp, rộng màn hình to ra thì con sẽ giữ kích thước không đổi nhưng ví dụ con nhiều quá mà tổng chiều rộng của con được setwwidth bắt đầu lớn hơn cha thì các con sẽ tự bị co lại - shrink nhỏ nhất là mincontent và không nhỏ hơn được nữa thì các phần tử phía cuối sẽ bị tràn ra phần tử cha, còn set <code>min-width</code> cho 1 phần tử con nào đó thì nó khởi đầu là chiều rộng item vừa khớp nội dung, càng lớn lên thì không gian phía sau của phần tử cha rộng ra nhưng co lại thì các con cũng bắt đầu co lại đến mincontent không thể co lại nữa ( các con này không thể tràn mà chỉ có thể tự xuống dòng đến khi nào khớp min content thì thôi và không xuống nữa.) nếu các phần tử con nhiều quá, không co lại được nữa thì chúng sẽ bị tràn ra khỏi cha. THẾ THÔI</li>
+          </ul>
+          <h5>Tương tác</h5>
+          <a name="" id="" class="btn btn-primary d-block text-uppercase font-weight-bolder" href="/asset/source/display-flex.html" role="button">Đi tới kiểm tra</a>
         <div data-for="display-grid" class="d-none"></div>
         <div data-for="display-table" class="d-none"></div>
         <div data-for="display-inline-flex" class="d-none"></div>

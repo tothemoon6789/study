@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiem tra fater flex - con display *</title>
+</head>
+<body>
+    <style>
+        .display-flex-parent {
+          display: flex;
+        }
+        .display-flex-parent .inline {
+          display: inline;
+          background-color: red;
+        }
+        .display-flex-parent .inline-block {
+          display: inline-block;
+          background-color: blue;
+        }
+        .display-flex-parent .inline-flex {
+          display: inline-flex;
+          background-color: yellow;
+        }
+        .display-flex-parent .inline-flexbox {
+          display: inline-flexbox;
+          background-color: aquamarine;
+        }
+        .display-flex-parent .inline-table {
+          display: inline-table;
+          background-color: green;
+        }
+        .display-flex-parent .block {
+          display: block;
+          background-color: purple;
+        }
+
+        .display-flex-parent .flex {
+          display: flex;
+          background-color: bisque;
+        }
+        .display-flex-parent .flexbox {
+          background-color: darkgrey;
+          display: -ms-flexbox;
+        }
+        .display-flex-parent .grid {
+          display: grid;
+          background-color: magenta;
+        }
+        .display-flex-parent .list-item {
+          display: list-item;
+          background-color: lightsalmon;
+        }
+        .display-flex-parent .contents {
+          display: contents;
+          background-color: rgb(211, 86, 20);
+        }
+        .display-flex-parent .flow-root {
+          display: flow-root;
+          background-color: hotpink;
+        }
+        .display-flex-parent .table {
+          display: table;
+          background-color: khaki;
+        }
+        .display-flex-parent .table-caption {
+          display: table-caption;
+          background-color: lightskyblue;
+        }
+        .display-flex-parent .table-cell {
+          display: table-cell;
+        }
+        .display-flex-parent .table-column {
+          display: table-column;
+          background-color: dodgerblue;
+        }
+        .display-flex-parent .table-column-group {
+          display: table-column-group;
+          background-color: bisque;
+        }
+        .display-flex-parent .table-footer-group {
+          display: table-footer-group;
+          background-color: cyan;
+        }
+        .display-flex-parent .table-header-group {
+          display: table-header-group;
+          background-color: chartreuse;
+        }
+        .display-flex-parent .table-row {
+          display: table-row;
+          background-color: maroon;
+        }
+        .display-flex-parent .table-row-group {
+          display: table-row-group;
+          background-color: lightcoral;
+        }
+        table {
+            background-color: aquamarine;
+        }
+      </style>
+      <h1>Kiểm tra sự tương quan giữa cha là flex và các con</h1>
+      <div class="display-flex-parent">
+        <div class="inline">inline</div>
+        <div class="inline-block">inline-block</div>
+        <div class="inline-flex">inline-flex</div>
+        <!-- <div class="inline-flexbox">inline-flexbox (Không còn dùng nữa)</div> -->
+        <div class="inline-table">inline-table</div>
+        <div class="block">block</div>
+        <div class="flex">flex</div>
+        <!-- <div class="flexbox">flexbox (Không còn dùng nữa)</div> -->
+        <div class="grid">grid</div>
+        <div class="list-item">list-item</div>
+        <div class="contents">contents</div>
+        <div class="flow-root">flow-root</div>
+        <div class="table">table</div>
+        <div class="table-caption">table-caption</div>
+        <div class="table-cell">table-cell</div>
+        <div class="table-column">table-column</div>
+        <div class="table-column-group">table-column-group</div>
+        <div class="table-footer-group">table-footer-group</div>
+        <div class="table-header-group">table-header-group</div>
+        <div class="table-row">table-row</div>
+        <div class="table-row-group">table-row-group</div>
+        <table>
+          <thead>
+            <tr>
+              <th>tr-th</th>
+              <th>tr-th</th>
+              <th>tr-th</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>tr-td</td>
+              <td>tr-td</td>
+              <td>tr-td</td>
+              
+            </tr>
+            <tr>
+              <td>tr-td</td>
+              <td>tr-td</td>
+              <td>tr-td</td>
+              
+            </tr>
+          </tbody>
+        </table>
+       
+      </div>
+    </div>
+    <p>Kiểm tra chỉ đơn thuần về element cha là display flex, và thẻ con là các kiểu display các loại. Ngoài ra chỉ thêm css cho background và kiểu hiển thị cho thẻ div chứ không thêm thuộc tính nào khác</p>
+    <p>Nhìn chung, các thẻ đều bị stretch</p>
+    <p>Như quan sát, chiều cao của cha trong trường hợp này chính là chiều cao của nội dung table. Bởi vì table có nội dung lớn nhất</p>
+    <p>Thử điền nội dung vào các thẻ bằng js và quan sát</p>
+    
+    <script>
+        
+        var children = document.querySelectorAll(".display-flex-parent > *");
+        var CHILDREN_LENGHT = children.length;
+        var TEXT = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dolore dolorem sint facilis quisquam labore explicabo, molestias rerum eius minus iure? Dolore eum nobis non tenetur asperiores possimus optio magni, deserunt rem! Ipsum cupiditate eligendi optio sapiente unde. Optio nulla aliquam dicta possimus voluptatum nam, consequuntur atque eos repellendus sed."
+        var TEXT_ARRAY = Array.from(TEXT);
+        var TEXT_ARRAY_LENGHT = TEXT_ARRAY.length;
+        var TIME_OUT = 20;
+        var childCount = 0;
+        
+        var index = 0;
+        function renderText(){
+            if (index < TEXT_ARRAY_LENGHT) {
+                setTimeout(() => {
+                    console.log(children[childCount]);
+                    children[childCount].insertAdjacentText("beforeend",TEXT_ARRAY[index]);
+                    index++;
+                    renderText();
+                }, TIME_OUT);
+                return;
+            }
+            childCount++;
+            callingElement()
+        }
+        function callingElement(){
+            index = 0;
+            if (childCount < CHILDREN_LENGHT) {
+                renderText()
+            }
+            console.log("DONE OR GO FOREVER");
+        }
+        callingElement()
+        
+    </script>
+</body>
+</html>

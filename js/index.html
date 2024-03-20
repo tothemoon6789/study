@@ -389,6 +389,10 @@
           <div class="alert alert-info" role="alert">
             <strong>element.childElementCount</strong>
           </div>
+          <p>Lưu ý: dùng với đám <code>elements = document.querySelectorAll() | .getElementByClassName() | .getElementsByName() | .getELementsByTagName() </code> tóm lại return về số nhiều thì phải lặp nó ra chứ không sẽ bị <code>undefined</code></p>
+          <div class="alert alert-info" role="alert">
+            element.childElementCount chỉ dùng trực tiếp được với document.querySelector() hoặc document.getElementById()
+          </div>
         </div>
         <div id="js60" class="d-none">
           <div id="noid" class="alert alert-info" role="alert">Lấy danh sách các nút con trực tiếp - <strong>NodeList</strong>, có nút chữ, có nút ghi chú</div>
@@ -397,6 +401,10 @@
           <div class="alert alert-info" role="alert">
             <strong>element.childNode<strong class="text-danger">s</strong></strong>
           </div>
+          <p>Lưu ý: dùng với đám <code>elements = document.querySelectorAll() | .getElementByClassName() | .getElementsByName() | .getELementsByTagName() </code> tóm lại return về số nhiều thì phải lặp nó ra chứ không sẽ bị <code>undefined</code></p>
+          <div class="alert alert-info" role="alert">
+            element.childNodes chỉ dùng trực tiếp được với document.querySelector() hoặc document.getElementById()
+          </div>
         </div>
         <div id="js61" class="d-none">
           <div class="alert alert-info" role="alert">
@@ -404,7 +412,7 @@
           </div>
         </div>
         <div id="js62" class="d-none">
-          <div class="alert alert-info" role="alert">Lấy danh sách các class - <strong>DOMTokenList</strong> của một phần tử</div>
+          <div class="alert alert-info" role="alert">Lấy danh sách các class - kiểu <strong>DOMTokenList</strong> của một phần tử</div>
           <h5>Thao tác</h5>
           <div class="jumbotron">
             <h1 class="display-4">Danh sách</h1>
@@ -626,6 +634,8 @@
           Vẫn có thể sử dụng <span style="color: red; text-decoration: line-through">node.getAttribute(name)</span> nhưng nếu node là text thì lỗi sẽ bị ném ra. Vì vậy: lời khuyên là <span class="display-4" style="text-decoration: line-through; text-decoration-color: red">KHÔNG DÙNG</span>
           <div class="text-danger">Sự khác nhau giữa <code>element.getAttribute()</code> và <code>element.getAttributeNode()</code> đó là thằng 1 trả về giá trị của một node attribute, thằng 2 trả về đối tượng đó</div>
           <div class="text-primary">W3school khuyên dùng <code>element.getAttribute()</code> sẽ dễ hơn.</div>
+          1 node attribute sẽ có dạng là một đối tượng -object có nội dung như bên dưới
+
           <h5>Ví dụ</h5>
 
           <pre class="example">
@@ -696,8 +706,9 @@
         </div>
         <div id="js80" class="d-none">
           <div class="alert alert-info" role="alert">
-            Khoảng trống bên trái giữa đường border cha offset và đường border con bị offset. Lưu ý trường hợp absolute và relative, cha là relative chứ không phải cha lồng vào nó.
+            Mặc định, tổ tiên có position là static nên khi gọi đến offsetLeft thì có thể hiểu là viền màn hình bên trái tới mép border left của phần tử. Nhưng nếu trường hợp đặc biệt, body nhận giá trị position là relative thì offsetLeft là biên ngoài cùng của border body tới biên ngoài border của phần tử. Còn trường hợp còn lại, thì phần tử cha nằm đâu thì offsetLeft sẽ là từ biên borderleft bên trong của cha relative đến biên ngoài border left của con relative
           </div>
+          <div class="text-danger">Hình bên dưới chỉnh đúng trường hợp mặc định, còn trường hợp cha trực tiếp là relative thì chưa có</div>
           <img src="../asset/images/offsetLeft-and-offsetTop.svg" alt="" srcset="">
         </div>
         <div id="js81" class="d-none">
@@ -726,6 +737,75 @@
           </div>
           <div class="text-danger">Sự khác nhau giữa <code>element.getAttribute()</code> và <code>element.getAttributeNode()</code> đó là thằng 1 trả về giá trị của một node attribute, thằng 2 trả về đối tượng đó</div>
           <div class="text-primary">W3school khuyên dùng <code>element.getAttribute()</code> sẽ dễ hơn.</div>
+          một attribute node có dạng như sau
+          <pre>
+            baseURI
+: 
+"http://localhost:5500/jan.html"
+childNodes
+: 
+NodeList []
+firstChild
+: 
+null
+isConnected
+: 
+false
+lastChild
+: 
+null
+localName
+: 
+"class"
+name
+: 
+"class"
+namespaceURI
+: 
+null
+nextSibling
+: 
+null
+nodeName
+: 
+"class"
+nodeType
+: 
+2
+nodeValue
+: 
+"box"
+ownerDocument
+: 
+document
+ownerElement
+: 
+div.box
+parentElement
+: 
+null
+parentNode
+: 
+null
+prefix
+: 
+null
+previousSibling
+: 
+null
+specified
+: 
+true
+textContent
+: 
+"box"
+value
+: 
+"box"
+[[Prototype]]
+: 
+Attr
+          </pre>
         </div>
         <div id="js85" class="d-none">
           <div class="text-danger"><code>document.getElementsByClassName() khác element.getElementsByClassName()</code> khác ở chỗ cái 1 thì tìm những element bên trong document, còn cái thứ 2 thì tìm những element bên trong element đó</div>
