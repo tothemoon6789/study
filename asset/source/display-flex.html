@@ -11,6 +11,9 @@
         .display-flex-parent {
           display: flex;
         }
+        .display-flex-parent > * {
+            cursor: pointer;
+        }
         .display-flex-parent .inline {
           display: inline;
           background-color: red;
@@ -98,9 +101,10 @@
         table {
             background-color: aquamarine;
         }
+
       </style>
       <h1>Kiểm tra sự tương quan giữa cha là flex và các con</h1>
-      <div class="display-flex-parent">
+      <div class="display-flex-parent" data-for="insert">
         <div class="inline">inline</div>
         <div class="inline-block">inline-block</div>
         <div class="inline-flex">inline-flex</div>
@@ -152,7 +156,51 @@
     <p>Nhìn chung, các thẻ đều bị stretch</p>
     <p>Như quan sát, chiều cao của cha trong trường hợp này chính là chiều cao của nội dung table. Bởi vì table có nội dung lớn nhất</p>
     <p>Thử điền nội dung vào các thẻ bằng js và quan sát</p>
+    <style>
+        .control > button {
+            border: unset;
+            padding: 8px 16px;
+            background-color: aliceblue;
+            cursor: pointer;
+            box-shadow: 2px 2px 4px 0 rgba(255,255,0, 0.8);
+            margin: 20px;
+        }
+        .control > button:focus {
+            background-color: yellow;
+        }
+    </style>
+    <div class="control">
+
     
+    <button onclick="callingRenderText()">ADD TEXT</button><br>
+    <button onclick="changeAddTextState(this)">STOP</button><br>
+    <hr>
+    <button onclick="changeFlat('flex')">INSERT FLEX ELEMENT</button>
+    <button onclick="changeFlat('inline')">INSERT INLINE ELEMENT</button>
+    <button onclick="changeFlat('inline-block')">INSERT INLINE-BLOCK ELEMENT</button>
+    <hr>
+    <button onclick="deleteELement(5)">DELETE 5 ELEMENT</button>
+    <button onclick="deleteELement(4)">DELETE 4 ELEMENT</button>
+    <button onclick="deleteELement(3)">DELETE 3 ELEMENT</button>
+    <button onclick="deleteELement(2)">DELETE 2 ELEMENT</button>
+    <button onclick="deleteELement(1)">DELETE 1 ELEMENT</button>
+</div>
+    <hr>
+    <div class="element-to-be-inserted">
+        <div class="for-flex">
+            <ul>
+                <li><a href="#">Lorem, ipsum.</a></li>
+                <li><a href="#">Lorem, ipsum.</a></li>
+                <li><a href="#">Lorem, ipsum.</a></li>
+                <li><a href="#">Lorem, ipsum.</a></li>
+                <li><a href="#">Lorem, ipsum.</a></li>
+                <li><a href="#">Lorem, ipsum.</a></li>
+                <li><a href="#">Lorem, ipsum.</a></li>
+            </ul>
+        </div>
+        <span class="for-inline" style="display: flex;background-color: red; border: 2px solid yellow;">I am span</span>
+        <span class="for-inline-block" style="display: inline-block;background-color: rgb(34, 0, 255); border: 2px solid rgb(0, 255, 13);">I am inline-block</span>
+    </div>
     <script>
         
         var children = document.querySelectorAll(".display-flex-parent > *");
@@ -162,8 +210,9 @@
         var TEXT_ARRAY_LENGHT = TEXT_ARRAY.length;
         var TIME_OUT = 20;
         var childCount = 0;
-        
         var index = 0;
+        var ADD_TEXT_STATE = true;
+        
         function renderText(){
             if (index < TEXT_ARRAY_LENGHT) {
                 setTimeout(() => {
@@ -175,17 +224,73 @@
                 return;
             }
             childCount++;
-            callingElement()
+            callingRenderText()
         }
-        function callingElement(){
+        function callingRenderText(){
             index = 0;
-            if (childCount < CHILDREN_LENGHT) {
+            if (childCount < CHILDREN_LENGHT && ADD_TEXT_STATE) {
                 renderText()
             }
-            console.log("DONE OR GO FOREVER");
+            console.log("DONE OR GO FOREVER: INDEX"+ index + " CHILDCOUNT: "+ childCount);
         }
-        callingElement()
+        function changeAddTextState(button){
+            if (ADD_TEXT_STATE) {
+                button.innerText = "RESUME";
+                ADD_TEXT_STATE = false;
+                return
+            }
+            button.innerText = "STOP";
+                ADD_TEXT_STATE = true;
+        }
         
+    </script>
+    <script>
+        var ALL_PLACES = document.querySelectorAll("[data-for='insert'] > div");
+        var placeIndex = 0;
+        var index_flat = "flex";
+        ALL_PLACES.forEach((place) => {
+            place.addEventListener("click",insertElement)
+            
+        })
+        function insertElement(event){
+            var ELEMENT_FLEX_TO_BE_INSERTED = document.querySelector(".element-to-be-inserted .for-flex").cloneNode(true);
+        var ELEMENT_INLINE_TO_BE_INSERTED = document.querySelector(".element-to-be-inserted .for-inline").cloneNode(true);
+        var ELEMENT_INLINE_BLOCK_TO_BE_INSERTED = document.querySelector(".element-to-be-inserted .for-inline-block").cloneNode(true);
+            index_flat === "flex" && this.insertAdjacentElement("beforeend",ELEMENT_FLEX_TO_BE_INSERTED);
+            index_flat === "inline" && this.insertAdjacentElement("beforeend",ELEMENT_INLINE_TO_BE_INSERTED);
+            index_flat === "inline-block" && this.insertAdjacentElement("beforeend",ELEMENT_INLINE_BLOCK_TO_BE_INSERTED);
+        }
+        function changeFlat(flat){
+            index_flat = flat;
+            alert(index_flat)
+        }
+    </script>
+    <script>
+        var DISPLAY_ELEMENTS = document.querySelectorAll("[data-for='insert'] > *");
+        DISPLAY_ELEMENTS.forEach((display_element) => {
+            display_element.addEventListener("dblclick",function(){
+                this.remove()
+            })
+        })
+    </script>
+    <script>
+        var DISPLAY_ELEMENTS = document.querySelectorAll("[data-for='insert'] > *");
+        DISPLAY_ELEMENTS.forEach((display_element) => {
+            display_element.addEventListener("dblclick",function(){
+                this.remove()
+            })
+        })
+    </script>
+    <script>
+        function deleteELement(number){
+             var DISPLAY_ELEMENTS = document.querySelectorAll("[data-for='insert'] > *");
+            DISPLAY_ELEMENTS.forEach((display_element,index) => {
+                if (index < number) {
+                    display_element.remove()
+                }
+            })
+
+         }
     </script>
 </body>
 </html>
