@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kiem tra fater flex - con display *</title>
+    <title>Kiem tra father inline - con display *</title>
 </head>
 
 <body>
@@ -126,7 +126,7 @@
             background-color: aquamarine;
         }
     </style>
-    <h1>Kiểm tra sự tương quan giữa cha là flex và các con</h1>
+    <h1>Kiểm tra sự tương quan giữa cha là inline và các con</h1>
     <style>
         .control {
             margin-bottom: 20px;
@@ -145,41 +145,11 @@
         }
     </style>
     <div class="control">
-        <span>Parent</span>
-        <button onclick="changeParentDisplay('inline')">inline</button>
-        <button onclick="changeParentDisplay('inline-block')">inline-block</button>
-        <button onclick="changeParentDisplay('inline-flex')">inline-flex</button>
-        <!-- <button onclick="changeParentDisplay('')" ine-flexbox">inline-flexbox (Không còn dùng nữa)</button> -->
-        <button onclick="changeParentDisplay('inline-table')">inline-table</button>
-        <button onclick="changeParentDisplay('block')">block</button>
-        <button onclick="changeParentDisplay('flex')">flex</button>
-        <!-- <button onclick="changeParentDisplay('')" xbox">flexbox (Không còn dùng nữa)</button> -->
-        <button onclick="changeParentDisplay('grid')">grid</button>
-        <button onclick="changeParentDisplay('list-item')">list-item</button>
-        <button onclick="changeParentDisplay('contents')">contents</button>
-        <button onclick="changeParentDisplay('flow-root')">flow-root</button>
-        <button onclick="changeParentDisplay('table')">table</button>
-        <button onclick="changeParentDisplay('table-caption')">table-caption</button>
-        <button onclick="changeParentDisplay('table-cell')">table-cell</button>
-        <button onclick="changeParentDisplay('table-column')">table-column</button>
-        <button onclick="changeParentDisplay('table-column-group')">table-column-group</button>
-        <button onclick="changeParentDisplay('table-footer-group')">table-footer-group</button>
-        <button onclick="changeParentDisplay('table-header-group')">table-header-group</button>
-        <button onclick="changeParentDisplay('table-row')">table-row</button>
-        <button onclick="changeParentDisplay('table-row-group')">table-row-group</button>
-
         <hr>
         <button onclick="refresh()">REFESH</button>
         <hr>
         <button onclick="callingRenderText()">ADD TEXT</button>
-        <button onclick="changeAddTextState(this)">STOP</button><br>
-        <button onclick="changeTextLength(5)">5</button>
-        <button onclick="changeTextLength(10)">10</button>
-        <button onclick="changeTextLength(15)">15</button>
-        <button onclick="changeTextLength(20)">20</button>
-        <button onclick="changeTextLength(25)">25</button>
-        <button onclick="changeTextLength(30)">30</button>
-
+        <button onclick="changeAddTextState(this)">STOP</button>
         <hr>
         <span id="insert">INSERT</span>
         <button onclick="changeFlat('flex')">flex E</button>
@@ -271,7 +241,7 @@
     <p>Thử điền nội dung vào các thẻ bằng js và quan sát</p>
     <hr>
     <div class="element-to-be-inserted">
-        <div class="for-flex" style="outline: 2px dotted red;">
+        <div class="for-flex">
             <ul>
                 <li><a href="#">Lorem, ipsum.</a></li>
                 <li><a href="#">Lorem, ipsum.</a></li>
@@ -291,16 +261,13 @@
             style="display: inline-flex; background-color: rgb(44, 225, 24); border: 2px solid rgb(25, 25, 207);">I am
             inline-flex ------<div>Lorem, ipsum dolor.</div>
             <div>Lorem, ipsum dolor.</div>
-
         </div>
     </div>
-
     <script>
         // CLICK FOR ADDING TEXT
         var children = document.querySelectorAll(".display-flex-parent > *");
         var CHILDREN_LENGHT = children.length;
-        // var TEXT = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dolore dolorem sint facilis quisquam labore explicabo, molestias rerum eius minus iure? Dolore eum nobis non tenetur asperiores possimus optio magni, deserunt rem! Ipsum cupiditate eligendi optio sapiente unde. Optio nulla aliquam dicta possimus voluptatum nam, consequuntur atque eos repellendus sed."
-        var TEXT = "Lorem ipsum dolor sit amet.";
+        var TEXT = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dolore dolorem sint facilis quisquam labore explicabo, molestias rerum eius minus iure? Dolore eum nobis non tenetur asperiores possimus optio magni, deserunt rem! Ipsum cupiditate eligendi optio sapiente unde. Optio nulla aliquam dicta possimus voluptatum nam, consequuntur atque eos repellendus sed."
         var TEXT_ARRAY = Array.from(TEXT);
         var TEXT_ARRAY_LENGHT = TEXT_ARRAY.length;
         var TIME_OUT = 20;
@@ -393,7 +360,7 @@
         function deleteELementFromEnd(number) {
             var DISPLAY_ELEMENTS = document.querySelectorAll("[data-for='insert'] > *");
             DISPLAY_ELEMENTS.forEach((display_element, index) => {
-                if (DISPLAY_ELEMENTS.length - 1 - number < index && index <= DISPLAY_ELEMENTS.length - 1) {
+                if (DISPLAY_ELEMENTS.length-1 - number < index && index <= DISPLAY_ELEMENTS.length-1) {
                     display_element.remove()
                 }
             })
@@ -402,49 +369,6 @@
     <script>
         function refresh() {
             window.document.location.reload();
-        }
-        function changeParentDisplay(display) {
-            document.querySelector(".display-flex-parent").style.display = display;
-        }
-        function changeTextLength(length) {
-            if (length === 5) {
-
-                TEXT = "Lorem ipsum dolor sit amet.";
-                TEXT_ARRAY = Array.from(TEXT);
-                TEXT_ARRAY_LENGHT = TEXT_ARRAY.length;
-                return
-            }
-            if (length === 10) {
-                TEXT = "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.";
-                TEXT_ARRAY = Array.from(TEXT);
-                TEXT_ARRAY_LENGHT = TEXT_ARRAY.length;
-
-                return
-            }
-            if (length === 15) {
-                TEXT = "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.";
-                TEXT_ARRAY = Array.from(TEXT);
-                TEXT_ARRAY_LENGHT = TEXT_ARRAY.length;
-                return
-            }
-            if (length === 20) {
-                TEXT = "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.";
-                TEXT_ARRAY = Array.from(TEXT);
-                TEXT_ARRAY_LENGHT = TEXT_ARRAY.length;
-                return
-            }
-            if (length === 25) {
-                TEXT = "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.";
-                TEXT_ARRAY = Array.from(TEXT);
-                TEXT_ARRAY_LENGHT = TEXT_ARRAY.length;
-                return
-            }
-            if (length === 30) {
-                TEXT = "Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.";
-                TEXT_ARRAY = Array.from(TEXT);
-                TEXT_ARRAY_LENGHT = TEXT_ARRAY.length;
-                return
-            }
         }
     </script>
 </body>

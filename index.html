@@ -231,6 +231,32 @@
             <li><em>Phần tử anh em bên trên: là khối</em> thì phần tử bên dưới là inline thì phần tử bên dưới sẽ <strong>xuống dòng</strong></li>
             <li style="color: red"><em>Cha là body :</em> cha body, đến con là inline thì con cố gắng rộng bằng với body là 100vw rồi xuống dòng. Nếu phần tử cháu rộng hơn cha chì cháu sẽ bị tràn ra ngoài</li>
           </ul>
+          Phản ứng inline và đám con các loại:
+          <ul>
+            <li>
+              Đối với cha
+  
+              <ul>
+                <li>Border cha là đường bọc đám con inline - hay đường bọc vùng inline, <span>Bọc inline hết bỏ qua block, flex, grid, list-item, flow-root, table</span></li>
+                <li>Background cha là dòng inline, background được tô theo vùng inline chứ không theo border</li>
+                <li>Chiều rộng của cha sẽ tự bao lấy toàn bộ thành phần con, và cố gắng tiến bằng 100% phần tử ông, nội dung quá 100% thì xuống dòng, còn nội dung set width lớn hơn cha thì bị tràn</li>
+                <li>Oveflow: không thể set. Nếu bên ngoài là các thể loại inline, inline -*, contents, các loại table thì không set được. Cho dù lên nhiều đời nữa vẫn không set được. Chỉ set được đám bên ngoài là phần tử khối.</li>
+              </ul>
+              <img src="./asset/images/border-inline-father.jpg" />
+              <span>Vi du border cha</span>
+              <img src="./asset/images/display-inline-background.jpg" alt="" />
+              <span>Ví dụ: background cha</span>
+            </li>
+            <li>
+              Đối với con
+              <ul>
+                <li>Con inline hoặc inline-* cố gắng lên xuống dòng theo nội dung</li>
+                <li>chiều cao dòng là chiều cao của phần tử cao nhất</li>
+                <li>chiều rộng được thiết lập tự động theo nội dung hoặc thiết lập bằng width, max-width, min-width.</li>
+                
+              </ul>
+            </li>
+          </ul>
           <table class="table table-striped table-responsive">
             <thead class="thead-inverse">
               <tr>
@@ -290,9 +316,30 @@
           <h5>display : inline-block</h5>
           <h5>Nhận xét</h5>
         </div>
-        <div data-for="display-inline-block" class="d-none"></div>
-        <div data-for="display-block" class="d-none"></div>
-        <div data-for="display-flex" class="d-block">
+        <div data-for="display-inline-block" class="d-none">
+          <ul>
+            <li>Nếu không set width, chiều rộng của nó chính là chiều rộng của phần tử con lớn nhất</li>
+            <li>Nếu không set height, chiều cao của nó chính là chiều cao của nội dung, nếu set height thì phải lưu ý đến việc nội dung bị tràn xuống bên dưới</li>
+            <li>Nền viền tràn set được bình thường</li>
+          </ul>
+          <ul>Đám con phản ứng theo bản chất của chúng, inline vẫn phản ứng theo inline, block vẫn cố gắng bằng cha, table vẫn phản ứng theo table</ul>
+        </div>
+        <div data-for="display-block" class="d-none">
+          Phản ứng block
+        <ul>
+          <li>Cố gắng bằng 100% chiều rộng của cha (Tới lề padding)</li>
+          <li>Đối với các phần tử khối thì có set width nhỏ cỡ nào thì cũng không lên dòng trên và đứa em inline kế tiếp cũng không thể nhảy lên trên được. Còn nếu set width quá lớn thì sẽ tràn ra ngoài. Và nói đúng hơn là tràn ra ngoài phần tử ông nội, cao nhất là body</li>
+        </ul>
+          <ul>
+            <li>Phần tử cha có thể set border, background, overflow bình thường</li>
+            <li>Chiều rộng của phần tử cha sẻ cố gắng lấy 100% phần tử ông</li>
+            <li>Chiều cao của phần tử con nếu không set thì sẽ bằng với chiều cao nội dung</li>
+          </ul>
+          <ul>
+            <li>Đám con sẽ có hành vi theo mặc định của chúng như: inline thì có phản ứng inline, khối thì có phản ứng flex, grid, bên cạnh đó là phản ứng table.</li>
+          </ul>
+        </div>
+        <div data-for="display-flex" class="d-none">
           <h5>
 
             Các giá trị mặc định tác động lên thẻ cha có display:flex
@@ -343,8 +390,29 @@
           <h5>Tương tác</h5>
           <a name="" id="" class="btn btn-primary d-block text-uppercase font-weight-bolder" href="/asset/source/display-flex.html" role="button">Đi tới kiểm tra</a>
         <div data-for="display-grid" class="d-none"></div>
-        <div data-for="display-table" class="d-none"></div>
-        <div data-for="display-inline-flex" class="d-none"></div>
+        <div data-for="display-table" class="d-none">
+          Phản ứng table
+          <ul>
+            <li>Luôn trôi về bên tay trái và nằm riêng biệt 1 dòng nhưng lại không có độ rộng bằng với cha nó, trừ khi tăng nội dung</li>
+            <li>Có thể set chiều rộng và chiều cao, nhưng không không thể set nhỏ hơn min content, rộng mấy cũng được nhưng nhỏ lại thì coi chừng, vì table không có set tràn nội dung</li>
+            <li>Ưu tiên ôm lấy nội dung</li>
+            <li>Mọi phần tử tiền tố table luôn cố gắng bằng với phần tử nội dung lớn nhất trong cột</li>
+            <li>Chỉ có table, td, caption mới set width được, còn lại tất cả đều set height được hết</li>
+          </ul>
+        </div>
+        <div data-for="display-inline-flex" class="d-none">
+          <ul>
+            <li>Có thể set width, nhưng nếu không set width thì width của nó sẽ là chiều rộng của nội dung (nội dung mặc định bị shrink lại ở một mức với content)</li>
+            <li>Có thể set height, nhưng nếu không set height thì height của nó chính bằng height lớn nhất của nội dung</li>
+            <li>Chính nó phản ứng là một inline, nên anh của nó inline-flex là thể loại inline thì khả năng nó cũng sẽ leo lên dòng</li>
+            <li>Trước mắt, điểm khác biệt giuwax display-inline-flex va display flex la cái đầu tiên thì cũng biểu hiện flex nhưng lên dòng và có chiều rộng ôm nội dung, còn flex thì nằm 1 mình 1 dòng và cố bằng 100% chiều rộng của cha. Để thấy rõ, hãy set background, border cho chúng nhưng đảm bảo nội dung inline-flex đủ nhỏ để thấy sự khác biệt</li>
+          </ul>
+      
+          <ul>
+            <li>Đám con bị tự động chuyển đổi kiểu hiển thị, inline , inline-block, đám table-* trở thanh block, inline-flex tro thanh flex, inline-table trở thành table, block flex grid list-item, contents, flow-root không thay đổi </li>
+            <li>Toàn bộ đám con có thể set width và height, ngoại trừ display:content</li>
+          </ul>
+        </div>
         <div data-for="display-inline-grid" class="d-none"></div>
         <div data-for="display-inline-table" class="d-none"></div>
         <div data-for="flex-grow" class="d-none"></div>
