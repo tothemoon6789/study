@@ -397,6 +397,7 @@
         <div id="js60" class="d-none">
           <div id="noid" class="alert alert-info" role="alert">Lấy danh sách các nút con trực tiếp - <strong>NodeList</strong>, có nút chữ, có nút ghi chú</div>
           <div class="alert alert-warning" role="alert">Danh sách trả về có nút chữ, nên có thể dùng js để thay đổi. Còn nếu gọi children, không thể thay đổi nút chữ do nút chữ không được trả về</div>
+          <img src="../asset/images/element-family.svg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
           <h5>Cú pháp</h5>
           <div class="alert alert-info" role="alert">
             <strong>element.childNode<strong class="text-danger">s</strong></strong>
@@ -661,6 +662,8 @@
         </div>
         <div id="js79" class="d-none">
           <img src="../asset/images/get-bouding-client-rect.svg" alt="" srcset="" />
+          <h5>Lưu ý:</h5>
+          <code>element.getBoundingClientRect()</code> trả về object, trong đó <code>.x .y .left .top .bottom .right</code> là khoảng cách giữa elemnt và <div class="display-2">viewbox</div> chứ không phải khoảng cách từ element đến <div class="display-3" style="text-decoration: line-through;">document</div>
           <h5>Trả về</h5>
           <pre>
             DOMRect
