@@ -1,7 +1,7 @@
 (function () {
   "use strict";
   var heading = [
-    // { id: "document", text: "Document Object" },
+    { id: "document", text: "Document Object" },
     { id: "element", text: "Element Object" },
   ];
   var buttons = [
@@ -77,6 +77,10 @@
     { id: "js95", id_heading: "element", order: 0, version: "dom1", text: "element.lastChild" }, // Lấy phần tử HTML cha
     { id: "js89", id_heading: "element", order: 0, version: "dom2", text: "element.hasChildNodes()" }, // hỏi có đứa con nào không
     { id: "js59", id_heading: "element", order: 0, version: "dom3", text: "element.childElementCount" }, // đếm số element con
+    { id: "js85", id_heading: "element", order: 0, version: "dom1", text: "element.getElementsByClassName()" }, // tìm danh sách Element
+    { id: "js86", id_heading: "element", order: 0, version: "dom1", text: "element.getElementsByTagName()" }, // tìm danh sách Element
+    { id: "js98", id_heading: "element", order: 0, version: "dom1", text: "element.querySelector()" }, // đếm số element con
+    { id: "js99", id_heading: "element", order: 0, version: "dom1", text: "element.querySelectorAll()" }, // đếm số element con
 
     // đám thuộc tính
     { id: "js57", id_heading: "element", order: 0, version: "dom1", text: "element.attributes" }, // lấy danh sách thuộc tính,
@@ -96,6 +100,9 @@
     { id: "js56", id_heading: "element", order: 0, version: "dom1", text: "element.appendChild()" }, // thêm 1 e hoặc node vào cuối thẻ đóng của 1 e
     { id: "js73", id_heading: "element", order: 0, version: "dom1", text: "element.contentEditable" }, // bật tắc khả năng có thể viết được của content trong element
     { id: "js83", id_heading: "element", order: 0, version: "dom1", text: "element.outerHTML" }, // lấy hoặc gán html cho phần tử
+    { id: "js100", id_heading: "element", order: 0, version: "dom1", text: "element.remove()" }, 
+    { id: "js101", id_heading: "element", order: 0, version: "dom1", text: "element.removeChild()" }, 
+    { id: "js102", id_heading: "element", order: 0, version: "dom1", text: "element.replaceChild()" }, 
 
     // vị trí và kích thước
     { id: "js79", id_heading: "element", order: 0, version: "dom1", text: "element.getBoundingClientRect()" }, // lấy đối tượng RectDOM Object chứa x,y,left,top,bottom,right,offsetWidth, offetHeight
@@ -109,9 +116,7 @@
 
     // tìm phần tử trong thẻ
     { id: "js70", id_heading: "element", order: 0, version: "dom1", text: "element.closest()" }, // tìm phần tử gần nhất có bộ chọn đáp ứng tiêu chí
-    { id: "js85", id_heading: "element", order: 0, version: "dom1", text: "element.getElementsByClassName()" }, // tìm danh sách Element
-    { id: "js86", id_heading: "element", order: 0, version: "dom1", text: "element.getElementsByTagName()" }, // tìm danh sách Element
-
+    
     // thiết lập khác
     { id: "js71", id_heading: "element", order: 0, version: "dom1", text: "element.compareDocumentPosition()" }, // kiểm tra vị tri tương đối của 2 element
     { id: "js72", id_heading: "element", order: 0, version: "dom1", text: "element.contains()" }, // kiểm tra 1 đứa element có phải là con cháu của 1 đứa element không

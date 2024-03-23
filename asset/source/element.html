@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  </head>
+  <body>
+    <style>
+      .element-example * {
+        outline: 1px solid gray;
+        padding-inline: 10px;
+        padding-block: 10px;
+      }
+      #main-element {
+        outline: 3px solid black;
+      }
+      #main-element.active {
+        outline: 5px solid red;
+      }
+      .element-example .active {
+        outline: 5px solid red;
+      }
+      .element-example {
+        margin: 20px;
+        padding-block: 20px;
+        outline: 1px solid gray;
+      }
+      .element-example,
+      .element-example .parentElement,
+      .element .children {
+        padding-left: 50px;
+      }
+    </style>
+    <div class="container">
+      <h3>Kiểm tra mối tương quan giữa element và các thành phần cha con anh chị em</h3>
+
+      <div class="element-example">
+        <div class="parentElement parentNode">
+          parentElement parentNode
+          <div>something</div>
+          <div>something</div>
+          <div>something</div>
+          <div class="previousElementSibling">previousElementSibling</div>
+          previousSibling
+          <div class="element" id="main-element">
+            fistChild (childNodes)
+            <div class="children firstElementChild">(childNodes) children fistElementChild</div>
+            <div class="children">(childNodes) children</div>
+            <div class="children">(childNodes) children</div>
+            <div class="children">(childNodes) children</div>
+            <div class="children lastElementChild">(childNodes) children lastElementChild</div>
+            lastChild (childNodes)
+          </div>
+          nextSibling
+          <div class="nextElementSibling">nextElementSibling</div>
+          <div>something</div>
+          <div>something</div>
+          <div>something</div>
+        </div>
+      </div>
+
+      <style>
+        .element-control-button-group {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          column-gap: 10px;
+          row-gap: 10px;
+        }
+      </style>
+
+      <div class="element-control-button-group" style="overflow: scroll;">
+        <button class="btn btn-primary">element</button>
+        <button class="btn btn-primary">parentElement</button>
+        <button class="btn btn-primary">parentNode</button>
+        <button class="btn btn-primary">previousElementSibling</button>
+        <button class="btn btn-primary">previousSibling</button>
+        <button class="btn btn-primary">nextElementSibling</button>
+        <button class="btn btn-primary">nextSibling</button>
+        <button class="btn btn-primary">children</button>
+        <button class="btn btn-primary">childNodes</button>
+        <button class="btn btn-primary">firstElementChild</button>
+        <button class="btn btn-primary">firstChild</button>
+        <button class="btn btn-primary">lastElementChild</button>
+        <button class="btn btn-primary">lastChild</button>
+        <button class="btn btn-primary">childElementCount</button>
+        <button class="btn btn-primary">remove()</button>
+        <button class="btn btn-primary">removeChild()</button>
+        <button class="btn btn-primary">replaceChild()</button>
+      </div>
+    </div>
+    <script>
+      var buttons = document.querySelectorAll(".element-control-button-group > button");
+      var element = document.getElementById("main-element");
+      buttons.forEach((button) => {
+        button.addEventListener("click", clearActive);
+        var buttonText = button.innerText;
+
+        
+        if (buttonText === "replaceChild()") {
+            button.onclick = function(){
+                element.replaceChild(element.nextElementSibling,element.firstChild)
+            }
+            return
+        }
+
+        if (buttonText === "removeChild()") {
+            button.onclick = function(){
+                element.removeChild(element.lastChild)
+            }
+            return
+        }
+        if (buttonText === "remove()") {
+            button.onclick = function(){
+                element.remove()
+            }
+            return
+        }
+        if (buttonText === "childElementCount") {
+          button.onclick = function () {
+            alert("childElementCount: " + element.childElementCount);
+          };
+          return;
+        }
+        if (buttonText === "previousSibling") {
+          button.onclick = function () {
+            clearActive();
+            element.previousSibling.nodeValue = "previousSibling Đã thay đổi !";
+          };
+          return;
+        }
+        if (buttonText === "nextSibling") {
+          button.onclick = function () {
+            clearActive();
+            element.nextSibling.nodeValue = "nextSibling Đã thay đổi !";
+          };
+          return;
+        }
+        if (buttonText === "firstChild") {
+          button.onclick = function () {
+            clearActive();
+            element.firstChild.nodeValue = "firstChild Đã thay đổi !";
+          };
+          return;
+        }
+        if (buttonText === "lastChild") {
+          button.onclick = function () {
+            clearActive();
+            element.lastChild.nodeValue = "lastChild Đã thay đổi !";
+          };
+          return;
+        }
+        if (buttonText === "children") {
+          button.onclick = function () {
+            var children = element.children;
+            for (let index = 0; index < children.length; index++) {
+              const child = children[index];
+              child.classList.add("active");
+            }
+          };
+          return;
+        }
+        if (buttonText === "childNodes") {
+          button.onclick = function () {
+            var childNodes = element.childNodes;
+            for (let index = 0; index < childNodes.length; index++) {
+              const child = childNodes[index];
+              child.nodeValue = "NODE ĐÃ THAY ĐỔI !";
+              child.innerText = "NODE ĐÃ THAY ĐỔI";
+            }
+          };
+          return;
+        }
+        button.onclick = function () {
+          var activeElement = document.querySelector("." + buttonText);
+          activeElement.classList.add("active");
+        };
+        function clearActive() {
+          var activeElements = element.parentElement.parentElement.querySelectorAll(".active");
+          for (let index = 0; index < activeElements.length; index++) {
+            const active = activeElements[index];
+            active.classList.remove("active");
+          }
+        }
+      });
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

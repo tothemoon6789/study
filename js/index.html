@@ -815,10 +815,15 @@ Attr
         </div>
         <div id="js85" class="d-none">
           <div class="text-danger"><code>document.getElementsByClassName() khác element.getElementsByClassName()</code> khác ở chỗ cái 1 thì tìm những element bên trong document, còn cái thứ 2 thì tìm những element bên trong element đó</div>
-          <div class="display-3">Chưa kiểm tra lời nói trên, chỉ mới hùa theo thằng tag</div>
+          <div class="text-danger">Không có phương thức <span class="display-4" style="text-decoration: line-through;">element.getElementById()</span></div>
+          <div class="text-danger">Không có phương thức <span class="display-4" style="text-decoration: line-through;">element.getElementByName()</span></div>
+          <img src="../asset/images/element-family.svg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
         </div>
         <div id="js86" class="d-none">
           <div class="text-danger"><code>document.getElementsByTagName() khác element.getElementsByTagName()</code> khác ở chỗ cái 1 thì tìm những element bên trong document, còn cái thứ 2 thì tìm những element bên trong element đó</div>
+          <div class="text-danger">Không có phương thức <span class="display-4" style="text-decoration: line-through;">element.getElementById()</span></div>
+          <div class="text-danger">Không có phương thức <span class="display-4" style="text-decoration: line-through;">element.getElementByName()</span></div>
+          <img src="../asset/images/element-family.svg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
         </div>
         <div id="js87" class="d-none">
           <h5>Định nghĩa</h5>
@@ -874,7 +879,31 @@ Attr
         <div id="js97" class="d-none">
           <img src="../asset/images/element-family.svg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
         </div>
-
+        <div id="js98" class="d-none">
+          <div class="text-danger">Không có phương thức <span class="display-4" style="text-decoration: line-through;">element.getElementById()</span></div>
+          <div class="text-danger">Không có phương thức <span class="display-4" style="text-decoration: line-through;">element.getElementByName()</span></div>
+          <img src="../asset/images/element-family.svg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+        </div>
+        <div id="js99" class="d-none">
+          <div class="text-danger">Không có phương thức <span class="display-4" style="text-decoration: line-through;">element.getElementById()</span></div>
+          <div class="text-danger">Không có phương thức <span class="display-4" style="text-decoration: line-through;">element.getElementByName()</span></div>
+          <img src="../asset/images/element-family.svg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+        </div>
+        <div id="js100" class="d-none">
+          <h5>Thực thi xoá phần tử ra khỏi DOM</h5>
+          <h5>Cú pháp</h5>
+          <code>element.remove()</code> hoặc là <code>element.remove()</code>
+        </div>
+        <div id="js101" class="d-none">
+          <h5>Thực thi xoá phần tử ra khỏi DOM</h5>
+          <h5>Cú pháp</h5>
+          <code>element.removeChild(node)</code> hoặc là <code>element.removeChild(node)</code>
+        </div>
+        <div id="js102" class="d-none">
+          <h5>Thực thi thay đổi 1 phần tử con và phần tử khác. Phần tử con sẽ bị xoá và nạp vào phần tử mới. Phần tử mới ở vị trí cũ không còn mà đã nhảy qua vị trí mới đó.</h5>
+          <h5>Cú pháp</h5>
+          <code>element.removeChild(node)</code> hoặc là <code>element.removeChild(node)</code>
+        </div>
         </div>
       </div>
       <div>
@@ -888,6 +917,7 @@ Attr
       <div id="total" class="display-3"></div>
       <div id="control" class="d-flex"></div>
       <button class="btn btn-danger" onclick="reload()">RELOAD PAGE</button>
+      <a  class="btn btn-primary" href="../asset/source/element.html" role="button">Find Element Test</a>
     </div>
 
     <!-- Optional JavaScript -->
