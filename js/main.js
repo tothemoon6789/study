@@ -63,12 +63,20 @@
     // KHU ELEMENT
 
     // đám con
-    { id: "js59", id_heading: "element", order: 0, version: "dom3", text: "element.childElementCount" }, // đếm số element con
-    { id: "js60", id_heading: "element", order: 0, version: "dom1", text: "element.childNodes" }, // lấy danh sách nút con
+    { id: "js91", id_heading: "element", order: 0, version: "dom1", text: "element.parentElement" }, // Lấy phần tử HTML cha
+    { id: "js90", id_heading: "element", order: 0, version: "dom1", text: "element.parentNode" }, // Lấy phần tử HTML cha
+    { id: "js92", id_heading: "element", order: 0, version: "dom1", text: "element.previousElementSibling" }, // Lấy phần tử HTML cha
+    { id: "js93", id_heading: "element", order: 0, version: "dom1", text: "element.previousSibling" }, // Lấy phần tử HTML cha
+    { id: "js96", id_heading: "element", order: 0, version: "dom1", text: "element.nextElementSibling" }, // Lấy phần tử HTML cha
+    { id: "js97", id_heading: "element", order: 0, version: "dom1", text: "element.nextSibling" }, // Lấy phần tử HTML cha
     { id: "js61", id_heading: "element", order: 0, version: "dom1", text: "element.children" }, // lấy danh sách element con
-    { id: "js75", id_heading: "element", order: 0, version: "dom1", text: "element.firstChild" }, // lấy nút con đầu tiên
+    { id: "js60", id_heading: "element", order: 0, version: "dom1", text: "element.childNodes" }, // lấy danh sách nút con
     { id: "js76", id_heading: "element", order: 0, version: "dom3", text: "element.firstElementChild" }, // lấy element con đầu tiên
+    { id: "js75", id_heading: "element", order: 0, version: "dom1", text: "element.firstChild" }, // lấy nút con đầu tiên
+    { id: "js94", id_heading: "element", order: 0, version: "dom1", text: "element.lastElementChild" }, // Lấy phần tử HTML cha
+    { id: "js95", id_heading: "element", order: 0, version: "dom1", text: "element.lastChild" }, // Lấy phần tử HTML cha
     { id: "js89", id_heading: "element", order: 0, version: "dom2", text: "element.hasChildNodes()" }, // hỏi có đứa con nào không
+    { id: "js59", id_heading: "element", order: 0, version: "dom3", text: "element.childElementCount" }, // đếm số element con
 
     // đám thuộc tính
     { id: "js57", id_heading: "element", order: 0, version: "dom1", text: "element.attributes" }, // lấy danh sách thuộc tính,
@@ -109,6 +117,7 @@
     { id: "js72", id_heading: "element", order: 0, version: "dom1", text: "element.contains()" }, // kiểm tra 1 đứa element có phải là con cháu của 1 đứa element không
     { id: "js74", id_heading: "element", order: 0, version: "dom1", text: "element.dir" }, // thiết lập hướng chữ
   ];
+  // MAX 97
   // SORT
   //   var newButtons = buttons.sort((a, b) => {
   //     let fa = a.id.toLowerCase(),
