@@ -5,23 +5,39 @@
     { id: "element", text: "Element Object" },
   ];
   var buttons = [
-    { id: "js1", id_heading: "document", order: 0, version: "dom1", text: "window.document.activeELement" },
-    { id: "js2", id_heading: "document", order: 0, version: "dom2", text: "window.document.addEventListener()" },
-    { id: "js3", id_heading: "document", order: 0, version: "dom3", text: "window.document.adoptNode()" },
-    { id: "js4", id_heading: "document", order: 0, version: "deprecated", text: "window.document.anchors" },
-    { id: "js5", id_heading: "document", order: 0, version: "deprecated", text: "window.document.applet" },
-    { id: "js6", id_heading: "document", order: 0, version: "dom4", text: "window.document.baseURI" },
+    // KHU DOCUMENT
+    // Lấy phần tử
+    { id: "js28", id_heading: "document", order: 0, version: "dom2", text: "window.document.getElementById()" },
+    { id: "js30", id_heading: "document", order: 0, version: "dom1", text: "window.document.getElementsByName()" },
+    { id: "js29", id_heading: "document", order: 0, version: "dom1", text: "window.document.getElementsByClassName()" },
+    { id: "js31", id_heading: "document", order: 0, version: "dom1", text: "window.document.getElementsByTagName()" },
+    { id: "js43", id_heading: "document", order: 0, version: "dom1", text: "window.document.querySelector()" },
+    { id: "js44", id_heading: "document", order: 0, version: "dom3", text: "window.document.querySelectorAll()" },
     { id: "js7", id_heading: "document", order: 0, version: "dom1", text: "window.document.body" },
-    { id: "js8", id_heading: "document", order: 0, version: "deprecated", text: "window.document.charset" },
-    { id: "js9", id_heading: "document", order: 0, version: "dom3", text: "window.document.characterSet" },
-    { id: "js10", id_heading: "document", order: 0, version: "dom1", text: "window.document.close()" },
-    { id: "js11", id_heading: "document", order: 0, version: "dom2", text: "window.document.cookie" },
+    { id: "js33", id_heading: "document", order: 0, version: "dom3", text: "window.document.head" },
+    { id: "js34", id_heading: "document", order: 0, version: "dom1", text: "window.document.images" },
+    { id: "js39", id_heading: "document", order: 0, version: "dom1", text: "window.document.links" },
+    { id: "js49", id_heading: "document", order: 0, version: "dom2", text: "window.document.scripts" },
+    { id: "js27", id_heading: "document", order: 0, version: "dom1", text: "window.document.forms" },
+    // Tạo phần tử mới
     { id: "js12", id_heading: "document", order: 0, version: "dom1", text: "window.document.createAttribute()" },
     { id: "js13", id_heading: "document", order: 0, version: "dom1", text: "window.document.createComment()" },
     { id: "js14", id_heading: "document", order: 0, version: "dom1", text: "window.document.createDocumentFragment()" },
     { id: "js15", id_heading: "document", order: 0, version: "dom1", text: "window.document.createElement()" },
     { id: "js16", id_heading: "document", order: 0, version: "dom1", text: "window.document.createEvent()" },
     { id: "js17", id_heading: "document", order: 0, version: "dom1", text: "window.document.createTextNode()" },
+    // hành vi
+    { id: "js2", id_heading: "document", order: 0, version: "dom2", text: "window.document.addEventListener()" },
+    { id: "js47", id_heading: "document", order: 0, version: "dom2", text: "window.document.removeEventListener()" },
+    { id: "js1", id_heading: "document", order: 0, version: "dom1", text: "window.document.activeELement" },
+    { id: "js3", id_heading: "document", order: 0, version: "dom3", text: "window.document.adoptNode()" },
+    { id: "js4", id_heading: "document", order: 0, version: "deprecated", text: "window.document.anchors" },
+    { id: "js5", id_heading: "document", order: 0, version: "deprecated", text: "window.document.applet" },
+    { id: "js10", id_heading: "document", order: 0, version: "dom1", text: "window.document.close()" },
+    { id: "js6", id_heading: "document", order: 0, version: "dom4", text: "window.document.baseURI" },
+    { id: "js8", id_heading: "document", order: 0, version: "deprecated", text: "window.document.charset" },
+    { id: "js9", id_heading: "document", order: 0, version: "dom3", text: "window.document.characterSet" },
+    { id: "js11", id_heading: "document", order: 0, version: "dom2", text: "window.document.cookie" },
     { id: "js18", id_heading: "document", order: 0, version: "dom1", text: "window.document.defaultView" },
     { id: "js19", id_heading: "document", order: 0, version: "dom1", text: "window.document.designMode" },
     { id: "js20", id_heading: "document", order: 0, version: "dom1", text: "window.document.doctype" },
@@ -31,57 +47,44 @@
     { id: "js24", id_heading: "document", order: 0, version: "deprecated", text: "window.document.domConfig" },
     { id: "js25", id_heading: "document", order: 0, version: "deprecated", text: "window.document.embeds" },
     { id: "js26", id_heading: "document", order: 0, version: "deprecated", text: "window.document.execCommand()" },
-    { id: "js27", id_heading: "document", order: 0, version: "dom1", text: "window.document.forms" },
-    { id: "js28", id_heading: "document", order: 0, version: "dom2", text: "window.document.getElementById()" },
-    { id: "js29", id_heading: "document", order: 0, version: "dom1", text: "window.document.getElementsByClassName()" },
-    { id: "js30", id_heading: "document", order: 0, version: "dom1", text: "window.document.getElementsByName()" },
-    { id: "js31", id_heading: "document", order: 0, version: "dom1", text: "window.document.getElementsByTagName()" },
     { id: "js32", id_heading: "document", order: 0, version: "dom1", text: "window.document.hasFocus()" },
-    { id: "js33", id_heading: "document", order: 0, version: "dom3", text: "window.document.head" },
-    { id: "js34", id_heading: "document", order: 0, version: "dom1", text: "window.document.images" },
     { id: "js35", id_heading: "document", order: 0, version: "dom1", text: "window.document.implementation" },
     { id: "js36", id_heading: "document", order: 0, version: "dom2", text: "window.document.importNode()" },
     { id: "js37", id_heading: "document", order: 0, version: "deprecated", text: "window.document.inputEncoding" },
     { id: "js38", id_heading: "document", order: 0, version: "dom3", text: "window.document.lastModified" },
-    { id: "js39", id_heading: "document", order: 0, version: "dom1", text: "window.document.links" },
     { id: "js40", id_heading: "document", order: 0, version: "dom2", text: "window.document.normalize()" },
     { id: "js41", id_heading: "document", order: 0, version: "deprecated", text: "window.document.mormalizeDocument()" },
     { id: "js42", id_heading: "document", order: 0, version: "dom1", text: "window.document.open()" },
-    { id: "js43", id_heading: "document", order: 0, version: "dom1", text: "window.document.querySelector()" },
-    { id: "js44", id_heading: "document", order: 0, version: "dom3", text: "window.document.querySelectorAll()" },
     { id: "js45", id_heading: "document", order: 0, version: "dom3", text: "window.document.readyState" },
     { id: "js46", id_heading: "document", order: 0, version: "dom3", text: "window.document.referrer" },
-    { id: "js47", id_heading: "document", order: 0, version: "dom2", text: "window.document.removeEventListener()" },
     { id: "js48", id_heading: "document", order: 0, version: "deprecated", text: "window.document.renameNode()()" },
-    { id: "js49", id_heading: "document", order: 0, version: "dom2", text: "window.document.scripts" },
     { id: "js50", id_heading: "document", order: 0, version: "deprecated", text: "window.document.strictErrorChecking" },
-    { id: "js51", id_heading: "document", order: 0, version: "dom2", text: "window.document.title" },
     { id: "js52", id_heading: "document", order: 0, version: "dom1", text: "window.document.URL" },
-    { id: "js53", id_heading: "document", order: 0, version: "dom1", text: "window.document.write()" },
+    { id: "js51", id_heading: "document", order: 0, version: "dom2", text: "window.document.title" },
     { id: "js54", id_heading: "document", order: 0, version: "dom1", text: "window.document.writeln()" },
+    { id: "js53", id_heading: "document", order: 0, version: "dom1", text: "window.document.write()" },
 
     // KHU ELEMENT
 
     // đám con
-    { id: "js91", id_heading: "element", order: 0, version: "dom1", text: "element.parentElement" }, // Lấy phần tử HTML cha
     { id: "js90", id_heading: "element", order: 0, version: "dom1", text: "element.parentNode" }, // Lấy phần tử HTML cha
-    { id: "js92", id_heading: "element", order: 0, version: "dom1", text: "element.previousElementSibling" }, // Lấy phần tử HTML cha
+    { id: "js91", id_heading: "element", order: 0, version: "dom1", text: "element.parentElement" }, // Lấy phần tử HTML cha
     { id: "js93", id_heading: "element", order: 0, version: "dom1", text: "element.previousSibling" }, // Lấy phần tử HTML cha
-    { id: "js96", id_heading: "element", order: 0, version: "dom1", text: "element.nextElementSibling" }, // Lấy phần tử HTML cha
+    { id: "js92", id_heading: "element", order: 0, version: "dom1", text: "element.previousElementSibling" }, // Lấy phần tử HTML cha
     { id: "js97", id_heading: "element", order: 0, version: "dom1", text: "element.nextSibling" }, // Lấy phần tử HTML cha
-    { id: "js61", id_heading: "element", order: 0, version: "dom1", text: "element.children" }, // lấy danh sách element con
+    { id: "js96", id_heading: "element", order: 0, version: "dom1", text: "element.nextElementSibling" }, // Lấy phần tử HTML cha
     { id: "js60", id_heading: "element", order: 0, version: "dom1", text: "element.childNodes" }, // lấy danh sách nút con
-    { id: "js76", id_heading: "element", order: 0, version: "dom3", text: "element.firstElementChild" }, // lấy element con đầu tiên
+    { id: "js61", id_heading: "element", order: 0, version: "dom1", text: "element.children" }, // lấy danh sách element con
     { id: "js75", id_heading: "element", order: 0, version: "dom1", text: "element.firstChild" }, // lấy nút con đầu tiên
-    { id: "js94", id_heading: "element", order: 0, version: "dom1", text: "element.lastElementChild" }, // Lấy phần tử HTML cha
+    { id: "js76", id_heading: "element", order: 0, version: "dom3", text: "element.firstElementChild" }, // lấy element con đầu tiên
     { id: "js95", id_heading: "element", order: 0, version: "dom1", text: "element.lastChild" }, // Lấy phần tử HTML cha
-    { id: "js89", id_heading: "element", order: 0, version: "dom2", text: "element.hasChildNodes()" }, // hỏi có đứa con nào không
-    { id: "js59", id_heading: "element", order: 0, version: "dom3", text: "element.childElementCount" }, // đếm số element con
+    { id: "js94", id_heading: "element", order: 0, version: "dom1", text: "element.lastElementChild" }, // Lấy phần tử HTML cha
     { id: "js85", id_heading: "element", order: 0, version: "dom1", text: "element.getElementsByClassName()" }, // tìm danh sách Element
     { id: "js86", id_heading: "element", order: 0, version: "dom1", text: "element.getElementsByTagName()" }, // tìm danh sách Element
     { id: "js98", id_heading: "element", order: 0, version: "dom1", text: "element.querySelector()" }, // đếm số element con
     { id: "js99", id_heading: "element", order: 0, version: "dom1", text: "element.querySelectorAll()" }, // đếm số element con
-
+    { id: "js70", id_heading: "element", order: 0, version: "dom1", text: "element.closest()" }, // tìm phần tử gần nhất có bộ chọn đáp ứng tiêu chí
+    
     // đám thuộc tính
     { id: "js57", id_heading: "element", order: 0, version: "dom1", text: "element.attributes" }, // lấy danh sách thuộc tính,
     { id: "js78", id_heading: "element", order: 0, version: "dom1", text: "element.getAttribute()" }, // lấy giá trị 1 thuộc tính,
@@ -90,19 +93,31 @@
     { id: "js88", id_heading: "element", order: 0, version: "dom2", text: "element.hasAttributes()" }, // hỏi có thuộc tính NÀO không,
     { id: "js63", id_heading: "element", order: 0, version: "dom1", text: "element.className" }, // lấy giá trị của class
     { id: "js62", id_heading: "element", order: 0, version: "dom1", text: "element.classList" }, // lấy giá trị của class dạng danh sách
+    { id: "js103", id_heading: "element", order: 0, version: "dom1", text: "element.id" }, // lấy giá trị của class dạng danh sách
 
-    // các hành vi
+    // tác động
     { id: "js55", id_heading: "element", order: 0, version: "dom1", text: "element.accessKey" }, // gán hoặc lấy nút bấm truy cập nhanh
     { id: "js58", id_heading: "element", order: 0, version: "dom2", text: "element.blur()" }, // xoá tập trung lên đối tượng
     { id: "js77", id_heading: "element", order: 0, version: "dom2", text: "element.focus()" }, // tập trung tại element có khả năng tập trung như input
     { id: "js64", id_heading: "element", order: 0, version: "dom1", text: "element.click()" }, // bấm ảo lên đối tượng element
-    { id: "js69", id_heading: "element", order: 0, version: "dom1", text: "element.cloneNode()" }, // copy nút để lại nút cũ
-    { id: "js56", id_heading: "element", order: 0, version: "dom1", text: "element.appendChild()" }, // thêm 1 e hoặc node vào cuối thẻ đóng của 1 e
     { id: "js73", id_heading: "element", order: 0, version: "dom1", text: "element.contentEditable" }, // bật tắc khả năng có thể viết được của content trong element
-    { id: "js83", id_heading: "element", order: 0, version: "dom1", text: "element.outerHTML" }, // lấy hoặc gán html cho phần tử
+    { id: "js89", id_heading: "element", order: 0, version: "dom2", text: "element.hasChildNodes()" }, // hỏi có đứa con nào không
+    { id: "js59", id_heading: "element", order: 0, version: "dom3", text: "element.childElementCount" }, // đếm số element con
+    // xoá
     { id: "js100", id_heading: "element", order: 0, version: "dom1", text: "element.remove()" }, 
     { id: "js101", id_heading: "element", order: 0, version: "dom1", text: "element.removeChild()" }, 
+    // thêm
+    { id: "js83", id_heading: "element", order: 0, version: "dom1", text: "element.outerHTML" }, // lấy hoặc gán html cho phần tử
+    { id: "js104", id_heading: "element", order: 0, version: "dom1", text: "element.innerHTML" }, // lấy hoặc gán html cho phần tử
+    { id: "js105", id_heading: "element", order: 0, version: "dom1", text: "element.outerText" }, // lấy hoặc gán html cho phần tử
+    { id: "js106", id_heading: "element", order: 0, version: "dom1", text: "element.innerText" }, // lấy hoặc gán html cho phần tử
     { id: "js102", id_heading: "element", order: 0, version: "dom1", text: "element.replaceChild()" }, 
+    { id: "js107", id_heading: "element", order: 0, version: "dom1", text: "element.insertAdjacentElement()" }, 
+    { id: "js108", id_heading: "element", order: 0, version: "dom1", text: "element.insertAdjacentHTML()" }, 
+    { id: "js109", id_heading: "element", order: 0, version: "dom1", text: "element.insertAdjacentText()" }, 
+    { id: "js110", id_heading: "element", order: 0, version: "dom1", text: "element.insertBefore()" }, 
+    { id: "js56", id_heading: "element", order: 0, version: "dom1", text: "element.appendChild()" }, // thêm 1 e hoặc node vào cuối thẻ đóng của 1 e
+    { id: "js69", id_heading: "element", order: 0, version: "dom1", text: "element.cloneNode()" }, // copy nút để lại nút cũ
 
     // vị trí và kích thước
     { id: "js79", id_heading: "element", order: 0, version: "dom1", text: "element.getBoundingClientRect()" }, // lấy đối tượng RectDOM Object chứa x,y,left,top,bottom,right,offsetWidth, offetHeight
@@ -115,7 +130,7 @@
     { id: "js82", id_heading: "element", order: 0, version: "dom1", text: "element.offsetParent" }, // lấy element Offset cha
 
     // tìm phần tử trong thẻ
-    { id: "js70", id_heading: "element", order: 0, version: "dom1", text: "element.closest()" }, // tìm phần tử gần nhất có bộ chọn đáp ứng tiêu chí
+    
     
     // thiết lập khác
     { id: "js71", id_heading: "element", order: 0, version: "dom1", text: "element.compareDocumentPosition()" }, // kiểm tra vị tri tương đối của 2 element

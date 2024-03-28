@@ -21,6 +21,7 @@
     { id: "btn-type-animation", heading: "Animation" },
     { id: "btn-type-transition", heading: "Transition" },
     { id: "btn-type-another", heading: "khác" },
+    { id: "btn-type-value", heading: "Giá trị" },
   ];
   var nut_bam = [
     {
@@ -1203,6 +1204,16 @@
       id: "grid-row-gap",
       class: "btn btn-danger btn-type-grid",
       text: "grid-row-gap",
+    },
+    {
+      id: "clamp",
+      class: "btn btn-danger btn-type-value",
+      text: "clamp",
+    },
+    {
+      id: "minmax",
+      class: "btn btn-danger btn-type-value",
+      text: "minmax",
     },
   ];
   

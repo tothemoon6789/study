@@ -736,6 +736,43 @@
           <div class="alert alert-info" role="alert">
             Lấy element dưới dạng string hoặc gán elment đó thành 1 element mới. outerHTML là HTML bao gồm toàn bộ element. Điều này khác với innerHTML
           </div>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>?</th>
+                <th>Lấy</th>
+                <th>Gán</th>
+                <th>Cách dùng</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>outerHTML</td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
+                <td>Thay đổi phần tử thành 1 phần tử mới</td>
+              </tr>
+              <tr>
+                <td>innerHTML</td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
+                <td>Thay đổi cái ruột HTML của phần tử</td>
+              </tr>
+              <tr>
+                <td>outerText</td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
+                <td>Thay đổi phần tử thành text luôn</td>
+              </tr>
+              <tr>
+                <td>innerText</td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
+                <td>Đổi cái ruột HTML thành Text</td>
+              </tr>
+              
+            </tbody>
+          </table>
         </div>
         <div id="js84" class="d-none">
           <div class="alert alert-info" role="alert">
@@ -903,6 +940,183 @@ Attr
           <h5>Thực thi thay đổi 1 phần tử con và phần tử khác. Phần tử con sẽ bị xoá và nạp vào phần tử mới. Phần tử mới ở vị trí cũ không còn mà đã nhảy qua vị trí mới đó.</h5>
           <h5>Cú pháp</h5>
           <code>element.removeChild(node)</code> hoặc là <code>element.removeChild(node)</code>
+        </div>
+        <div id="js103" class="d-none">
+          <h5>Định nghĩa</h5>
+          <p>Lấy hoặc gán ID của element</p>
+          <h5>Cú pháp</h5>
+          <code>element.id</code> hoặc <code>element.id=id</code>
+          <h5>Return value</h5>
+          <code>string</code>
+          <h5>Lưu ý</h5>
+          <pre>
+            var demo = document.getElementById("demo");
+            demo.id = "newID";
+            console.log(demo);
+            console.log(document.getElementById("newID"));
+          </pre>
+          <span class="display-3 text-danger">element vẫn gọi được sau khi set id cho element</span>
+          <span class="display-1 text-danger">hi ban</span> nếu lấy demo.outerHTML thì không còn gọi được demo nữa nhé. 
+        </div>
+        <div id="js104" class="d-none">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>?</th>
+                <th>Lấy</th>
+                <th>Gán</th>
+                <th>Cách dùng</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>outerHTML</td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
+                <td>Thay đổi phần tử thành 1 phần tử mới</td>
+              </tr>
+              <tr>
+                <td>innerHTML</td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
+                <td>Thay đổi cái ruột HTML của phần tử</td>
+              </tr>
+              <tr>
+                <td>outerText</td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
+                <td>Thay đổi phần tử thành text luôn</td>
+              </tr>
+              <tr>
+                <td>innerText</td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
+                <td>Đổi cái ruột HTML thành Text</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="js105" class="d-none">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>?</th>
+                <th>Lấy</th>
+                <th>Gán</th>
+                <th>Cách dùng</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>outerHTML</td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
+                <td>Thay đổi phần tử thành 1 phần tử mới</td>
+              </tr>
+              <tr>
+                <td>innerHTML</td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
+                <td>Thay đổi cái ruột HTML của phần tử</td>
+              </tr>
+              <tr>
+                <td>outerText</td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
+                <td>Thay đổi phần tử thành text luôn</td>
+              </tr>
+              <tr>
+                <td>innerText</td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
+                <td>Đổi cái ruột HTML thành Text</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="js106" class="d-none">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>?</th>
+                <th>Lấy</th>
+                <th>Gán</th>
+                <th>Cách dùng</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>outerHTML</td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
+                <td>Thay đổi phần tử thành 1 phần tử mới</td>
+              </tr>
+              <tr>
+                <td>innerHTML</td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
+                <td>Thay đổi cái ruột HTML của phần tử</td>
+              </tr>
+              <tr>
+                <td>outerText</td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
+                <td>Thay đổi phần tử thành text luôn</td>
+              </tr>
+              <tr>
+                <td>innerText</td>
+                <td>&#10003;</td>
+                <td>&#10003;</td>
+                <td>Đổi cái ruột HTML thành Text</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="js107" class="d-none">
+          
+        </div>
+        <div id="js108" class="d-none">
+
+        </div>
+        <div id="js109" class="d-block">
+          <table class="table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Vị trí</th>
+                <th>Giá trị được gán</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row">insertAdjacentELement()</td>
+                <td>trước sau thẻ mở và trước sau thẻ đóng</td>
+                <td>Element</td>
+              </tr>
+              <tr>
+                <td scope="row">insertAdjacentHTML()</td>
+                <td>trước sau thẻ mở và trước sau thẻ đóng</td>
+                <td>HTML</td>
+              </tr>
+              <tr>
+                <td scope="row">insertAdjacentText()</td>
+                <td>trước sau thẻ mở và trước sau thẻ đóng</td>
+                <td>Text</td>
+              </tr>
+              <tr>
+                <td scope="row">insertBefore()</td>
+                <td>phía trước thẻ thẻ con, hoặc phía cuối cùng của đám con (như append) nếu null</td>
+                <td><strong>Element</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="js110" class="d-none">
+          <h5>Định nghĩa</h5>
+          Thêm 1 element hoặc 1 node vào phía trước của một element hoặc node
+          <div class="text-danger">nếu là <code>null</code> thì insert ở phía cuối element(node) được gọi</div>
+          <h5>Cú pháp</h5>
+          <code>element.insertBefore(new,existing)</code> hoặc <code>node.insertBefore(new,existing)</code>
         </div>
         </div>
       </div>

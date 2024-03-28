@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .wrap-box {
+            padding: 20px;
+            background-color: gray;
+            border-radius: 10px;
+        }
+      .box {
+        width: clamp(300px, 50%, 500px);
+        display: flex;
+        border-radius: 10px;
+        position: relative;
+        flex-wrap: wrap;
+      }
+      .ghost {
+        position: absolute;
+        width: 25%;
+        height: 25%;
+        left: 0%;
+        top: 0%;
+        background-color: red;
+        border-radius: 10px;
+        z-index: 1;
+        transition: all 0.3s;
+        transform-origin: bottom right;
+        transform-box: fill-box;
+        transition-timing-function: ease;
+        animation: changeShadow 1s 1 linear forwards alternate;
+      }
+      @keyframes changeShadow {
+        from {
+            box-shadow: 0px 0px 0px 0px rgba(255, 0, 0, 0.8);
+            transform: rotate(0deg);
+        }
+        to {
+            box-shadow: 0px 0px 16px 4px rgba(255, 0, 0, 0.8);
+            transform: rotate(360deg);
+
+        }
+      }
+      .right::before {
+        left: 50%;
+      }
+
+      .item {
+        flex: 1 0 25%;
+        text-align: center;
+        padding-block: 20px;
+        color: white;
+        position: relative;
+        z-index: 2;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap-box">
+      <div class="box">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">8</div>
+        <div class="item">8</div>
+        <div class="item">8</div>
+        <div class="item">8</div>
+        <div class="item">8</div>
+        <div class="item">8</div>
+        <div class="item">8</div>
+        <div class="item">8</div>
+        <div class="ghost"></div>
+      </div>
+    </div>
+    <script>
+      var items = document.querySelectorAll(".item");
+      for (let index = 0; index < items.length; index++) {
+        const item = items[index];
+        item.onclick = function () {
+            var childLeft = item.offsetLeft;
+            var childTop = item.offsetTop;
+            var parentWidth = item.parentElement.offsetWidth;
+            var parentHeight = item.parentElement.offsetHeight;
+            
+            var percentLeft = 0;
+            var percentTop = 0;
+            var ghost = document.querySelector(".ghost");
+            percentLeft = childLeft/parentWidth;
+            percentTop = childTop/parentHeight;
+            ghost.style.left = percentLeft*100+"%";
+            ghost.style.top = percentTop*100+"%";
+
+            // item.parentElement.lastElementChild.left = "25%";
+        };
+      }
+    </script>
+  </body>
+</html>

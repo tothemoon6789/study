@@ -232,6 +232,7 @@
             <li style="color: red"><em>Cha là body :</em> cha body, đến con là inline thì con cố gắng rộng bằng với body là 100vw rồi xuống dòng. Nếu phần tử cháu rộng hơn cha chì cháu sẽ bị tràn ra ngoài</li>
           </ul>
           Phản ứng inline và đám con các loại:
+          <a href="/asset/source/display-flex.html"><button class="btn btn-primary">TEST DISPLAY</button></a>
           <ul>
             <li>
               Đối với cha
@@ -326,6 +327,7 @@
         </div>
         <div data-for="display-block" class="d-none">
           Phản ứng block
+          <div class="text-dange">luu y: set width 400px, xem inspect thấy phần màu cam bên phải là của block, không cho thằng nào nhảy lên.</div>
         <ul>
           <li>Cố gắng bằng 100% chiều rộng của cha (Tới lề padding)</li>
           <li>Đối với các phần tử khối thì có set width nhỏ cỡ nào thì cũng không lên dòng trên và đứa em inline kế tiếp cũng không thể nhảy lên trên được. Còn nếu set width quá lớn thì sẽ tràn ra ngoài. Và nói đúng hơn là tràn ra ngoài phần tử ông nội, cao nhất là body</li>
@@ -341,7 +343,6 @@
         </div>
         <div data-for="display-flex" class="d-none">
           <h5>
-
             Các giá trị mặc định tác động lên thẻ cha có display:flex
           </h5>
 
@@ -388,7 +389,8 @@
             <li>Khi set width cho con + flex-warp:no-warp, rộng màn hình to ra thì con sẽ giữ kích thước không đổi nhưng ví dụ con nhiều quá mà tổng chiều rộng của con được setwwidth bắt đầu lớn hơn cha thì các con sẽ tự bị co lại - shrink nhỏ nhất là mincontent và không nhỏ hơn được nữa thì các phần tử phía cuối sẽ bị tràn ra phần tử cha, còn set <code>min-width</code> cho 1 phần tử con nào đó thì nó khởi đầu là chiều rộng item vừa khớp nội dung, càng lớn lên thì không gian phía sau của phần tử cha rộng ra nhưng co lại thì các con cũng bắt đầu co lại đến mincontent không thể co lại nữa ( các con này không thể tràn mà chỉ có thể tự xuống dòng đến khi nào khớp min content thì thôi và không xuống nữa.) nếu các phần tử con nhiều quá, không co lại được nữa thì chúng sẽ bị tràn ra khỏi cha. THẾ THÔI</li>
           </ul>
           <h5>Tương tác</h5>
-          <a name="" id="" class="btn btn-primary d-block text-uppercase font-weight-bolder" href="/asset/source/display-flex.html" role="button">Đi tới kiểm tra</a>
+          <a href="/asset/source/display-flex.html"><button class="btn btn-primary">TEST DISPLAY</button></a>
+        </div>
         <div data-for="display-grid" class="d-none"></div>
         <div data-for="display-table" class="d-none">
           Phản ứng table
@@ -1384,6 +1386,39 @@
         </div>
         <div data-for="em" class="d-none">
           <div class="alert alert-info" role="alert">5rem = 5 x fontsize của chính nó</div>
+        </div>
+        <div data-for="clamp" class="d-none">
+          <div class="alert alert-info" role="alert">
+            
+          </div>
+        <strong>clamp(100px,50%,400px)</strong> giá trị này là giá trị kẹp. Ví dụ .box có width:clamp(100px,50%,400px) là .box có chiều ngang giao động từ 100px đến 400px (100px, 101px, 102px .... 398px, 399px, 400px) và tương tứng với màn hình nhỏ hơn 100px / 50% = 200px thì .box có min width là 100px, màn hình vừa lớn hơn 100px vd 101px thì giá trị 50% bắt đầu được tính toán, tính đến 50% bằng 400px thì dừng. Màn hình nhận điểm cuối cùng là 400px/50% = 800px, vậy có thể hiểu. Màn hình dưới 200px nhận giá trị width 100px, màn hình tử 200px đến 800px nhận giá trị bằng 50%, màn hình trên 800px nhận giá trị 400px
+        <strong><span class="display-3 text-danger">width: clamp(45ch, 50%, 75ch);</span></strong>luu y truong hop nay, co nghia la: chữ sẽ nằm trong khoảng tỉ lệ vàng 1 hàng là 45 ký tự đến 75 ký tự.
+        </div>
+        <div id="minmax" class="d-block">
+          <span class="display-3 text-danger">minmax(value, value) chỉ dùng cho hiển thị grid</span> , ví dụ: grid-temaplte-columns
+          co màn hình lại sẽ thấy rõ
+          màu vàng giao động từ 100px đến 200px, Bai viet <a href="https://viblo.asia/p/cach-function-minmax-hoat-dong-trong-css-phan-1-Qbq5QqQ35D8#_length-1">go</a> nói cũng khá rõ, còn một số giá trị trong minmax(value,percent) hoặc minmax(value,max-content) ....
+          <style>
+            .minmax .item:first-child {
+                background-color: yellow;
+            }
+            .minmax .item:nth-child(2) {
+                background-color: red;
+            }
+            .minmax .item:last-child {
+                background-color: red;
+            }
+            .minmax {
+                display: grid;
+                grid-template-columns: minmax(100px,200px) 1fr 1fr;
+                column-gap: 10px;
+            }
+        </style>
+        <div class="minmax">
+          <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, dignissimos.</div>
+          <div class="item"></div>
+          <div class="item"></div>
+      </div>
         </div>
       </div>
       <div id="total"></div>
