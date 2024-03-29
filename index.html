@@ -111,12 +111,22 @@
         <div data-for="aspect-ratio" class="d-none"></div>
         <div data-for="box-sizing" class="d-none"></div>
         <div data-for="border" class="d-none"></div>
+        <div data-for="border-top" class="d-none"></div>
+        <div data-for="border-right" class="d-none"></div>
+        <div data-for="border-bottom" class="d-none"></div>
+        <div data-for="border-left" class="d-none"></div>
         <div data-for="border-top-width" class="d-none"></div>
         <div data-for="border-width" class="d-none"></div>
         <div data-for="border-right-width" class="d-none"></div>
         <div data-for="border-bottom-width" class="d-none"></div>
         <div data-for="border-left-width" class="d-none"></div>
         <div data-for="border-block" class="d-none"></div>
+        <div data-for="border-block-width" class="d-none"></div>
+        <div data-for="border-block-start" class="d-none"></div>
+        <div data-for="border-block-end" class="d-none"></div>
+        <div data-for="border-inline" class="d-none"></div>
+        <div data-for="border-inline-start" class="d-none"></div>
+        <div data-for="border-inline-end" class="d-none"></div>
         <div data-for="border-block-start-width" class="d-none"></div>
         <div data-for="border-block-end-width" class="d-none"></div>
         <div data-for="border-inline-width" class="d-none"></div>
@@ -1394,7 +1404,7 @@
         <strong>clamp(100px,50%,400px)</strong> giá trị này là giá trị kẹp. Ví dụ .box có width:clamp(100px,50%,400px) là .box có chiều ngang giao động từ 100px đến 400px (100px, 101px, 102px .... 398px, 399px, 400px) và tương tứng với màn hình nhỏ hơn 100px / 50% = 200px thì .box có min width là 100px, màn hình vừa lớn hơn 100px vd 101px thì giá trị 50% bắt đầu được tính toán, tính đến 50% bằng 400px thì dừng. Màn hình nhận điểm cuối cùng là 400px/50% = 800px, vậy có thể hiểu. Màn hình dưới 200px nhận giá trị width 100px, màn hình tử 200px đến 800px nhận giá trị bằng 50%, màn hình trên 800px nhận giá trị 400px
         <strong><span class="display-3 text-danger">width: clamp(45ch, 50%, 75ch);</span></strong>luu y truong hop nay, co nghia la: chữ sẽ nằm trong khoảng tỉ lệ vàng 1 hàng là 45 ký tự đến 75 ký tự.
         </div>
-        <div id="minmax" class="d-block">
+        <div id="minmax" class="d-none">
           <span class="display-3 text-danger">minmax(value, value) chỉ dùng cho hiển thị grid</span> , ví dụ: grid-temaplte-columns
           co màn hình lại sẽ thấy rõ
           màu vàng giao động từ 100px đến 200px, Bai viet <a href="https://viblo.asia/p/cach-function-minmax-hoat-dong-trong-css-phan-1-Qbq5QqQ35D8#_length-1">go</a> nói cũng khá rõ, còn một số giá trị trong minmax(value,percent) hoặc minmax(value,max-content) ....
@@ -1438,13 +1448,28 @@
         <div id="dem"></div>
         <div id="object" class="d-flex"></div>
       </div>
-      <div id="control-area" class="d-flex"></div>
-      <div class="btn-group mb-5" role="group" aria-label="Basic example">
-        <button id="btn-to-small-default" type="button" class="btn btn-secondary" onclick="resizeButtonToVerrySmall()">X Small</button>
-        <button type="button" class="btn btn-secondary" onclick="resizeButtonToSmall()">Small</button>
-        <button type="button" class="btn btn-secondary" onclick="resizeButtonToMiddle()">Middle</button>
-        <button type="button" class="btn btn-secondary" onclick="resizeButtonToLarge()">Large</button>
+      <div id="scale-button-group" class="btn-group mb-5" role="group" aria-label="Basic example">
+        <!-- <button  type="button" class="btn btn-secondary" onclick="resizeButtonToVerrySmall()">X Small</button> -->
+        <button  type="button" class="btn btn-secondary" onclick="resizeButton('heading-sx','button-type','btn-sx',this)">Verry Small</button>
+        <button id="btn-to-small-default" type="button" class="btn btn-secondary" onclick="resizeButton('heading-sm','button-type','btn-sm',this)">Small</button>
+        <button type="button" class="btn btn-secondary" onclick="resizeButton('heading-md','button-type','btn-md',this)">Middle</button>
+        <button type="button" class="btn btn-secondary" onclick="resizeButton('heading-lg','button-type','btn-lg',this)">Large</button>
       </div>
+      <div id="control-area"></div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>

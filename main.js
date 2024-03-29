@@ -1,29 +1,34 @@
 (function () {
   var phan_loai = [
-    { id: "btn-type-text", heading: "Chữ" },
-    { id: "btn-type-background", heading: "Nền" },
-    { id: "btn-type-dimension", heading: "Kích thước" },
-    { id: "btn-type-border", heading: "đường viền" },
-    { id: "btn-type-padding", heading: "không gian" },
-    { id: "btn-type-outline", heading: "viền ngoài" },
+    { id: "btn-type-text", heading: "Text" },
+    { id: "btn-type-background", heading: "Background" },
+    { id: "btn-type-mask", heading: "Mask" },
+    { id: "btn-type-padding", heading: "Padding" },
+    { id: "btn-type-inset", heading: "Inset" },
+    { id: "btn-type-border", heading: "Border" },
+    { id: "btn-type-dimension", heading: "Width" },
+    { id: "btn-type-outline", heading: "Outline" },
     { id: "btn-type-margin", heading: "Margin" },
-    { id: "btn-type-position", heading: "kiểu position" },
-    { id: "btn-type-display", heading: "Kiểu hiển thị" },
-    { id: "btn-type-flex", heading: "bố cục flex" },
-    { id: "btn-type-grid", heading: "lưới grid" },
-    { id: "btn-type-float", heading: "kiểu trôi" },
-    { id: "btn-type-transform", heading: "hình dạng" },
-    { id: "btn-type-mask", heading: "mặt nạ" },
-    { id: "btn-type-inset", heading: "khoảng cách cha con" },
-    { id: "btn-type-column", heading: "Cột" },
-    { id: "btn-type-list", heading: "Danh sách" },
-    { id: "btn-type-scrollbar", heading: "Thanh kéo" },
-    { id: "btn-type-animation", heading: "Animation" },
+    { id: "btn-type-position", heading: "Position" },
+    { id: "btn-type-display", heading: "Display" },
+    { id: "btn-type-float", heading: "Float" },
+    { id: "btn-type-flex", heading: "Flex" },
+    { id: "btn-type-grid", heading: "Grid" },
+    { id: "btn-type-transform", heading: "Transform" },
     { id: "btn-type-transition", heading: "Transition" },
-    { id: "btn-type-another", heading: "khác" },
-    { id: "btn-type-value", heading: "Giá trị" },
+    { id: "btn-type-animation", heading: "Animation" },
+    { id: "btn-type-column", heading: "Column" },
+    { id: "btn-type-list", heading: "List" },
+    { id: "btn-type-scrollbar", heading: "Scrollbar" },
+    { id: "btn-type-another", heading: "Another" },
+    { id: "btn-type-value", heading: "Value" },
   ];
   var nut_bam = [
+    {
+      id: "color",
+      class: "btn btn-outline-primary btn-type-text",
+      text: "color",
+    },
     {
       id: "font-family",
       class: "btn btn-outline-primary btn-type-text",
@@ -45,19 +50,9 @@
       text: "font-weight",
     },
     {
-      id: "text-decoration",
-      class: "btn btn-outline-primary btn-type-text",
-      text: "text-decoration",
-    },
-    {
       id: "text-transform",
       class: "btn btn-outline-primary btn-type-text",
       text: "text-transform",
-    },
-    {
-      id: "text-overflow",
-      class: "btn btn-outline-primary btn-type-text",
-      text: "text-overflow",
     },
     {
       id: "text-shadow",
@@ -65,15 +60,16 @@
       text: "text-shadow",
     },
     {
-      id: "text-indent",
-      class: "btn btn-outline-primary btn-type-text",
-      text: "text-indent",
+      id: "vertical-align",
+      class: "btn btn-warning btn-type-text",
+      text: "vertical-align",
     },
     {
-      id: "text-justify",
+      id: "text-decoration",
       class: "btn btn-outline-primary btn-type-text",
-      text: "text-justify",
+      text: "text-decoration",
     },
+    
     {
       id: "text-decoration-line",
       class: "btn btn-outline-primary btn-type-text",
@@ -85,15 +81,16 @@
       text: "text-decoration-thickness",
     },
     {
-      id: "text-align-last",
-      class: "btn btn-outline-primary btn-type-text",
-      text: "text-align-last",
-    },
-    {
       id: "text-decoration-style",
       class: "btn btn-outline-primary btn-type-text",
       text: "text-decoration-style",
     },
+    {
+      id: "text-decoration-color",
+      class: "btn btn-outline-primary btn-type-text",
+      text: "text-decoration-color",
+    },
+    
     {
       id: "text-emphasis",
       class: "btn btn-outline-primary btn-type-text",
@@ -104,31 +101,45 @@
       class: "btn btn-outline-primary btn-type-text",
       text: "text-emphasis-style",
     },
+
     {
-      id: "letter-spacing",
+      id: "text-emphasis-color",
       class: "btn btn-outline-primary btn-type-text",
-      text: "letter-spacing",
+      text: "text-emphasis-color",
     },
     {
       id: "text-emphasis-position",
       class: "btn btn-outline-primary btn-type-text",
       text: "text-emphasis-position",
     },
+    
     {
-      id: "color",
+      id: "text-indent",
       class: "btn btn-outline-primary btn-type-text",
-      text: "color",
+      text: "text-indent",
     },
     {
-      id: "text-decoration-color",
+      id: "letter-spacing",
       class: "btn btn-outline-primary btn-type-text",
-      text: "text-decoration-color",
+      text: "letter-spacing",
     },
     {
-      id: "text-emphasis-color",
+      id: "text-justify",
       class: "btn btn-outline-primary btn-type-text",
-      text: "text-emphasis-color",
+      text: "text-justify",
     },
+    {
+      id: "text-overflow",
+      class: "btn btn-outline-primary btn-type-text",
+      text: "text-overflow",
+    },
+    
+    {
+      id: "text-align-last",
+      class: "btn btn-outline-primary btn-type-text",
+      text: "text-align-last",
+    },
+    
     {
       id: "word-wrap",
       class: "btn btn-warning btn-type-text",
@@ -144,11 +155,7 @@
       class: "btn btn-warning btn-type-text",
       text: "word-break",
     },
-    {
-      id: "vertical-align",
-      class: "btn btn-warning btn-type-text",
-      text: "vertical-align",
-    },
+    
     {
       id: "user-select",
       class: "btn btn-warning btn-type-text",
@@ -270,59 +277,9 @@
       text: "border",
     },
     {
-      id: "border-top-width",
-      class: "btn btn-outline-primary btn-type-border",
-      text: "border-top-width",
-    },
-    {
       id: "border-width",
       class: "btn btn-outline-primary btn-type-border",
       text: "border-width",
-    },
-    {
-      id: "border-right-width",
-      class: "btn btn-outline-primary btn-type-border",
-      text: "border-right-width",
-    },
-    {
-      id: "border-bottom-width",
-      class: "btn btn-outline-primary btn-type-border",
-      text: "border-bottom-width",
-    },
-    {
-      id: "border-left-width",
-      class: "btn btn-outline-primary btn-type-border",
-      text: "border-left-width",
-    },
-    {
-      id: "border-block",
-      class: "btn btn-outline-primary btn-type-border",
-      text: "border-block",
-    },
-    {
-      id: "border-block-start-width",
-      class: "btn btn-outline-primary btn-type-border",
-      text: "border-block-start-width",
-    },
-    {
-      id: "border-block-end-width",
-      class: "btn btn-outline-primary btn-type-border",
-      text: "border-block-end-width",
-    },
-    {
-      id: "border-inline-width",
-      class: "btn btn-outline-primary btn-type-border",
-      text: "border-inline-width",
-    },
-    {
-      id: "border-inline-start-width",
-      class: "btn btn-outline-primary btn-type-border",
-      text: "border-inline-start-width",
-    },
-    {
-      id: "border-inline-end-width",
-      class: "btn btn-outline-primary btn-type-border",
-      text: "border-inline-end-width",
     },
     {
       id: "border-style",
@@ -330,74 +287,90 @@
       text: "border-style",
     },
     {
+      id: "border-color",
+      class: "btn btn-outline-primary btn-type-border",
+      text: "border-color",
+    },
+    {
+      id: "border-top",
+      class: "btn btn-outline-primary btn-type-border",
+      text: "border-top",
+    },
+    {
+      id: "border-top-width",
+      class: "btn btn-outline-primary btn-type-border",
+      text: "border-top-width",
+    },
+    {
       id: "border-top-style",
       class: "btn btn-outline-primary btn-type-border",
       text: "border-top-style",
+    },
+    
+    {
+      id: "border-top-color",
+      class: "btn btn-outline-primary btn-type-border",
+      text: "border-top-color",
+    },
+    
+    {
+      id: "border-right",
+      class: "btn btn-outline-primary btn-type-border",
+      text: "border-right",
     },
     {
       id: "border-right-style",
       class: "btn btn-outline-primary btn-type-border",
       text: "border-right-style",
     },
-    {
-      id: "border-bottom-style",
-      class: "btn btn-outline-primary btn-type-border",
-      text: "border-bottom-style",
-    },
-    {
-      id: "border-left-style",
-      class: "btn btn-outline-primary btn-type-border",
-      text: "border-left-style",
-    },
-    {
-      id: "border-block-style",
-      class: "btn btn-outline-primary btn-type-border",
-      text: "border-block-style",
-    },
-    {
-      id: "border-block-start-style",
-      class: "btn btn-outline-primary btn-type-border",
-      text: "border-block-start-style",
-    },
-    {
-      id: "border-block-end-style",
-      class: "btn btn-outline-primary btn-type-border",
-      text: "border-block-end-style",
-    },
-    {
-      id: "border-inline-style",
-      class: "btn btn-outline-primary btn-type-border",
-      text: "border-inline-style",
-    },
-    {
-      id: "border-inline-start-style",
-      class: "btn btn-outline-primary btn-type-border",
-      text: "border-inline-start-style",
-    },
-    {
-      id: "border-inline-end-style",
-      class: "btn btn-outline-primary btn-type-border",
-      text: "border-inline-end-style",
-    },
-    {
-      id: "border-color",
-      class: "btn btn-outline-primary btn-type-border",
-      text: "border-color",
-    },
-    {
-      id: "border-top-color",
-      class: "btn btn-outline-primary btn-type-border",
-      text: "border-top-color",
-    },
+
     {
       id: "border-right-color",
       class: "btn btn-outline-primary btn-type-border",
       text: "border-right-color",
     },
     {
+      id: "border-right-width",
+      class: "btn btn-outline-primary btn-type-border",
+      text: "border-right-width",
+    },
+    
+    {
+      id: "border-bottom",
+      class: "btn btn-outline-primary btn-type-border",
+      text: "border-bottom",
+    },
+    {
+      id: "border-bottom-width",
+      class: "btn btn-outline-primary btn-type-border",
+      text: "border-bottom-width",
+    },
+    {
+      id: "border-bottom-style",
+      class: "btn btn-outline-primary btn-type-border",
+      text: "border-bottom-style",
+    },
+
+    {
       id: "border-bottom-color",
       class: "btn btn-outline-primary btn-type-border",
       text: "border-bottom-color",
+    },
+    {
+      id: "border-left",
+      class: "btn btn-outline-primary btn-type-border",
+      text: "border-left",
+    },
+    {
+      id: "border-left-width",
+      class: "btn btn-outline-primary btn-type-border",
+      text: "border-left-width",
+    },
+
+    {
+      id: "border-left-style",
+      class: "btn btn-outline-primary btn-type-border",
+      text: "border-left-style",
     },
     {
       id: "border-left-color",
@@ -405,9 +378,34 @@
       text: "border-left-color",
     },
     {
+      id: "border-block",
+      class: "btn btn-outline-primary btn-type-border",
+      text: "border-block",
+    },
+    {
+      id: "border-block-width",
+      class: "btn btn-outline-primary btn-type-border",
+      text: "border-block-width",
+    },
+    {
       id: "border-block-color",
       class: "btn btn-outline-primary btn-type-border",
       text: "border-block-color",
+    },
+    {
+      id: "border-block-style",
+      class: "btn btn-outline-primary btn-type-border",
+      text: "border-block-style",
+    },
+    {
+      id: "border-block-start",
+      class: "btn btn-outline-primary btn-type-border",
+      text: "border-block-start",
+    },
+    {
+      id: "border-block-start-width",
+      class: "btn btn-outline-primary btn-type-border",
+      text: "border-block-start-width",
     },
     {
       id: "border-block-start-color",
@@ -415,25 +413,107 @@
       text: "border-block-start-color",
     },
     {
+      id: "border-block-start-style",
+      class: "btn btn-outline-primary btn-type-border",
+      text: "border-block-start-style",
+    },
+    {
+      id: "border-block-end",
+      class: "btn btn-outline-primary btn-type-border",
+      text: "border-block-end",
+    },
+    {
+      id: "border-block-end-width",
+      class: "btn btn-outline-primary btn-type-border",
+      text: "border-block-end-width",
+    },
+
+    {
       id: "border-block-end-color",
       class: "btn btn-outline-primary btn-type-border",
       text: "border-block-end-color",
     },
+
     {
-      id: "border-inline-color",
+      id: "border-block-end-style",
       class: "btn btn-outline-primary btn-type-border",
-      text: "border-inline-color",
+      text: "border-block-end-style",
     },
+    
+    
+    
+    
+    
     {
-      id: "border-inline-start-color",
+      id: "border-inline-end",
       class: "btn btn-outline-primary btn-type-border",
-      text: "border-inline-start-color",
+      text: "border-inline-end",
+    },
+    
+    
+    {
+      id: "border-inline-end-style",
+      class: "btn btn-outline-primary btn-type-border",
+      text: "border-inline-end-style",
+    },
+    
+    
+    
+    {
+      id: "border-inline-end-width",
+      class: "btn btn-outline-primary btn-type-border",
+      text: "border-inline-end-width",
     },
     {
       id: "border-inline-end-color",
       class: "btn btn-outline-primary btn-type-border",
       text: "border-inline-end-color",
     },
+    
+    {
+      id: "border-inline",
+      class: "btn btn-outline-primary btn-type-border",
+      text: "border-inline",
+    },
+    {
+      id: "border-inline-color",
+      class: "btn btn-outline-primary btn-type-border",
+      text: "border-inline-color",
+    },
+
+    {
+      id: "border-inline-style",
+      class: "btn btn-outline-primary btn-type-border",
+      text: "border-inline-style",
+    },
+    {
+      id: "border-inline-width",
+      class: "btn btn-outline-primary btn-type-border",
+      text: "border-inline-width",
+    },
+    {
+      id: "border-inline-start",
+      class: "btn btn-outline-primary btn-type-border",
+      text: "border-inline-start",
+    },
+    {
+      id: "border-inline-start-color",
+      class: "btn btn-outline-primary btn-type-border",
+      text: "border-inline-start-color",
+    },
+
+    {
+      id: "border-inline-start-style",
+      class: "btn btn-outline-primary btn-type-border",
+      text: "border-inline-start-style",
+    },
+
+    {
+      id: "border-inline-start-width",
+      class: "btn btn-outline-primary btn-type-border",
+      text: "border-inline-start-width",
+    },
+    
     {
       id: "border-start-start-radius",
       class: "btn btn-outline-primary btn-type-border",
@@ -1119,7 +1199,7 @@
       class: "btn btn-outline-primary btn-type-another",
       text: "writing-mode",
     },
-    
+
     {
       id: "grid",
       class: "btn btn-danger btn-type-grid",
@@ -1216,7 +1296,7 @@
       text: "minmax",
     },
   ];
-  
+
   var control_area = document.getElementById("control-area");
   // thêm danh sách cho control area
   phan_loai.forEach((loai) => {
@@ -1256,10 +1336,10 @@
       control_area.innerText = "Nhà báo – Nhà thơ Phạm Quốc Cường sinh năm 1980 tại Nam Đàn – Nghệ An, bút danh: Quốc Đô, Quốc Minh, Trà My, TQC, QM, HM. Phạm Quốc Cường hiện là Trưởng ban Pháp luật – Bạn đọc, thuộc Báo Pháp luật Việt Nam.Các tập thơ đã xuất bản: Viết cho người tình mơ; Anh chờ qua trăng; Tình hoa; Tình yêu còn lại; Khúc ca tình đời; Tuyển chọn 100 bài thơ tình và đời; Bước đời. Phạm Quốc Cường cũng là tác giả của nhiều ca khúc được yêu thíchCác giải thưởng: Tham gia chỉ đạo, biên tập, tổ chức xuất bản loạt bài của nhóm phóng viên Báo điện tử Pháp luật Việt Nam (Phapluatplus.vn) được trao giải C giải Báo chí Quốc gia năm 2016; Giải thưởng báo chí toàn quốc phòng, chống tham nhũng, tiêu cực các năm 2020-2021, 2022-2023; Giải thưởng báo chí toàn quốc về Quốc hội và Hội đồng nhân dân (Giải Diên Hồng, tháng 1 năm 2024); Các giải thưởng Báo chí Bộ, ngành, địa phương; Bằng khen, giấy khen của các Bộ, ngành Trung ương, và nhiều giải thưởng khác về văn hóa, nghệ thuật, thể thao.";
       control_area.className = e.innerText;
       control_area.scrollIntoView();
-      document.querySelector("#result .d-block") && document.querySelector("#result .d-block").classList.add("d-none")
-      document.querySelector("#result .d-block") && document.querySelector("#result .d-block").classList.remove("d-block")
-      document.querySelector('div[data-for="'+e.id+'"]').classList.add("d-block");
-      document.querySelector('div[data-for="'+e.id+'"]').classList.remove("d-none");
+      document.querySelector("#result .d-block") && document.querySelector("#result .d-block").classList.add("d-none");
+      document.querySelector("#result .d-block") && document.querySelector("#result .d-block").classList.remove("d-block");
+      document.querySelector('div[data-for="' + e.id + '"]').classList.add("d-block");
+      document.querySelector('div[data-for="' + e.id + '"]').classList.remove("d-none");
     });
   });
 })();
@@ -1366,7 +1446,6 @@
     { id: "box-decoration-break", note: "", warning: "", html: htmlBoxDecorationBreak, multiple: false },
     { id: "caption-side", note: "", warning: "", html: htmlTable, multiple: false },
     { id: "caret-color", note: "", warning: "", html: htmlCaretColor, multiple: false },
-   
   ];
   c.forEach(function (e) {
     // document.getElementById(e.id) && e.multiple === true && document.getElementById(e.id).classList.add("multiple");
@@ -1480,60 +1559,24 @@ document.getElementById("animation-direction").onclick = function () {
     };
   };
 };
-function resizeButtonToSmall() {
+
+function resizeButton(className, attributeName, attributeValue,button) {
   var buttons = document.querySelectorAll("#control-area button");
   var uls = document.querySelectorAll("#control-area ul");
-  var headings = document.querySelectorAll("#control-area h6");
-  headings.forEach((heading) => {
-    heading.classList.remove("x-small");
-  })
+  
+  var buttons = document.querySelectorAll("#scale-button-group > button");
+  
+  for (let index = 0; index < buttons.length; index++) {
+    const btn = buttons[index];
+    console.log(btn);
+    btn.setAttribute("clicked","false");
+  }
+  button.setAttribute("clicked","true");
   uls.forEach((ul) => {
-     ul.classList.remove("x-small");
-  })
-  buttons.forEach((btn) => {
-    btn.setAttribute("button-type","btn-sm");
+    ul.className = className;
   });
-}
-function resizeButtonToLarge() {
-  var buttons = document.querySelectorAll("#control-area button");
-  var uls = document.querySelectorAll("#control-area ul");
-  var headings = document.querySelectorAll("#control-area h6");
-  headings.forEach((heading) => {
-    heading.classList.remove("x-small");
-  })
-  uls.forEach((ul) => {
-     ul.classList.remove("x-small");
-  })
   buttons.forEach((btn) => {
-    btn.setAttribute("button-type","btn-lg");
-  });
-}
-function resizeButtonToMiddle() {
-  var buttons = document.querySelectorAll("#control-area button");
-  var uls = document.querySelectorAll("#control-area ul");
-  var headings = document.querySelectorAll("#control-area h6");
-  headings.forEach((heading) => {
-    heading.classList.remove("x-small");
-  })
-  uls.forEach((ul) => {
-     ul.classList.remove("x-small");
-  })
-  buttons.forEach((btn) => {
-    btn.setAttribute("button-type","btn-md");
-  });
-}
-function resizeButtonToVerrySmall() {
-  var buttons = document.querySelectorAll("#control-area button");
-  var uls = document.querySelectorAll("#control-area ul");
-  var headings = document.querySelectorAll("#control-area h6");
-  headings.forEach((heading) => {
-    heading.classList.add("x-small");
-  })
-  uls.forEach((ul) => {
-     ul.classList.add("x-small");
-  })
-  buttons.forEach((btn) => {
-    btn.setAttribute("button-type","x-small");
+    btn.setAttribute(attributeName, attributeValue);
   });
 }
 // var a = document.querySelectorAll(".ws-table-all a");

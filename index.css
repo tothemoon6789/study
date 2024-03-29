@@ -18,8 +18,7 @@ li {
   max-height: 70vh;
   overflow: scroll;
 }
-#control-area {
-}
+
 p {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
@@ -2844,30 +2843,140 @@ ul {
 /* end kieu */
 /* object */
 #control-area {
-  max-width: 100%;
-  overflow: scroll;
-  height: 60vh;
-  border: 1px solid rgb(0, 255, 38, 0.2);
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: clamp(10px,2vw,20px);
+}
+#control-area::-webkit-scrollbar {
+  height: 3px;
+}
+#control-area::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 10px;
+}
+#control-area::-webkit-scrollbar-track {
+  border-radius: 20px;
+  background-color: white;
+}
+/* end object */
+/* another */
+
+#control-area ul {
+  flex-basis: auto;
+  /* flex-grow: 1; */
+  flex-shrink: 0;
+  transition: all 0.25s;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+}
+#control-area ul::-webkit-scrollbar {
+  width: 2px;
+  /* background-color: red; */
+}
+#control-area ul::-webkit-scrollbar-thumb {
+  background-color: gray;
   border-radius: 5px;
+}
+#control-area ul::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+#control-area ul.heading-sx {
+  list-style: none;
+  padding-left: 0px !important;
+}
+#control-area ul.heading-sx {
+  height: 200px;
+}
+#control-area ul.heading-sm {
+  height: 300px;
+}
+#control-area ul.heading-md {
+  height: 400px;
+}
+#control-area ul.heading-lg {
+  height: 500px;
+  margin: 20px;
+}
+#control-area ul.heading-sx h6 {
+  font-size: 8px;
+  writing-mode: vertical-lr;
+  text-transform: capitalize;
+}
+#control-area ul.heading-sm h6 {
+  font-size: 14px;
+  writing-mode: horizontal-tb;
+  text-transform: capitalize;
+}
+
+#control-area ul.heading-md h6 {
+  font-size: 18px;
+  writing-mode: horizontal-tb;
+  text-transform: capitalize;
+}
+
+#control-area ul.heading-lg h6 {
+  font-size: 24px;
+  writing-mode: horizontal-tb;
+  text-transform: capitalize;
+}
+#control-area ul.heading-sm li {
+  font-size: 14px;
+}
+#control-area ul.heading-md li {
+  font-size: 18px;
+}
+#control-area ul.heading-lg li {
+  font-size: 18px;
+}
+
+#control-area h6 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 #control-area button {
   min-width: 200px !important;
   text-align: left;
+  transition: all 0.25s;
 }
-/* end object */
-/* another */
-#control-area::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+/* button sx,sm, md, lg */
+button[clicked="true"] {
+  background-color: red !important;
 }
-#control-area::-webkit-scrollbar-thumb {
-  background-color: rgb(0, 255, 38);
-  border-radius: 20px;
+#control-area button[button-type="btn-sx"]{
+  border: initial;
+  max-width: 60px !important;
+  min-width: unset !important;
+  font-size: 8px;
+  padding: 2px 4px;
+  margin-top: 5px;
+  font-weight: 500;
 }
-#control-area::-webkit-scrollbar-track {
-  border-radius: 20px;
-  box-shadow: inset 2px 2px 4px 0 rgb(0, 255, 38, 0.2);
+#control-area  button[button-type="btn-sm"]{
+  border: initial;
+  max-width: 150px !important;
+  min-width: unset !important;
+  font-size: 12px;
+  padding: 4px 8px;
+  margin-top: 5px;
+  font-weight: 400;
 }
+
+#control-area  button[button-type="btn-md"]{
+  border: initial;
+  max-width: 150px !important;
+  min-width: unset !important;
+  font-size: 16px;
+  padding: 6px 12px;
+  margin-top: 5px;
+  font-weight: 400;
+}
+#control-area button[button-type="btn-lg"]{
+  border: initial;
+}
+
 .all {
   color: red;
   font-weight: 900;
@@ -3030,46 +3139,3 @@ to {
   text-decoration: line-through;
 }
 
-#control-area button[button-type="x-small"]{
-  border: initial;
-  max-width: 60px !important;
-  min-width: unset !important;
-  font-size: 8px;
-  padding: 2px 4px;
-  margin-top: 5px;
-  font-weight: 500;
-}
-#control-area  button[button-type="btn-sm"]{
-  border: initial;
-  max-width: 150px !important;
-  min-width: unset !important;
-  font-size: 12px;
-  padding: 4px 8px;
-  margin-top: 5px;
-  font-weight: 400;
-}
-
-#control-area  button[button-type="btn-md"]{
-  border: initial;
-  max-width: 150px !important;
-  min-width: unset !important;
-  font-size: 16px;
-  padding: 6px 12px;
-  margin-top: 5px;
-  font-weight: 400;
-}
-button[button-type="btn-lg"]{
-  border: initial;
-}
-#control-area ul.x-small {
-  list-style: none;
-  padding-left: 0px !important;
-}
-#control-area h6.x-small {
-  font-size: 8px;
-  writing-mode: vertical-lr;
-  text-transform: capitalize;
-}
-#control-area {
-  padding-top: 20px;
-}
