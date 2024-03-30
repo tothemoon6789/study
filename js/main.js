@@ -94,6 +94,11 @@
     { id: "js63", id_heading: "element", order: 0, version: "dom1", text: "element.className" }, // lấy giá trị của class
     { id: "js62", id_heading: "element", order: 0, version: "dom1", text: "element.classList" }, // lấy giá trị của class dạng danh sách
     { id: "js103", id_heading: "element", order: 0, version: "dom1", text: "element.id" }, // lấy giá trị của class dạng danh sách
+    { id: "js111", id_heading: "element", order: 0, version: "dom1", text: "element.title" }, // lấy giá trị của class dạng danh sách
+    { id: "js112", id_heading: "element", order: 0, version: "dom1", text: "element.textContent" }, // lấy giá trị của class dạng danh sách
+    { id: "js113", id_heading: "element", order: 0, version: "dom1", text: "element.tagName" }, // lấy giá trị của class dạng danh sách
+    { id: "js114", id_heading: "element", order: 0, version: "dom1", text: "element.tabIndex" }, // lấy giá trị của class dạng danh sách
+    { id: "js115", id_heading: "element", order: 0, version: "dom1", text: "element.style" }, // lấy giá trị của class dạng danh sách
 
     // tác động
     { id: "js55", id_heading: "element", order: 0, version: "dom1", text: "element.accessKey" }, // gán hoặc lấy nút bấm truy cập nhanh
