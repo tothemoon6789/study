@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      :root {
+        --circle-position-top:-25px;
+        --icon-position-top: -20px;
+        --text-position-top: -20px;
+      }
+      body {
+        position: relative;
+      }
+      .container {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #C0D6DF;
+      }
+      .container ul {
+        display: flex;
+        padding: 0;
+        margin: 0;
+
+        position: relative;
+      }
+      .container .circle {
+        content: "";
+        position: absolute;
+        top: var(--circle-position-top);
+        /* left: calc(25% / 2); */
+        transform: translateX(-50%);
+        left: -100px;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background-color: #DD6E42;
+        animation: position1 1s forwards;
+        z-index: 0;
+        transition: all 0.25s;
+        border: 2px solid white;
+      }
+      .container ul li {
+        flex: 1 0 auto;
+        list-style: none;
+        position: relative;
+        z-index: 2;
+      }
+      .container ul li a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 70px;
+        flex-direction: column;
+        text-decoration: none;
+      }
+
+      .container ul li a i {
+        display: block;
+        position: relative;
+        transition: all 0.25s;
+        top: 0;
+        color: #4F6D7A;
+        font-size: 24px;
+      }
+      .container ul li a:focus i {
+        top: var(--icon-position-top);
+        color: #E8DAB2;
+        font-size: 30px;
+        
+      }
+      
+      .container ul li a span {
+        position: relative;
+        top: 20px;
+        opacity: 0;
+        transition: all 0.25s;
+        color: white;
+
+      }
+      .container ul li a:focus span {
+        top: var(--text-position-top);
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quae repudiandae magni ut numquam doloribus praesentium molestias, est reprehenderit possimus natus obcaecati molestiae cum tempore fugiat! Ab doloribus aut expedita et. Dolorum sunt quae nobis, natus cum debitis ab nulla ipsam laborum, repellat velit suscipit ipsa consequatur officiis libero? Alias totam eveniet officia dolores corrupti. Obcaecati repudiandae cupiditate ad accusantium laboriosam tempora praesentium aut. Modi nemo, repellendus asperiores totam consequuntur, tempore nam amet quis perferendis maiores ad iusto distinctio, recusandae officia rem optio nulla nesciunt enim id dolorem facere! Dolorum ratione porro laudantium distinctio dicta assumenda! Voluptatum modi nemo laborum doloremque magnam ut, placeat minima tenetur veniam! Repellendus laboriosam ipsum adipisci provident ipsam corporis deleniti possimus eveniet fugit similique accusantium magni, omnis incidunt voluptate, consectetur minima repudiandae odio eaque impedit beatae eius? Vel consectetur numquam labore consequuntur adipisci nihil ex magni nulla ratione ipsa harum aut quaerat, a molestias enim eveniet voluptatum quas sint quos illo! Ex vitae distinctio, suscipit esse consectetur quaerat dolores eligendi libero magni officia natus voluptate aliquid tenetur illo sed consequatur sunt minus officiis eaque error. Iusto inventore tempore deleniti eaque quod eius, pariatur molestiae, totam, odit cupiditate perspiciatis assumenda facilis sunt nesciunt incidunt esse temporibus vero iste! Debitis placeat est nam nobis! Nam vitae voluptatum nihil eaque fugit! Veritatis aspernatur cum et mollitia placeat quasi ullam similique dolore reiciendis soluta, a sunt iure ipsa quia voluptas ipsam voluptatem, vero error dolor possimus facilis! Consequatur atque, sint praesentium officia tenetur aspernatur. Libero, possimus eligendi quo recusandae excepturi nisi deleniti iusto beatae porro harum placeat voluptate expedita sed fugiat. Ipsum ipsa blanditiis, accusamus id doloremque voluptas placeat necessitatibus sapiente. Assumenda expedita natus nulla ratione quae cum in esse explicabo accusamus, id sit delectus rem voluptatibus quam, tempore veniam nisi necessitatibus? Adipisci, quisquam facere aliquid vel pariatur natus culpa iusto reiciendis in totam ipsa perferendis animi qui voluptate earum illum! Impedit neque corrupti nemo sequi non accusamus fugit quos, provident adipisci tempore veniam a eius aliquam libero in doloremque. Deserunt eaque esse molestiae quos illo ipsum perferendis, odio quam obcaecati repellendus, tenetur quisquam vel. Delectus consectetur assumenda non expedita quidem vero illum ipsam id perspiciatis consequatur officiis veritatis eum optio nisi ea corporis saepe, odio rem accusamus! Exercitationem mollitia sapiente dolorum magnam id, saepe ducimus? Facere voluptas consequuntur voluptates quibusdam ducimus ad esse reiciendis eius expedita tenetur mollitia consectetur provident repellat consequatur delectus quidem, nobis minus harum. Culpa odit fugiat ipsum minus quasi dolorum est libero laudantium deleniti fuga quae sequi omnis itaque natus, deserunt quia non odio excepturi ab ad nihil quam sed. Accusantium, alias voluptatem? Nisi minima illum facere voluptate laboriosam? Impedit ex inventore esse quod voluptas modi, nisi odio repellendus facere dignissimos tempore saepe maxime, est atque molestiae nobis reiciendis eius ipsa eum. Veniam beatae omnis incidunt nostrum illo libero, excepturi modi quisquam asperiores, optio dolor nobis eum harum voluptatum laudantium, officiis aliquam vero fugit minus. Nostrum labore facilis veritatis enim ratione maxime illum omnis fugiat animi culpa iste et, non, quaerat explicabo laborum. Ab repellendus praesentium et officia, dolore iure id ratione perspiciatis, atque ducimus officiis magnam similique, dignissimos inventore qui culpa nobis ad rerum odit facere nostrum corporis tempore ut! Deserunt id error vitae numquam tempora, est provident architecto voluptatem facere dolor ab esse voluptatibus perferendis quam itaque sequi adipisci soluta, non nihil distinctio reiciendis quis sit pariatur? Sunt sint eligendi amet quibusdam laboriosam officia ducimus. Inventore et dolores obcaecati odio ad at, suscipit mollitia? Vero officia necessitatibus iusto voluptate soluta, illo maxime minima quibusdam distinctio sunt excepturi debitis eaque ipsum ab alias fugit consequatur ullam, adipisci, rem suscipit vitae. Consequatur soluta consequuntur at sequi fugit, non itaque sunt hic eum commodi ipsam id ullam dolore expedita ex nam architecto? A fugiat cum ipsum commodi. Magnam dolore deserunt necessitatibus porro, totam eum impedit sunt nulla vero? Recusandae commodi modi quos soluta possimus! Nobis laborum accusantium labore unde ipsum odit provident. Autem temporibus ad molestiae, qui, culpa vero nulla, tenetur saepe doloribus odio esse! Rerum non sunt quis maxime et molestiae minus, in laboriosam rem. Tenetur rem unde nostrum laudantium eligendi numquam laborum atque nam molestias, quae rerum iusto sint porro fugiat, facilis modi beatae dolorem eos ex incidunt sequi. Dolorem recusandae maxime voluptatem adipisci illo repudiandae dolores ipsam expedita, quidem eum! Error ratione dolore similique sint nobis iste ut architecto, excepturi consequatur provident. Voluptatibus et eius hic! Illum rem culpa minima rerum, ducimus ipsa fugiat sit nulla blanditiis optio, tempora sapiente illo quos nostrum veniam quia, debitis expedita similique dignissimos maxime a. Maiores, rem vitae? Iusto repellat fugiat repellendus ea qui inventore quisquam. Nostrum ratione enim laborum cum voluptatibus culpa pariatur, alias eum totam accusamus? Ducimus exercitationem necessitatibus quos similique, nostrum voluptate fugiat numquam, labore voluptatum voluptates nisi doloribus nihil. Voluptatem expedita nemo similique! Officia hic quam recusandae repudiandae quidem saepe dolorem accusamus qui, itaque, ea fugit quae. Iusto culpa libero perferendis repellat sequi eaque, necessitatibus quis, corrupti laboriosam repudiandae sint ratione asperiores inventore ab animi. Nobis suscipit doloribus autem eos minus nostrum, ratione quos deserunt, quaerat dolor recusandae ea magnam optio. Voluptas reprehenderit voluptatem culpa, itaque quibusdam perspiciatis in ex iure aliquid alias? Velit cupiditate consequatur repellendus ducimus dolor culpa tempora! Provident ullam vero tempore beatae pariatur quia soluta nulla totam, quaerat asperiores harum impedit nam quae quam, maiores quod perspiciatis obcaecati cum minima corrupti sapiente perferendis rerum. Dolore voluptatem provident cumque possimus, in numquam architecto minima incidunt quia dolores consequatur consectetur maxime aut veritatis. Nemo, eius iusto. Itaque, tempore impedit eaque eius voluptates atque numquam laudantium, saepe est magni voluptatem ipsa placeat molestiae quisquam! Eum dolores esse nulla sequi porro? Iste quam minus distinctio omnis. Nam iure eveniet ratione exercitationem eaque illo distinctio maiores mollitia maxime. Delectus, dolores quam consequuntur, reiciendis ut fuga voluptas nulla neque ab aut, unde officia labore minima iste natus modi vero nihil sapiente molestias. Sed architecto eius odit quas veritatis rerum? Quidem magnam alias nam sequi eos! Vero dolores et quo quisquam provident voluptatem, corporis neque ipsa dolor a vel aliquid vitae nisi ratione voluptatum ex.
+    <div class="container">
+      <ul>
+        <li>
+          <a href="#"><i class="fa-solid fa-house"></i> <span>Home</span></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-solid fa-address-book"></i><span>Contact</span></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-solid fa-file-signature"></i><span>Call</span></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-solid fa-id-card"></i><span>Order</span></a>
+        </li>
+      </ul>
+      <div class="circle"></div>
+    </div>
+    <script>
+      var links = document.querySelectorAll(".container a");
+      for (let index = 0; index < links.length; index++) {
+        const a = links[index];
+        a.onclick = () => {
+          var circle = document.querySelector(".container .circle");
+          circle.style.left = index * 25 + 25 / 2 + "%";
+        };
+      }
+      links[0].click();
+    </script>
+  </body>
+</html>
