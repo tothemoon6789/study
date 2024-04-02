@@ -248,7 +248,7 @@
           <ul>
             <li>
               Đối với cha
-  
+
               <ul>
                 <li>Border cha là đường bọc đám con inline - hay đường bọc vùng inline, <span>Bọc inline hết bỏ qua block, flex, grid, list-item, flow-root, table</span></li>
                 <li>Background cha là dòng inline, background được tô theo vùng inline chứ không theo border</li>
@@ -266,7 +266,6 @@
                 <li>Con inline hoặc inline-* cố gắng lên xuống dòng theo nội dung</li>
                 <li>chiều cao dòng là chiều cao của phần tử cao nhất</li>
                 <li>chiều rộng được thiết lập tự động theo nội dung hoặc thiết lập bằng width, max-width, min-width.</li>
-                
               </ul>
             </li>
           </ul>
@@ -335,15 +334,17 @@
             <li>Nếu không set height, chiều cao của nó chính là chiều cao của nội dung, nếu set height thì phải lưu ý đến việc nội dung bị tràn xuống bên dưới</li>
             <li>Nền viền tràn set được bình thường</li>
           </ul>
-          <ul>Đám con phản ứng theo bản chất của chúng, inline vẫn phản ứng theo inline, block vẫn cố gắng bằng cha, table vẫn phản ứng theo table</ul>
+          <ul>
+            Đám con phản ứng theo bản chất của chúng, inline vẫn phản ứng theo inline, block vẫn cố gắng bằng cha, table vẫn phản ứng theo table
+          </ul>
         </div>
         <div data-for="display-block" class="d-none">
           Phản ứng block
           <div class="text-dange">luu y: set width 400px, xem inspect thấy phần màu cam bên phải là của block, không cho thằng nào nhảy lên.</div>
-        <ul>
-          <li>Cố gắng bằng 100% chiều rộng của cha (Tới lề padding)</li>
-          <li>Đối với các phần tử khối thì có set width nhỏ cỡ nào thì cũng không lên dòng trên và đứa em inline kế tiếp cũng không thể nhảy lên trên được. Còn nếu set width quá lớn thì sẽ tràn ra ngoài. Và nói đúng hơn là tràn ra ngoài phần tử ông nội, cao nhất là body</li>
-        </ul>
+          <ul>
+            <li>Cố gắng bằng 100% chiều rộng của cha (Tới lề padding)</li>
+            <li>Đối với các phần tử khối thì có set width nhỏ cỡ nào thì cũng không lên dòng trên và đứa em inline kế tiếp cũng không thể nhảy lên trên được. Còn nếu set width quá lớn thì sẽ tràn ra ngoài. Và nói đúng hơn là tràn ra ngoài phần tử ông nội, cao nhất là body</li>
+          </ul>
           <ul>
             <li>Phần tử cha có thể set border, background, overflow bình thường</li>
             <li>Chiều rộng của phần tử cha sẻ cố gắng lấy 100% phần tử ông</li>
@@ -354,9 +355,7 @@
           </ul>
         </div>
         <div data-for="display-flex" class="d-none">
-          <h5>
-            Các giá trị mặc định tác động lên thẻ cha có display:flex
-          </h5>
+          <h5>Các giá trị mặc định tác động lên thẻ cha có display:flex</h5>
 
           <ul>
             <li><code>flex-wrap:nowarp</code></li>
@@ -421,14 +420,48 @@
             <li>Chính nó phản ứng là một inline, nên anh của nó inline-flex là thể loại inline thì khả năng nó cũng sẽ leo lên dòng</li>
             <li>Trước mắt, điểm khác biệt giuwax display-inline-flex va display flex la cái đầu tiên thì cũng biểu hiện flex nhưng lên dòng và có chiều rộng ôm nội dung, còn flex thì nằm 1 mình 1 dòng và cố bằng 100% chiều rộng của cha. Để thấy rõ, hãy set background, border cho chúng nhưng đảm bảo nội dung inline-flex đủ nhỏ để thấy sự khác biệt</li>
           </ul>
-      
+
           <ul>
-            <li>Đám con bị tự động chuyển đổi kiểu hiển thị, inline , inline-block, đám table-* trở thanh block, inline-flex tro thanh flex, inline-table trở thành table, block flex grid list-item, contents, flow-root không thay đổi </li>
+            <li>Đám con bị tự động chuyển đổi kiểu hiển thị, inline , inline-block, đám table-* trở thanh block, inline-flex tro thanh flex, inline-table trở thành table, block flex grid list-item, contents, flow-root không thay đổi</li>
             <li>Toàn bộ đám con có thể set width và height, ngoại trừ display:content</li>
           </ul>
         </div>
         <div data-for="display-inline-grid" class="d-none"></div>
         <div data-for="display-inline-table" class="d-none"></div>
+        <div data-for="flex" class="d-none">
+          <h5>Định nghĩa</h5>
+          <p>Gán giá trị cho <code>flex-grow</code> <code>flex-shrink</code> <code>flex-basis</code></p>
+          <h5>Cú pháp</h5>
+          <code>flex: <strong>flex-grow</strong> | <strong>flex-shrink</strong> | <strong>flex-basis</strong> ;</code>
+          <h5>Lưu ý</h5>
+          <span class="text-danger" style="font-weight: 900">Gán lên con</span>
+          <p>Khi set phần tử cha là display:flex thì toàn bộ các phần tử con có giá trị mặc định <code class="display-2">flex: 0 1 auto;</code></p>
+        </div>
+        <div data-for="flex-basis" class="d-none">
+          <h5>Định nghĩa</h5>
+          <p>Định nghĩa chiều rộng của phần tử con</p>
+          <ul>
+            <li><code>auto</code>: chiều rộng bằng với chiều rộng của nội dung, màn hình co dãn thì nội dung co dãn theo để các cột có chiều cao tương ứng gần bằng nhau</li>
+            <li><code>20%</code>: chiều rộng của item bằng 20% chiều rộng của phần tử cha, quá nhiều nội dung thì sẽ tự xuống dòng nhưng vẫn bằng 20%</li>
+            <li><code>300px</code>: chiều rộng của item bằng 300px khi co màn hình lại thì chiều rộng bị co lại vì <code>flex-shrink</code> có gía trị mặc định cho phần tử là 1, nhưng nếu set flex-shrink là <span class="display-2">0</span> thì co màn hình lại thì kích thước vẫn không đổi, câu chuyện ở đây là bị tràn</li>
+          </ul>
+          <h5>Cú pháp</h5>
+          <code>flex-basis: <strong>number</strong> | <strong>auto</strong> | <strong>initial</strong> | <strong>inherit</strong> ;</code>
+          <h5>Giá trị mặc định</h5>
+          <code>flex-basis: auto;</code>
+          <h5>Lưu ý</h5>
+          <span class="text-danger" style="font-weight: 900">Gán lên con</span>
+        </div>
+        <div data-for="flex-flow" class="d-none">
+          <h5>Định nghĩa</h5>
+          <p>Viết tắc cho thuộc tính <code>flex-direction</code> và <code>flex-wrap</code></p>
+          <h5>Mặc định:</h5>
+          <code>flex-wrap: row nowrap</code>
+          <h5>Cú pháp</h5>
+          <code>flex-wrap: <strong>flex-direction</strong> <strong>flex-wrap</strong> | <strong>initial</strong> | <strong>inherit</strong>;</code>
+          <h5>Lưu ý</h5>
+          <span class="text-danger" style="font-weight: 900">Gán lên cha</span>
+        </div>
         <div data-for="flex-grow" class="d-none"></div>
         <div data-for="flex-shrink" class="d-none"></div>
         <div data-for="justify-content" class="d-none"></div>
@@ -770,6 +803,29 @@
           <div class="alert alert-info" role="alert">-webkit-box-reflect: <strong>none</strong> | <strong>above</strong> | <strong>right</strong> | <strong>below</strong> | <strong>left</strong> | <strong>initial</strong> | <strong>inherit</strong></div>
         </div>
         <div data-for="caption-side" class="d-none"></div>
+        <div data-for="offset" class="d-none">
+          <h5>Định nghĩa</h5>
+          <p>Định vị một phần tử bất kỳ theo đường <code>path('')</code></p>
+          <h5>Lưu ý</h5>
+          <p>Có thể animation rất đẹp, dùng cho toàn bộ các phần tử</p>
+          <h5>Cú pháp</h5>
+          <code>offset: <strong>auto</strong> | <strong>value</strong> | <strong>initial</strong> | <strong>inherit</strong></code>
+          <span class="text-danger display-1">CHUA HIEU HET</span>
+          <p></p>
+        </div>
+        <div data-for="offset-path" class="d-none">
+          offset-path, vẽ đường path để tạo chuyển động trong offset
+        </div>
+        <div data-for="offset-distance" class="d-none">
+          offset-distance, tạo khoảng cách giửa điểm đầu và điểm cuối, từ 0% đến 100%
+        </div>
+        <div data-for="offset-rotate" class="d-none">
+          offset-rotate, quay element được offset theo 1 góc bao nhiêu độ đó từ 0deg đến 360deg, nhận giá trị âm
+        </div>
+        <div data-for="offset-anchor" class="d-none">
+          offset-rotate
+          <span class="text-danger display-1">CÁC TRÌNH DUYỆT KHÔNG HỖ TRỢ THUỘC TÍNH NÀY NGOẠI TRỪ FIREFORX</span>
+        </div>
         <div data-for="caret-color" class="d-none"></div>
         <div data-for="clip" class="d-none"></div>
         <div data-for="clip-path" class="d-none">
@@ -790,6 +846,15 @@
             }
           </style>
           <div class="clip-path"></div>
+        </div>
+
+        <div data-for="visibility" class="d-block">
+          <h5>Định nghĩa</h5>
+          <p>Ẩn hoặc hiện một phần tử nhưng vẫn giữ chỗ</p>
+          <h5>Lưu ý</h5>
+          <code>visibility:collapse;</code> sẽ làm ẩn cột hoặc hàng nào đó của table, và không gian đó sẽ được chiếm lấy bởi phần tử khác
+          <h5>Cú pháp</h5>
+          <code>visibility:hidden|visible|collapse</code>
         </div>
         <div data-for="content" class="d-none">content</div>
         <div data-for="cursor" class="d-none">
@@ -1400,37 +1465,34 @@
           <div class="alert alert-info" role="alert">5rem = 5 x fontsize của chính nó</div>
         </div>
         <div data-for="clamp" class="d-none">
-          <div class="alert alert-info" role="alert">
-            
-          </div>
-        <strong>clamp(100px,50%,400px)</strong> giá trị này là giá trị kẹp. Ví dụ .box có width:clamp(100px,50%,400px) là .box có chiều ngang giao động từ 100px đến 400px (100px, 101px, 102px .... 398px, 399px, 400px) và tương tứng với màn hình nhỏ hơn 100px / 50% = 200px thì .box có min width là 100px, màn hình vừa lớn hơn 100px vd 101px thì giá trị 50% bắt đầu được tính toán, tính đến 50% bằng 400px thì dừng. Màn hình nhận điểm cuối cùng là 400px/50% = 800px, vậy có thể hiểu. Màn hình dưới 200px nhận giá trị width 100px, màn hình tử 200px đến 800px nhận giá trị bằng 50%, màn hình trên 800px nhận giá trị 400px
-        <strong><span class="display-3 text-danger">width: clamp(45ch, 50%, 75ch);</span></strong>luu y truong hop nay, co nghia la: chữ sẽ nằm trong khoảng tỉ lệ vàng 1 hàng là 45 ký tự đến 75 ký tự.
+          <div class="alert alert-info" role="alert"></div>
+          <strong>clamp(100px,50%,400px)</strong> giá trị này là giá trị kẹp. Ví dụ .box có width:clamp(100px,50%,400px) là .box có chiều ngang giao động từ 100px đến 400px (100px, 101px, 102px .... 398px, 399px, 400px) và tương tứng với màn hình nhỏ hơn 100px / 50% = 200px thì .box có min width là 100px, màn hình vừa lớn hơn 100px vd 101px thì giá trị 50% bắt đầu được tính toán, tính đến 50% bằng 400px thì dừng. Màn hình nhận điểm cuối cùng là 400px/50% = 800px, vậy có thể hiểu. Màn hình dưới 200px nhận giá trị width 100px, màn hình tử 200px đến 800px nhận giá trị bằng 50%, màn hình trên 800px nhận giá trị 400px <strong><span class="display-3 text-danger">width: clamp(45ch, 50%, 75ch);</span></strong
+          >luu y truong hop nay, co nghia la: chữ sẽ nằm trong khoảng tỉ lệ vàng 1 hàng là 45 ký tự đến 75 ký tự.
         </div>
+
         <div id="minmax" class="d-none">
-          <span class="display-3 text-danger">minmax(value, value) chỉ dùng cho hiển thị grid</span> , ví dụ: grid-temaplte-columns
-          co màn hình lại sẽ thấy rõ
-          màu vàng giao động từ 100px đến 200px, Bai viet <a href="https://viblo.asia/p/cach-function-minmax-hoat-dong-trong-css-phan-1-Qbq5QqQ35D8#_length-1">go</a> nói cũng khá rõ, còn một số giá trị trong minmax(value,percent) hoặc minmax(value,max-content) ....
+          <span class="display-3 text-danger">minmax(value, value) chỉ dùng cho hiển thị grid</span> , ví dụ: grid-temaplte-columns co màn hình lại sẽ thấy rõ màu vàng giao động từ 100px đến 200px, Bai viet <a href="https://viblo.asia/p/cach-function-minmax-hoat-dong-trong-css-phan-1-Qbq5QqQ35D8#_length-1">go</a> nói cũng khá rõ, còn một số giá trị trong minmax(value,percent) hoặc minmax(value,max-content) ....
           <style>
             .minmax .item:first-child {
-                background-color: yellow;
+              background-color: yellow;
             }
             .minmax .item:nth-child(2) {
-                background-color: red;
+              background-color: red;
             }
             .minmax .item:last-child {
-                background-color: red;
+              background-color: red;
             }
             .minmax {
-                display: grid;
-                grid-template-columns: minmax(100px,200px) 1fr 1fr;
-                column-gap: 10px;
+              display: grid;
+              grid-template-columns: minmax(100px, 200px) 1fr 1fr;
+              column-gap: 10px;
             }
-        </style>
-        <div class="minmax">
-          <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, dignissimos.</div>
-          <div class="item"></div>
-          <div class="item"></div>
-      </div>
+          </style>
+          <div class="minmax">
+            <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, dignissimos.</div>
+            <div class="item"></div>
+            <div class="item"></div>
+          </div>
         </div>
       </div>
       <div id="total"></div>
@@ -1452,26 +1514,26 @@
       </div>
       <div id="scale-button-group" class="btn-group mb-5" role="group" aria-label="Basic example">
         <!-- <button  type="button" class="btn btn-secondary" onclick="resizeButtonToVerrySmall()">X Small</button> -->
-        <button  type="button" class="btn btn-secondary" onclick="resizeButton('heading-sx','button-type','btn-sx',this)">Verry Small</button>
+        <button type="button" class="btn btn-secondary" onclick="resizeButton('heading-sx','button-type','btn-sx',this)">Verry Small</button>
         <button id="btn-to-small-default" type="button" class="btn btn-secondary" onclick="resizeButton('heading-sm','button-type','btn-sm',this)">Small</button>
         <button type="button" class="btn btn-secondary" onclick="resizeButton('heading-md','button-type','btn-md',this)">Middle</button>
         <button type="button" class="btn btn-secondary" onclick="resizeButton('heading-lg','button-type','btn-lg',this)">Large</button>
       </div>
       <div id="control-area"></div>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>

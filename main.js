@@ -15,6 +15,7 @@
     { id: "btn-type-flex", heading: "Flex" },
     { id: "btn-type-grid", heading: "Grid" },
     { id: "btn-type-transform", heading: "Transform" },
+    { id: "btn-type-offset", heading: "Offset" },
     { id: "btn-type-transition", heading: "Transition" },
     { id: "btn-type-animation", heading: "Animation" },
     { id: "btn-type-column", heading: "Column" },
@@ -805,6 +806,11 @@
       text: "display-inline-table",
     },
     {
+      id: "flex",
+      class: "btn btn-warning btn-type-flex multiple",
+      text: "flex",
+    },
+    {
       id: "flex-grow",
       class: "btn btn-warning btn-type-flex multiple",
       text: "flex-grow",
@@ -813,6 +819,16 @@
       id: "flex-shrink",
       class: "btn btn-warning btn-type-flex multiple",
       text: "flex-shrink",
+    },
+    {
+      id: "flex-basis",
+      class: "btn btn-warning btn-type-flex multiple",
+      text: "flex-basis",
+    },
+    {
+      id: "flex-flow",
+      class: "btn btn-warning btn-type-flex multiple",
+      text: "flex-flow",
     },
     {
       id: "justify-content",
@@ -1185,6 +1201,11 @@
       text: "clip-path",
     },
     {
+      id: "visibility",
+      class: "btn btn-outline-primary btn-type-another",
+      text: "visibility",
+    },
+    {
       id: "content",
       class: "btn btn-outline-primary btn-type-another",
       text: "content",
@@ -1295,6 +1316,33 @@
       class: "btn btn-danger btn-type-value",
       text: "minmax",
     },
+    
+    {
+      id: "offset",
+      class: "btn btn-danger btn-type-offset",
+      text: "offset",
+    },
+    {
+      id: "offset-path",
+      class: "btn btn-danger btn-type-offset",
+      text: "offset-path",
+    },
+    {
+      id: "offset-distance",
+      class: "btn btn-danger btn-type-offset",
+      text: "offset-distance",
+    },
+    {
+      id: "offset-anchor",
+      class: "btn btn-danger btn-type-offset",
+      text: "offset-anchor",
+    },
+    {
+      id: "offset-rotate",
+      class: "btn btn-danger btn-type-offset",
+      text: "offset-rotate",
+    },
+
   ];
 
   var control_area = document.getElementById("control-area");
