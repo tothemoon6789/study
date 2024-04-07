@@ -1,787 +1,874 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Js</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <div class="container">
-      <div id="showing" class="mt-5">
-        <div id="js1" class="d-none">
-          <input type="text" /><button>Button</button>
-          <p>Bấm vào phần tử có thể active để in ra tagname</p>
-          <button class="start" onclick="activeELement(this)">START</button>
-          <div class="hide">
-            <hr />
-            <h2>Lưu ý:</h2>
-            <p class="note">Lấy phần tử bị active</p>
-            <p class="warning"></p>
-          </div>
-        </div>
-        <div id="js2" class="d-none">
-          <p>Bấm vào phần tử có thể active để in ra tagname</p>
-          <button id="buttonDA">Button Chưa được gán sự kiện</button>
+<head>
+  <title>Js</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div id="showing" class="mt-5">
+      <div id="js1" class="d-none">
+        <input type="text" /><button>Button</button>
+        <p>Bấm vào phần tử có thể active để in ra tagname</p>
+        <button class="start" onclick="activeELement(this)">START</button>
+        <div class="hide">
           <hr />
-          <button class="start" onclick="documentAddEventListener(this)">START</button>
-          <div class="">
-            <hr />
-            <h2>Lưu ý:</h2>
-            <p class="note">Lưu ý: một phần tử có thể thêm nhiều addEventListner, các phần tử cùng cùng event khai báo trước chạy trước</p>
-            <p class="warning"></p>
-          </div>
+          <h2>Lưu ý:</h2>
+          <p class="note">Lấy phần tử bị active</p>
+          <p class="warning"></p>
         </div>
-        <div id="js3" class="d-none">
-          <p>adoptNode nhận một phần tử từ một document khác, chẳng hạn document từ iframe</p>
-          <strong>danger</strong>them the nhatvuong moi
-          <!-- <iframe id="iframeAdopt" src="https://nhatvuong.vn/bao-gaming.html" frameborder="0" height="400px"></iframe> -->
+      </div>
+      <div id="js2" class="d-none">
+        <p>Bấm vào phần tử có thể active để in ra tagname</p>
+        <button id="buttonDA">Button Chưa được gán sự kiện</button>
+        <hr />
+        <button class="start" onclick="documentAddEventListener(this)">START</button>
+        <div class="">
           <hr />
-          <button class="start" disabled onclick="document_adoptNode()">START</button>
-          <div class="">
-            <hr />
-            <h2>Lưu ý:</h2>
-            <p class="note">Lưu ý: phần tử gốc bị di chuyển</p>
-            <p class="warning">Cảnh báo: dưới host vd thấy cảnh báo không có quyền try cập từ window</p>
-          </div>
+          <h2>Lưu ý:</h2>
+          <p class="note">Lưu ý: một phần tử có thể thêm nhiều addEventListner, các phần tử cùng cùng event khai báo
+            trước chạy trước</p>
+          <p class="warning"></p>
         </div>
-        <div id="js4" class="d-none">
-          <p>Phương thức này không còn dùng nữa</p>
-          <button class="start" disabled onclick="">START</button>
-          <div class="hide">
-            <hr />
-            <h2>Lưu ý:</h2>
-            <p class="note">Lưu ý:</p>
-            <p class="warning">Cảnh báo: Phương thức này không còn dùng nữa</p>
-          </div>
+      </div>
+      <div id="js3" class="d-none">
+        <p>adoptNode nhận một phần tử từ một document khác, chẳng hạn document từ iframe</p>
+        <strong>danger</strong>them the nhatvuong moi
+        <!-- <iframe id="iframeAdopt" src="https://nhatvuong.vn/bao-gaming.html" frameborder="0" height="400px"></iframe> -->
+        <hr />
+        <button class="start" disabled onclick="document_adoptNode()">START</button>
+        <div class="">
+          <hr />
+          <h2>Lưu ý:</h2>
+          <p class="note">Lưu ý: phần tử gốc bị di chuyển</p>
+          <p class="warning">Cảnh báo: dưới host vd thấy cảnh báo không có quyền try cập từ window</p>
         </div>
-        <div id="js5" class="d-none">
-          <p>Phương thức này không còn dùng nữa</p>
-          <button class="start" disabled onclick="">START</button>
-          <div class="hide">
-            <hr />
-            <h2>Lưu ý:</h2>
-            <p class="note">Lưu ý:</p>
-            <p class="warning">Cảnh báo:</p>
-          </div>
+      </div>
+      <div id="js4" class="d-none">
+        <p>Phương thức này không còn dùng nữa</p>
+        <button class="start" disabled onclick="">START</button>
+        <div class="hide">
+          <hr />
+          <h2>Lưu ý:</h2>
+          <p class="note">Lưu ý:</p>
+          <p class="warning">Cảnh báo: Phương thức này không còn dùng nữa</p>
         </div>
-        <div id="js6" class="d-none">
-          <p>baseURI dùng để lấy đường dẫn của trang</p>
-          <button class="start" onclick="document_baseURI()">START</button>
-          <div class="">
-            <hr />
-            <h2>Lưu ý:</h2>
-            <p class="note">Lưu ý: Chỉ được đọc, ko gán được</p>
-            <p class="warning">Cảnh báo: Không hỗ trợ trong Internet Explore</p>
-          </div>
+      </div>
+      <div id="js5" class="d-none">
+        <p>Phương thức này không còn dùng nữa</p>
+        <button class="start" disabled onclick="">START</button>
+        <div class="hide">
+          <hr />
+          <h2>Lưu ý:</h2>
+          <p class="note">Lưu ý:</p>
+          <p class="warning">Cảnh báo:</p>
         </div>
+      </div>
+      <div id="js6" class="d-none">
+        <p>baseURI dùng để lấy đường dẫn của trang</p>
+        <button class="start" onclick="document_baseURI()">START</button>
+        <div class="">
+          <hr />
+          <h2>Lưu ý:</h2>
+          <p class="note">Lưu ý: Chỉ được đọc, ko gán được</p>
+          <p class="warning">Cảnh báo: Không hỗ trợ trong Internet Explore</p>
+        </div>
+      </div>
 
-        <div id="js7" class="d-none">
-          <p>dùng để lấy kiểu ký tự để viết file html</p>
-          <button class="start" onclick="document_document_characterSet_lay()">START</button>
-          <div class="">
-            <hr />
-            <h2>Lưu ý:</h2>
-            <p class="note">Lưu ý: Chỉ được đọc, ko gán được</p>
-            <p class="warning"></p>
-          </div>
+      <div id="js7" class="d-none">
+        <p>dùng để lấy kiểu ký tự để viết file html</p>
+        <button class="start" onclick="document_document_characterSet_lay()">START</button>
+        <div class="">
+          <hr />
+          <h2>Lưu ý:</h2>
+          <p class="note">Lưu ý: Chỉ được đọc, ko gán được</p>
+          <p class="warning"></p>
         </div>
-        <div id="js8" class="d-none">
-          <p>window.document.charset không còn dùng nữa</p>
-        </div>
-        <div id="js9" class="d-none">
-          <p>window.document.charset không còn dùng nữa</p>
-        </div>
-        <div id="js10" class="d-none">
-          <p>Phương thức này khó tiếp cận do bảo mật của trình duyệt. dùng để THỰC THI đóng cửa sổ hiện tại.</p>
-          <button onclick="openAndCloseWindow()">Thử</button>
-          <script>
-            function openAndCloseWindow() {
-              const myWindow = window.open("", "", "width=400,height=200"); // Tùy chỉnh kích thước (tùy chọn)
-              if (myWindow) {
-                // Kiểm tra xem cửa sổ có được mở thành công hay không
-                myWindow.document.open();
-                myWindow.document.write("<h1>Xin chào Thế giới!</h1>");
-                // Thêm nút "Đóng" vào cửa sổ mới
-                const closeButton = document.createElement("button");
-                closeButton.textContent = "Đóng";
-                closeButton.onclick = function () {
-                  myWindow.document.close();
-                };
-                myWindow.document.body.appendChild(closeButton);
-              } else {
-                alert("Không thể mở cửa sổ mới. Cửa sổ bật lên có thể bị chặn bởi trình duyệt của bạn.");
-              }
+      </div>
+      <div id="js8" class="d-none">
+        <p>window.document.charset không còn dùng nữa</p>
+      </div>
+      <div id="js9" class="d-none">
+        <p>window.document.charset không còn dùng nữa</p>
+      </div>
+      <div id="js10" class="d-none">
+        <p>Phương thức này khó tiếp cận do bảo mật của trình duyệt. dùng để THỰC THI đóng cửa sổ hiện tại.</p>
+        <button onclick="openAndCloseWindow()">Thử</button>
+        <script>
+          function openAndCloseWindow() {
+            const myWindow = window.open("", "", "width=400,height=200"); // Tùy chỉnh kích thước (tùy chọn)
+            if (myWindow) {
+              // Kiểm tra xem cửa sổ có được mở thành công hay không
+              myWindow.document.open();
+              myWindow.document.write("<h1>Xin chào Thế giới!</h1>");
+              // Thêm nút "Đóng" vào cửa sổ mới
+              const closeButton = document.createElement("button");
+              closeButton.textContent = "Đóng";
+              closeButton.onclick = function () {
+                myWindow.document.close();
+              };
+              myWindow.document.body.appendChild(closeButton);
+            } else {
+              alert("Không thể mở cửa sổ mới. Cửa sổ bật lên có thể bị chặn bởi trình duyệt của bạn.");
             }
-          </script>
-        </div>
-        <div id="js11" class="d-none">
-          <p>lấy cookie của trang web</p>
-          <ul>
-            <li>Cookie là một chuỗi (string)</li>
-            <li>Cookie được sử dụng cho client-server (browser-server), localStorage sử dụng cho client (browser)</li>
-            <li>Cookie có ngày hết hạn, localStorage không có ngày hết hạn</li>
-            <li>Cookie bị giới hạn 4kb lưu trữ / 1 domain, trong khi localStorage tới 5MB/1domain</li>
-          </ul>
+          }
+        </script>
+      </div>
+      <div id="js11" class="d-none">
+        <p>lấy cookie của trang web</p>
+        <ul>
+          <li>Cookie là một chuỗi (string)</li>
+          <li>Cookie được sử dụng cho client-server (browser-server), localStorage sử dụng cho client (browser)</li>
+          <li>Cookie có ngày hết hạn, localStorage không có ngày hết hạn</li>
+          <li>Cookie bị giới hạn 4kb lưu trữ / 1 domain, trong khi localStorage tới 5MB/1domain</li>
+        </ul>
 
-          <button class="btn btn-primary" onclick="test()">GET</button>
+        <button class="btn btn-primary" onclick="test()">GET</button>
 
-          <button class="btn btn-outline-primary" onclick="">SET</button>
+        <button class="btn btn-outline-primary" onclick="">SET</button>
 
-          <div class="container">
-            <hr />
-            <h2>Lưu ý:</h2>
-            <div class="alert alert-success" role="alert">
-              <strong>success</strong>
-            </div>
-            <div class="alert alert-danger" role="alert">
-              <strong>Chưa có sử dụng set được, xem lại</strong>
-            </div>
-          </div>
-        </div>
-        <div id="js12" class="d-none">
-          <p>Thực thi tạo mới một thuộc tính (hay còn gọi là attribute)</p>
-          <button class="btn btn-outline-primary" onclick="window_document_createAttribute()">Tạo mới</button>
-        </div>
-        <div id="js13" class="d-none">
-          <p>Thực thi tạo mới một nút ghi chú và trả về nút ghi chú đó</p>
-          <button class="btn btn-outline-primary" onclick="window_document_createComment()">Tạo mới</button>
-        </div>
-        <div id="js14" class="d-none">
-          <div class="alert alert-info" role="alert">
-            <strong>Thực thi tạo mới một nút ngoài màn hình</strong>
-          </div>
-          <button type="button" class="btn btn-primary" onclick="window_document_createDocumentFragment()">Play</button>
-        </div>
-        <div id="js15" class="d-none">
-          <div class="alert alert-info" role="alert">
-            <strong>Thực thi tạo mới một element</strong>
-          </div>
-          <button type="button" class="btn btn-primary" onclick="window_document_createElement()">Play</button>
-        </div>
-        <div id="js16" class="d-none">
-          <div class="alert alert-info" role="alert">
-            <strong>Thực thi tạo mới một event</strong>
-          </div>
-          <button type="button" class="btn btn-primary" onclick="window_document_createEvent()">Play</button>
-          <div id="window_document_createEvent_id" style="padding: 50px; background-color: yellow" onmouseover="this.innerHTML += '*';">*</div>
-        </div>
-        <div id="js17" class="d-none">
-          <div class="alert alert-info" role="alert">
-            <strong>Thực thi tạo mới một nút text</strong>
-          </div>
-          <button type="button" class="btn btn-primary" onclick="window_document_createTextNode()">Play</button>
-        </div>
-        <div id="js18" class="d-none">
-          <div class="alert alert-info" role="alert"><strong>window === document.defaultView //true</strong> lấy đối tượng window</div>
-          <button type="button" class="btn btn-primary" onclick="window_document_defaultView()">Play</button>
-        </div>
-        <div id="js19" class="d-none">
-          <div class="alert alert-info" role="alert">
-            <strong>Lấy hoặc gán chức năng desgin mode</strong>
-          </div>
-          <button type="button" class="btn btn-primary" onclick="window_document_designMode()">Play</button>
-        </div>
-
-        <div id="js20" class="d-none">
-          <div class="alert alert-info" role="alert">
-            <strong>Lấy kiểu doctype </strong>
-          </div>
-          <div class="alert alert-danger" role="alert"><strong>Cảnh báo: </strong> chỉ được lấy không được gán</div>
-          <button type="button" class="btn btn-primary" onclick="window_document_doctype()">Play</button>
-        </div>
-        <div id="js21" class="d-none">
-          <div class="alert alert-info" role="alert">
-            <strong>Dùng để lấy đối tượng document html</strong>
+        <div class="container">
+          <hr />
+          <h2>Lưu ý:</h2>
+          <div class="alert alert-success" role="alert">
+            <strong>success</strong>
           </div>
           <div class="alert alert-danger" role="alert">
-            <strong>Read-only</strong>
+            <strong>Chưa có sử dụng set được, xem lại</strong>
           </div>
-          <div class="alert alert-danger" role="alert"><strong>document === document.documentElement // false</strong> document.documentElement trả về thẻ html và nội dung của nó.</div>
+        </div>
+      </div>
+      <div id="js12" class="d-none">
+        <p>Thực thi tạo mới một thuộc tính (hay còn gọi là attribute)</p>
+        <button class="btn btn-outline-primary" onclick="window_document_createAttribute()">Tạo mới</button>
+      </div>
+      <div id="js13" class="d-none">
+        <p>Thực thi tạo mới một nút ghi chú và trả về nút ghi chú đó</p>
+        <button class="btn btn-outline-primary" onclick="window_document_createComment()">Tạo mới</button>
+      </div>
+      <div id="js14" class="d-none">
+        <div class="alert alert-info" role="alert">
+          <strong>Thực thi tạo mới một nút ngoài màn hình</strong>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="window_document_createDocumentFragment()">Play</button>
+      </div>
+      <div id="js15" class="d-none">
+        <div class="alert alert-info" role="alert">
+          <strong>Thực thi tạo mới một element</strong>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="window_document_createElement()">Play</button>
+      </div>
+      <div id="js16" class="d-none">
+        <div class="alert alert-info" role="alert">
+          <strong>Thực thi tạo mới một event</strong>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="window_document_createEvent()">Play</button>
+        <div id="window_document_createEvent_id" style="padding: 50px; background-color: yellow"
+          onmouseover="this.innerHTML += '*';">*</div>
+      </div>
+      <div id="js17" class="d-none">
+        <div class="alert alert-info" role="alert">
+          <strong>Thực thi tạo mới một nút text</strong>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="window_document_createTextNode()">Play</button>
+      </div>
+      <div id="js18" class="d-none">
+        <div class="alert alert-info" role="alert"><strong>window === document.defaultView //true</strong> lấy đối tượng
+          window</div>
+        <button type="button" class="btn btn-primary" onclick="window_document_defaultView()">Play</button>
+      </div>
+      <div id="js19" class="d-none">
+        <div class="alert alert-info" role="alert">
+          <strong>Lấy hoặc gán chức năng desgin mode</strong>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="window_document_designMode()">Play</button>
+      </div>
 
-          <button type="button" class="btn btn-primary" onclick="window_document_documentElement()">Play</button>
+      <div id="js20" class="d-none">
+        <div class="alert alert-info" role="alert">
+          <strong>Lấy kiểu doctype </strong>
         </div>
-        <div id="js22" class="d-none">
-          <div class="alert alert-info" role="alert">Dùng để lấy hoặc gán địa chỉ của trang document</div>
-          <div class="alert alert-warning" role="alert"><strong>Cảnh báo: </strong> chưa thực hiện được phép gán</div>
-          <div class="alert alert-danger" role="alert"><strong>Nguy hiểm: </strong>không sử dụng được cho IE 11 trở xuống</div>
-          <button type="button" class="btn btn-primary" onclick="window_document_documentURI()">Play</button>
+        <div class="alert alert-danger" role="alert"><strong>Cảnh báo: </strong> chỉ được lấy không được gán</div>
+        <button type="button" class="btn btn-primary" onclick="window_document_doctype()">Play</button>
+      </div>
+      <div id="js21" class="d-none">
+        <div class="alert alert-info" role="alert">
+          <strong>Dùng để lấy đối tượng document html</strong>
         </div>
-        <div id="js23" class="d-none">
-          <div class="alert alert-info" role="alert">Dùng để lấy tên miền của trang web</div>
-          <button type="button" class="btn btn-primary" onclick="window_document_domain()">Play</button>
+        <div class="alert alert-danger" role="alert">
+          <strong>Read-only</strong>
         </div>
-        <div id="js24" class="d-none">
-          <div class="alert alert-danger" role="alert"><strong>domConfig</strong> không còn được dùng nữa</div>
-        </div>
+        <div class="alert alert-danger" role="alert"><strong>document === document.documentElement // false</strong>
+          document.documentElement trả về thẻ html và nội dung của nó.</div>
 
-        <div id="js25" class="d-none">
-          <div class="alert alert-danger" role="alert"><strong>embeds</strong> hầu hết các trình duyệt không còn hỗ trợ nữa, thẻ này lúc trước dùng để nhúng img, iframe, video, audio</div>
+        <button type="button" class="btn btn-primary" onclick="window_document_documentElement()">Play</button>
+      </div>
+      <div id="js22" class="d-none">
+        <div class="alert alert-info" role="alert">Dùng để lấy hoặc gán địa chỉ của trang document</div>
+        <div class="alert alert-warning" role="alert"><strong>Cảnh báo: </strong> chưa thực hiện được phép gán</div>
+        <div class="alert alert-danger" role="alert"><strong>Nguy hiểm: </strong>không sử dụng được cho IE 11 trở xuống
         </div>
-        <div id="js26" class="d-none">
-          <div class="alert alert-danger" role="alert"><strong>execCommand()</strong> không còn được dùng nữa</div>
-        </div>
-        <div id="js27" class="d-none">
-          <div class="alert alert-info" role="alert">Dùng để lấy toàn bộ thẻ form trong document</div>
-          <div class="alert alert-danger" role="alert">
-            <strong>Read-only !</strong>
-          </div>
-          <button onclick="window_document_forms()" type="button" class="btn btn-outline-primary">Play</button>
-        </div>
-        <div id="js28" class="d-none">
-          <div class="alert alert-info" role="alert">Lấy một phần tử thông qua ID</div>
-          <div class="alert alert-warning" role="alert">Trả về null nếu tìm không ra</div>
-        </div>
-        <div id="js29" class="d-none">
-          <div class="alert alert-info" role="alert">Lấy danh sách các phần tử có cùng class</div>
-          <div class="alert alert-danger" role="alert">
-            <strong>Read-only !</strong>
-          </div>
-        </div>
-        <div id="js30" class="d-none">
-          <div class="alert alert-info" role="alert">Lấy danh sách các phần tử thông qua thuộc tính <strong>name</strong> của element</div>
-        </div>
-        <div id="js31" class="d-none">
-          <div class="alert alert-info" role="alert">Lấy danh sách các phần tử thông qua tên thẻ</div>
-          <div class="alert alert-danger" role="alert">
-            <strong>Read-only !</strong>
-          </div>
-        </div>
-        <div id="js32" class="d-none">
-          <div class="alert alert-info" role="alert">Lấy boolean nếu document có hoặc không có focus()</div>
-          <div class="alert alert-danger" role="alert">
-            <strong>Read-only !</strong>
-          </div>
-          <div class="form-group">
-            <label for="">EX</label>
-            <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Place holder" />
-            <small id="helpId" class="form-text text-muted">Help text</small>
-          </div>
-          <button type="button" class="btn btn-primary" onclick="window_document_hasFocus()">Play</button>
-        </div>
-        <div id="js33" class="d-none">
-          <div class="alert alert-info" role="alert">Lấy thẻ head</div>
-          <button type="button" class="btn btn-primary" onclick="window_document_head()">Play</button>
-        </div>
-        <div id="js34" class="d-none">
-          <div class="alert alert-info" role="alert">Lấy toàn bộ thẻ img trong document</div>
-          <img src="../asset/images/border-image-1.png" alt="" srcset="" />
-          <img src="../asset/images/border-image-2.webp" alt="" srcset="" />
-          <img src="../asset/images/image.jpeg" alt="" srcset="" />
-          <button type="button" class="btn btn-primary" onclick="window_document_images()">Play</button>
-        </div>
-        <div id="js35" class="d-none">
-          <div class="alert alert-info" role="alert">Lấy đối tượng DOMimplementation</div>
-          <button type="button" class="btn btn-primary" onclick="window_document_implementation()">Play</button>
-        </div>
-        <div id="js36" class="d-none">
-          <div class="alert alert-info" role="alert">Nạp 1 phần tử từ iframe</div>
-          <div class="alert alert-danger" role="alert"><strong>danger</strong>them the nhatvuong moi</div>
-          <!-- <iframe id="importNodeIframe" src="https://nhatvuong.vn/" frameborder="0"></iframe> -->
-          <div id="importNodeIframeDiv"></div>
-          <button type="button" class="btn btn-primary" onclick="window_document_importNode()">Play</button>
-        </div>
-        <div id="js37" class="d-none"></div>
-        <div id="js38" class="d-none">
-          <div class="alert alert-info" role="alert">Lấy thời gian cuối cùng trang web được chỉnh sửa</div>
-          <button type="button" class="btn btn-primary" onclick="window_document_lastModified()">Play</button>
-        </div>
-        <div id="js39" class="d-none">
-          <div class="alert alert-info" role="alert">Lấy danh sách toàn bộ link của trang</div>
-          <button type="button" class="btn btn-primary" onclick="window_document_normalize()">Play</button>
-        </div>
-        <div id="js40" class="d-none">
-          <div class="alert alert-info" role="alert">Thực thi hợp nhất các nút text gần nhau, xoá các nút text rỗng</div>
-        </div>
-        <div id="js41" class="d-none">
-          <div class="alert alert-info" role="alert">Không còn được dùng nữa</div>
-        </div>
-        <div id="js42" class="d-none">
-          <div class="alert alert-info" role="alert">Thực thi mở một cửa sổ mới</div>
-          <button type="button" class="btn btn-primary" onclick="window_document_open()">Play</button>
-        </div>
-        <div id="js43" class="d-none">
-          <div class="alert alert-info" role="alert">Thực thi lấy danh sách 1 phần tử đầu tiên trong danh sách</div>
-          <button type="button" class="btn btn-primary" onclick="window_document_open()">Play</button>
-        </div>
-        <div id="js44" class="d-none">
-          <div class="alert alert-info" role="alert">Thực thi lấy danh sách các phần tử</div>
-          <button type="button" class="btn btn-primary" onclick="window_document_open()">Play</button>
-        </div>
-        <div id="js45" class="d-none">
-          <div class="alert alert-danger" role="alert">Phương thức này thực ra chưa hiểu</div>
-          <button type="button" class="btn btn-primary" onclick="">Play</button>
-        </div>
-        <div id="js46" class="d-none">
-          <div class="alert alert-info" role="alert">Lấy đường dẫn đã load trang web</div>
-          <button type="button" class="btn btn-primary" onclick="window_document_referrer()">Play</button>
-        </div>
-        <div id="js47" class="d-none">
-          <div class="alert alert-info" role="alert">Thực thi xoá sự kiện cho một đối tượng element</div>
-          <div class="alert alert-danger" role="alert">Hiện tại chưa remove được khi gán sự kiện trong html bằng onclick</div>
-          <button id="js47Button" type="button" class="btn btn-primary" onclick="window_document_removeEventListener()">Play</button>
-        </div>
-        <div id="js48" class="d-none">
-          <div class="alert alert-info" role="alert">renameNode() không còn dùng nữa</div>
-        </div>
-        <div id="js49" class="d-none">
-          <div class="alert alert-info" role="alert">Lấy danh sách toàn bộ element script trong trang web</div>
-        </div>
-        <div id="js50" class="d-none">
-          <div class="alert alert-info" role="alert">strictErrorChecking không còn dùng nữa</div>
-        </div>
+        <button type="button" class="btn btn-primary" onclick="window_document_documentURI()">Play</button>
+      </div>
+      <div id="js23" class="d-none">
+        <div class="alert alert-info" role="alert">Dùng để lấy tên miền của trang web</div>
+        <button type="button" class="btn btn-primary" onclick="window_document_domain()">Play</button>
+      </div>
+      <div id="js24" class="d-none">
+        <div class="alert alert-danger" role="alert"><strong>domConfig</strong> không còn được dùng nữa</div>
+      </div>
 
-        <div id="js51" class="d-none">
-          <div class="alert alert-info" role="alert">Lấy hoặc gán tiêu đề trang</div>
-          <button type="button" class="btn btn-primary" onclick=" document.title = 'Tieu de da bi thay doi';this.innerHTML = document.title">Gán</button>
+      <div id="js25" class="d-none">
+        <div class="alert alert-danger" role="alert"><strong>embeds</strong> hầu hết các trình duyệt không còn hỗ trợ
+          nữa, thẻ này lúc trước dùng để nhúng img, iframe, video, audio</div>
+      </div>
+      <div id="js26" class="d-none">
+        <div class="alert alert-danger" role="alert"><strong>execCommand()</strong> không còn được dùng nữa</div>
+      </div>
+      <div id="js27" class="d-none">
+        <div class="alert alert-info" role="alert">Dùng để lấy toàn bộ thẻ form trong document</div>
+        <div class="alert alert-danger" role="alert">
+          <strong>Read-only !</strong>
         </div>
-        <div id="js52" class="d-none">
-          <div class="alert alert-info" role="alert">Lấy đường dẫn đến trang web</div>
-          <button type="button" class="btn btn-primary" onclick="this.innerHTML = document.URL">Play</button>
+        <button onclick="window_document_forms()" type="button" class="btn btn-outline-primary">Play</button>
+      </div>
+      <div id="js28" class="d-none">
+        <div class="alert alert-info" role="alert">Lấy một phần tử thông qua ID</div>
+        <div class="alert alert-warning" role="alert">Trả về null nếu tìm không ra</div>
+      </div>
+      <div id="js29" class="d-none">
+        <div class="alert alert-info" role="alert">Lấy danh sách các phần tử có cùng class</div>
+        <div class="alert alert-danger" role="alert">
+          <strong>Read-only !</strong>
         </div>
-        <div id="js53" class="d-none">
-          <div class="alert alert-info" role="alert">In ra màn hình document không xuống dòng</div>
-          <button type="button" class="btn btn-primary" onclick="document.write('xin chao')">Play</button>
+      </div>
+      <div id="js30" class="d-none">
+        <div class="alert alert-info" role="alert">Lấy danh sách các phần tử thông qua thuộc tính <strong>name</strong>
+          của element</div>
+      </div>
+      <div id="js31" class="d-none">
+        <div class="alert alert-info" role="alert">Lấy danh sách các phần tử thông qua tên thẻ</div>
+        <div class="alert alert-danger" role="alert">
+          <strong>Read-only !</strong>
         </div>
-        <div id="js54" class="d-none">
-          <div class="alert alert-info" role="alert">In ra màn hình document có xuống dòng</div>
-          <div class="alert alert-danger" role="alert">Test không thể xuống dòng !</div>
-          <button type="button" class="btn btn-primary" onclick="window_document_writeln()">Play</button>
-          <script>
-            function window_document_writeln() {
-              document.write("Hello World!");
-              document.write("Have a nice day!");
-              document.write("<br>");
-              document.writeln("Hello World!");
-              document.writeln("Have a nice day!");
-            }
-          </script>
+      </div>
+      <div id="js32" class="d-none">
+        <div class="alert alert-info" role="alert">Lấy boolean nếu document có hoặc không có focus()</div>
+        <div class="alert alert-danger" role="alert">
+          <strong>Read-only !</strong>
         </div>
-        <div id="js55" class="d-none">
-          <div class="alert alert-danger" role="alert">Hạn chế dùng vì confit với những access key khác</div>
+        <div class="form-group">
+          <label for="">EX</label>
+          <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Place holder" />
+          <small id="helpId" class="form-text text-muted">Help text</small>
         </div>
-        <div id="js56" class="d-none">
-          <div class="alert alert-info" role="alert">Thêm một nút trước thẻ đóng một element</div>
-          <h5>Cú pháp</h5>
-          <div class="alert alert-info" role="alert"><strong>element.appendChild(node)</strong> hoặc <strong>node.appendChild(node)</strong></div>
+        <button type="button" class="btn btn-primary" onclick="window_document_hasFocus()">Play</button>
+      </div>
+      <div id="js33" class="d-none">
+        <div class="alert alert-info" role="alert">Lấy thẻ head</div>
+        <button type="button" class="btn btn-primary" onclick="window_document_head()">Play</button>
+      </div>
+      <div id="js34" class="d-none">
+        <div class="alert alert-info" role="alert">Lấy toàn bộ thẻ img trong document</div>
+        <img src="../asset/images/border-image-1.png" alt="" srcset="" />
+        <img src="../asset/images/border-image-2.webp" alt="" srcset="" />
+        <img src="../asset/images/image.jpeg" alt="" srcset="" />
+        <button type="button" class="btn btn-primary" onclick="window_document_images()">Play</button>
+      </div>
+      <div id="js35" class="d-none">
+        <div class="alert alert-info" role="alert">Lấy đối tượng DOMimplementation</div>
+        <button type="button" class="btn btn-primary" onclick="window_document_implementation()">Play</button>
+      </div>
+      <div id="js36" class="d-none">
+        <div class="alert alert-info" role="alert">Nạp 1 phần tử từ iframe</div>
+        <div class="alert alert-danger" role="alert"><strong>danger</strong>them the nhatvuong moi</div>
+        <!-- <iframe id="importNodeIframe" src="https://nhatvuong.vn/" frameborder="0"></iframe> -->
+        <div id="importNodeIframeDiv"></div>
+        <button type="button" class="btn btn-primary" onclick="window_document_importNode()">Play</button>
+      </div>
+      <div id="js37" class="d-none"></div>
+      <div id="js38" class="d-none">
+        <div class="alert alert-info" role="alert">Lấy thời gian cuối cùng trang web được chỉnh sửa</div>
+        <button type="button" class="btn btn-primary" onclick="window_document_lastModified()">Play</button>
+      </div>
+      <div id="js39" class="d-none">
+        <div class="alert alert-info" role="alert">Lấy danh sách toàn bộ link của trang</div>
+        <button type="button" class="btn btn-primary" onclick="window_document_normalize()">Play</button>
+      </div>
+      <div id="js40" class="d-none">
+        <div class="alert alert-info" role="alert">Thực thi hợp nhất các nút text gần nhau, xoá các nút text rỗng</div>
+      </div>
+      <div id="js41" class="d-none">
+        <div class="alert alert-info" role="alert">Không còn được dùng nữa</div>
+      </div>
+      <div id="js42" class="d-none">
+        <div class="alert alert-info" role="alert">Thực thi mở một cửa sổ mới</div>
+        <button type="button" class="btn btn-primary" onclick="window_document_open()">Play</button>
+      </div>
+      <div id="js43" class="d-none">
+        <div class="alert alert-info" role="alert">Thực thi lấy danh sách 1 phần tử đầu tiên trong danh sách</div>
+        <button type="button" class="btn btn-primary" onclick="window_document_open()">Play</button>
+      </div>
+      <div id="js44" class="d-none">
+        <div class="alert alert-info" role="alert">Thực thi lấy danh sách các phần tử</div>
+        <button type="button" class="btn btn-primary" onclick="window_document_open()">Play</button>
+      </div>
+      <div id="js45" class="d-none">
+        <div class="alert alert-danger" role="alert">Phương thức này thực ra chưa hiểu</div>
+        <button type="button" class="btn btn-primary" onclick="">Play</button>
+      </div>
+      <div id="js46" class="d-none">
+        <div class="alert alert-info" role="alert">Lấy đường dẫn đã load trang web</div>
+        <button type="button" class="btn btn-primary" onclick="window_document_referrer()">Play</button>
+      </div>
+      <div id="js47" class="d-none">
+        <div class="alert alert-info" role="alert">Thực thi xoá sự kiện cho một đối tượng element</div>
+        <div class="alert alert-danger" role="alert">Hiện tại chưa remove được khi gán sự kiện trong html bằng onclick
         </div>
-        <div id="js57" class="d-none">
-          <div class="alert alert-info" role="alert" id="123" tab-index="-1" position="5" style="background-color: aliceblue">Lấy danh sách các thuộc tính trong 1 phần tử <strong>NamedNodeMap</strong> kể cả class, id , style</div>
-        </div>
-        <div id="js58" class="d-none">
-          <div class="alert alert-info">Xoá tập trung (focus) lên phần tử</div>
-          <h5>Cú pháp</h5>
-          <div class="alert alert-info" role="alert">
-            <strong>HTMLELementObject.blur()</strong>
-          </div>
-          <input type="text" /><br />
-          <button type="button" onclick="document.querySelector('js58 input').blur()" class="btn btn-primary mt-3">Play</button>
-        </div>
-        <div id="js59" class="d-none">
-          <div class="alert alert-info" role="alert">Đếm số lượng con của 1 element (chỉ đếm trong nhánh chính);</div>
-          <div class="text-danger">Đếm <span class="display-3">element</span> không đếm <span class="display-2" style="text-decoration: line-through;">nút</span></div>
-          <h5>Cú pháp</h5>
-          <div class="alert alert-info" role="alert">
-            <strong>element.childElementCount</strong>
-          </div>
-          <p>Lưu ý: dùng với đám <code>elements = document.querySelectorAll() | .getElementByClassName() | .getElementsByName() | .getELementsByTagName() </code> tóm lại return về số nhiều thì phải lặp nó ra chứ không sẽ bị <code>undefined</code></p>
-          <div class="alert alert-info" role="alert">
-            element.childElementCount chỉ dùng trực tiếp được với document.querySelector() hoặc document.getElementById()
-          </div>
-        </div>
-        <div id="js60" class="d-none">
-          <div id="noid" class="alert alert-info" role="alert">Lấy danh sách các nút con trực tiếp - <strong>NodeList</strong>, có nút chữ, có nút ghi chú</div>
-          <div class="alert alert-warning" role="alert">Danh sách trả về có nút chữ, nên có thể dùng js để thay đổi. Còn nếu gọi children, không thể thay đổi nút chữ do nút chữ không được trả về</div>
-          <img src="../asset/images/element-family.svg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
-          <h5>Cú pháp</h5>
-          <div class="alert alert-info" role="alert">
-            <strong>element.childNode<strong class="text-danger">s</strong></strong>
-          </div>
-          <p>Lưu ý: dùng với đám <code>elements = document.querySelectorAll() | .getElementByClassName() | .getElementsByName() | .getELementsByTagName() </code> tóm lại return về số nhiều thì phải lặp nó ra chứ không sẽ bị <code>undefined</code></p>
-          <div class="alert alert-info" role="alert">
-            element.childNodes chỉ dùng trực tiếp được với document.querySelector() hoặc document.getElementById()
-          </div>
-        </div>
-        <div id="js61" class="d-none">
-          <div class="alert alert-info" role="alert">
-            Lấy danh sách các nút element - <strong>HTMLCollection</strong> của một phần tử <span class="text-danger">Danh sách <strong>không có</strong> nút text, nút comment</span>
+        <button id="js47Button" type="button" class="btn btn-primary"
+          onclick="window_document_removeEventListener()">Play</button>
+      </div>
+      <div id="js48" class="d-none">
+        <div class="alert alert-info" role="alert">renameNode() không còn dùng nữa</div>
+      </div>
+      <div id="js49" class="d-none">
+        <div class="alert alert-info" role="alert">Lấy danh sách toàn bộ element script trong trang web</div>
+      </div>
+      <div id="js50" class="d-none">
+        <div class="alert alert-info" role="alert">strictErrorChecking không còn dùng nữa</div>
+      </div>
 
-          </div>
-          <img src="../asset/images/element-family.svg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+      <div id="js51" class="d-none">
+        <div class="alert alert-info" role="alert">Lấy hoặc gán tiêu đề trang</div>
+        <button type="button" class="btn btn-primary"
+          onclick=" document.title = 'Tieu de da bi thay doi';this.innerHTML = document.title">Gán</button>
+      </div>
+      <div id="js52" class="d-none">
+        <div class="alert alert-info" role="alert">Lấy đường dẫn đến trang web</div>
+        <button type="button" class="btn btn-primary" onclick="this.innerHTML = document.URL">Play</button>
+      </div>
+      <div id="js53" class="d-none">
+        <div class="alert alert-info" role="alert">In ra màn hình document không xuống dòng</div>
+        <button type="button" class="btn btn-primary" onclick="document.write('xin chao')">Play</button>
+      </div>
+      <div id="js54" class="d-none">
+        <div class="alert alert-info" role="alert">In ra màn hình document có xuống dòng</div>
+        <div class="alert alert-danger" role="alert">Test không thể xuống dòng !</div>
+        <button type="button" class="btn btn-primary" onclick="window_document_writeln()">Play</button>
+        <script>
+          function window_document_writeln() {
+            document.write("Hello World!");
+            document.write("Have a nice day!");
+            document.write("<br>");
+            document.writeln("Hello World!");
+            document.writeln("Have a nice day!");
+          }
+        </script>
+      </div>
+      <div id="js55" class="d-none">
+        <div class="alert alert-danger" role="alert">Hạn chế dùng vì confit với những access key khác</div>
+      </div>
+      <div id="js56" class="d-none">
+        <div class="alert alert-info" role="alert">Thêm một nút trước thẻ đóng một element</div>
+        <h5>Cú pháp</h5>
+        <div class="alert alert-info" role="alert"><strong>element.appendChild(node)</strong> hoặc
+          <strong>node.appendChild(node)</strong></div>
+      </div>
+      <div id="js57" class="d-none">
+        <div class="alert alert-info" role="alert" id="123" tab-index="-1" position="5"
+          style="background-color: aliceblue">Lấy danh sách các thuộc tính trong 1 phần tử <strong>NamedNodeMap</strong>
+          kể cả class, id , style</div>
+      </div>
+      <div id="js58" class="d-none">
+        <div class="alert alert-info">Xoá tập trung (focus) lên phần tử</div>
+        <h5>Cú pháp</h5>
+        <div class="alert alert-info" role="alert">
+          <strong>HTMLELementObject.blur()</strong>
         </div>
-        <div id="js62" class="d-none">
-          <div class="alert alert-info" role="alert">Lấy danh sách các class - kiểu <strong>DOMTokenList</strong> của một phần tử</div>
-          <h5>Thao tác</h5>
-          <div class="jumbotron">
-            <h1 class="display-4">Danh sách</h1>
-            <ul>
-              <li>add()</li>
-              <li>remove()</li>
-              <li>toggle()</li>
-              <li>contains()</li>
-              <li>replace()</li>
-              <li>values()</li>
-              <li>entries()</li>
-              <li>forEach()</li>
-              <li>item()</li>
-              <li>keys()</li>
-              <li>length</li>
-              <li>supports()</li>
-              <li>value</li>
-            </ul>
-            <hr class="my-4" />
-            <p>Cu tèo cu tí đi bán xôi</p>
-            <p class="lead">
-              <a class="btn btn-primary btn-lg" href="#" role="button" onclick="this.parentElement.previousSibling.previousSibling.innerText='Đùa tí thôi! Chẳng có gì xảy ra cả.'">Bấm cái đi</a>
-            </p>
-          </div>
+        <input type="text" /><br />
+        <button type="button" onclick="document.querySelector('js58 input').blur()"
+          class="btn btn-primary mt-3">Play</button>
+      </div>
+      <div id="js59" class="d-none">
+        <div class="alert alert-info" role="alert">Đếm số lượng con của 1 element (chỉ đếm trong nhánh chính);</div>
+        <div class="text-danger">Đếm <span class="display-3">element</span> không đếm <span class="display-2"
+            style="text-decoration: line-through;">nút</span></div>
+        <h5>Cú pháp</h5>
+        <div class="alert alert-info" role="alert">
+          <strong>element.childElementCount</strong>
         </div>
-        <div id="js63" class="d-none">
-          <div class="alert alert-info" role="alert">Lấy hoặc gán giá trị - <strong>string</strong> của class trong một phần tử</div>
-          <h5>Cú pháp</h5>
-          <div class="alert alert-info" role="alert"><strong>HTMLElementObject.className</strong> hoặc <strong>HTMLElementObject.className = "class-name"</strong></div>
+        <p>Lưu ý: dùng với đám
+          <code>elements = document.querySelectorAll() | .getElementByClassName() | .getElementsByName() | .getELementsByTagName() </code>
+          tóm lại return về số nhiều thì phải lặp nó ra chứ không sẽ bị <code>undefined</code></p>
+        <div class="alert alert-info" role="alert">
+          element.childElementCount chỉ dùng trực tiếp được với document.querySelector() hoặc document.getElementById()
         </div>
-        <div id="js64" class="d-none">
-          <div class="alert alert-info" role="alert">Dùng để bấm ảo lên một element để active input hoặc bấm nút ...</div>
-          <h5>Cú pháp</h5>
-          <div class="alert alert-info" role="alert">element.click();</div>
+      </div>
+      <div id="js60" class="d-none">
+        <div id="noid" class="alert alert-info" role="alert">Lấy danh sách các nút con trực tiếp -
+          <strong>NodeList</strong>, có nút chữ, có nút ghi chú</div>
+        <div class="alert alert-warning" role="alert">Danh sách trả về có nút chữ, nên có thể dùng js để thay đổi. Còn
+          nếu gọi children, không thể thay đổi nút chữ do nút chữ không được trả về</div>
+        <img src="../asset/images/element-family.svg"
+          class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+        <h5>Cú pháp</h5>
+        <div class="alert alert-info" role="alert">
+          <strong>element.childNode<strong class="text-danger">s</strong></strong>
         </div>
-        <div id="js65" class="d-none">
-          <div class="alert alert-info" role="alert">Lấy <strong>độ rộng</strong> của element từ biên ngoài padding trái cho đến biên ngoài padding phải</div>
-          <img src="../asset/images/clientElement.svg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="" />
+        <p>Lưu ý: dùng với đám
+          <code>elements = document.querySelectorAll() | .getElementByClassName() | .getElementsByName() | .getELementsByTagName() </code>
+          tóm lại return về số nhiều thì phải lặp nó ra chứ không sẽ bị <code>undefined</code></p>
+        <div class="alert alert-info" role="alert">
+          element.childNodes chỉ dùng trực tiếp được với document.querySelector() hoặc document.getElementById()
         </div>
-        <div id="js66" class="d-none">
-          <div class="alert alert-info" role="alert">Lấy <strong>độ rộng</strong> của element từ biên ngoài padding trên cho đến biên ngoài padding dưới</div>
-          <img src="../asset/images/clientElement.svg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="" />
-        </div>
-        <div id="js67" class="d-none">
-          <div class="alert alert-info" role="alert">Lấy <strong>độ rộng</strong> đường viền bên trên phần tử</div>
-          <img src="../asset/images/clientElement.svg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="" />
-        </div>
-        <div id="js68" class="d-none">
-          <div class="alert alert-info" role="alert">Lấy <strong>độ rộng</strong> đường viền bên trái phần tử</div>
-          <img src="../asset/images/clientElement.svg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="" />
-        </div>
-        <div id="js69" class="d-none">
-          <h5>Cú pháp</h5>
-          <div class="alert alert-info" role="alert">node.<strong>cloneNode</strong>(<strong>false</strong> - Không copy đám con cháu | <strong>true</strong> - Có copy đám con cháu - <strong>Hay là bộ lòng</strong>)</div>
+      </div>
+      <div id="js61" class="d-none">
+        <div class="alert alert-info" role="alert">
+          Lấy danh sách các nút element - <strong>HTMLCollection</strong> của một phần tử <span class="text-danger">Danh
+            sách <strong>không có</strong> nút text, nút comment</span>
 
-          <h5>Ví dụ</h5>
-          var node = document.getElementById("demo").firstChid; <br />
-          var nodeToBeClone = node.<strong>cloneNode()</strong>; // true -> Có copy đám con chau<br />
-          document.body.appendChild(nodeToBeClone);
-          <h5>Lưu ý:</h5>
-          ví dụ có: <br />
-          div#demo chứa p,a,span.. <br />
-          <strong>node.cloneNode(false)</strong> hoặc <strong>node.cloneNode()</strong> : <span>chỉ trả về div#demo</span> <br />
-          <strong>node.cloneNode(<span class="text-danger">true</span>)</strong> : <span>trả về div#demo có chứa đám p,a,span (<strong class="text-danger">có chứa bộ lòng</strong>)</span> <br />
         </div>
-        <div id="js70" class="d-none">
-          <div class="alert alert-info" role="alert">Lấy <strong>phần tử gần nhất</strong> ( <strong>theo hướng ra bên ngoài</strong> ) có <strong>selector css</strong> phù hợp</div>
-          <h5>Cú pháp</h5>
-          element<strong>.closest(selectors)</strong>
-          <div class="text-danger">Trả về null nếu không tìm ra</div>
-        </div>
-        <div id="js71" class="d-none">
-          <div class="alert alert-info" role="alert">Kiểm tra <strong>vị trí tương đối</strong> của 2 phần tử, chiếu theo kết quả: 2 <span style="font-size: 10px; vertical-align: top">0</span> = 1 , 2<span style="font-size: 10px; vertical-align: top">1</span> = 2 , 2<span style="font-size: 10px; vertical-align: top">2</span> = 4 , 2<span style="font-size: 10px; vertical-align: top">3</span> = 8, 2<span style="font-size: 10px; vertical-align: top">4</span> = 16 , 2<span style="font-size: 10px; vertical-align: top">5</span> = 32 và tra ra vị trí.</div>
-          <h5>Cú pháp</h5>
-          node<strong>.compareDocumentPosition(</strong>node<strong>)</strong>;
-          <h5>Giá trị trả về</h5>
+        <img src="../asset/images/element-family.svg"
+          class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+      </div>
+      <div id="js62" class="d-none">
+        <div class="alert alert-info" role="alert">Lấy danh sách các class - kiểu <strong>DOMTokenList</strong> của một
+          phần tử</div>
+        <h5>Thao tác</h5>
+        <div class="jumbotron">
+          <h1 class="display-4">Danh sách</h1>
           <ul>
-            <li><strong>1</strong> : <strong>đứng khác</strong> document</li>
-            <li><strong>2</strong> : <strong>đứng sau</strong> node bị so sánh</li>
-            <li><strong>4</strong> : <strong>đứng trước</strong> node bị so sánh</li>
-            <li><strong>8</strong> : <strong>đứng bên trong</strong> node bị so sánh <span class="text-danger">Kiểm tra thì có giá trị 10 chứ không phải 8</span></li>
-            <li><strong>16</strong> : <strong>đứng trong</strong> node so sánh <span class="text-danger">Kiểm tra không thấy 16 xuất hiện</span></li>
-            <li><strong>20</strong> : <strong>đứng ngoài</strong> node <strong>bị</strong> so sánh</li>
-            <li><strong>32</strong> : các node là attributes (thuộc tính) trên 1 document</li>
+            <li>add()</li>
+            <li>remove()</li>
+            <li>toggle()</li>
+            <li>contains()</li>
+            <li>replace()</li>
+            <li>values()</li>
+            <li>entries()</li>
+            <li>forEach()</li>
+            <li>item()</li>
+            <li>keys()</li>
+            <li>length</li>
+            <li>supports()</li>
+            <li>value</li>
           </ul>
+          <hr class="my-4" />
+          <p>Cu tèo cu tí đi bán xôi</p>
+          <p class="lead">
+            <a class="btn btn-primary btn-lg" href="#" role="button"
+              onclick="this.parentElement.previousSibling.previousSibling.innerText='Đùa tí thôi! Chẳng có gì xảy ra cả.'">Bấm
+              cái đi</a>
+          </p>
         </div>
-        <div id="js72" class="d-none">
-          <div class="alert alert-info" role="alert"><strong>Kiểm tra</strong> một node có phải là <strong>con cháu</strong> của node kia không</div>
-          <div>.contain<strong class="text-danger">s</strong>() nhớ là có s</div>
-          <h5>Cú pháp</h5>
-          element<strong>.contains()</strong>
-          <h5>Ví dụ</h5>
-          var flat = element1.contains(element2);
-          <h5>Trả về</h5>
-          <ul>
-            <li>true</li>
-            <li>false</li>
-          </ul>
+      </div>
+      <div id="js63" class="d-none">
+        <div class="alert alert-info" role="alert">Lấy hoặc gán giá trị - <strong>string</strong> của class trong một
+          phần tử</div>
+        <h5>Cú pháp</h5>
+        <div class="alert alert-info" role="alert"><strong>HTMLElementObject.className</strong> hoặc
+          <strong>HTMLElementObject.className = "class-name"</strong></div>
+      </div>
+      <div id="js64" class="d-none">
+        <div class="alert alert-info" role="alert">Dùng để bấm ảo lên một element để active input hoặc bấm nút ...</div>
+        <h5>Cú pháp</h5>
+        <div class="alert alert-info" role="alert">element.click();</div>
+      </div>
+      <div id="js65" class="d-none">
+        <div class="alert alert-info" role="alert">Lấy <strong>độ rộng</strong> của element từ biên ngoài padding trái
+          cho đến biên ngoài padding phải</div>
+        <img src="../asset/images/clientElement.svg"
+          class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="" />
+      </div>
+      <div id="js66" class="d-none">
+        <div class="alert alert-info" role="alert">Lấy <strong>độ rộng</strong> của element từ biên ngoài padding trên
+          cho đến biên ngoài padding dưới</div>
+        <img src="../asset/images/clientElement.svg"
+          class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="" />
+      </div>
+      <div id="js67" class="d-none">
+        <div class="alert alert-info" role="alert">Lấy <strong>độ rộng</strong> đường viền bên trên phần tử</div>
+        <img src="../asset/images/clientElement.svg"
+          class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="" />
+      </div>
+      <div id="js68" class="d-none">
+        <div class="alert alert-info" role="alert">Lấy <strong>độ rộng</strong> đường viền bên trái phần tử</div>
+        <img src="../asset/images/clientElement.svg"
+          class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="" />
+      </div>
+      <div id="js69" class="d-none">
+        <h5>Cú pháp</h5>
+        <div class="alert alert-info" role="alert">node.<strong>cloneNode</strong>(<strong>false</strong> - Không copy
+          đám con cháu | <strong>true</strong> - Có copy đám con cháu - <strong>Hay là bộ lòng</strong>)</div>
+
+        <h5>Ví dụ</h5>
+        var node = document.getElementById("demo").firstChid; <br />
+        var nodeToBeClone = node.<strong>cloneNode()</strong>; // true -> Có copy đám con chau<br />
+        document.body.appendChild(nodeToBeClone);
+        <h5>Lưu ý:</h5>
+        ví dụ có: <br />
+        div#demo chứa p,a,span.. <br />
+        <strong>node.cloneNode(false)</strong> hoặc <strong>node.cloneNode()</strong> : <span>chỉ trả về div#demo</span>
+        <br />
+        <strong>node.cloneNode(<span class="text-danger">true</span>)</strong> : <span>trả về div#demo có chứa đám
+          p,a,span (<strong class="text-danger">có chứa bộ lòng</strong>)</span> <br />
+      </div>
+      <div id="js70" class="d-none">
+        <div class="alert alert-info" role="alert">Lấy <strong>phần tử gần nhất</strong> ( <strong>theo hướng ra bên
+            ngoài</strong> ) có <strong>selector css</strong> phù hợp</div>
+        <h5>Cú pháp</h5>
+        element<strong>.closest(selectors)</strong>
+        <div class="text-danger">Trả về null nếu không tìm ra</div>
+      </div>
+      <div id="js71" class="d-none">
+        <div class="alert alert-info" role="alert">Kiểm tra <strong>vị trí tương đối</strong> của 2 phần tử, chiếu theo
+          kết quả: 2 <span style="font-size: 10px; vertical-align: top">0</span> = 1 , 2<span
+            style="font-size: 10px; vertical-align: top">1</span> = 2 , 2<span
+            style="font-size: 10px; vertical-align: top">2</span> = 4 , 2<span
+            style="font-size: 10px; vertical-align: top">3</span> = 8, 2<span
+            style="font-size: 10px; vertical-align: top">4</span> = 16 , 2<span
+            style="font-size: 10px; vertical-align: top">5</span> = 32 và tra ra vị trí.</div>
+        <h5>Cú pháp</h5>
+        node<strong>.compareDocumentPosition(</strong>node<strong>)</strong>;
+        <h5>Giá trị trả về</h5>
+        <ul>
+          <li><strong>1</strong> : <strong>đứng khác</strong> document</li>
+          <li><strong>2</strong> : <strong>đứng sau</strong> node bị so sánh</li>
+          <li><strong>4</strong> : <strong>đứng trước</strong> node bị so sánh</li>
+          <li><strong>8</strong> : <strong>đứng bên trong</strong> node bị so sánh <span class="text-danger">Kiểm tra
+              thì có giá trị 10 chứ không phải 8</span></li>
+          <li><strong>16</strong> : <strong>đứng trong</strong> node so sánh <span class="text-danger">Kiểm tra không
+              thấy 16 xuất hiện</span></li>
+          <li><strong>20</strong> : <strong>đứng ngoài</strong> node <strong>bị</strong> so sánh</li>
+          <li><strong>32</strong> : các node là attributes (thuộc tính) trên 1 document</li>
+        </ul>
+      </div>
+      <div id="js72" class="d-none">
+        <div class="alert alert-info" role="alert"><strong>Kiểm tra</strong> một node có phải là <strong>con
+            cháu</strong> của node kia không</div>
+        <div>.contain<strong class="text-danger">s</strong>() nhớ là có s</div>
+        <h5>Cú pháp</h5>
+        element<strong>.contains()</strong>
+        <h5>Ví dụ</h5>
+        var flat = element1.contains(element2);
+        <h5>Trả về</h5>
+        <ul>
+          <li>true</li>
+          <li>false</li>
+        </ul>
+      </div>
+      <div id="js73" class="d-none">
+        <div class="alert alert-info" role="alert"><strong>Lấy khả năng viết</strong> (có thể thay đổi outerText từ giao
+          diện người dùng) hoặc <strong>gán khả năng viết</strong></div>
+        <h5>Cú pháp</h5>
+        <div>element<strong>.contentEditable</strong></div>
+        <div>element<strong>.contentEditable</strong> = value</div>
+        <div id="demo-js73" class="my-3">Thử viết vào đây !</div>
+        <button class="btn btn-outline-primary btn-sm"
+          onclick="this.innerText = document.getElementById('demo-js73').contentEditable">Lấy khả năng viết</button>
+        <button class="btn btn-outline-primary btn-sm"
+          onclick="document.getElementById('demo-js73').contentEditable = true;">Mở khả năng viết</button>
+        <button class="btn btn-outline-primary btn-sm"
+          onclick="document.getElementById('demo-js73').contentEditable = false;">Xoá khả năng viết</button>
+        <h5>Tham số</h5>
+        <ul>
+          <li><strong>true</strong> : nội dung có thể thay đổi</li>
+          <li><strong>false</strong> : nội dung không thể thay đổi</li>
+          <li><strong>inherit</strong> : Default. Nếu cha có contentEditable=true thì con cũng vậy</li>
+        </ul>
+        <h5>Giá trị trả về</h5>
+        <ul>
+          <li><strong>true</strong> : nội dung có thể thay đổi</li>
+          <li><strong>false</strong> : nội dung không thể thay đổi</li>
+          <li><strong>inherit</strong> : Default. Nếu cha có contentEditable=true thì con cũng vậy</li>
+        </ul>
+      </div>
+      <div id="js74" class="d-none">
+        <div class="alert alert-info" role="alert"><strong>Lấy hướng viết của chữ</strong> hoặc <strong>gán hướng viết
+            của chữ</strong></div>
+        <h5>Cú pháp</h5>
+        <ul>
+          <li>
+            Lấy: <span>element<strong>.dir</strong></span>
+          </li>
+          <li>
+            Gán: <span>element<strong>.dir</strong> = "<strong>ltr</strong> | <strong>rtl</strong> |
+              <strong>auto</strong> "</span>
+          </li>
+        </ul>
+
+        <div class="form-group my-3">
+          <label for="demo-js74">Form viết</label>
+          <input type="text" class="form-control" name="demo-js74" id="demo-js74" aria-describedby="helpId"
+            placeholder="Thử viết vào đây" />
         </div>
-        <div id="js73" class="d-none">
-          <div class="alert alert-info" role="alert"><strong>Lấy khả năng viết</strong> (có thể thay đổi outerText từ giao diện người dùng) hoặc <strong>gán khả năng viết</strong></div>
-          <h5>Cú pháp</h5>
-          <div>element<strong>.contentEditable</strong></div>
-          <div>element<strong>.contentEditable</strong> = value</div>
-          <div id="demo-js73" class="my-3">Thử viết vào đây !</div>
-          <button class="btn btn-outline-primary btn-sm" onclick="this.innerText = document.getElementById('demo-js73').contentEditable">Lấy khả năng viết</button>
-          <button class="btn btn-outline-primary btn-sm" onclick="document.getElementById('demo-js73').contentEditable = true;">Mở khả năng viết</button>
-          <button class="btn btn-outline-primary btn-sm" onclick="document.getElementById('demo-js73').contentEditable = false;">Xoá khả năng viết</button>
-          <h5>Tham số</h5>
-          <ul>
-            <li><strong>true</strong> : nội dung có thể thay đổi</li>
-            <li><strong>false</strong> : nội dung không thể thay đổi</li>
-            <li><strong>inherit</strong> : Default. Nếu cha có contentEditable=true thì con cũng vậy</li>
-          </ul>
-          <h5>Giá trị trả về</h5>
-          <ul>
-            <li><strong>true</strong> : nội dung có thể thay đổi</li>
-            <li><strong>false</strong> : nội dung không thể thay đổi</li>
-            <li><strong>inherit</strong> : Default. Nếu cha có contentEditable=true thì con cũng vậy</li>
-          </ul>
+
+        <button class="btn btn-outline-primary btn-sm"
+          onclick="this.innerText = document.getElementById('demo-js74').dir">Lấy hướng chữ</button>
+        <button class="btn btn-outline-primary btn-sm" onclick="document.getElementById('demo-js74').dir = 'ltr';">Từ
+          trái sang phải</button>
+        <button class="btn btn-outline-primary btn-sm" onclick="document.getElementById('demo-js74').dir = 'rtl';">Từ
+          phải sang trái</button>
+        <button class="btn btn-outline-primary btn-sm"
+          onclick="document.getElementById('demo-js74').dir = 'auto';">Auto</button>
+
+        <h5 class="mt-3">Tham số</h5>
+        <ul>
+          <li><strong>ltr</strong> : hướng từ trái sang phải <strong>default</strong></li>
+          <li><strong>rtl</strong> : hướng từ phải sang trái</li>
+          <li><strong>auto</strong> : Để browser tự quyết định</li>
+        </ul>
+        <h5>Giá trị trả về</h5>
+        <ul>
+          <li><strong>ltr</strong> : hướng từ trái sang phải <strong>default</strong></li>
+          <li><strong>rtl</strong> : hướng từ phải sang trái</li>
+          <li><strong>auto</strong> : Để browser tự quyết định</li>
+        </ul>
+      </div>
+      <div id="js75" class="d-none">
+        <div class="alert alert-info" role="alert">Lấy <strong>nút con</strong> đầu tiên</div>
+        <h5>Cú pháp</h5>
+        <em class="ml-2">element<strong>.firstChild</strong></em> hoặc <em>node<strong>.firstChild</strong></em>
+        <h5>Lưu ý</h5>
+        <div class="text-danger m-2"><strong>Read-only !</strong></div>
+        <div class="text-danger mx-2">
+          Giống với <strong>childNode<span
+              style="text-decoration: underline; color: black; text-decoration-thickness: 3px">s</span>[0]</strong>
         </div>
-        <div id="js74" class="d-none">
-          <div class="alert alert-info" role="alert"><strong>Lấy hướng viết của chữ</strong> hoặc <strong>gán hướng viết của chữ</strong></div>
-          <h5>Cú pháp</h5>
-          <ul>
-            <li>
-              Lấy: <span>element<strong>.dir</strong></span>
-            </li>
-            <li>
-              Gán: <span>element<strong>.dir</strong> = "<strong>ltr</strong> | <strong>rtl</strong> | <strong>auto</strong> "</span>
-            </li>
-          </ul>
-
-          <div class="form-group my-3">
-            <label for="demo-js74">Form viết</label>
-            <input type="text" class="form-control" name="demo-js74" id="demo-js74" aria-describedby="helpId" placeholder="Thử viết vào đây" />
-          </div>
-
-          <button class="btn btn-outline-primary btn-sm" onclick="this.innerText = document.getElementById('demo-js74').dir">Lấy hướng chữ</button>
-          <button class="btn btn-outline-primary btn-sm" onclick="document.getElementById('demo-js74').dir = 'ltr';">Từ trái sang phải</button>
-          <button class="btn btn-outline-primary btn-sm" onclick="document.getElementById('demo-js74').dir = 'rtl';">Từ phải sang trái</button>
-          <button class="btn btn-outline-primary btn-sm" onclick="document.getElementById('demo-js74').dir = 'auto';">Auto</button>
-
-          <h5 class="mt-3">Tham số</h5>
-          <ul>
-            <li><strong>ltr</strong> : hướng từ trái sang phải <strong>default</strong></li>
-            <li><strong>rtl</strong> : hướng từ phải sang trái</li>
-            <li><strong>auto</strong> : Để browser tự quyết định</li>
-          </ul>
-          <h5>Giá trị trả về</h5>
-          <ul>
-            <li><strong>ltr</strong> : hướng từ trái sang phải <strong>default</strong></li>
-            <li><strong>rtl</strong> : hướng từ phải sang trái</li>
-            <li><strong>auto</strong> : Để browser tự quyết định</li>
-          </ul>
+        <div class="text-danger mx-2">Trả về <strong>Node Object</strong> or <strong>null</strong> nếu tìm không thấy
         </div>
-        <div id="js75" class="d-none">
-          <div class="alert alert-info" role="alert">Lấy <strong>nút con</strong> đầu tiên</div>
-          <h5>Cú pháp</h5>
-          <em class="ml-2">element<strong>.firstChild</strong></em> hoặc <em>node<strong>.firstChild</strong></em>
-          <h5>Lưu ý</h5>
-          <div class="text-danger m-2"><strong>Read-only !</strong></div>
-          <div class="text-danger mx-2">
-            Giống với <strong>childNode<span style="text-decoration: underline; color: black; text-decoration-thickness: 3px">s</span>[0]</strong>
-          </div>
-          <div class="text-danger mx-2">Trả về <strong>Node Object</strong> or <strong>null</strong> nếu tìm không thấy</div>
+      </div>
+      <div id="js76" class="d-none">
+        <div class="alert alert-info" role="alert">
+          Lấy <strong><span class="text-danger">element</span> con</strong> đầu tiên
         </div>
-        <div id="js76" class="d-none">
-          <div class="alert alert-info" role="alert">
-            Lấy <strong><span class="text-danger">element</span> con</strong> đầu tiên
-          </div>
-          <img src="../asset/images/element-family.svg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
-          <h5>Cú pháp</h5>
-          <em class="ml-2"
-            >element<strong>.first<span class="text-danger">element</span>Child</strong></em
-          >
-          <h5>Lưu ý</h5>
-          <div class="text-danger m-2"><strong>Read-only !</strong></div>
-          <div class="mx-2">Giống với <strong>children[0]</strong></div>
-          <div class="mx-2">Trả về <strong class="text-danger">First Child Element</strong> or <strong>null</strong> nếu tìm không thấy</div>
-          <div class="">Không có thuộc tính: <strong class="display-3" style="text-decoration: line-through">node.firstElementChild</strong></div>
+        <img src="../asset/images/element-family.svg"
+          class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+        <h5>Cú pháp</h5>
+        <em class="ml-2">element<strong>.first<span class="text-danger">element</span>Child</strong></em>
+        <h5>Lưu ý</h5>
+        <div class="text-danger m-2"><strong>Read-only !</strong></div>
+        <div class="mx-2">Giống với <strong>children[0]</strong></div>
+        <div class="mx-2">Trả về <strong class="text-danger">First Child Element</strong> or <strong>null</strong> nếu
+          tìm không thấy</div>
+        <div class="">Không có thuộc tính: <strong class="display-3"
+            style="text-decoration: line-through">node.firstElementChild</strong></div>
+      </div>
+      <div id="js77" class="d-none">
+        <div class="alert alert-info" role="alert"><strong>Tập trung</strong> vào 1 element có khả năng tập trung</div>
+        <div class="form-group">
+          <label for="demo-js77-input">Text</label>
+          <input type="text" class="form-control" name="demo-js77-input" id="demo-js77-input" aria-describedby="helpId"
+            placeholder="Writing something !" />
         </div>
-        <div id="js77" class="d-none">
-          <div class="alert alert-info" role="alert"><strong>Tập trung</strong> vào 1 element có khả năng tập trung</div>
-          <div class="form-group">
-            <label for="demo-js77-input">Text</label>
-            <input type="text" class="form-control" name="demo-js77-input" id="demo-js77-input" aria-describedby="helpId" placeholder="Writing something !" />
-          </div>
-          <button id="demo-js77-button" class="btn btn-outline-danger">Không có chức năng</button><br />
-          <style>
-            #demo-js77-link {
-              border: 1px solid blue;
-              border-radius: 5px;
-              outline: 1px solid transparent;
-              transition: all 0.5s;
-            }
-            #demo-js77-link:focus {
-              outline: 1px solid black;
-              border-radius: 5px;
-              outline-offset: 2px;
-            }
-          </style>
-          <a href="#" id="demo-js77-link" class="p-3 d-inline-block mt-3">Đây là link</a><br />
+        <button id="demo-js77-button" class="btn btn-outline-danger">Không có chức năng</button><br />
+        <style>
+          #demo-js77-link {
+            border: 1px solid blue;
+            border-radius: 5px;
+            outline: 1px solid transparent;
+            transition: all 0.5s;
+          }
 
-          <div class="btn-group mt-3" role="group" aria-label="">
-            <button type="button" class="btn btn-outline-primary" onclick="document.getElementById('demo-js77-input').focus()">Focus input</button>
-            <button type="button" class="btn btn-outline-primary" onclick="document.getElementById('demo-js77-button').focus()">Focus button</button>
-            <button type="button" class="btn btn-outline-primary" onclick="document.getElementById('demo-js77-link').focus()">Focus link</button>
-          </div>
+          #demo-js77-link:focus {
+            outline: 1px solid black;
+            border-radius: 5px;
+            outline-offset: 2px;
+          }
+        </style>
+        <a href="#" id="demo-js77-link" class="p-3 d-inline-block mt-3">Đây là link</a><br />
 
-          <h5>Cú pháp</h5>
-          element<strong>.focus()</strong>
+        <div class="btn-group mt-3" role="group" aria-label="">
+          <button type="button" class="btn btn-outline-primary"
+            onclick="document.getElementById('demo-js77-input').focus()">Focus input</button>
+          <button type="button" class="btn btn-outline-primary"
+            onclick="document.getElementById('demo-js77-button').focus()">Focus button</button>
+          <button type="button" class="btn btn-outline-primary"
+            onclick="document.getElementById('demo-js77-link').focus()">Focus link</button>
         </div>
-        <div id="js78" class="d-none">
-          <div class="alert alert-info" role="alert">Lấy giá trị của thuộc tính thẻ</div>
-          <h5>Cú pháp</h5>
-          <pre>element.<strong>getAttribute(name)</strong></pre>
-          <h5>Return</h5>
-          Giá trị trả về là <code>string</code> nếu không tìm thấy trả về <code>null</code><br />
-          Vẫn có thể sử dụng <span style="color: red; text-decoration: line-through">node.getAttribute(name)</span> nhưng nếu node là text thì lỗi sẽ bị ném ra. Vì vậy: lời khuyên là <span class="display-4" style="text-decoration: line-through; text-decoration-color: red">KHÔNG DÙNG</span>
-          <div class="text-danger">Sự khác nhau giữa <code>element.getAttribute()</code> và <code>element.getAttributeNode()</code> đó là thằng 1 trả về giá trị của một node attribute, thằng 2 trả về đối tượng đó</div>
-          <div class="text-primary">W3school khuyên dùng <code>element.getAttribute()</code> sẽ dễ hơn.</div>
-          1 node attribute sẽ có dạng là một đối tượng -object có nội dung như bên dưới
 
-          <h5>Ví dụ</h5>
+        <h5>Cú pháp</h5>
+        element<strong>.focus()</strong>
+      </div>
+      <div id="js78" class="d-none">
+        <div class="alert alert-info" role="alert">Lấy giá trị của thuộc tính thẻ</div>
+        <h5>Cú pháp</h5>
+        <pre>element.<strong>getAttribute(name)</strong></pre>
+        <h5>Return</h5>
+        Giá trị trả về là <code>string</code> nếu không tìm thấy trả về <code>null</code><br />
+        Vẫn có thể sử dụng <span style="color: red; text-decoration: line-through">node.getAttribute(name)</span> nhưng
+        nếu node là text thì lỗi sẽ bị ném ra. Vì vậy: lời khuyên là <span class="display-4"
+          style="text-decoration: line-through; text-decoration-color: red">KHÔNG DÙNG</span>
+        <div class="text-danger">Sự khác nhau giữa <code>element.getAttribute()</code> và
+          <code>element.getAttributeNode()</code> đó là thằng 1 trả về giá trị của một node attribute, thằng 2 trả về
+          đối tượng đó</div>
+        <div class="text-primary">W3school khuyên dùng <code>element.getAttribute()</code> sẽ dễ hơn.</div>
+        1 node attribute sẽ có dạng là một đối tượng -object có nội dung như bên dưới
 
-          <pre class="example">
+        <h5>Ví dụ</h5>
+
+        <pre class="example">
               <div class="lop-123" id="demo-js78" onclick="myTestFunction()" position="-1" data-for = "jan">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, nesciunt.
               </div>
               <div id="result-js78"></div>
               <script>
                 var js78 = document.getElementById("demo-js78");
-                document.getElementById("result-js78").insertAdjacentText("beforeend"," Kết quả: id "+js78.getAttribute("id"));
-                document.getElementById("result-js78").insertAdjacentText("beforeend"," Kết quả: class "+js78.getAttribute("class"));
-                document.getElementById("result-js78").insertAdjacentText("beforeend"," Kết quả: position "+js78.getAttribute("position"));
-                document.getElementById("result-js78").insertAdjacentText("beforeend"," Kết quả: data-for "+js78.getAttribute("data-for"));
-                document.getElementById("result-js78").insertAdjacentText("beforeend"," Kết quả: onclick "+js78.getAttribute("onclick"));
+                document.getElementById("result-js78").insertAdjacentText("beforeend", " Kết quả: id " + js78.getAttribute("id"));
+                document.getElementById("result-js78").insertAdjacentText("beforeend", " Kết quả: class " + js78.getAttribute("class"));
+                document.getElementById("result-js78").insertAdjacentText("beforeend", " Kết quả: position " + js78.getAttribute("position"));
+                document.getElementById("result-js78").insertAdjacentText("beforeend", " Kết quả: data-for " + js78.getAttribute("data-for"));
+                document.getElementById("result-js78").insertAdjacentText("beforeend", " Kết quả: onclick " + js78.getAttribute("onclick"));
               </script>
           </pre>
 
-          <h5>Code</h5>
-          <pre class="code"></pre>
-          <script>
-            document.querySelector("#js78 .code").innerText = document.querySelector("#js78 .example").innerHTML;
-          </script>
+        <h5>Code</h5>
+        <pre class="code"></pre>
+        <script>
+          document.querySelector("#js78 .code").innerText = document.querySelector("#js78 .example").innerHTML;
+        </script>
+      </div>
+      <div id="js79" class="d-none">
+        <img src="../asset/images/get-bouding-client-rect.svg" alt="" srcset="" />
+        <h5>Lưu ý:</h5>
+        <code>element.getBoundingClientRect()</code> trả về object, trong đó
+        <code>.x .y .left .top .bottom .right</code> là khoảng cách giữa elemnt và <div class="display-2">viewbox</div>
+        chứ không phải khoảng cách từ element đến <div class="display-3" style="text-decoration: line-through;">document
         </div>
-        <div id="js79" class="d-none">
-          <img src="../asset/images/get-bouding-client-rect.svg" alt="" srcset="" />
-          <h5>Lưu ý:</h5>
-          <code>element.getBoundingClientRect()</code> trả về object, trong đó <code>.x .y .left .top .bottom .right</code> là khoảng cách giữa elemnt và <div class="display-2">viewbox</div> chứ không phải khoảng cách từ element đến <div class="display-3" style="text-decoration: line-through;">document</div>
-          <h5>Trả về</h5>
-          <pre>
+        <h5>Trả về</h5>
+        <pre>
             DOMRect
           </pre>
-          <style>
-            #demo-js79 {
-              width: 100px;
-              height: 100px;
-              background-color: red;
-              border: 0px solid blue;
-            }
-          </style>
-          <div id="demo-js79"></div>
-          <div id="resultJs79"></div>
-          <script>
-            var element = document.getElementById("demo-js79");
-            var variable_demo_js79 = 0;
+        <style>
+          #demo-js79 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border: 0px solid blue;
+          }
+        </style>
+        <div id="demo-js79"></div>
+        <div id="resultJs79"></div>
+        <script>
+          var element = document.getElementById("demo-js79");
+          var variable_demo_js79 = 0;
 
-            setInterval(() => {
-              var resultJs79 = document.getElementById("resultJs79");
-              var rectE = element.getBoundingClientRect();
-              element.style.borderTopWidth = variable_demo_js79 + "px";
-              var html = "";
-              html += "element.clientLeft = " + element.clientLeft + "_________________";
-              html += "element.clientTop = " + element.clientTop + "_________________";
-              html += "element.clientHeight = " + element.clientHeight + "_________________";
-              html += "element.clientWidth = " + element.clientWidth + "_________________";
-              html += "element.offsetWidth = " + element.offsetWidth + "_________________";
-              html += "element.offsetHeight = " + element.offsetHeight + "_________________";
-              html += "element.getBoudingClientRect().left  = " + rectE.left + "_________________";
-              html += "element.getBoudingClientRect().top  = " + rectE.top + "_________________";
-              html += "element.getBoudingClientRect().x  = " + rectE.x + "_________________";
-              html += "element.getBoudingClientRect()y.  = " + rectE.y + "_________________";
-              html += "element.getBoudingClientRect().bottom  = " + rectE.bottom + "_________________";
-              html += "element.getBoudingClientRect().right  = " + rectE.right + "_________________";
-              html += "element.getBoudingClientRect().width  = " + rectE.width + "_________________";
-              html += "element.getBoudingClientRect().height  = " + rectE.height + "_________________";
-              console.log(rectE);
-              resultJs79.innerText = html;
-              variable_demo_js79++;
-            }, 200);
-          </script>
+          setInterval(() => {
+            var resultJs79 = document.getElementById("resultJs79");
+            var rectE = element.getBoundingClientRect();
+            element.style.borderTopWidth = variable_demo_js79 + "px";
+            var html = "";
+            html += "element.clientLeft = " + element.clientLeft + "_________________";
+            html += "element.clientTop = " + element.clientTop + "_________________";
+            html += "element.clientHeight = " + element.clientHeight + "_________________";
+            html += "element.clientWidth = " + element.clientWidth + "_________________";
+            html += "element.offsetWidth = " + element.offsetWidth + "_________________";
+            html += "element.offsetHeight = " + element.offsetHeight + "_________________";
+            html += "element.getBoudingClientRect().left  = " + rectE.left + "_________________";
+            html += "element.getBoudingClientRect().top  = " + rectE.top + "_________________";
+            html += "element.getBoudingClientRect().x  = " + rectE.x + "_________________";
+            html += "element.getBoudingClientRect()y.  = " + rectE.y + "_________________";
+            html += "element.getBoudingClientRect().bottom  = " + rectE.bottom + "_________________";
+            html += "element.getBoudingClientRect().right  = " + rectE.right + "_________________";
+            html += "element.getBoudingClientRect().width  = " + rectE.width + "_________________";
+            html += "element.getBoudingClientRect().height  = " + rectE.height + "_________________";
+            console.log(rectE);
+            resultJs79.innerText = html;
+            variable_demo_js79++;
+          }, 200);
+        </script>
+      </div>
+      <div id="js80" class="d-none">
+        <div class="alert alert-info" role="alert">
+          Mặc định, tổ tiên có position là static nên khi gọi đến offsetLeft thì có thể hiểu là viền màn hình bên trái
+          tới mép border left của phần tử. Nhưng nếu trường hợp đặc biệt, body nhận giá trị position là relative thì
+          offsetLeft là biên ngoài cùng của border body tới biên ngoài border của phần tử. Còn trường hợp còn lại, thì
+          phần tử cha nằm đâu thì offsetLeft sẽ là từ biên borderleft bên trong của cha relative đến biên ngoài border
+          left của con relative
         </div>
-        <div id="js80" class="d-none">
-          <div class="alert alert-info" role="alert">
-            Mặc định, tổ tiên có position là static nên khi gọi đến offsetLeft thì có thể hiểu là viền màn hình bên trái tới mép border left của phần tử. Nhưng nếu trường hợp đặc biệt, body nhận giá trị position là relative thì offsetLeft là biên ngoài cùng của border body tới biên ngoài border của phần tử. Còn trường hợp còn lại, thì phần tử cha nằm đâu thì offsetLeft sẽ là từ biên borderleft bên trong của cha relative đến biên ngoài border left của con relative
-          </div>
-          <div class="text-danger">Hình bên dưới chỉnh đúng trường hợp mặc định, còn trường hợp cha trực tiếp là relative thì chưa có</div>
-          <img src="../asset/images/offsetLeft-and-offsetTop.svg" alt="" srcset="">
+        <div class="text-danger">Hình bên dưới chỉnh đúng trường hợp mặc định, còn trường hợp cha trực tiếp là relative
+          thì chưa có</div>
+        <img src="../asset/images/offsetLeft-and-offsetTop.svg" alt="" srcset="">
+      </div>
+      <div id="js81" class="d-none">
+        <div class="alert alert-info" role="alert">
+          Khoảng trống bên trên giữa đường border cha offset và đường border con bị offset.
         </div>
-        <div id="js81" class="d-none">
-          <div class="alert alert-info" role="alert">
-            Khoảng trống bên trên giữa đường border cha offset và đường border con bị offset. 
-          </div>
-          <div class="text-danger">
-            Lưu ý trường hợp absolute và relative, cha là relative chứ không phải cha lồng vào nó.
-          </div>
-          <img src="../asset/images/offsetLeft-and-offsetTop.svg" alt="" srcset="">
+        <div class="text-danger">
+          Lưu ý trường hợp absolute và relative, cha là relative chứ không phải cha lồng vào nó.
         </div>
-        <div id="js82" class="d-none">
-          <div class="alert alert-info" role="alert">
-            Lấy elment offset cha. Ví dụ: thằng con absolute thì thằng offsetParent là thằng cha relative
-          </div>
-          <div class="text-danger">Lưu ý trường hợp absolute và relative, cha là relative chứ không phải cha lồng vào nó.</div>
+        <img src="../asset/images/offsetLeft-and-offsetTop.svg" alt="" srcset="">
+      </div>
+      <div id="js82" class="d-none">
+        <div class="alert alert-info" role="alert">
+          Lấy elment offset cha. Ví dụ: thằng con absolute thì thằng offsetParent là thằng cha relative
         </div>
-        <div id="js83" class="d-none">
-          <div class="alert alert-info" role="alert">
-            Lấy element dưới dạng string hoặc gán elment đó thành 1 element mới. outerHTML là HTML bao gồm toàn bộ element. Điều này khác với innerHTML
-          </div>
-          <table class="table">
-            <thead>
-              <tr>
-                <th>?</th>
-                <th>Lấy</th>
-                <th>Gán</th>
-                <th>Cách dùng</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>outerHTML</td>
-                <td>&#10003;</td>
-                <td>&#10003;</td>
-                <td>Thay đổi phần tử thành 1 phần tử mới</td>
-              </tr>
-              <tr>
-                <td>innerHTML</td>
-                <td>&#10003;</td>
-                <td>&#10003;</td>
-                <td>Thay đổi cái ruột HTML của phần tử</td>
-              </tr>
-              <tr>
-                <td>outerText</td>
-                <td>&#10003;</td>
-                <td>&#10003;</td>
-                <td>Thay đổi phần tử thành text luôn</td>
-              </tr>
-              <tr>
-                <td>innerText</td>
-                <td>&#10003;</td>
-                <td>&#10003;</td>
-                <td>Đổi cái ruột HTML thành Text</td>
-              </tr>
-              
-            </tbody>
-          </table>
+        <div class="text-danger">Lưu ý trường hợp absolute và relative, cha là relative chứ không phải cha lồng vào nó.
         </div>
-        <div id="js84" class="d-none">
-          <div class="alert alert-info" role="alert">
-            Lấy đối tượng node của element. 
-          </div>
-          <div class="text-danger">Sự khác nhau giữa <code>element.getAttribute()</code> và <code>element.getAttributeNode()</code> đó là thằng 1 trả về giá trị của một node attribute, thằng 2 trả về đối tượng đó</div>
-          <div class="text-primary">W3school khuyên dùng <code>element.getAttribute()</code> sẽ dễ hơn.</div>
-          một attribute node có dạng như sau
-          <pre>
+      </div>
+      <div id="js83" class="d-none">
+        <div class="alert alert-info" role="alert">
+          Lấy element dưới dạng string hoặc gán elment đó thành 1 element mới. outerHTML là HTML bao gồm toàn bộ
+          element. Điều này khác với innerHTML
+        </div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>?</th>
+              <th>Lấy</th>
+              <th>Gán</th>
+              <th>Cách dùng</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>outerHTML</td>
+              <td>&#10003;</td>
+              <td>&#10003;</td>
+              <td>Thay đổi phần tử thành 1 phần tử mới</td>
+            </tr>
+            <tr>
+              <td>innerHTML</td>
+              <td>&#10003;</td>
+              <td>&#10003;</td>
+              <td>Thay đổi cái ruột HTML của phần tử</td>
+            </tr>
+            <tr>
+              <td>outerText</td>
+              <td>&#10003;</td>
+              <td>&#10003;</td>
+              <td>Thay đổi phần tử thành text luôn</td>
+            </tr>
+            <tr>
+              <td>innerText</td>
+              <td>&#10003;</td>
+              <td>&#10003;</td>
+              <td>Đổi cái ruột HTML thành Text</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+      <div id="js84" class="d-none">
+        <div class="alert alert-info" role="alert">
+          Lấy đối tượng node của element.
+        </div>
+        <div class="text-danger">Sự khác nhau giữa <code>element.getAttribute()</code> và
+          <code>element.getAttributeNode()</code> đó là thằng 1 trả về giá trị của một node attribute, thằng 2 trả về
+          đối tượng đó</div>
+        <div class="text-primary">W3school khuyên dùng <code>element.getAttribute()</code> sẽ dễ hơn.</div>
+        một attribute node có dạng như sau
+        <pre>
             baseURI
 : 
 "http://localhost:5500/jan.html"
@@ -849,329 +936,707 @@ value
 : 
 Attr
           </pre>
+      </div>
+      <div id="js85" class="d-none">
+        <div class="text-danger"><code>document.getElementsByClassName() khác element.getElementsByClassName()</code>
+          khác ở chỗ cái 1 thì tìm những element bên trong document, còn cái thứ 2 thì tìm những element bên trong
+          element đó</div>
+        <div class="text-danger">Không có phương thức <span class="display-4"
+            style="text-decoration: line-through;">element.getElementById()</span></div>
+        <div class="text-danger">Không có phương thức <span class="display-4"
+            style="text-decoration: line-through;">element.getElementByName()</span></div>
+        <img src="../asset/images/element-family.svg"
+          class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+      </div>
+      <div id="js86" class="d-none">
+        <div class="text-danger"><code>document.getElementsByTagName() khác element.getElementsByTagName()</code> khác ở
+          chỗ cái 1 thì tìm những element bên trong document, còn cái thứ 2 thì tìm những element bên trong element đó
         </div>
-        <div id="js85" class="d-none">
-          <div class="text-danger"><code>document.getElementsByClassName() khác element.getElementsByClassName()</code> khác ở chỗ cái 1 thì tìm những element bên trong document, còn cái thứ 2 thì tìm những element bên trong element đó</div>
-          <div class="text-danger">Không có phương thức <span class="display-4" style="text-decoration: line-through;">element.getElementById()</span></div>
-          <div class="text-danger">Không có phương thức <span class="display-4" style="text-decoration: line-through;">element.getElementByName()</span></div>
-          <img src="../asset/images/element-family.svg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
-        </div>
-        <div id="js86" class="d-none">
-          <div class="text-danger"><code>document.getElementsByTagName() khác element.getElementsByTagName()</code> khác ở chỗ cái 1 thì tìm những element bên trong document, còn cái thứ 2 thì tìm những element bên trong element đó</div>
-          <div class="text-danger">Không có phương thức <span class="display-4" style="text-decoration: line-through;">element.getElementById()</span></div>
-          <div class="text-danger">Không có phương thức <span class="display-4" style="text-decoration: line-through;">element.getElementByName()</span></div>
-          <img src="../asset/images/element-family.svg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
-        </div>
-        <div id="js87" class="d-none">
-          <h5>Định nghĩa</h5>
-          Kiểm tra có hoặc không có 1 thuộc tính (attribute) tồn tại trong 1 element
-          <h5>Cú pháp</h5>
-          <code>element.hasAttribute(name)</code>
-          <h5>Trả về</h5>
-          <code>Boolean</code>
-        </div>
-        <div id="js88" class="d-none">
-          <h5>Định nghĩa</h5>
-          Kiểm tra element có thuộc tính nào không, hay có nghĩa là có attribute nào không. Khác với <code>element.hasAttribute(name)</code> ở chỗ thằng 1 thì kiểm tra có cái nào không, còn thằng 2 thì kiểm tra có cái đó không !
-          <h5>Cú pháp</h5>
-          <code>element.hasAttribute<strong style="color:black">s</strong>()</code> <br>
-          hoặc <br>
-          <code>node.hasAttribute<strong style="color:black">s</strong>()</code> <br>
+        <div class="text-danger">Không có phương thức <span class="display-4"
+            style="text-decoration: line-through;">element.getElementById()</span></div>
+        <div class="text-danger">Không có phương thức <span class="display-4"
+            style="text-decoration: line-through;">element.getElementByName()</span></div>
+        <img src="../asset/images/element-family.svg"
+          class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+      </div>
+      <div id="js87" class="d-none">
+        <h5>Định nghĩa</h5>
+        Kiểm tra có hoặc không có 1 thuộc tính (attribute) tồn tại trong 1 element
+        <h5>Cú pháp</h5>
+        <code>element.hasAttribute(name)</code>
+        <h5>Trả về</h5>
+        <code>Boolean</code>
+      </div>
+      <div id="js88" class="d-none">
+        <h5>Định nghĩa</h5>
+        Kiểm tra element có thuộc tính nào không, hay có nghĩa là có attribute nào không. Khác với
+        <code>element.hasAttribute(name)</code> ở chỗ thằng 1 thì kiểm tra có cái nào không, còn thằng 2 thì kiểm tra có
+        cái đó không !
+        <h5>Cú pháp</h5>
+        <code>element.hasAttribute<strong style="color:black">s</strong>()</code> <br>
+        hoặc <br>
+        <code>node.hasAttribute<strong style="color:black">s</strong>()</code> <br>
 
-          <h5>Trả về</h5>
-          <code>Boolean</code>
-        </div>
-        <div id="js89" class="d-none">
-          <h5>Định nghĩa</h5>
-          Kiểm tra element có nút con nào không, hay có nghĩa là có node con nào không. 
-          <h5>Cú pháp</h5>
-          <code>element.hasChildNode<strong style="color:black">s</strong>()</code> <br>
-          hoặc (test thì thấy ok, nhưng không thấy w3school đề cập) <br>
-          <code>node.hasChildNode<strong style="color:black">s</strong>()</code> <br>
+        <h5>Trả về</h5>
+        <code>Boolean</code>
+      </div>
+      <div id="js89" class="d-none">
+        <h5>Định nghĩa</h5>
+        Kiểm tra element có nút con nào không, hay có nghĩa là có node con nào không.
+        <h5>Cú pháp</h5>
+        <code>element.hasChildNode<strong style="color:black">s</strong>()</code> <br>
+        hoặc (test thì thấy ok, nhưng không thấy w3school đề cập) <br>
+        <code>node.hasChildNode<strong style="color:black">s</strong>()</code> <br>
 
-          <h5>Trả về</h5>
-          <code>Boolean</code>
-        </div>
-        <div id="js90" class="d-none">
-          <img src="../asset/images/element-family.svg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
-        </div>
-        <div id="js91" class="d-none">
-          <img src="../asset/images/element-family.svg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
-        </div>
-        <div id="js92" class="d-none">
-          <img src="../asset/images/element-family.svg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
-        </div>
-        <div id="js93" class="d-none">
-          <img src="../asset/images/element-family.svg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
-        </div>
-        <div id="js94" class="d-none">
-          <img src="../asset/images/element-family.svg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
-        </div>
-        <div id="js95" class="d-none">
-          <img src="../asset/images/element-family.svg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
-        </div>
-        <div id="js96" class="d-none">
-          <img src="../asset/images/element-family.svg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
-        </div>
-        <div id="js97" class="d-none">
-          <img src="../asset/images/element-family.svg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
-        </div>
-        <div id="js98" class="d-none">
-          <div class="text-danger">Không có phương thức <span class="display-4" style="text-decoration: line-through;">element.getElementById()</span></div>
-          <div class="text-danger">Không có phương thức <span class="display-4" style="text-decoration: line-through;">element.getElementByName()</span></div>
-          <img src="../asset/images/element-family.svg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
-        </div>
-        <div id="js99" class="d-none">
-          <div class="text-danger">Không có phương thức <span class="display-4" style="text-decoration: line-through;">element.getElementById()</span></div>
-          <div class="text-danger">Không có phương thức <span class="display-4" style="text-decoration: line-through;">element.getElementByName()</span></div>
-          <img src="../asset/images/element-family.svg" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
-        </div>
-        <div id="js100" class="d-none">
-          <h5>Thực thi xoá phần tử ra khỏi DOM</h5>
-          <h5>Cú pháp</h5>
-          <code>element.remove()</code> hoặc là <code>element.remove()</code>
-        </div>
-        <div id="js101" class="d-none">
-          <h5>Thực thi xoá phần tử ra khỏi DOM</h5>
-          <h5>Cú pháp</h5>
-          <code>element.removeChild(node)</code> hoặc là <code>element.removeChild(node)</code>
-        </div>
-        <div id="js102" class="d-none">
-          <h5>Thực thi thay đổi 1 phần tử con và phần tử khác. Phần tử con sẽ bị xoá và nạp vào phần tử mới. Phần tử mới ở vị trí cũ không còn mà đã nhảy qua vị trí mới đó.</h5>
-          <h5>Cú pháp</h5>
-          <code>element.removeChild(node)</code> hoặc là <code>element.removeChild(node)</code>
-        </div>
-        <div id="js103" class="d-none">
-          <h5>Định nghĩa</h5>
-          <p>Lấy hoặc gán ID của element</p>
-          <h5>Cú pháp</h5>
-          <code>element.id</code> hoặc <code>element.id=id</code>
-          <h5>Return value</h5>
-          <code>string</code>
-          <h5>Lưu ý</h5>
-          <pre>
+        <h5>Trả về</h5>
+        <code>Boolean</code>
+      </div>
+      <div id="js90" class="d-none">
+        <img src="../asset/images/element-family.svg"
+          class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+      </div>
+      <div id="js91" class="d-none">
+        <img src="../asset/images/element-family.svg"
+          class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+      </div>
+      <div id="js92" class="d-none">
+        <img src="../asset/images/element-family.svg"
+          class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+      </div>
+      <div id="js93" class="d-none">
+        <img src="../asset/images/element-family.svg"
+          class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+      </div>
+      <div id="js94" class="d-none">
+        <img src="../asset/images/element-family.svg"
+          class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+      </div>
+      <div id="js95" class="d-none">
+        <img src="../asset/images/element-family.svg"
+          class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+      </div>
+      <div id="js96" class="d-none">
+        <img src="../asset/images/element-family.svg"
+          class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+      </div>
+      <div id="js97" class="d-none">
+        <img src="../asset/images/element-family.svg"
+          class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+      </div>
+      <div id="js98" class="d-none">
+        <div class="text-danger">Không có phương thức <span class="display-4"
+            style="text-decoration: line-through;">element.getElementById()</span></div>
+        <div class="text-danger">Không có phương thức <span class="display-4"
+            style="text-decoration: line-through;">element.getElementByName()</span></div>
+        <img src="../asset/images/element-family.svg"
+          class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+      </div>
+      <div id="js99" class="d-none">
+        <div class="text-danger">Không có phương thức <span class="display-4"
+            style="text-decoration: line-through;">element.getElementById()</span></div>
+        <div class="text-danger">Không có phương thức <span class="display-4"
+            style="text-decoration: line-through;">element.getElementByName()</span></div>
+        <img src="../asset/images/element-family.svg"
+          class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+      </div>
+      <div id="js100" class="d-none">
+        <h5>Thực thi xoá phần tử ra khỏi DOM</h5>
+        <h5>Cú pháp</h5>
+        <code>element.remove()</code> hoặc là <code>element.remove()</code>
+      </div>
+      <div id="js101" class="d-none">
+        <h5>Thực thi xoá phần tử ra khỏi DOM</h5>
+        <h5>Cú pháp</h5>
+        <code>element.removeChild(node)</code> hoặc là <code>element.removeChild(node)</code>
+      </div>
+      <div id="js102" class="d-none">
+        <h5>Thực thi thay đổi 1 phần tử con và phần tử khác. Phần tử con sẽ bị xoá và nạp vào phần tử mới. Phần tử mới ở
+          vị trí cũ không còn mà đã nhảy qua vị trí mới đó.</h5>
+        <h5>Cú pháp</h5>
+        <code>element.removeChild(node)</code> hoặc là <code>element.removeChild(node)</code>
+      </div>
+      <div id="js103" class="d-none">
+        <h5>Định nghĩa</h5>
+        <p>Lấy hoặc gán ID của element</p>
+        <h5>Cú pháp</h5>
+        <code>element.id</code> hoặc <code>element.id=id</code>
+        <h5>Return value</h5>
+        <code>string</code>
+        <h5>Lưu ý</h5>
+        <pre>
             var demo = document.getElementById("demo");
             demo.id = "newID";
             console.log(demo);
             console.log(document.getElementById("newID"));
           </pre>
-          <span class="display-3 text-danger">element vẫn gọi được sau khi set id cho element</span>
-          <span class="display-1 text-danger">hi ban</span> nếu lấy demo.outerHTML thì không còn gọi được demo nữa nhé. 
+        <span class="display-3 text-danger">element vẫn gọi được sau khi set id cho element</span>
+        <span class="display-1 text-danger">hi ban</span> nếu lấy demo.outerHTML thì không còn gọi được demo nữa nhé.
+      </div>
+      <div id="js104" class="d-none">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>?</th>
+              <th>Lấy</th>
+              <th>Gán</th>
+              <th>Cách dùng</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>outerHTML</td>
+              <td>&#10003;</td>
+              <td>&#10003;</td>
+              <td>Thay đổi phần tử thành 1 phần tử mới</td>
+            </tr>
+            <tr>
+              <td>innerHTML</td>
+              <td>&#10003;</td>
+              <td>&#10003;</td>
+              <td>Thay đổi cái ruột HTML của phần tử</td>
+            </tr>
+            <tr>
+              <td>outerText</td>
+              <td>&#10003;</td>
+              <td>&#10003;</td>
+              <td>Thay đổi phần tử thành text luôn</td>
+            </tr>
+            <tr>
+              <td>innerText</td>
+              <td>&#10003;</td>
+              <td>&#10003;</td>
+              <td>Đổi cái ruột HTML thành Text</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="js105" class="d-none">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>?</th>
+              <th>Lấy</th>
+              <th>Gán</th>
+              <th>Cách dùng</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>outerHTML</td>
+              <td>&#10003;</td>
+              <td>&#10003;</td>
+              <td>Thay đổi phần tử thành 1 phần tử mới</td>
+            </tr>
+            <tr>
+              <td>innerHTML</td>
+              <td>&#10003;</td>
+              <td>&#10003;</td>
+              <td>Thay đổi cái ruột HTML của phần tử</td>
+            </tr>
+            <tr>
+              <td>outerText</td>
+              <td>&#10003;</td>
+              <td>&#10003;</td>
+              <td>Thay đổi phần tử thành text luôn</td>
+            </tr>
+            <tr>
+              <td>innerText</td>
+              <td>&#10003;</td>
+              <td>&#10003;</td>
+              <td>Đổi cái ruột HTML thành Text</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="js106" class="d-none">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>?</th>
+              <th>Lấy</th>
+              <th>Gán</th>
+              <th>Cách dùng</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>outerHTML</td>
+              <td>&#10003;</td>
+              <td>&#10003;</td>
+              <td>Thay đổi phần tử thành 1 phần tử mới</td>
+            </tr>
+            <tr>
+              <td>innerHTML</td>
+              <td>&#10003;</td>
+              <td>&#10003;</td>
+              <td>Thay đổi cái ruột HTML của phần tử</td>
+            </tr>
+            <tr>
+              <td>outerText</td>
+              <td>&#10003;</td>
+              <td>&#10003;</td>
+              <td>Thay đổi phần tử thành text luôn</td>
+            </tr>
+            <tr>
+              <td>innerText</td>
+              <td>&#10003;</td>
+              <td>&#10003;</td>
+              <td>Đổi cái ruột HTML thành Text</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="js107" class="d-none">
+
+      </div>
+      <div id="js108" class="d-none">
+
+      </div>
+      <div id="js109" class="d-none">
+        <table class="table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Vị trí</th>
+              <th>Giá trị được gán</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td scope="row">insertAdjacentELement()</td>
+              <td>trước sau thẻ mở và trước sau thẻ đóng</td>
+              <td>Element</td>
+            </tr>
+            <tr>
+              <td scope="row">insertAdjacentHTML()</td>
+              <td>trước sau thẻ mở và trước sau thẻ đóng</td>
+              <td>HTML</td>
+            </tr>
+            <tr>
+              <td scope="row">insertAdjacentText()</td>
+              <td>trước sau thẻ mở và trước sau thẻ đóng</td>
+              <td>Text</td>
+            </tr>
+            <tr>
+              <td scope="row">insertBefore()</td>
+              <td>phía trước thẻ thẻ con, hoặc phía cuối cùng của đám con (như append) nếu null</td>
+              <td><strong>Element</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="js110" class="d-none">
+        <h5>Định nghĩa</h5>
+        Thêm 1 element hoặc 1 node vào phía trước của một element hoặc node
+        <div class="text-danger">nếu là <code>null</code> thì insert ở phía cuối element(node) được gọi</div>
+        <h5>Cú pháp</h5>
+        <code>element.insertBefore(new,existing)</code> hoặc <code>node.insertBefore(new,existing)</code>
+      </div>
+      <div id="js111" class="d-none">
+        <h5>Định nghĩa</h5>
+        <p>Lấy hoặc gán thuộc tính title của thẻ, thuộc tính này có thể mở rộng thông tin như tooltip</p>
+        <h5>Cú pháp</h5>
+        <code>element.title</code> hoặc <code>element.title = "Bấm vào để chuyển sang trang mới"</code>
+      </div>
+      <div id="js112" class="d-none">
+        <h5>Định nghĩa</h5>
+        <p>Lấy nội dung (chữ) của thẻ, bao gồm khoảng trống và nội dung của thẻ span</p>
+        <h5>Cú pháp</h5>
+      </div>
+      <div id="js113" class="d-none">
+        <h5>Định nghĩa</h5>
+        <p>Lấy tên của thẻ, ví dụ div, span, a, img...</p>
+        <h5>Cú pháp</h5>
+        <code>element.tagName</code>
+      </div>
+      <div id="js114" class="d-none">
+        <h5>Định nghĩa</h5>
+        <p>Chỉ định hướng đi khi bấm nút tab trên bàn phím, đây là thuộc tính của thẻ</p>
+        <h5>Cú pháp</h5>
+        <code>element.tabIndex</code>
+        <p>sau khi set tabIndex cho các thẻ,<span class="display-2">phải gọi element.focus()</span></p>
+      </div>
+      <div id="js115" class="d-none">
+        <h5>Định nghĩa</h5>
+        Định nghĩa inline css cho thẻ
+        <h5>Cú pháp</h5>
+        <code>element.style.</code><span class="d-2 text-danger">backgroundColor hoặc color hoặc animation hoặc ... còn
+          hơn 340 thuộc tính css khác</span>
+      </div>
+      <div id="js116" class="d-none">
+        <p>Thứ tự event diễn ra từ trên xuống dưới</p>
+        <ul>
+          <li><code>onmouseover</code> : chuột xâm nhập vào element</li>
+          <li><code>onmouseenter</code> : chuột xâm nhập vào element</li>
+          <li><code>onmousemove</code> : chuột chạy bên trong element element</li>
+          <li><code>onmousdown</code> : chuột trái hoặc chuột phải cắn element</li>
+          <li><code>onmouesup</code> : chuột trái hoặc chuột phải cắn element</li>
+          <li><code>onclick</code> : sau khi chuột trái nhả element</li>
+          <li><code>ondblclick</code> : sau khi chuột trái cắn nhả element liên tiếp 2 lần, thì mousedown sẽ bắn 2 lần,
+            mouseup sẽ bắn 2 lần, onclick cũng bắn 2 lần</li>
+          <li><code>oncontextmenu</code> : sau khi chuột phải nhả element</li>
+          <li><code>onmouseout</code> : trỏ chuột vừa rời element</li>
+          <li><code>onmouseleave</code> : trỏ chuột vừa rời element</li>
+        </ul>
+        <p><span>Lưu ý</span> : onmouseover giống như onmouseenter, onmouseout giống như onmouseleave, tuy nhiên điểm
+          khác biệt ở chỗ: onmouseover và onmouseout bắn sự kiện trước 2 thằng kia. Và thằng enter và leave thì không có
+          nổi bọt. </p>
+        <p>Lấy ví dụ: có #outside nằm bên ngoài #inside, Chúng ta chỉ set onmouseover và onmouseenter cho thằng outside
+          (là thằng cha), vậy khi chuột bò vào #outside thì sự kiện sẽ cùng bắn ra. Tuy nhiên nếu chuột bò tiếp vào
+          inside thì chỉ sự kiện onmouseover của cha là bắn sự kiện vì con #inside được nổi bọt trong mouseover, còn
+          mouseenter thì không được bắn sự kiện khi chuột bò vào inside</p>
+      </div>
+      <div id="js117" class="d-none">
+        <p>Thứ tự event diễn ra từ trên xuống dưới</p>
+        <ul>
+          <li><code>onmouseover</code> : chuột xâm nhập vào element</li>
+          <li><code>onmouseenter</code> : chuột xâm nhập vào element</li>
+          <li><code>onmousemove</code> : chuột chạy bên trong element element</li>
+          <li><code>onmousdown</code> : chuột trái hoặc chuột phải cắn element</li>
+          <li><code>onmouesup</code> : chuột trái hoặc chuột phải cắn element</li>
+          <li><code>onclick</code> : sau khi chuột trái nhả element</li>
+          <li><code>ondblclick</code> : sau khi chuột trái cắn nhả element liên tiếp 2 lần, thì mousedown sẽ bắn 2 lần,
+            mouseup sẽ bắn 2 lần, onclick cũng bắn 2 lần</li>
+          <li><code>oncontextmenu</code> : sau khi chuột phải nhả element</li>
+          <li><code>onmouseout</code> : trỏ chuột vừa rời element</li>
+          <li><code>onmouseleave</code> : trỏ chuột vừa rời element</li>
+        </ul>
+        <p><span>Lưu ý</span> : onmouseover giống như onmouseenter, onmouseout giống như onmouseleave, tuy nhiên điểm
+          khác biệt ở chỗ: onmouseover và onmouseout bắn sự kiện trước 2 thằng kia. Và thằng enter và leave thì không có
+          nổi bọt. </p>
+        <p>Lấy ví dụ: có #outside nằm bên ngoài #inside, Chúng ta chỉ set onmouseover và onmouseenter cho thằng outside
+          (là thằng cha), vậy khi chuột bò vào #outside thì sự kiện sẽ cùng bắn ra. Tuy nhiên nếu chuột bò tiếp vào
+          inside thì chỉ sự kiện onmouseover của cha là bắn sự kiện vì con #inside được nổi bọt trong mouseover, còn
+          mouseenter thì không được bắn sự kiện khi chuột bò vào inside</p>
+      </div>
+      <div id="js118" class="d-none">
+        <p>Thứ tự event diễn ra từ trên xuống dưới</p>
+        <ul>
+          <li><code>onmouseover</code> : chuột xâm nhập vào element</li>
+          <li><code>onmouseenter</code> : chuột xâm nhập vào element</li>
+          <li><code>onmousemove</code> : chuột chạy bên trong element element</li>
+          <li><code>onmousdown</code> : chuột trái hoặc chuột phải cắn element</li>
+          <li><code>onmouesup</code> : chuột trái hoặc chuột phải cắn element</li>
+          <li><code>onclick</code> : sau khi chuột trái nhả element</li>
+          <li><code>ondblclick</code> : sau khi chuột trái cắn nhả element liên tiếp 2 lần, thì mousedown sẽ bắn 2 lần,
+            mouseup sẽ bắn 2 lần, onclick cũng bắn 2 lần</li>
+          <li><code>oncontextmenu</code> : sau khi chuột phải nhả element</li>
+          <li><code>onmouseout</code> : trỏ chuột vừa rời element</li>
+          <li><code>onmouseleave</code> : trỏ chuột vừa rời element</li>
+        </ul>
+        <p><span>Lưu ý</span> : onmouseover giống như onmouseenter, onmouseout giống như onmouseleave, tuy nhiên điểm
+          khác biệt ở chỗ: onmouseover và onmouseout bắn sự kiện trước 2 thằng kia. Và thằng enter và leave thì không có
+          nổi bọt. </p>
+        <p>Lấy ví dụ: có #outside nằm bên ngoài #inside, Chúng ta chỉ set onmouseover và onmouseenter cho thằng outside
+          (là thằng cha), vậy khi chuột bò vào #outside thì sự kiện sẽ cùng bắn ra. Tuy nhiên nếu chuột bò tiếp vào
+          inside thì chỉ sự kiện onmouseover của cha là bắn sự kiện vì con #inside được nổi bọt trong mouseover, còn
+          mouseenter thì không được bắn sự kiện khi chuột bò vào inside</p>
+      </div>
+      <div id="js119" class="d-none">
+        <p>Thứ tự event diễn ra từ trên xuống dưới</p>
+        <ul>
+          <li><code>onmouseover</code> : chuột xâm nhập vào element</li>
+          <li><code>onmouseenter</code> : chuột xâm nhập vào element</li>
+          <li><code>onmousemove</code> : chuột chạy bên trong element element</li>
+          <li><code>onmousdown</code> : chuột trái hoặc chuột phải cắn element</li>
+          <li><code>onmouesup</code> : chuột trái hoặc chuột phải cắn element</li>
+          <li><code>onclick</code> : sau khi chuột trái nhả element</li>
+          <li><code>ondblclick</code> : sau khi chuột trái cắn nhả element liên tiếp 2 lần, thì mousedown sẽ bắn 2 lần,
+            mouseup sẽ bắn 2 lần, onclick cũng bắn 2 lần</li>
+          <li><code>oncontextmenu</code> : sau khi chuột phải nhả element</li>
+          <li><code>onmouseout</code> : trỏ chuột vừa rời element</li>
+          <li><code>onmouseleave</code> : trỏ chuột vừa rời element</li>
+        </ul>
+        <p><span>Lưu ý</span> : onmouseover giống như onmouseenter, onmouseout giống như onmouseleave, tuy nhiên điểm
+          khác biệt ở chỗ: onmouseover và onmouseout bắn sự kiện trước 2 thằng kia. Và thằng enter và leave thì không có
+          nổi bọt. </p>
+        <p>Lấy ví dụ: có #outside nằm bên ngoài #inside, Chúng ta chỉ set onmouseover và onmouseenter cho thằng outside
+          (là thằng cha), vậy khi chuột bò vào #outside thì sự kiện sẽ cùng bắn ra. Tuy nhiên nếu chuột bò tiếp vào
+          inside thì chỉ sự kiện onmouseover của cha là bắn sự kiện vì con #inside được nổi bọt trong mouseover, còn
+          mouseenter thì không được bắn sự kiện khi chuột bò vào inside</p>
+      </div>
+      <div id="js120" class="d-none">
+        <p>Thứ tự event diễn ra từ trên xuống dưới</p>
+        <ul>
+          <li><code>onmouseover</code> : chuột xâm nhập vào element</li>
+          <li><code>onmouseenter</code> : chuột xâm nhập vào element</li>
+          <li><code>onmousemove</code> : chuột chạy bên trong element element</li>
+          <li><code>onmousdown</code> : chuột trái hoặc chuột phải cắn element</li>
+          <li><code>onmouesup</code> : chuột trái hoặc chuột phải cắn element</li>
+          <li><code>onclick</code> : sau khi chuột trái nhả element</li>
+          <li><code>ondblclick</code> : sau khi chuột trái cắn nhả element liên tiếp 2 lần, thì mousedown sẽ bắn 2 lần,
+            mouseup sẽ bắn 2 lần, onclick cũng bắn 2 lần</li>
+          <li><code>oncontextmenu</code> : sau khi chuột phải nhả element</li>
+          <li><code>onmouseout</code> : trỏ chuột vừa rời element</li>
+          <li><code>onmouseleave</code> : trỏ chuột vừa rời element</li>
+        </ul>
+        <p><span>Lưu ý</span> : onmouseover giống như onmouseenter, onmouseout giống như onmouseleave, tuy nhiên điểm
+          khác biệt ở chỗ: onmouseover và onmouseout bắn sự kiện trước 2 thằng kia. Và thằng enter và leave thì không có
+          nổi bọt. </p>
+        <p>Lấy ví dụ: có #outside nằm bên ngoài #inside, Chúng ta chỉ set onmouseover và onmouseenter cho thằng outside
+          (là thằng cha), vậy khi chuột bò vào #outside thì sự kiện sẽ cùng bắn ra. Tuy nhiên nếu chuột bò tiếp vào
+          inside thì chỉ sự kiện onmouseover của cha là bắn sự kiện vì con #inside được nổi bọt trong mouseover, còn
+          mouseenter thì không được bắn sự kiện khi chuột bò vào inside</p>
+      </div>
+      <div id="js121" class="d-none">
+        <p>Thứ tự event diễn ra từ trên xuống dưới</p>
+        <ul>
+          <li><code>onmouseover</code> : chuột xâm nhập vào element</li>
+          <li><code>onmouseenter</code> : chuột xâm nhập vào element</li>
+          <li><code>onmousemove</code> : chuột chạy bên trong element element</li>
+          <li><code>onmousdown</code> : chuột trái hoặc chuột phải cắn element</li>
+          <li><code>onmouesup</code> : chuột trái hoặc chuột phải cắn element</li>
+          <li><code>onclick</code> : sau khi chuột trái nhả element</li>
+          <li><code>ondblclick</code> : sau khi chuột trái cắn nhả element liên tiếp 2 lần, thì mousedown sẽ bắn 2 lần,
+            mouseup sẽ bắn 2 lần, onclick cũng bắn 2 lần</li>
+          <li><code>oncontextmenu</code> : sau khi chuột phải nhả element</li>
+          <li><code>onmouseout</code> : trỏ chuột vừa rời element</li>
+          <li><code>onmouseleave</code> : trỏ chuột vừa rời element</li>
+        </ul>
+        <p><span>Lưu ý</span> : onmouseover giống như onmouseenter, onmouseout giống như onmouseleave, tuy nhiên điểm
+          khác biệt ở chỗ: onmouseover và onmouseout bắn sự kiện trước 2 thằng kia. Và thằng enter và leave thì không có
+          nổi bọt. </p>
+        <p>Lấy ví dụ: có #outside nằm bên ngoài #inside, Chúng ta chỉ set onmouseover và onmouseenter cho thằng outside
+          (là thằng cha), vậy khi chuột bò vào #outside thì sự kiện sẽ cùng bắn ra. Tuy nhiên nếu chuột bò tiếp vào
+          inside thì chỉ sự kiện onmouseover của cha là bắn sự kiện vì con #inside được nổi bọt trong mouseover, còn
+          mouseenter thì không được bắn sự kiện khi chuột bò vào inside</p>
+      </div>
+      <div id="js122" class="d-none">
+        <p>Thứ tự event diễn ra từ trên xuống dưới</p>
+        <ul>
+          <li><code>onmouseover</code> : chuột xâm nhập vào element</li>
+          <li><code>onmouseenter</code> : chuột xâm nhập vào element</li>
+          <li><code>onmousemove</code> : chuột chạy bên trong element element</li>
+          <li><code>onmousdown</code> : chuột trái hoặc chuột phải cắn element</li>
+          <li><code>onmouesup</code> : chuột trái hoặc chuột phải cắn element</li>
+          <li><code>onclick</code> : sau khi chuột trái nhả element</li>
+          <li><code>ondblclick</code> : sau khi chuột trái cắn nhả element liên tiếp 2 lần, thì mousedown sẽ bắn 2 lần,
+            mouseup sẽ bắn 2 lần, onclick cũng bắn 2 lần</li>
+          <li><code>oncontextmenu</code> : sau khi chuột phải nhả element</li>
+          <li><code>onmouseout</code> : trỏ chuột vừa rời element</li>
+          <li><code>onmouseleave</code> : trỏ chuột vừa rời element</li>
+        </ul>
+        <p><span>Lưu ý</span> : onmouseover giống như onmouseenter, onmouseout giống như onmouseleave, tuy nhiên điểm
+          khác biệt ở chỗ: onmouseover và onmouseout bắn sự kiện trước 2 thằng kia. Và thằng enter và leave thì không có
+          nổi bọt. </p>
+        <p>Lấy ví dụ: có #outside nằm bên ngoài #inside, Chúng ta chỉ set onmouseover và onmouseenter cho thằng outside
+          (là thằng cha), vậy khi chuột bò vào #outside thì sự kiện sẽ cùng bắn ra. Tuy nhiên nếu chuột bò tiếp vào
+          inside thì chỉ sự kiện onmouseover của cha là bắn sự kiện vì con #inside được nổi bọt trong mouseover, còn
+          mouseenter thì không được bắn sự kiện khi chuột bò vào inside</p>
+      </div>
+      <div id="js123" class="d-none">
+        <p>Thứ tự event diễn ra từ trên xuống dưới</p>
+        <ul>
+          <li><code>onmouseover</code> : chuột xâm nhập vào element</li>
+          <li><code>onmouseenter</code> : chuột xâm nhập vào element</li>
+          <li><code>onmousemove</code> : chuột chạy bên trong element element</li>
+          <li><code>onmousdown</code> : chuột trái hoặc chuột phải cắn element</li>
+          <li><code>onmouesup</code> : chuột trái hoặc chuột phải cắn element</li>
+          <li><code>onclick</code> : sau khi chuột trái nhả element</li>
+          <li><code>ondblclick</code> : sau khi chuột trái cắn nhả element liên tiếp 2 lần, thì mousedown sẽ bắn 2 lần,
+            mouseup sẽ bắn 2 lần, onclick cũng bắn 2 lần</li>
+          <li><code>oncontextmenu</code> : sau khi chuột phải nhả element</li>
+          <li><code>onmouseout</code> : trỏ chuột vừa rời element</li>
+          <li><code>onmouseleave</code> : trỏ chuột vừa rời element</li>
+        </ul>
+        <p><span>Lưu ý</span> : onmouseover giống như onmouseenter, onmouseout giống như onmouseleave, tuy nhiên điểm
+          khác biệt ở chỗ: onmouseover và onmouseout bắn sự kiện trước 2 thằng kia. Và thằng enter và leave thì không có
+          nổi bọt. </p>
+        <p>Lấy ví dụ: có #outside nằm bên ngoài #inside, Chúng ta chỉ set onmouseover và onmouseenter cho thằng outside
+          (là thằng cha), vậy khi chuột bò vào #outside thì sự kiện sẽ cùng bắn ra. Tuy nhiên nếu chuột bò tiếp vào
+          inside thì chỉ sự kiện onmouseover của cha là bắn sự kiện vì con #inside được nổi bọt trong mouseover, còn
+          mouseenter thì không được bắn sự kiện khi chuột bò vào inside</p>
+      </div>
+      <div id="js124" class="d-none">
+        <p>Thứ tự event diễn ra từ trên xuống dưới</p>
+        <ul>
+          <li><code>onmouseover</code> : chuột xâm nhập vào element</li>
+          <li><code>onmouseenter</code> : chuột xâm nhập vào element</li>
+          <li><code>onmousemove</code> : chuột chạy bên trong element element</li>
+          <li><code>onmousdown</code> : chuột trái hoặc chuột phải cắn element</li>
+          <li><code>onmouesup</code> : chuột trái hoặc chuột phải cắn element</li>
+          <li><code>onclick</code> : sau khi chuột trái nhả element</li>
+          <li><code>ondblclick</code> : sau khi chuột trái cắn nhả element liên tiếp 2 lần, thì mousedown sẽ bắn 2 lần,
+            mouseup sẽ bắn 2 lần, onclick cũng bắn 2 lần</li>
+          <li><code>oncontextmenu</code> : sau khi chuột phải nhả element</li>
+          <li><code>onmouseout</code> : trỏ chuột vừa rời element</li>
+          <li><code>onmouseleave</code> : trỏ chuột vừa rời element</li>
+        </ul>
+        <p><span>Lưu ý</span> : onmouseover giống như onmouseenter, onmouseout giống như onmouseleave, tuy nhiên điểm
+          khác biệt ở chỗ: onmouseover và onmouseout bắn sự kiện trước 2 thằng kia. Và thằng enter và leave thì không có
+          nổi bọt. </p>
+        <p>Lấy ví dụ: có #outside nằm bên ngoài #inside, Chúng ta chỉ set onmouseover và onmouseenter cho thằng outside
+          (là thằng cha), vậy khi chuột bò vào #outside thì sự kiện sẽ cùng bắn ra. Tuy nhiên nếu chuột bò tiếp vào
+          inside thì chỉ sự kiện onmouseover của cha là bắn sự kiện vì con #inside được nổi bọt trong mouseover, còn
+          mouseenter thì không được bắn sự kiện khi chuột bò vào inside</p>
+      </div>
+      <div id="js125" class="d-none">
+        <p>Thứ tự event diễn ra từ trên xuống dưới</p>
+        <ul>
+          <li><code>onmouseover</code> : chuột xâm nhập vào element</li>
+          <li><code>onmouseenter</code> : chuột xâm nhập vào element</li>
+          <li><code>onmousemove</code> : chuột chạy bên trong element element</li>
+          <li><code>onmousdown</code> : chuột trái hoặc chuột phải cắn element</li>
+          <li><code>onmouesup</code> : chuột trái hoặc chuột phải cắn element</li>
+          <li><code>onclick</code> : sau khi chuột trái nhả element</li>
+          <li><code>ondblclick</code> : sau khi chuột trái cắn nhả element liên tiếp 2 lần, thì mousedown sẽ bắn 2 lần,
+            mouseup sẽ bắn 2 lần, onclick cũng bắn 2 lần</li>
+          <li><code>oncontextmenu</code> : sau khi chuột phải nhả element</li>
+          <li><code>onmouseout</code> : trỏ chuột vừa rời element</li>
+          <li><code>onmouseleave</code> : trỏ chuột vừa rời element</li>
+        </ul>
+        <p><span>Lưu ý</span> : onmouseover giống như onmouseenter, onmouseout giống như onmouseleave, tuy nhiên điểm
+          khác biệt ở chỗ: onmouseover và onmouseout bắn sự kiện trước 2 thằng kia. Và thằng enter và leave thì không có
+          nổi bọt. </p>
+        <p>Lấy ví dụ: có #outside nằm bên ngoài #inside, Chúng ta chỉ set onmouseover và onmouseenter cho thằng outside
+          (là thằng cha), vậy khi chuột bò vào #outside thì sự kiện sẽ cùng bắn ra. Tuy nhiên nếu chuột bò tiếp vào
+          inside thì chỉ sự kiện onmouseover của cha là bắn sự kiện vì con #inside được nổi bọt trong mouseover, còn
+          mouseenter thì không được bắn sự kiện khi chuột bò vào inside</p>
+      </div>
+      <div id="js126" class="d-none">
+        <style> 
+          #demoAnimationEvent {
+            animation: animate 2s 3;
+            animation-delay: 2s;
+          }
+          @keyframes animate {
+            from {
+              transform: rotate(0deg);
+            }
+            to {
+              transform: rotate(360deg);
+            }
+            
+          }
+        </style>
+        <div id="demoAnimationEvent">demoAnimationEvent</div>
+        <script>
+          var demoAnimationEvent = document.querySelector("#demoAnimationEvent");
+          demoAnimationEvent.onanimationstart = function (){
+            demoAnimationEvent.innerText = "animation start";
+          }
+          var x = 2;
+          demoAnimationEvent.onanimationiteration = function(){
+            demoAnimationEvent.innerText = "animation interation " + x;
+            x++
+          }
+          demoAnimationEvent.onanimationend = function(){
+            demoAnimationEvent.innerText = "animationend";
+          }
+        </script>
+
+      </div>
+      <div id="js127" class="d-none"></div>
+      <div id="js128" class="d-none"></div>
+      <div id="js129" class="d-none">
+        <div id="demoClipboardEvents" contenteditable="true">Phạm Ngọc Linh</div>
+    <p id="resultClipboardEvent">resultClipboardEvent</p>
+    <script>
+      var demoClipboardEvents = document.getElementById("demoClipboardEvents");
+      var resultClipboardEvent = document.getElementById("resultClipboardEvent");
+      demoClipboardEvents.oncopy = function (event) {
+        resultClipboardEvent.innerText = "Copied";
+      };
+
+      demoClipboardEvents.oncut = function () {
+        resultClipboardEvent.innerText = "Cut";
+      };
+      demoClipboardEvents.onpaste = function () {
+        resultClipboardEvent.innerText = "Paste";
+      };
+    </script>
+      </div>
+      <div id="js130" class="d-none"></div>
+      <div id="js131" class="d-none"></div>
+
+      <div id="js132" class="d-none">
+        <style>
+          .dragEvent > div {
+            padding: 40px;
+            margin-top: 20px;
+            background-color: red;
+          }
+          .dragEvent #resultDragEvent {
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 5px;
+            line-height: 5px;
+          }
+        </style>
+        <div class="dragEvent">
+          <div id="elementDragEvent" draggable="true">element</div>
+          <div id="targetDragEvent">target</div>
+          <div id="resultDragEvent" style="background-color: transparent"></div>
+          <p>Lưu ý: dragend là của elmement, dragleave là của target, chỉ cần dùng preventdefault cho drop</p>
         </div>
-        <div id="js104" class="d-none">
-          <table class="table">
-            <thead>
-              <tr>
-                <th>?</th>
-                <th>Lấy</th>
-                <th>Gán</th>
-                <th>Cách dùng</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>outerHTML</td>
-                <td>&#10003;</td>
-                <td>&#10003;</td>
-                <td>Thay đổi phần tử thành 1 phần tử mới</td>
-              </tr>
-              <tr>
-                <td>innerHTML</td>
-                <td>&#10003;</td>
-                <td>&#10003;</td>
-                <td>Thay đổi cái ruột HTML của phần tử</td>
-              </tr>
-              <tr>
-                <td>outerText</td>
-                <td>&#10003;</td>
-                <td>&#10003;</td>
-                <td>Thay đổi phần tử thành text luôn</td>
-              </tr>
-              <tr>
-                <td>innerText</td>
-                <td>&#10003;</td>
-                <td>&#10003;</td>
-                <td>Đổi cái ruột HTML thành Text</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div id="js105" class="d-none">
-          <table class="table">
-            <thead>
-              <tr>
-                <th>?</th>
-                <th>Lấy</th>
-                <th>Gán</th>
-                <th>Cách dùng</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>outerHTML</td>
-                <td>&#10003;</td>
-                <td>&#10003;</td>
-                <td>Thay đổi phần tử thành 1 phần tử mới</td>
-              </tr>
-              <tr>
-                <td>innerHTML</td>
-                <td>&#10003;</td>
-                <td>&#10003;</td>
-                <td>Thay đổi cái ruột HTML của phần tử</td>
-              </tr>
-              <tr>
-                <td>outerText</td>
-                <td>&#10003;</td>
-                <td>&#10003;</td>
-                <td>Thay đổi phần tử thành text luôn</td>
-              </tr>
-              <tr>
-                <td>innerText</td>
-                <td>&#10003;</td>
-                <td>&#10003;</td>
-                <td>Đổi cái ruột HTML thành Text</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div id="js106" class="d-none">
-          <table class="table">
-            <thead>
-              <tr>
-                <th>?</th>
-                <th>Lấy</th>
-                <th>Gán</th>
-                <th>Cách dùng</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>outerHTML</td>
-                <td>&#10003;</td>
-                <td>&#10003;</td>
-                <td>Thay đổi phần tử thành 1 phần tử mới</td>
-              </tr>
-              <tr>
-                <td>innerHTML</td>
-                <td>&#10003;</td>
-                <td>&#10003;</td>
-                <td>Thay đổi cái ruột HTML của phần tử</td>
-              </tr>
-              <tr>
-                <td>outerText</td>
-                <td>&#10003;</td>
-                <td>&#10003;</td>
-                <td>Thay đổi phần tử thành text luôn</td>
-              </tr>
-              <tr>
-                <td>innerText</td>
-                <td>&#10003;</td>
-                <td>&#10003;</td>
-                <td>Đổi cái ruột HTML thành Text</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div id="js107" class="d-none">
+        <script>
+          var elementDragEvent = document.getElementById("elementDragEvent");
+          var targetDragEvent = document.getElementById("targetDragEvent");
+          var resultDragEvent = document.getElementById("resultDragEvent");
+          elementDragEvent.addEventListener("dragstart", function () {
+            resultDragEvent.insertAdjacentHTML("beforeend", "<p>dragstart</p>");
+          });
+          elementDragEvent.addEventListener("dragend", function () {
+            resultDragEvent.insertAdjacentHTML("beforeend", "<p>dragend</p>");
+          });
+          elementDragEvent.addEventListener("drag", function () {
+            resultDragEvent.insertAdjacentHTML("beforeend","<p style='background-color:blue'>draging<p>");
+          });
+          targetDragEvent.addEventListener("dragenter", function () {
+            resultDragEvent.insertAdjacentHTML("beforeend", "<p>dragEnter<p>");
+          });
+          targetDragEvent.addEventListener("dragover", function (event) {
+            event.preventDefault();
+            resultDragEvent.insertAdjacentHTML("beforeend","<p style='background-color:green'>over<p>");
+          });
+          targetDragEvent.addEventListener("dragleave", function (event) {
+            resultDragEvent.insertAdjacentHTML("beforeend", "<p>dragLeave<p>");
+          });
+          targetDragEvent.addEventListener("drop", function (event) {
+            resultDragEvent.insertAdjacentHTML("beforeend", "<p style='background-color:yellow'>drop<p>");
+            targetDragEvent.appendChild(elementDragEvent);
+          });
           
-        </div>
-        <div id="js108" class="d-none">
-
-        </div>
-        <div id="js109" class="d-block">
-          <table class="table">
-            <thead>
-              <tr>
-                <th></th>
-                <th>Vị trí</th>
-                <th>Giá trị được gán</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td scope="row">insertAdjacentELement()</td>
-                <td>trước sau thẻ mở và trước sau thẻ đóng</td>
-                <td>Element</td>
-              </tr>
-              <tr>
-                <td scope="row">insertAdjacentHTML()</td>
-                <td>trước sau thẻ mở và trước sau thẻ đóng</td>
-                <td>HTML</td>
-              </tr>
-              <tr>
-                <td scope="row">insertAdjacentText()</td>
-                <td>trước sau thẻ mở và trước sau thẻ đóng</td>
-                <td>Text</td>
-              </tr>
-              <tr>
-                <td scope="row">insertBefore()</td>
-                <td>phía trước thẻ thẻ con, hoặc phía cuối cùng của đám con (như append) nếu null</td>
-                <td><strong>Element</strong></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div id="js110" class="d-none">
-          <h5>Định nghĩa</h5>
-          Thêm 1 element hoặc 1 node vào phía trước của một element hoặc node
-          <div class="text-danger">nếu là <code>null</code> thì insert ở phía cuối element(node) được gọi</div>
-          <h5>Cú pháp</h5>
-          <code>element.insertBefore(new,existing)</code> hoặc <code>node.insertBefore(new,existing)</code>
-        </div>
-        <div id="js111" class="d-none">
-          <h5>Định nghĩa</h5>
-          <p>Lấy hoặc gán thuộc tính title của thẻ, thuộc tính này có thể mở rộng thông tin như tooltip</p>
-          <h5>Cú pháp</h5>
-          <code>element.title</code> hoặc <code>element.title = "Bấm vào để chuyển sang trang mới"</code>
-        </div>
-        <div id="js112" class="d-none">
-          <h5>Định nghĩa</h5>
-          <p>Lấy nội dung (chữ) của thẻ, bao gồm khoảng trống và nội dung của thẻ span</p>
-          <h5>Cú pháp</h5>
-        </div>
-        <div id="js113" class="d-none">
-          <h5>Định nghĩa</h5>
-          <p>Lấy tên của thẻ, ví dụ div, span, a, img...</p>
-          <h5>Cú pháp</h5>
-          <code>element.tagName</code>
-        </div>
-        <div id="js114" class="d-none">
-          <h5>Định nghĩa</h5>
-          <p>Chỉ định hướng đi khi bấm nút tab trên bàn phím, đây là thuộc tính của thẻ</p>
-          <h5>Cú pháp</h5>
-          <code>element.tabIndex</code>
-          <p>sau khi set tabIndex cho các thẻ,<span class="display-2">phải gọi element.focus()</span></p>
-        </div>
-        <div id="js115" class="d-none">
-          <h5>Định nghĩa</h5>
-          Định nghĩa inline css cho thẻ
-          <h5>Cú pháp</h5>
-          <code>element.style.</code><span class="d-2 text-danger">backgroundColor hoặc color hoặc animation hoặc ... còn hơn 340 thuộc tính css khác</span>
-        </div>
-        </div>
-
+        </script>
       </div>
-      <div>
-        <h3>Kết quả:</h3>
-        <div id="result"></div>
-        <hr />
-        <h3>Dòng lệnh thực thi:</h3>
-        <div id="statement"></div>
-        <hr />
-      </div>
-      <div id="total" class="display-3"></div>
-      <div id="control" class="d-flex"></div>
-      <button class="btn btn-danger" onclick="reload()">RELOAD PAGE</button>
-      <a  class="btn btn-primary" href="../asset/source/element.html" role="button">Find Element Test</a>
+      <div id="js133" class="d-none"></div>
+      <div id="js134" class="d-none"></div>
+      <div id="js135" class="d-none"></div>
+      <div id="js136" class="d-none"></div>
+      <div id="js137" class="d-none"></div>
+      <div id="js138" class="d-none"></div>
+
     </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </div>
+  <div>
+    <h3>Kết quả:</h3>
+    <div id="result"></div>
+    <hr />
+    <h3>Dòng lệnh thực thi:</h3>
+    <div id="statement"></div>
+    <hr />
+  </div>
+  <div id="total" class="display-3"></div>
+  <div id="control" class="d-flex"></div>
+  <button class="btn btn-danger" onclick="reload()">RELOAD PAGE</button>
+  <a class="btn btn-primary" href="../asset/source/element.html" role="button">Find Element Test</a>
+  </div>
 
-    <script src="main.js"></script>
-    <script src="play.js"></script>
-  </body>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <script src="main.js"></script>
+  <script src="play.js"></script>
+</body>
+
 </html>

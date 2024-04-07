@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .dragEvent > div {
+        padding: 40px;
+        margin-top: 20px;
+        background-color: red;
+      }
+      .dragEvent #resultDragEvent {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 5px;
+        line-height: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dragEvent">
+      <div id="elementDragEvent" draggable="true">element</div>
+      <div id="targetDragEvent">target</div>
+      <div id="resultDragEvent" style="background-color: transparent"></div>
+    </div>
+    <script>
+      var elementDragEvent = document.getElementById("elementDragEvent");
+      var targetDragEvent = document.getElementById("targetDragEvent");
+      var resultDragEvent = document.getElementById("resultDragEvent");
+      elementDragEvent.addEventListener("dragstart", function () {
+        resultDragEvent.insertAdjacentHTML("beforeend", "<p>dragstart</p>");
+      });
+      elementDragEvent.addEventListener("dragend", function () {
+        resultDragEvent.insertAdjacentHTML("beforeend", "<p>dragend</p>");
+      });
+      elementDragEvent.addEventListener("drag", function () {
+        // resultDragEvent.insertAdjacentHTML("beforeend","<p>draging-element<p>");
+      });
+      targetDragEvent.addEventListener("dragenter", function () {
+        resultDragEvent.insertAdjacentHTML("beforeend", "<p>dragEnter<p>");
+      });
+      targetDragEvent.addEventListener("dragover", function (event) {
+        event.preventDefault();
+        // resultDragEvent.insertAdjacentHTML("beforeend","<p>dragOver-target<p>");
+      });
+      targetDragEvent.addEventListener("dragleave", function (event) {
+        // event.preventDefault()
+        resultDragEvent.insertAdjacentHTML("beforeend", "<p>dragLeave<p>");
+      });
+      targetDragEvent.addEventListener("drop", function (event) {
+        event.preventDefault();
+        resultDragEvent.insertAdjacentHTML("beforeend", "<p>drop<p>");
+        targetDragEvent.appendChild(elementDragEvent);
+      });
+    </script>
+  </body>
+</html>

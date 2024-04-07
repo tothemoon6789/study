@@ -3,6 +3,10 @@
   var heading = [
     { id: "document", text: "Document Object" },
     { id: "element", text: "Element Object" },
+    { id: "mouseEvent", text: "Mouse Event" },
+    { id: "animationEvent", text: "Animation Event" },
+    { id: "clipboardEvent", text: "Clipboard Event" },
+    { id: "dragEvent", text: "Drag Event" },
   ];
   var buttons = [
     // KHU DOCUMENT
@@ -141,6 +145,34 @@
     { id: "js71", id_heading: "element", order: 0, version: "dom1", text: "element.compareDocumentPosition()" }, // kiểm tra vị tri tương đối của 2 element
     { id: "js72", id_heading: "element", order: 0, version: "dom1", text: "element.contains()" }, // kiểm tra 1 đứa element có phải là con cháu của 1 đứa element không
     { id: "js74", id_heading: "element", order: 0, version: "dom1", text: "element.dir" }, // thiết lập hướng chữ
+
+    // mouse event
+    { id: "js116", id_heading: "mouseEvent", order: 0, version: "dom1", text: "element.onmouseover" }, 
+    { id: "js117", id_heading: "mouseEvent", order: 0, version: "dom1", text: "element.onmouseenter" }, 
+    { id: "js118", id_heading: "mouseEvent", order: 0, version: "dom1", text: "element.onmousemove" }, 
+    { id: "js119", id_heading: "mouseEvent", order: 0, version: "dom1", text: "element.onmousedown" }, 
+    { id: "js120", id_heading: "mouseEvent", order: 0, version: "dom1", text: "element.onmouseup" }, 
+    { id: "js121", id_heading: "mouseEvent", order: 0, version: "dom1", text: "element.onclick" }, 
+    { id: "js122", id_heading: "mouseEvent", order: 0, version: "dom1", text: "element.ondoubleclick" }, 
+    { id: "js123", id_heading: "mouseEvent", order: 0, version: "dom1", text: "element.oncontextmenu" }, 
+    { id: "js124", id_heading: "mouseEvent", order: 0, version: "dom1", text: "element.onmouseout" }, 
+    { id: "js125", id_heading: "mouseEvent", order: 0, version: "dom1", text: "element.onmouseleave" }, 
+    // animation Event
+    { id: "js126", id_heading: "animationEvent", order: 0, version: "dom1", text: "element.onanimationstart" }, 
+    { id: "js127", id_heading: "animationEvent", order: 0, version: "dom1", text: "element.onanimationinteration" }, 
+    { id: "js128", id_heading: "animationEvent", order: 0, version: "dom1", text: "element.onanimationstart" }, 
+    // clipboard event
+    { id: "js129", id_heading: "clipboardEvent", order: 0, version: "dom1", text: "element.oncopy" }, 
+    { id: "js130", id_heading: "clipboardEvent", order: 0, version: "dom1", text: "element.oncut" }, 
+    { id: "js131", id_heading: "clipboardEvent", order: 0, version: "dom1", text: "element.onpaste" }, 
+    // drag event
+    { id: "js132", id_heading: "dragEvent", order: 0, version: "dom1", text: "element.ondragstart" }, 
+    { id: "js133", id_heading: "dragEvent", order: 0, version: "dom1", text: "element.ondrag" }, 
+    { id: "js134", id_heading: "dragEvent", order: 0, version: "dom1", text: "element.ondragenter" }, 
+    { id: "js135", id_heading: "dragEvent", order: 0, version: "dom1", text: "element.ondragover" }, 
+    { id: "js136", id_heading: "dragEvent", order: 0, version: "dom1", text: "element.ondragleave" }, 
+    { id: "js137", id_heading: "dragEvent", order: 0, version: "dom1", text: "element.ondrop" }, 
+    { id: "js138", id_heading: "dragEvent", order: 0, version: "dom1", text: "element.ondragend" }, 
   ];
   // MAX 97
   // SORT

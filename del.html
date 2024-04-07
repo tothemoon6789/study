@@ -1,54 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <style>
-      #frameDiv {
-        /* width: 400px;
-        height: 170px;
-        margin: 20px;
-        position: relative;
-        border: solid black 1px;
-        background-color: rgb(205, 242, 205); */
-        position: relative;
-        border: 10px solid red;
-        min-height: 100vh;
-        offset: path("M1 523.568C92.5466 109.898 130.844 -206.948 147.169 167.992C163.495 542.932 219.491 19.4178 257.941 252.128C296.391 484.838 342.316 704.527 417.537 462.134C477.714 268.221 652.253 463.247 732 585") 0px auto 0deg;
-        animation: moveImg 5s 1s infinite alternate;
-      }
-      
-      .one {
-        position: absolute;
-        top: 0;
-        width: 100px;
-        offset: path("M1 523.568C92.5466 109.898 130.844 -206.948 147.169 167.992C163.495 542.932 219.491 19.4178 257.941 252.128C296.391 484.838 342.316 704.527 417.537 462.134C477.714 268.221 652.253 463.247 732 585") 0px auto 0deg;
-        animation: moveImg 5s 1s infinite;
-        outline: 5px solid blue;
-      }
-      .two {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        offset: ;
-      }
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
 
-      @keyframes moveImg {
-        100% {
-          offset-distance: 50%;
-        }
+    <style>
+      #outside {
+        padding: 40px;
+        background-color: yellow;
+      }
+      #demo {
+        display: inline;
+        background-color: red;
+        color: white;
+        line-height: 40px;
+        display: inline-block;
+        padding-left: 20px;
+        padding-right: 20px;
+        cursor: pointer;
       }
     </style>
   </head>
   <body>
-    <h1>The offset property</h1>
-
-    <div id="frameDiv">
-        <img class="two" src="./asset/images/path.svg" alt="" />
-        <img class="one" src="./asset/images/car-svgrepo-com.svg" alt="fish" />
+    
+    
+    <!-- onmouseout="mOut()"
+    onmouseleave="mLeave()" -->
+    
+    <div
+    onmouseover="mOver()"
+    onmouseenter="mEnter()"
+    id="outside">
+    
+    <!-- onmouseover="mouseoverFunction(event)" 
+    onmouseenter="mouseenterFunction(event)"  -->
+      <div 
+      onmousedown="mousedownFunction(event)" 
+      onmouseup="mouseupFunction(event)" 
+      onmousemove="mousemoveFunction(event)" 
+      onclick="clickFunction(event)" 
+      ondblclick="dblclickFunction(event)" 
+      oncontextmenu="contextmenuFunction(event)" 
+      id="demo">demo</div>
     </div>
-
-    <p>Here, the offset shorthand property is used to define property values for offset-path, offset-distance and offset-rotate. The fish starts moving at a 150px distance from the start of the path, and 45 degrees is added to its default rotation.</p>
+    <!-- onmouseleave="mouseleaveFunction(event)" 
+    onmouseout="mouseoutFunction(event)"  -->
+    <script defer>
+      function bubbleFunction(event) {
+        // console.log(event);
+        console.log("bubbleFunction outside");
+      }
+      function clickFunction(event) {
+        // console.log(event);
+        console.log("click");
+      }
+      function mouseenterFunction(event) {
+        // console.log(event);
+        console.log("mouseenter");
+      }
+      function mouseenterOutsideFunction(event) {
+        // console.log(event);
+        console.log("mouseenterOutside");
+      }
+      function mouseoverFunction(event) {
+        // console.log(event);
+        console.log("mouseover");
+      }
+      function mouseleaveFunction(event) {
+        // console.log(event);
+        console.log("mouseleave");
+      }
+      function mouseoutFunction(event) {
+        // console.log(event);
+        console.log("mouseout");
+      }
+      function dblclickFunction(event) {
+        // console.log(event);
+        console.log("dblclick");
+      }
+      function contextmenuFunction(event) {
+        event.preventDefault(event);
+        // console.log(event);
+        console.log("contextmenu");
+      }
+      function mousedownFunction(event) {
+        // console.log(event);
+        console.log("mousedown");
+      }
+      function mouseupFunction(event) {
+        // console.log(event);
+        console.log("mouseup");
+      }
+      function mousemoveFunction(event) {
+        // console.log(event);
+        console.log("mousemouve");
+      }
+    //   onmouseenter="mEnter()"
+    // onmouseover="mOver()"
+    // onmouseout="mOut()"
+    // onmouseleave="mLeave()"
+    function mEnter(){
+      console.log("enter");
+    }
+    function mOver(){
+      console.log("over");
+    }
+    function mOut(){
+      console.log("out");
+    }
+    function mLeave(){
+      console.log("leave");
+    }
+    </script>
   </body>
 </html>

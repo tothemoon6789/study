@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex menu</title>
+    <style>
+      /* flex menu */
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        padding: 0px;
+        margin: 0px;
+      }
+      nav {
+        display: flex;
+        padding: 0px;
+        margin: 0px;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: auto;
+      }
+      nav #brand {
+      }
+      nav #brand img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      nav #brand a {
+        display: inline-block;
+        width: 70px;
+        height: 70px;
+        cursor: pointer;
+      }
+
+      nav ul {
+        padding: 0px;
+        margin: 0px;
+        list-style: none;
+        display: flex;
+        column-gap: 10px;
+        transition: all 0.25s;
+      }
+      nav > ul > li {
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
+      nav > ul > li:hover > ul {
+        display: flex;
+      }
+      nav > ul > li > a {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        position: relative;
+      }
+      nav > ul > li > a::after {
+        position: absolute;
+        content: "";
+        width: 0%;
+        height: 2px;
+        background-color: green;
+        bottom: 0;
+        left: 0;
+        transition: all 0.25s;
+      }
+
+      nav > ul > li > a:hover::after {
+        width: 100%;
+      }
+      nav > ul > li > ul {
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        top: 100%;
+      }
+      nav > ul > li > ul > li {
+        position: relative;
+        padding: 8px 16px;
+      }
+      nav > ul > li > ul > li:hover > ul {
+        display: flex;
+      }
+      nav > ul > li > ul > li > ul {
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        left: 100%;
+        top: 0;
+      }
+      nav > ul > li > ul > li > ul > li {
+        padding: 8px 16px;
+      }
+      #open {
+        display: none;
+      }
+      @media (max-width: 576px) {
+        #open {
+          display: inline-block;
+        }
+        nav > ul {
+            padding: 20px;
+          position: fixed;
+          top: 0;
+          bottom: 0;
+          left: -100%;
+          flex-direction: column;
+          width: clamp(300px, 50%, 700px);
+          opacity: 0;
+          transition: all 0.25s;
+          display: block;
+          background-color: yellow;
+        }
+        nav > ul > li {
+            margin: 5px;
+            display: block;
+        }
+        nav > ul > li > ul{
+            display: none;
+            position: relative;
+            background-color: yellow;
+            padding-left: 20px;
+        }
+        nav > ul > li > ul > li {
+            display: block;
+
+        }
+        nav > ul > li > ul > li > ul {
+            display: none;
+            position: relative;
+            left: 0;
+        }
+        nav .show {
+            left: 0;
+            opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div id="brand">
+        <a href="#">
+          <img src="../images/fish.svg" />
+        </a>
+      </div>
+      <ul>
+        <li>
+          <a href="#"><span>Home 0</span></a>
+        </li>
+        <li>
+          <a href="#"><span>Home 1</span></a>
+          <ul>
+            <li>
+              <a href="#"><span>Child 0</span></a>
+            </li>
+            <li>
+              <a href="#"><span>Child 1</span></a>
+            </li>
+            <li>
+              <a href="#"><span>Child 2</span></a>
+            </li>
+            <li>
+              <a href="#"><span>Child 3</span></a>
+            </li>
+            <li>
+              <a href="#"><span>Child 4</span></a>
+              <ul>
+                <li>
+                  <a href="#"><span>Child 0</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>Child 1</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>Child 2</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>Child 3</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>Child 4</span></a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"><span>Child 3</span></a>
+            </li>
+            <li>
+              <a href="#"><span>Child 3</span></a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#"><span>Home 2</span></a>
+        </li>
+        <li>
+          <a href="#"><span>Home 1</span></a>
+          <ul>
+            <li>
+              <a href="#"><span>Child 0</span></a>
+            </li>
+            <li>
+              <a href="#"><span>Child 1</span></a>
+            </li>
+            <li>
+              <a href="#"><span>Child 2</span></a>
+            </li>
+            <li>
+              <a href="#"><span>Child 3</span></a>
+            </li>
+            <li>
+              <a href="#"><span>Child 4</span></a>
+              <ul>
+                <li>
+                  <a href="#"><span>Child 0</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>Child 1</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>Child 2</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>Child 3</span></a>
+                </li>
+                <li>
+                  <a href="#"><span>Child 4</span></a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"><span>Child 3</span></a>
+            </li>
+            <li>
+              <a href="#"><span>Child 3</span></a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#"><span>Home 3</span></a>
+        </li>
+      </ul>
+      <button id="open">Close</button>
+      <script>
+        var open = document.querySelector("#open");
+        open.addEventListener("click",openMenu);
+        function openMenu (event){
+            var menu = event.target.previousElementSibling;
+            menu.classList.toggle("show");
+
+        }
+      </script>
+    </nav>
+  </body>
+</html>
