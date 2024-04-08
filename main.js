@@ -20,7 +20,7 @@
     { id: "btn-type-animation", heading: "Animation" },
     { id: "btn-type-column", heading: "Column" },
     { id: "btn-type-list", heading: "List" },
-    { id: "btn-type-scrollbar", heading: "Scrollbar" },
+    { id: "btn-type-scroll", heading: "Scroll" },
     { id: "btn-type-another", heading: "Another" },
     { id: "btn-type-value", heading: "Value" },
   ];
@@ -1047,22 +1047,22 @@
     },
     {
       id: "webkit-scrollbar",
-      class: "btn btn-outline-primary btn-type-scrollbar multiple",
+      class: "btn btn-outline-primary btn-type-scroll multiple",
       text: "webkit-scrollbar",
     },
     {
       id: "webkit-scrollbar-thumb",
-      class: "btn btn-outline-primary btn-type-scrollbar multiple",
+      class: "btn btn-outline-primary btn-type-scroll multiple",
       text: "webkit-scrollbar-thumb",
     },
     {
       id: "webkit-scrollbar-track",
-      class: "btn btn-outline-primary btn-type-scrollbar multiple",
+      class: "btn btn-outline-primary btn-type-scroll multiple",
       text: "webkit-scrollbar-track",
     },
     {
       id: "webkit-scrollbar-corner",
-      class: "btn btn-warning btn-type-scrollbar multiple",
+      class: "btn btn-warning btn-type-scroll multiple",
       text: "webkit-scrollbar-corner",
     },
     {
@@ -1341,6 +1341,133 @@
       id: "offset-rotate",
       class: "btn btn-danger btn-type-offset",
       text: "offset-rotate",
+    },
+    {
+      id: "scroll-snap-type",
+      class: "btn btn-danger btn-type-scroll",
+      text: "scroll-snap-type",
+    },
+    {
+      id: "scroll-snap-align",
+      class: "btn btn-danger btn-type-scroll",
+      text: "scroll-snap-align",
+    },
+    {
+      id: "scroll-snap-stop",
+      class: "btn btn-danger btn-type-scroll",
+      text: "scroll-snap-stop",
+    },
+    {
+      id: "scroll-padding",
+      class: "btn btn-danger btn-type-scroll",
+      text: "scroll-padding",
+    },
+    {
+      id: "scroll-padding-top",
+      class: "btn btn-danger btn-type-scroll",
+      text: "scroll-padding-top",
+    },
+    
+    {
+      id: "scroll-padding-bottom",
+      class: "btn btn-danger btn-type-scroll",
+      text: "scroll-padding-bottom",
+    },
+    {
+      id: "scroll-padding-left",
+      class: "btn btn-danger btn-type-scroll",
+      text: "scroll-padding-left",
+    },
+    {
+      id: "scroll-padding-right",
+      class: "btn btn-danger btn-type-scroll",
+      text: "scroll-padding-right",
+    },
+    {
+      id: "scroll-padding-block",
+      class: "btn btn-danger btn-type-scroll",
+      text: "scroll-padding-block",
+    },
+    {
+      id: "scroll-padding-block-start",
+      class: "btn btn-danger btn-type-scroll",
+      text: "scroll-padding-block-start",
+    },
+    {
+      id: "scroll-padding-block-end",
+      class: "btn btn-danger btn-type-scroll",
+      text: "scroll-padding-block-end",
+    },
+    {
+      id: "scroll-padding-inline",
+      class: "btn btn-danger btn-type-scroll",
+      text: "scroll-padding-inline",
+    },
+    {
+      id: "scroll-padding-inline-start",
+      class: "btn btn-danger btn-type-scroll",
+      text: "scroll-padding-inline-start",
+    },
+    {
+      id: "scroll-padding-inline-end",
+      class: "btn btn-danger btn-type-scroll",
+      text: "scroll-padding-inline-end",
+    },
+    {
+      id: "scroll-margin",
+      class: "btn btn-danger btn-type-scroll",
+      text: "scroll-margin",
+    },
+    {
+      id: "scroll-margin-top",
+      class: "btn btn-danger btn-type-scroll",
+      text: "scroll-margin-top",
+    },
+    
+    {
+      id: "scroll-margin-bottom",
+      class: "btn btn-danger btn-type-scroll",
+      text: "scroll-margin-bottom",
+    },
+    {
+      id: "scroll-margin-left",
+      class: "btn btn-danger btn-type-scroll",
+      text: "scroll-margin-left",
+    },
+    {
+      id: "scroll-margin-right",
+      class: "btn btn-danger btn-type-scroll",
+      text: "scroll-margin-right",
+    },
+    {
+      id: "scroll-margin-block",
+      class: "btn btn-danger btn-type-scroll",
+      text: "scroll-margin-block",
+    },
+    {
+      id: "scroll-margin-block-start",
+      class: "btn btn-danger btn-type-scroll",
+      text: "scroll-margin-block-start",
+    },
+    {
+      id: "scroll-margin-block-end",
+      class: "btn btn-danger btn-type-scroll",
+      text: "scroll-margin-block-end",
+    },
+    {
+      id: "scroll-margin-inline",
+      class: "btn btn-danger btn-type-scroll",
+      text: "scroll-margin-inline",
+    },
+    {
+      id: "scroll-margin-inline-start",
+      class: "btn btn-danger btn-type-scroll",
+      text: "scroll-margin-inline-start",
+    },
+    {
+      id: "scroll-margin-inline-end",
+      class: "btn btn-danger btn-type-scroll",
+      text: "scroll-margin-inline-end",
     },
 
   ];

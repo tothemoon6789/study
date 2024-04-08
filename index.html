@@ -902,7 +902,7 @@
           <div class="clip-path"></div>
         </div>
 
-        <div data-for="visibility" class="d-block">
+        <div data-for="visibility" class="d-none">
           <h5>Định nghĩa</h5>
           <p>Ẩn hoặc hiện một phần tử nhưng vẫn giữ chỗ</p>
           <h5>Lưu ý</h5>
@@ -1524,7 +1524,7 @@
           >luu y truong hop nay, co nghia la: chữ sẽ nằm trong khoảng tỉ lệ vàng 1 hàng là 45 ký tự đến 75 ký tự.
         </div>
 
-        <div id="minmax" class="d-none">
+        <div data-for="minmax" class="d-none">
           <span class="display-3 text-danger">minmax(value, value) chỉ dùng cho hiển thị grid</span> , ví dụ: grid-temaplte-columns co màn hình lại sẽ thấy rõ màu vàng giao động từ 100px đến 200px, Bai viet <a href="https://viblo.asia/p/cach-function-minmax-hoat-dong-trong-css-phan-1-Qbq5QqQ35D8#_length-1">go</a> nói cũng khá rõ, còn một số giá trị trong minmax(value,percent) hoặc minmax(value,max-content) ....
           <style>
             .minmax .item:first-child {
@@ -1547,6 +1547,19 @@
             <div class="item"></div>
             <div class="item"></div>
           </div>
+          
+        </div>
+        <div data-for="scroll-snap-type" class="d-none">
+          tạo hiệu ứng kéo scroll lên phần tử con
+          <p><span class="text-danger">thiết lập lên html</span></p>
+        </div>
+        <div data-for="scroll-snap-align" class="d-none">
+          tạo hiệu ứng kéo scroll lên phần tử con
+          <p><span class="text-danger">thiết lập lên phần tử con</span></p>
+        </div>
+        <div data-for="scroll-snap-stop" class="d-none">
+          tạo hiệu ứng kéo scroll lên phần tử con, giá trị normal, kéo thật mạnh và dài thì nó sẽ cuộn đến thật dài và dừng tại scroll-snap-align, còn nếu set là always thì cuộn mạnh nó cũng chỉ đi 2 đến 3 section
+          <p><span class="text-danger">thiết lập lên phần tử con</span></p>
         </div>
       </div>
       <div id="total"></div>
