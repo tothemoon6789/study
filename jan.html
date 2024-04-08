@@ -11,7 +11,10 @@
     <script>
       var videoLeo = document.querySelector("video");
       videoLeo.addEventListener("canplay",function(){
-        alert("canplay")
+        console.log("canplay");
+      })
+      videoLeo.addEventListener("canplaythrough",function(){
+        console.log("canplaythough");
       })
     </script>
   </body>
