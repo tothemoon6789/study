@@ -16,6 +16,33 @@
       videoLeo.addEventListener("canplaythrough",function(){
         console.log("canplaythough");
       })
+      videoLeo.addEventListener("loadstart",function(){
+        console.log("loadstart");
+      })
+      videoLeo.addEventListener("durationchange",function(){
+        console.log("durationchange")
+      })
+      videoLeo.addEventListener("loadedmetadata",function(){
+        console.log("loadedmetadata")
+      })
+      videoLeo.addEventListener("loadeddata",function(){
+        console.log("loadeddata")
+      })
+      videoLeo.addEventListener("progress",function(){
+        console.log("progress")
+      })
+      videoLeo.addEventListener("play",function(){
+        console.log("play")
+      })
+      videoLeo.addEventListener("playing",function(){
+        console.log("playing")
+      })
+      videoLeo.addEventListener("timeupdate",function(){
+        console.log("timeupdate")
+      })
+      videoLeo.addEventListener("ended",function(){
+        console.log("ended")
+      })
     </script>
   </body>
 </html>
