@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+      }
+      .box {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        animation: gap 2s 2 alternate;
+        position: relative;
+      }
+      .box #result {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: gray;
+        padding: 20px;
+        color: white;
+        font-size: 40px;
+      }
+
+      .box > .item {
+        outline: 1px solid red;
+      }
+      @keyframes gap {
+        from {
+          gap: 0px;
+        }
+        to {
+          gap: 50px;
+        }
+      }
+
+      @keyframes row-gap {
+        from {
+          row-gap: 0px;
+        }
+        to {
+          row-gap: 50px;
+        }
+      }
+      @keyframes column-gap {
+        from {
+          column-gap: 0px;
+        }
+        to {
+          column-gap: 50px;
+        }
+      }
+      @keyframes grid-row-gap {
+        from {
+          grid-row-gap: 0px;
+        }
+        to {
+          grid-row-gap: 50px;
+        }
+      }
+      @keyframes grid-column-gap {
+        from {
+          grid-column-gap: 0px;
+        }
+        to {
+          grid-column-gap: 50px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi itaque repellendus voluptatem doloremque soluta ullam? Dolorum nesciunt distinctio eaque veniam?</div>
+      <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi itaque repellendus voluptatem doloremque soluta ullam? Dolorum nesciunt distinctio eaque veniam?</div>
+      <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi itaque repellendus voluptatem doloremque soluta ullam? Dolorum nesciunt distinctio eaque veniam?</div>
+      <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi itaque repellendus voluptatem doloremque soluta ullam? Dolorum nesciunt distinctio eaque veniam?</div>
+      <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi itaque repellendus voluptatem doloremque soluta ullam? Dolorum nesciunt distinctio eaque veniam?</div>
+      <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi itaque repellendus voluptatem doloremque soluta ullam? Dolorum nesciunt distinctio eaque veniam?</div>
+      <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi itaque repellendus voluptatem doloremque soluta ullam? Dolorum nesciunt distinctio eaque veniam?</div>
+      <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi itaque repellendus voluptatem doloremque soluta ullam? Dolorum nesciunt distinctio eaque veniam?</div>
+      <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi itaque repellendus voluptatem doloremque soluta ullam? Dolorum nesciunt distinctio eaque veniam?</div>
+      <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi itaque repellendus voluptatem doloremque soluta ullam? Dolorum nesciunt distinctio eaque veniam?</div>
+      <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi itaque repellendus voluptatem doloremque soluta ullam? Dolorum nesciunt distinctio eaque veniam?</div>
+      <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi itaque repellendus voluptatem doloremque soluta ullam? Dolorum nesciunt distinctio eaque veniam?</div>
+      <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi itaque repellendus voluptatem doloremque soluta ullam? Dolorum nesciunt distinctio eaque veniam?</div>
+      <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi itaque repellendus voluptatem doloremque soluta ullam? Dolorum nesciunt distinctio eaque veniam?</div>
+      <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi itaque repellendus voluptatem doloremque soluta ullam? Dolorum nesciunt distinctio eaque veniam?</div>
+      <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi itaque repellendus voluptatem doloremque soluta ullam? Dolorum nesciunt distinctio eaque veniam?</div>
+      <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi itaque repellendus voluptatem doloremque soluta ullam? Dolorum nesciunt distinctio eaque veniam?</div>
+      <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi itaque repellendus voluptatem doloremque soluta ullam? Dolorum nesciunt distinctio eaque veniam?</div>
+      <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi itaque repellendus voluptatem doloremque soluta ullam? Dolorum nesciunt distinctio eaque veniam?</div>
+      <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi itaque repellendus voluptatem doloremque soluta ullam? Dolorum nesciunt distinctio eaque veniam?</div>
+      <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi itaque repellendus voluptatem doloremque soluta ullam? Dolorum nesciunt distinctio eaque veniam?</div>
+      <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi itaque repellendus voluptatem doloremque soluta ullam? Dolorum nesciunt distinctio eaque veniam?</div>
+      <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi itaque repellendus voluptatem doloremque soluta ullam? Dolorum nesciunt distinctio eaque veniam?</div>
+      <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi itaque repellendus voluptatem doloremque soluta ullam? Dolorum nesciunt distinctio eaque veniam?</div>
+      <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi itaque repellendus voluptatem doloremque soluta ullam? Dolorum nesciunt distinctio eaque veniam?</div>
+      <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi itaque repellendus voluptatem doloremque soluta ullam? Dolorum nesciunt distinctio eaque veniam?</div>
+      <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi itaque repellendus voluptatem doloremque soluta ullam? Dolorum nesciunt distinctio eaque veniam?</div>
+      <div id="result">nothing</div>
+    </div>
+    <script>
+      var box = document.querySelector(".box");
+      var result = document.querySelector("#result");
+      var key = ["gap", "row-gap", "column-gap","grid-row-gap","grid-column-gap"];
+      result.innerText = key[0];
+      box.addEventListener("animationend", function (e) {
+        var animationName = e.animationName;
+        var index = key.indexOf(animationName);
+        var KEY_LENGTH = key.length;
+        if (index < KEY_LENGTH-1) {
+          result.innerText = key[index + 1];
+          box.style.animationName = key[index + 1];
+        }
+      });
+    </script>
+  </body>
+</html>

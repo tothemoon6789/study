@@ -4,6 +4,7 @@ html {
 body {
   margin: 0px;
   font-family: "Montserrat", sans-serif;
+  padding-bottom: 500px;
 }
 ul,
 li {
@@ -2842,11 +2843,31 @@ ul {
 }
 /* end kieu */
 /* object */
+.wrap-control {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 50vh;
+  background-color: white;
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 1);
+  z-index: 8;
+}
+#control-column {
+  /* background-color: rgb(212, 209, 209); */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding-block: 8px;
+  text-align: center;
+  max-width: 500px;
+  margin: auto;
+}
 #control-area {
+  
   display: flex;
-  overflow-y: hidden;
-  overflow-x: scroll;
+  overflow-y: auto;
+  overflow-x: auto;
   padding: clamp(10px,2vw,20px);
+  scroll-behavior: smooth;
 }
 #control-area::-webkit-scrollbar {
   height: 3px;
@@ -2864,7 +2885,6 @@ ul {
 
 #control-area ul {
   flex-basis: auto;
-  /* flex-grow: 1; */
   flex-shrink: 0;
   transition: all 0.25s;
   overflow-x: hidden;
@@ -2940,6 +2960,8 @@ ul {
   min-width: 200px !important;
   text-align: left;
   transition: all 0.25s;
+  /* font-size: 10px; */
+  
 }
 /* button sx,sm, md, lg */
 button[clicked="true"] {

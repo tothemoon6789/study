@@ -91,6 +91,21 @@
       class: "btn btn-outline-primary btn-type-text",
       text: "text-decoration-color",
     },
+    {
+      id: "text-orientation",
+      class: "btn btn-outline-primary btn-type-text",
+      text: "text-orientation",
+    },
+    {
+      id: "text-underline-offset",
+      class: "btn btn-outline-primary btn-type-text",
+      text: "text-underline-offset",
+    },
+    {
+      id: "text-underline-position",
+      class: "btn btn-outline-primary btn-type-text",
+      text: "text-underline-position",
+    },
     
     {
       id: "text-emphasis",
@@ -128,6 +143,11 @@
       id: "text-justify",
       class: "btn btn-outline-primary btn-type-text",
       text: "text-justify",
+    },
+    {
+      id: "white-space",
+      class: "btn btn-outline-primary btn-type-text",
+      text: "white-space",
     },
     {
       id: "text-overflow",
@@ -696,6 +716,16 @@
       text: "margin-bottom",
     },
     {
+      id: "margin-block",
+      class: "btn btn-outline-primary btn-type-margin",
+      text: "margin-block",
+    },
+    {
+      id: "margin-inline",
+      class: "btn btn-outline-primary btn-type-margin",
+      text: "margin-inline",
+    },
+    {
       id: "margin-block-start",
       class: "btn btn-outline-primary btn-type-margin",
       text: "margin-block-start",
@@ -724,6 +754,11 @@
       id: "relative",
       class: "btn btn-outline-primary btn-type-position",
       text: "relative",
+    },
+    {
+      id: "position",
+      class: "btn btn-outline-primary btn-type-position",
+      text: "position",
     },
     {
       id: "fixed",
@@ -814,6 +849,11 @@
       id: "flex-grow",
       class: "btn btn-warning btn-type-flex multiple",
       text: "flex-grow",
+    },
+    {
+      id: "row-gap",
+      class: "btn btn-warning btn-type-flex multiple",
+      text: "row-gap",
     },
     {
       id: "flex-shrink",
@@ -1141,6 +1181,16 @@
       text: "box-shadow",
     },
     {
+      id: "media",
+      class: "btn btn-outline-primary btn-type-another",
+      text: "@media",
+    },
+    {
+      id: "opacity",
+      class: "btn btn-outline-primary btn-type-another",
+      text: "opacity",
+    },
+    {
       id: "all",
       class: "btn btn-outline-primary btn-type-another",
       text: "all",
@@ -1227,6 +1277,11 @@
       text: "grid",
     },
     {
+      id: "grid-gap",
+      class: "btn btn-danger btn-type-grid",
+      text: "grid-gap",
+    },
+    {
       id: "grid-area",
       class: "btn btn-danger btn-type-grid",
       text: "grid-area",
@@ -1257,14 +1312,25 @@
       text: "grid-template-columns",
     },
     {
+      id: "grid-template-areas",
+      class: "btn btn-danger btn-type-grid",
+      text: "grid-template-areas",
+    },
+    {
       id: "grid-template-rows",
       class: "btn btn-danger btn-type-grid",
       text: "grid-template-rows",
     },
+    
     {
-      id: "grid-template-area",
+      id: "justify-items",
       class: "btn btn-danger btn-type-grid",
-      text: "grid-template-area",
+      text: "justify-items",
+    },
+    {
+      id: "justify-self",
+      class: "btn btn-danger btn-type-grid",
+      text: "justify-self",
     },
     {
       id: "grid-column",
@@ -1469,19 +1535,38 @@
       class: "btn btn-danger btn-type-scroll",
       text: "scroll-margin-inline-end",
     },
+    {
+      id: "border-spacing",
+      class: "btn btn-danger btn-type-another",
+      text: "border-spacing",
+    },
+    {
+      id: "display",
+      class: "btn btn-danger btn-type-display",
+      text: "display",
+    },
+    
 
   ];
 
   var control_area = document.getElementById("control-area");
+  var control_column = document.getElementById("control-column");
   // thêm danh sách cho control area
   phan_loai.forEach((loai) => {
     var ul = document.createElement("ul");
-    var heading = document.createElement("h6");
-    var headingNode = document.createTextNode(loai.heading);
-    heading.appendChild(headingNode);
-    ul.appendChild(heading);
+    var h6 = document.createElement("h6");
+    var button = document.createElement("button");
+    button.className = "btn btn-default btn-sm";
+    button.innerText = loai.heading;
+    var TEXT_NODE_HEADING = document.createTextNode(loai.heading);
+    h6.appendChild(TEXT_NODE_HEADING);
+    ul.appendChild(h6);
     ul.id = loai.id;
     control_area.appendChild(ul);
+    control_column.appendChild(button);
+    button.addEventListener("click",function(){
+      document.getElementById(loai.id).scrollIntoView()
+    })
   });
   // thêm toàn bộ nút cho control area
   phan_loai.forEach((loai) => {
@@ -1730,9 +1815,7 @@ document.getElementById("animation-direction").onclick = function () {
 function resizeButton(className, attributeName, attributeValue,button) {
   var buttons = document.querySelectorAll("#control-area button");
   var uls = document.querySelectorAll("#control-area ul");
-  
   var buttons = document.querySelectorAll("#scale-button-group > button");
-  
   for (let index = 0; index < buttons.length; index++) {
     const btn = buttons[index];
     console.log(btn);

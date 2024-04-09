@@ -782,7 +782,6 @@
             html += "element.getBoudingClientRect().right  = " + rectE.right + "_________________";
             html += "element.getBoudingClientRect().width  = " + rectE.width + "_________________";
             html += "element.getBoudingClientRect().height  = " + rectE.height + "_________________";
-            console.log(rectE);
             resultJs79.innerText = html;
             variable_demo_js79++;
           }, 200);
@@ -1605,7 +1604,94 @@ Attr
       <div id="js136" class="d-none"></div>
       <div id="js137" class="d-none"></div>
       <div id="js138" class="d-none"></div>
-      <div id="js139" class="d-none"></div>
+      <div id="js139" class="d-none">
+        <video width="100%" height="400px" src="../asset/images/videoleo.mp4" controls="true"></video>
+        <div id="consoleVideoLeo"></div>
+        <script>
+          var videoLeo = document.querySelector("video");
+          var consoleVideoLeo = document.getElementById("consoleVideoLeo");
+          videoLeo.addEventListener("loadstart",function(){
+            consoleVideoLeo.insertAdjacentText("beforeend","loadstart </br>");
+          })
+          videoLeo.addEventListener("durationchange",function(){
+            consoleVideoLeo.insertAdjacentText("beforeend","durationchang </br>e")
+          })
+    
+          videoLeo.addEventListener("loadedmetadata",function(){
+            consoleVideoLeo.insertAdjacentText("beforeend","loadedmetadat </br>a")
+          })
+    
+    
+    
+          videoLeo.onloadstart = () => {
+          }
+          videoLeo.ondurationchange = () => {
+            
+          }
+          videoLeo.onloadedmetadata = () => {
+            
+          }
+          videoLeo.onloadeddata = () => {
+            
+          }
+          videoLeo.oncanplay = () => {
+            
+          }
+          videoLeo.oncanplaythrough = () => {
+            
+          }
+          videoLeo.onplay = () => {
+            
+          }
+          videoLeo.onplaying = () => {
+            
+          }
+          videoLeo.ontimeupdate = () => {
+            
+          }
+          videoLeo.onprogress = () => {
+            
+          }
+          videoLeo.onended = () => {
+            
+          }
+          videoLeo.addEventListener("loadeddata",function(){
+            consoleVideoLeo.insertAdjacentHTML("beforeend","loadeddat </br>");
+          })
+          videoLeo.addEventListener("canplay",function(){
+            consoleVideoLeo.insertAdjacentHTML("beforeend","canplay </br>");
+          })
+          videoLeo.addEventListener("canplaythrough",function(){
+            consoleVideoLeo.insertAdjacentHTML("beforeend","canplaythough </br>");
+          })
+          videoLeo.addEventListener("play",function(){
+            consoleVideoLeo.insertAdjacentHTML("beforeend","pla </br>y")
+          })
+          videoLeo.addEventListener("playing",function(){
+            consoleVideoLeo.insertAdjacentHTML("beforeend","playin </br>g")
+          })
+          videoLeo.addEventListener("timeupdate",function(){
+            consoleVideoLeo.insertAdjacentHTML("beforeend","timeupdat </br>e")
+          })
+          videoLeo.addEventListener("progress",function(){
+            consoleVideoLeo.insertAdjacentHTML("beforeend","progres </br>s")
+          })
+          videoLeo.addEventListener("ended",function(){
+            consoleVideoLeo.insertAdjacentHTML("beforeend","ende </br>d")
+          })
+          
+        </script>
+      </div>
+      <div id="js140" class="d-none"></div>
+      <div id="js141" class="d-none"></div>
+      <div id="js142" class="d-none"></div>
+      <div id="js143" class="d-none"></div>
+      <div id="js144" class="d-none"></div>
+      <div id="js145" class="d-none"></div>
+      <div id="js146" class="d-none"></div>
+      <div id="js147" class="d-none"></div>
+      <div id="js148" class="d-none"></div>
+      <div id="js149" class="d-none"></div>
 
     </div>
 

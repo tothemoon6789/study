@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lazy load image</title>
+    <style>
+      .container {
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .container > div {
+        flex-basis: 25%;
+        overflow: hidden;
+        aspect-ratio: 2/3;
+        object-fit: cover;
+        background-color: gray;
+        position: relative;
+        margin-top: 10px;
+      }
+      
+      .container > div::before {
+        content: "";
+        width: 200px;
+        transform: skew(-5deg);
+        height: 100%;
+        background: linear-gradient(to right,transparent, rgb(176, 175, 175), transparent);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        animation: animate 2s infinite linear;
+      }
+      .container > div:nth-child(1n):before {
+        animation-delay: 0.2s;
+      }
+      @keyframes animate {
+        from {
+          left: -100%;
+        }
+        to {
+          left: 100%;
+        }
+      }
+
+      .container > div > img {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: all 0.25s ease-in-out;
+      }
+      .container > div > img.loaded {
+        opacity: 1;
+      }
+      @media (max-width: 576px) {
+        .container > div {
+          flex-basis: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img loading="lazy" src="https://i.pravatar.cc" alt="ok" />
+      <img loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEBqYEUHs9SPync2bo8AmdYjzW5WYicOWF8lreCXnMcQ&s" alt="" />
+      <img loading="lazy" src="https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg" alt="" srcset="" />
+      <img loading="lazy" src="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg" alt="" />
+      <img loading="lazy" src="https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg" alt="" />
+      <img loading="lazy" src="https://t3.ftcdn.net/jpg/02/70/35/00/360_F_270350073_WO6yQAdptEnAhYKM5GuA9035wbRnVJSr.jpg" alt="" />
+      <img loading="lazy" src="https://static.vecteezy.com/system/resources/thumbnails/034/263/090/small_2x/the-sun-rises-over-a-lake-and-purple-flowers-ai-generated-free-photo.jpg" alt="" />
+      <img loading="lazy" src="https://images.unsplash.com/photo-1455813879542-fdcede6da042?w=420&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXRodW1ibmFpbHx8MTQ5NzE4Nnx8ZW58MHx8fHx8" alt="" />
+      <img loading="lazy" src="https://h5p.org/sites/default/files/h5p/content/1209180/images/file-6113d5f8845dc.jpeg" alt="" />
+      <img loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7JJzP29iqr5MshDYkkDwYYrjUohSEettDk2PpKHXicU2sXIn5svJLOWYwZYOga7DvlBc&usqp=CAU" alt="" />
+      <img loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9BsrkGK-wpn_QnUdM7Xxld7QTK7fqRmq8_lvfGHpJQt20xPzDoQSA_u_ykV8O7FSTT60&usqp=CAU" alt="" />
+      <img loading="lazy" src="https://www.befunky.com/images/prismic/1f427434-7ca0-46b2-b5d1-7d31843859b6_funky-focus-red-flower-field-after.jpeg?auto=avif,webp&format=jpg&width=863" alt="" />
+      <img loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8ECB157tKW4iu8OMzeMOwRdW_W4vqokGYbUi5-OS0j1BXaN_4vMWnsOdQQWP-nk9QuA0&usqp=CAU" alt="" />
+      <img loading="lazy" src="https://image.shutterstock.com/image-photo/womans-hand-fern-leaf-man-260nw-2190358695.jpg" alt="" />
+    </div>
+    <script>
+      var container = document.querySelector(".container");
+      var images = document.querySelectorAll(".container > img");
+      images.forEach((image) => {
+        var wrap = document.createElement("div");
+        wrap.appendChild(image);
+        container.appendChild(wrap);
+        function loaded (){
+          image.classList.add("loaded")
+        }
+        image.addEventListener("load",loaded)
+      });
+    </script>
+  </body>
+</html>

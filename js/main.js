@@ -3,6 +3,7 @@
   var heading = [
     { id: "document", text: "Document Object" },
     { id: "element", text: "Element Object" },
+    { id: "event", text: "Event" },
     { id: "mouseEvent", text: "Mouse Event" },
     { id: "animationEvent", text: "Animation Event" },
     { id: "clipboardEvent", text: "Clipboard Event" },
@@ -174,7 +175,17 @@
     { id: "js137", id_heading: "dragEvent", order: 0, version: "dom1", text: "element.ondrop" }, 
     { id: "js138", id_heading: "dragEvent", order: 0, version: "dom1", text: "element.ondragend" }, 
     // event
-    { id: "js139", id_heading: "event", order: 0, version: "dom1", text: "element.onabort" }, 
+    { id: "js139", id_heading: "event", order: 0, version: "dom1", text: "element.onloadstart" }, 
+    { id: "js140", id_heading: "event", order: 0, version: "dom1", text: "element.ondurationchange" }, 
+    { id: "js141", id_heading: "event", order: 0, version: "dom1", text: "element.onloadedmetadata" }, 
+    { id: "js142", id_heading: "event", order: 0, version: "dom1", text: "element.onloadeddata" }, 
+    { id: "js143", id_heading: "event", order: 0, version: "dom1", text: "element.onprogress" }, 
+    { id: "js144", id_heading: "event", order: 0, version: "dom1", text: "element.oncanplay" }, 
+    { id: "js145", id_heading: "event", order: 0, version: "dom1", text: "element.oncanplaythrough" }, 
+    { id: "js146", id_heading: "event", order: 0, version: "dom1", text: "element.onplay" }, 
+    { id: "js147", id_heading: "event", order: 0, version: "dom1", text: "element.onplaying" }, 
+    { id: "js148", id_heading: "event", order: 0, version: "dom1", text: "element.ontimeupdate" }, 
+    { id: "js149", id_heading: "event", order: 0, version: "dom1", text: "element.onended" }, 
   ];
   // MAX 97
   // SORT

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        max-width: 1200px;
+        width: 100%;
+        margin: auto;
+      }
+      table , tr, td {
+        /* border: 1px solid; */
+        border-collapse: collapse;
+      }
+      td {
+        text-align: center;
+        padding: 4px 6px;
+      }
+      table tbody tr:nth-child(odd) {
+        background-color: rgba(103, 103, 103, 0.2);
+
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      var table = document.createElement("table");
+      var tbody = document.createElement("tbody");
+
+      var TOTAL = 100000000;
+      var YEAR = 5;
+      var PERCENT = 8;
+      var TIME = YEAR * 12;
+      var PERCENT_BY_MONTH = PERCENT / 12 / 100;
+      var EVERY = TOTAL / TIME;
+      
+      for (let month = 1; month < TIME; month++) {
+        var REMAIN = TOTAL - EVERY*month;
+        var LOST = REMAIN * PERCENT_BY_MONTH;
+        var TEXT_NODE_EVERY = Math.floor(EVERY);
+        var TEXT_NODE_LOST = Math.floor(LOST);
+        var TEXT_NODE_PAYMENT = Math.floor(LOST+EVERY);
+        var TEXT_NODE_REMAIN = Math.floor(REMAIN);
+        var tr = document.createElement("tr");
+        var td1 = document.createElement("td");
+        var td2 = document.createElement("td");
+        var td3 = document.createElement("td");
+        var td4 = document.createElement("td");
+        td1.textContent = TEXT_NODE_EVERY;
+        td2.textContent = TEXT_NODE_LOST;
+        td3.textContent = TEXT_NODE_PAYMENT;
+        td4.textContent = TEXT_NODE_REMAIN;
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+        tr.appendChild(td4);
+        tbody.appendChild(tr);
+
+        // console.log(month,Math.floor(EVERY),  Math.floor(LOST), Math.floor(LOST + EVERY), Math.floor(REMAIN));
+      }
+      
+      table.appendChild(tbody);
+      console.log(table);
+      document.body.appendChild(table);
+    </script>
+  </body>
+</html>
