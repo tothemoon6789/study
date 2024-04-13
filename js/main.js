@@ -104,6 +104,13 @@
     { id: "js113", id_heading: "element", order: 0, version: "dom1", text: "element.tagName" }, // lấy giá trị của class dạng danh sách
     { id: "js114", id_heading: "element", order: 0, version: "dom1", text: "element.tabIndex" }, // lấy giá trị của class dạng danh sách
     { id: "js115", id_heading: "element", order: 0, version: "dom1", text: "element.style" }, // lấy giá trị của class dạng danh sách
+    { id: "js152", id_heading: "element", order: 0, version: "dom1", text: "element.removeAttribute()" }, // lấy giá trị của class dạng danh sách
+    { id: "js153", id_heading: "element", order: 0, version: "dom1", text: "element.removeAttributeNode()" }, // lấy giá trị của class dạng danh sách
+    { id: "js154", id_heading: "element", order: 0, version: "dom1", text: "element.setAttribute()" }, // gán gía trị cho nút thuộc tính thẻ
+    { id: "js155", id_heading: "element", order: 0, version: "dom1", text: "element.setAttributeNode()" }, // gán một node cho thuộc tính thẻ
+    { id: "js156", id_heading: "element", order: 0, version: "dom1", text: "element.nodeName" },
+    { id: "js157", id_heading: "element", order: 0, version: "dom1", text: "element.nodeType" },
+    { id: "js158", id_heading: "element", order: 0, version: "dom1", text: "element.nodeValue" },
 
     // tác động
     { id: "js55", id_heading: "element", order: 0, version: "dom1", text: "element.accessKey" }, // gán hoặc lấy nút bấm truy cập nhanh
@@ -113,6 +120,8 @@
     { id: "js73", id_heading: "element", order: 0, version: "dom1", text: "element.contentEditable" }, // bật tắc khả năng có thể viết được của content trong element
     { id: "js89", id_heading: "element", order: 0, version: "dom2", text: "element.hasChildNodes()" }, // hỏi có đứa con nào không
     { id: "js59", id_heading: "element", order: 0, version: "dom3", text: "element.childElementCount" }, // đếm số element con
+    { id: "js150", id_heading: "element", order: 0, version: "dom3", text: "element.addEventListener()" }, // thêm sự kiện
+    { id: "js151", id_heading: "element", order: 0, version: "dom3", text: "element.removeEventListener()" }, // thêm sự kiện
     // xoá
     { id: "js100", id_heading: "element", order: 0, version: "dom1", text: "element.remove()" }, 
     { id: "js101", id_heading: "element", order: 0, version: "dom1", text: "element.removeChild()" }, 
@@ -138,6 +147,12 @@
     { id: "js80", id_heading: "element", order: 0, version: "dom1", text: "element.offsetLeft" }, // lấy khoảng cách giữa viền trái phải của offset Parent và offset child
     { id: "js81", id_heading: "element", order: 0, version: "dom1", text: "element.offsetTop" }, // lấy khoảng cách giữa viền trên dưới của offset Parent và offset child
     { id: "js82", id_heading: "element", order: 0, version: "dom1", text: "element.offsetParent" }, // lấy element Offset cha
+    { id: "js168", id_heading: "element", order: 0, version: "dom1", text: "element.offsetHeight" }, // lấy element Offset cha
+    { id: "js169", id_heading: "element", order: 0, version: "dom1", text: "element.offsetWidth" }, // lấy element Offset cha
+    { id: "js172", id_heading: "element", order: 0, version: "dom1", text: "element.scrollLeft" }, // lấy element Offset cha
+    { id: "js173", id_heading: "element", order: 0, version: "dom1", text: "element.scrollTop" }, // lấy element Offset cha
+    { id: "js174", id_heading: "element", order: 0, version: "dom1", text: "element.scrollHeight" }, // lấy element Offset cha
+    { id: "js175", id_heading: "element", order: 0, version: "dom1", text: "element.scrollWidth" }, // lấy element Offset cha
 
     // tìm phần tử trong thẻ
     
@@ -146,6 +161,17 @@
     { id: "js71", id_heading: "element", order: 0, version: "dom1", text: "element.compareDocumentPosition()" }, // kiểm tra vị tri tương đối của 2 element
     { id: "js72", id_heading: "element", order: 0, version: "dom1", text: "element.contains()" }, // kiểm tra 1 đứa element có phải là con cháu của 1 đứa element không
     { id: "js74", id_heading: "element", order: 0, version: "dom1", text: "element.dir" }, // thiết lập hướng chữ
+    { id: "js159", id_heading: "element", order: 0, version: "dom1", text: "element.isContentEditable" }, // trả về true hoặc false khi phần tử có thể thay đổi giá trị trên màn hình người dùng hay không.
+    { id: "js160", id_heading: "element", order: 0, version: "dom1", text: "element.isDefaultNamespace()" }, // trả về bolean nhưng ko biết để làm gì
+    { id: "js161", id_heading: "element", order: 0, version: "dom1", text: "element.isEqualNode()" }, // trả về bolean nhưng ko biết để làm gì
+    { id: "js162", id_heading: "element", order: 0, version: "dom1", text: "element.isSameNode()" }, // 
+    { id: "js163", id_heading: "element", order: 0, version: "dom1", text: "element.isSupported()" }, // 
+    { id: "js164", id_heading: "element", order: 0, version: "dom1", text: "element.lang" }, // 
+    { id: "js165", id_heading: "element", order: 0, version: "dom1", text: "element.matches()" }, // 
+    { id: "js166", id_heading: "element", order: 0, version: "dom1", text: "element.namespaceURI" }, // 
+    { id: "js167", id_heading: "element", order: 0, version: "dom1", text: "element.normalize()" }, // 
+    { id: "js170", id_heading: "element", order: 0, version: "dom1", text: "element.ownerDocument" }, // 
+    { id: "js171", id_heading: "element", order: 0, version: "dom1", text: "element.scrollIntoView()" }, // 
 
     // mouse event
     { id: "js116", id_heading: "mouseEvent", order: 0, version: "dom1", text: "element.onmouseover" }, 

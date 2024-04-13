@@ -6,65 +6,309 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      table {
-        max-width: 1200px;
-        width: 100%;
-        margin: auto;
+      :root {
+        --background-color: #ffffff;
+        --background-surface: #f6f7fb;
+        --accent-color: #00de9a;
+        --light-color: gray;
       }
-      table , tr, td {
-        /* border: 1px solid; */
-        border-collapse: collapse;
+      html {
+        scroll-behavior: smooth;
       }
-      td {
+      .interest-wrap * {
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+        text-transform: uppercase;
         text-align: center;
-        padding: 4px 6px;
       }
-      table tbody tr:nth-child(odd) {
-        background-color: rgba(103, 103, 103, 0.2);
+      .interest-wrap {
+        max-width: 1200px;
+        background-color: var(--background-color);
+        display: flex;
+        margin: auto;
+        column-gap: 10px;
+      }
 
+      .interest-wrap .interest-table {
+        width: 100%;
+        padding: 20px;
+        flex-basis: 70%;
+        background-color: var(--background-surface);
+      }
+      .interest-wrap .interest-control {
+        flex-basis: 30%;
+        background-color: var(--background-surface);
+        padding: 20px;
+        align-self: flex-start;
+        position: sticky;
+        top: 0;
+      }
+      @media (max-width: 786px) {
+        .interest-wrap {
+          flex-wrap: wrap;
+          row-gap: 10px;
+          flex-direction: column-reverse;
+        }
+        .interest-wrap .interest-table {
+          flex-basis: 100%;
+          overflow: scroll;
+        }
+        .interest-wrap .interest-control {
+          flex-basis: 100%;
+          width: 100%;
+          position: unset;
+          top: unset;
+        }
+      }
+      .interest-wrap .interest-control label {
+        margin-top: 16px;
+        text-align: left;
+        display: block;
+        text-transform: capitalize;
+        color: var(--light-color);
+      }
+      .interest-wrap .interest-control select {
+        display: block;
+        width: 100%;
+        padding: 16px;
+        margin-top: 4px;
+        border: none;
+        border-radius: 3px;
+        text-align-last: left;
+        border-right: 16px solid transparent;
+      }
+      .interest-wrap .interest-control .wrap-button {
+        margin-top: 16px;
+        text-align: end !important;
+      }
+      .interest-wrap .interest-control .wrap-button button {
+        padding: 10px 20px;
+        background-color: var(--accent-color);
+        border-radius: 3px;
+        border: unset;
+        color: white;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      .interest-wrap p {
+        text-align: left;
+        margin-bottom: 16px;
+        color: var(--light-color);
+      }
+      .interest-wrap h2 {
+        margin-block: 16px;
+      }
+      .interest-wrap #time,
+      #percent,
+      #total {
+        font-weight: 900;
+        color: #000000;
+      }
+      .interest-wrap .wrap-table {
+        width: 100%;
+        overflow: scroll;
+      }
+      .interest-wrap table {
+        width: 100%;
+      }
+      .interest-wrap tbody {
+        position: relative;
+      }
+      .interest-wrap tbody::before {
+        content: "";
+        height: 2px;
+        width: 0%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: var(--accent-color);
+        /* transition: all 0.3s; */
+      }
+      .interest-wrap tbody.loader::before {
+        animation: loader 1s 1 ease-in-out;
+      }
+      @keyframes loader {
+        from {
+          width: 0%;
+        }
+        to {
+          width: 100%;
+        }
+      }
+      .interest-wrap th {
+        padding: 4px;
+      }
+      .interest-wrap td {
+        background-color: white;
+        padding: 4px;
+        color: var(--light-color);
+      }
+      .interest-wrap tbody tr {
+        animation: animatetd 0.2s 2 alternate;
+      }
+      @keyframes animatetd {
+        from {
+          transform: translateY(0px);
+        }
+        to {
+          transform: translateY(30px);
+        }
+      }
+      .interest-wrap tr td:nth-child(4) {
+        font-weight: 900;
+        color: #000000;
       }
     </style>
   </head>
   <body>
-    <script>
-      var table = document.createElement("table");
-      var tbody = document.createElement("tbody");
+    <!-- interest: tiền lãi -->
+    <div class="interest-wrap">
+      <div class="interest-table">
+        <p>Bảng tính <span>Vay vốn ngân hàng</span></p>
+        <p>Mục đích:</p>
+        <h2>Mua xe trả góp</h2>
+        <p>Vốn vay: <span id="total">6</span></p>
+        <p>Thời gian: <span id="time">6</span> năm</p>
+        <p>Lãi suất: <span id="percent">6</span>% / 12 tháng</p>
+        <div class="wrap-table">
+          <table>
+            <thead>
+              <tr>
+                <th>tg</th>
+                <th>tiền gốc</th>
+                <th>tiền lãi</th>
+                <th>tổng cộng</th>
+                <th>còn lại</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="interest-control">
+        <h3>số liệu đầu vào</h3>
+        <label for="select-total">Vốn vay</label>
+        <select name="select-total" id="select-total">
+          <option value="5">500 triệu</option>
+          <option value="6">600 triệu</option>
+          <option value="7">700 triệu</option>
+          <option value="8" selected>800 triệu</option>
+          <option value="9">900 triệu</option>
+          <option value="10">1 tỷ</option>
+          <option value="12">1 tỷ 200 triệu</option>
+          <option value="15">1 tỷ 500 triệu</option>
+          <option value="20">2 tỷ</option>
+        </select>
+        <label for="select-time">Thời gian</label>
+        <select name="select-time" id="select-time">
+          <option value="2">2 năm</option>
+          <option value="3">3 năm</option>
+          <option value="4">4 năm</option>
+          <option value="5">5 năm</option>
+          <option value="6">6 năm</option>
+          <option value="7">7 năm</option>
+          <option value="8" selected>8 năm</option>
+        </select>
+        <label for="select-percent">Lãi suất</label>
+        <select name="select-percent" id="select-percent">
+          <option value="5">5 %</option>
+          <option value="6">6 %</option>
+          <option value="7">7 %</option>
+          <option value="8">8 %</option>
+          <option value="9" selected>9 %</option>
+          <option value="10">10 %</option>
+          <option value="11">11 %</option>
+          <option value="12">12 %</option>
+        </select>
 
-      var TOTAL = 100000000;
-      var YEAR = 5;
-      var PERCENT = 8;
-      var TIME = YEAR * 12;
-      var PERCENT_BY_MONTH = PERCENT / 12 / 100;
-      var EVERY = TOTAL / TIME;
-      
-      for (let month = 1; month < TIME; month++) {
-        var REMAIN = TOTAL - EVERY*month;
-        var LOST = REMAIN * PERCENT_BY_MONTH;
-        var TEXT_NODE_EVERY = Math.floor(EVERY);
-        var TEXT_NODE_LOST = Math.floor(LOST);
-        var TEXT_NODE_PAYMENT = Math.floor(LOST+EVERY);
-        var TEXT_NODE_REMAIN = Math.floor(REMAIN);
-        var tr = document.createElement("tr");
-        var td1 = document.createElement("td");
-        var td2 = document.createElement("td");
-        var td3 = document.createElement("td");
-        var td4 = document.createElement("td");
-        td1.textContent = TEXT_NODE_EVERY;
-        td2.textContent = TEXT_NODE_LOST;
-        td3.textContent = TEXT_NODE_PAYMENT;
-        td4.textContent = TEXT_NODE_REMAIN;
-        tr.appendChild(td1);
-        tr.appendChild(td2);
-        tr.appendChild(td3);
-        tr.appendChild(td4);
-        tbody.appendChild(tr);
+        <div class="wrap-button">
+          <button>KẾT QUẢ</button>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" defer>
+      function calculateInterset() {
+        var tbodyForAnimation = document.querySelector(".interest-wrap table tbody");
 
-        // console.log(month,Math.floor(EVERY),  Math.floor(LOST), Math.floor(LOST + EVERY), Math.floor(REMAIN));
+        tbodyForAnimation.innerHTML = "";
+        tbodyForAnimation.classList.add("loader");
+
+        setTimeout(() => {
+          tbodyForAnimation.classList.remove("loader");
+          var elementTime = document.getElementById("time");
+          var elementPercent = document.getElementById("percent");
+          var elementTotal = document.getElementById("total");
+          var tbody = document.querySelector(".interest-wrap table tbody");
+          var table = document.querySelector(".interest-wrap table");
+
+          var TOTAL = document.getElementById("select-total").value;
+          TOTAL = window.parseInt(TOTAL) * 100000000;
+          var YEAR = document.getElementById("select-time").value;
+          YEAR = window.parseInt(YEAR);
+          var PERCENT = document.getElementById("select-percent").value;
+          YEAR = window.parseInt(YEAR);
+          var TIME = YEAR * 12;
+          var PERCENT_BY_MONTH = PERCENT / 12 / 100;
+          var EVERY = TOTAL / TIME;
+          tbody.innerHTML = "";
+
+          elementTime.innerText = YEAR;
+          elementPercent.innerText = PERCENT;
+          elementTotal.innerText = document.querySelector("#select-total").children[document.querySelector("#select-total").selectedIndex].innerText;
+          for (let month = 1; month <= TIME; month++) {
+            // value
+            var REMAIN = TOTAL - EVERY * month;
+            var REMAIN_TO_LOST = TOTAL - EVERY * (month - 1);
+            var LOST = REMAIN_TO_LOST * PERCENT_BY_MONTH;
+            // create textnode
+            var TEXT_NODE_EVERY = Comma(Math.floor(EVERY));
+            var TEXT_NODE_LOST = Comma(Math.floor(LOST));
+            var TEXT_NODE_PAYMENT = Comma(Math.floor(LOST + EVERY));
+            var TEXT_NODE_REMAIN = Comma(Math.floor(REMAIN));
+            // create element
+            var tr = document.createElement("tr");
+            var td0 = document.createElement("td");
+            var td1 = document.createElement("td");
+            var td2 = document.createElement("td");
+            var td3 = document.createElement("td");
+            var td4 = document.createElement("td");
+            // set text
+            td0.textContent = month;
+            td1.textContent = TEXT_NODE_EVERY;
+            td2.textContent = TEXT_NODE_LOST;
+            td3.textContent = TEXT_NODE_PAYMENT;
+            td4.textContent = TEXT_NODE_REMAIN;
+            tr.appendChild(td0);
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            tr.appendChild(td3);
+            tr.appendChild(td4);
+            tr.style.animationDelay = month * 0.03 + "s";
+            tbody.appendChild(tr);
+          }
+          table.scrollIntoView();
+        }, 1000);
       }
-      
-      table.appendChild(tbody);
-      console.log(table);
-      document.body.appendChild(table);
+      var result = document.querySelector(".interest-wrap button");
+      result && result.addEventListener("click", calculateInterset);
+      result &&
+        (function () {
+          calculateInterset();
+        })();
+
+      function Comma(number) {
+        number = "" + number;
+        if (number.length > 3) {
+          var mod = number.length % 3;
+          var output = mod > 0 ? number.substring(0, mod) : "";
+          for (i = 0; i < Math.floor(number.length / 3); i++) {
+            if (mod == 0 && i == 0) output += number.substring(mod + 3 * i, mod + 3 * i + 3);
+            else output += "," + number.substring(mod + 3 * i, mod + 3 * i + 3);
+          }
+          return output;
+        } else return number;
+      }
     </script>
   </body>
 </html>

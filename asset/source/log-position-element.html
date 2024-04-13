@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent {
+        width: 300px;
+        height: 300px;
+        overflow: auto;
+        background-color: red;
+      }
+      .child {
+        width: 600px;
+        height: 600px;
+        background-color: yellow;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <script></script>
+    <div class="parent">
+      <div class="child">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus sunt vel numquam sint facere pariatur odit dolores nesciunt sequi? Sapiente non, recusandae, consequatur dolorum laborum aliquam ea id nulla voluptates ex, nobis optio quae sed sequi eveniet? Numquam quidem, ducimus nemo impedit unde minus. Quia molestias eaque sunt ducimus exercitationem.</div>
+    </div>
+    <script>
+      document.querySelector(".parent").addEventListener("scroll", render);
+      function render() {
+        var parent = document.querySelector(".parent");
+        var rect = parent.getBoundingClientRect();
+        console.clear()
+        console.log("1: parent clientLeft: ", parent.clientLeft);
+        console.log("2: parent clientTop: ", parent.clientTop);
+        console.log("3: parent clientWidth: ", parent.clientWidth);
+        console.log("4: parent clientHeight: ", parent.clientHeight);
+        console.log("----------------------")
+        console.log("5: parent offsetLeft: ", parent.offsetLeft);
+        console.log("6: parent offsetTop: ", parent.offsetTop);
+        console.log("7: parent offsetHeight: ", parent.offsetHeight);
+        console.log("8: parent offsetWidth: ", parent.offsetWidth);
+        console.log("----------------------")
+        console.log("9: parent scrollLeft: ", parent.scrollLeft);
+        console.log("10: parent scrollTop: ", parent.scrollTop);
+        console.log("11: parent scrollHeight: ", parent.scrollHeight);
+        console.log("12: parent scrollWidth: ", parent.scrollWidth);
+        console.log(parent.offsetParent)
+        console.log("----------------------")
+        console.log("13: parent rect .width : ", rect.width)
+        console.log("14: parent rect .height : ", rect.height)
+        console.log("15: parent rect .x alias of left: ", rect.x)
+        console.log("16: parent rect .y alias of top: ", rect.y)
+        console.log("17: parent rect .left : ", rect.left)
+        console.log("18: parent rect .top : ", rect.top)
+        console.log("19: parent rect .right : ", rect.right)
+        console.log("20: parent rect .bottom : ", rect.bottom)
+      }
+      render()
+    </script>
+  </body>
+</html>
