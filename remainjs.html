@@ -1,206 +1,39 @@
 <script>
   // lay cac phan tu tren web
+  var tr = document.querySelectorAll(".ws-table-all tr");
+  var arr = [];
+  tr.forEach((element) => {
+    var firstChild = element.querySelector("td:first-child > code");
+    var lastChild = element.querySelector("td:last-child > a");
+    var code = firstChild.innerText;
+    console.log(code);
+    console.log(lastChild);
+  });
+  console.log(arr);
+  // lay cac phan tu tren web
   var a = document.querySelectorAll(".ws-table-all tr td:first-child a");
   var arr = [];
   a.forEach((element) => {
     console.log(element.innerText);
     var obj = {};
     obj.name = element.innerText;
-    obj.href = "https://www.w3schools.com/jsref/"+element.getAttribute("href");
+    obj.href = "https://www.w3schools.com/php/" + element.getAttribute("href");
     arr.push(obj);
   });
   console.log(arr);
-  
+
   // lay cac phan tu da hoc
   var buttons = document.querySelectorAll("#control .item:nth-of-type(2) button");
   var btnArr = [];
   buttons.forEach((btn) => {
     btnArr.push(btn.innerHTML);
-  })
+  });
   console.log(btnArr);
 
-
-  var r1 = [
-    "element.accessKey",
-    "element.addEventListener()",
-    "element.appendChild()",
-    "element.attributes",
-    "element.blur()",
-    "element.childElementCount",
-    "element.childNodes",
-    "element.children",
-    "element.classList",
-    "element.className",
-    "element.click()",
-    "element.clientHeight",
-    "element.clientLeft",
-    "element.clientTop",
-    "element.clientWidth",
-    "element.cloneNode()",
-    "element.closest()",
-    "element.compareDocumentPosition()",
-    "element.contains()",
-    "element.contentEditable",
-    "element.dir",
-    "element.firstChild",
-    "element.firstElementChild",
-    "element.focus()",
-    "element.getAttribute()",
-    "element.getAttributeNode()",
-    "element.getBoundingClientRect()",
-    "element.getElementsByClassName()",
-    "element.getElementsByTagName()",
-    "element.hasAttribute()",
-    "element.hasAttributes()",
-    "element.hasChildNodes()",
-    "element.id",
-    "element.innerHTML",
-    "element.innerText",
-    "element.insertAdjacentElement()",
-    "element.insertAdjacentHTML()",
-    "element.insertAdjacentText()",
-    "element.insertBefore()",
-    "element.isContentEditable",
-    "element.isDefaultNamespace()",
-    "element.isEqualNode()",
-    "element.isSameNode()",
-    "element.isSupported()",
-    "element.lang",
-    "element.lastChild",
-    "element.lastElementChild",
-    "element.matches()",
-    "element.namespaceURI",
-    "element.nextSibling",
-    "element.nextElementSibling",
-    "element.nodeName",
-    "element.nodeType",
-    "element.nodeValue",
-    "element.normalize()",
-    "element.offsetHeight",
-    "element.offsetWidth",
-    "element.offsetLeft",
-    "element.offsetParent",
-    "element.offsetTop",
-    "element.outerHTML",
-    "element.outerText",
-    "element.ownerDocument",
-    "element.parentNode",
-    "element.parentElement",
-    "element.previousSibling",
-    "element.previousElementSibling",
-    "element.querySelector()",
-    "element.querySelectorAll()",
-    "element.remove()",
-    "element.removeAttribute()",
-    "element.removeAttributeNode()",
-    "element.removeChild()",
-    "element.removeEventListener()",
-    "element.replaceChild()",
-    "element.scrollHeight",
-    "element.scrollIntoView()",
-    "element.scrollLeft",
-    "element.scrollTop",
-    "element.scrollWidth",
-    "element.setAttribute()",
-    "element.setAttributeNode()",
-    "element.style",
-    "element.tabIndex",
-    "element.tagName",
-    "element.textContent",
-    "element.title"
-];
-  var r2 = 
-  [
-    "element.parentNode",
-    "element.parentElement",
-    "element.previousSibling",
-    "element.previousElementSibling",
-    "element.nextSibling",
-    "element.nextElementSibling",
-    "element.childNodes",
-    "element.children",
-    "element.firstChild",
-    "element.firstElementChild",
-    "element.lastChild",
-    "element.lastElementChild",
-    "element.getElementsByClassName()",
-    "element.getElementsByTagName()",
-    "element.querySelector()",
-    "element.querySelectorAll()",
-    "element.closest()",
-    "element.attributes",
-    "element.getAttribute()",
-    "element.getAttributeNode()",
-    "element.hasAttribute()",
-    "element.hasAttributes()",
-    "element.className",
-    "element.classList",
-    "element.id",
-    "element.title",
-    "element.textContent",
-    "element.tagName",
-    "element.tabIndex",
-    "element.style",
-    "element.removeAttribute()",
-    "element.removeAttributeNode()",
-    "element.setAttribute()",
-    "element.setAttributeNode()",
-    "element.nodeName",
-    "element.nodeType",
-    "element.nodeValue",
-    "element.accessKey",
-    "element.blur()",
-    "element.focus()",
-    "element.click()",
-    "element.contentEditable",
-    "element.hasChildNodes()",
-    "element.childElementCount",
-    "element.addEventListener()",
-    "element.removeEventListener()",
-    "element.remove()",
-    "element.removeChild()",
-    "element.outerHTML",
-    "element.innerHTML",
-    "element.outerText",
-    "element.innerText",
-    "element.replaceChild()",
-    "element.insertAdjacentElement()",
-    "element.insertAdjacentHTML()",
-    "element.insertAdjacentText()",
-    "element.insertBefore()",
-    "element.appendChild()",
-    "element.cloneNode()",
-    "element.getBoundingClientRect()",
-    "element.clientLeft",
-    "element.clientTop",
-    "element.clientWidth",
-    "element.clientHeight",
-    "element.offsetLeft",
-    "element.offsetTop",
-    "element.offsetParent",
-    "element.offsetHeight",
-    "element.offsetWidth",
-    "element.scrollLeft",
-    "element.scrollTop",
-    "element.scrollHeight",
-    "element.scrollWidth",
-    "element.compareDocumentPosition()",
-    "element.contains()",
-    "element.dir",
-    "element.isContentEditable",
-    "element.isDefaultNamespace()",
-    "element.isEqualNode()",
-    "element.isSameNode()",
-    "element.isSupported()",
-    "element.lang",
-    "element.matches()",
-    "element.namespaceURI",
-    "element.normalize()",
-    "element.ownerDocument",
-    "element.scrollIntoView()"
-]
-var r = r1.filter((e) => {
+  var r1 = ["element.accessKey", "element.addEventListener()", "element.appendChild()", "element.attributes", "element.blur()", "element.childElementCount", "element.childNodes", "element.children", "element.classList", "element.className", "element.click()", "element.clientHeight", "element.clientLeft", "element.clientTop", "element.clientWidth", "element.cloneNode()", "element.closest()", "element.compareDocumentPosition()", "element.contains()", "element.contentEditable", "element.dir", "element.firstChild", "element.firstElementChild", "element.focus()", "element.getAttribute()", "element.getAttributeNode()", "element.getBoundingClientRect()", "element.getElementsByClassName()", "element.getElementsByTagName()", "element.hasAttribute()", "element.hasAttributes()", "element.hasChildNodes()", "element.id", "element.innerHTML", "element.innerText", "element.insertAdjacentElement()", "element.insertAdjacentHTML()", "element.insertAdjacentText()", "element.insertBefore()", "element.isContentEditable", "element.isDefaultNamespace()", "element.isEqualNode()", "element.isSameNode()", "element.isSupported()", "element.lang", "element.lastChild", "element.lastElementChild", "element.matches()", "element.namespaceURI", "element.nextSibling", "element.nextElementSibling", "element.nodeName", "element.nodeType", "element.nodeValue", "element.normalize()", "element.offsetHeight", "element.offsetWidth", "element.offsetLeft", "element.offsetParent", "element.offsetTop", "element.outerHTML", "element.outerText", "element.ownerDocument", "element.parentNode", "element.parentElement", "element.previousSibling", "element.previousElementSibling", "element.querySelector()", "element.querySelectorAll()", "element.remove()", "element.removeAttribute()", "element.removeAttributeNode()", "element.removeChild()", "element.removeEventListener()", "element.replaceChild()", "element.scrollHeight", "element.scrollIntoView()", "element.scrollLeft", "element.scrollTop", "element.scrollWidth", "element.setAttribute()", "element.setAttributeNode()", "element.style", "element.tabIndex", "element.tagName", "element.textContent", "element.title"];
+  var r2 = ["element.parentNode", "element.parentElement", "element.previousSibling", "element.previousElementSibling", "element.nextSibling", "element.nextElementSibling", "element.childNodes", "element.children", "element.firstChild", "element.firstElementChild", "element.lastChild", "element.lastElementChild", "element.getElementsByClassName()", "element.getElementsByTagName()", "element.querySelector()", "element.querySelectorAll()", "element.closest()", "element.attributes", "element.getAttribute()", "element.getAttributeNode()", "element.hasAttribute()", "element.hasAttributes()", "element.className", "element.classList", "element.id", "element.title", "element.textContent", "element.tagName", "element.tabIndex", "element.style", "element.removeAttribute()", "element.removeAttributeNode()", "element.setAttribute()", "element.setAttributeNode()", "element.nodeName", "element.nodeType", "element.nodeValue", "element.accessKey", "element.blur()", "element.focus()", "element.click()", "element.contentEditable", "element.hasChildNodes()", "element.childElementCount", "element.addEventListener()", "element.removeEventListener()", "element.remove()", "element.removeChild()", "element.outerHTML", "element.innerHTML", "element.outerText", "element.innerText", "element.replaceChild()", "element.insertAdjacentElement()", "element.insertAdjacentHTML()", "element.insertAdjacentText()", "element.insertBefore()", "element.appendChild()", "element.cloneNode()", "element.getBoundingClientRect()", "element.clientLeft", "element.clientTop", "element.clientWidth", "element.clientHeight", "element.offsetLeft", "element.offsetTop", "element.offsetParent", "element.offsetHeight", "element.offsetWidth", "element.scrollLeft", "element.scrollTop", "element.scrollHeight", "element.scrollWidth", "element.compareDocumentPosition()", "element.contains()", "element.dir", "element.isContentEditable", "element.isDefaultNamespace()", "element.isEqualNode()", "element.isSameNode()", "element.isSupported()", "element.lang", "element.matches()", "element.namespaceURI", "element.normalize()", "element.ownerDocument", "element.scrollIntoView()"];
+  var r = r1.filter((e) => {
     return !r2.includes(e);
-})
-console.log(r);
+  });
+  console.log(r);
 </script>

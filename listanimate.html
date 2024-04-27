@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        --primary-color: red;
+        --accent-color: yellow;
+        --surface-color: gray;
+        font-size: 16px;
+      }
+      
+      .wrap-box {
+        position: relative;
+        height: 6rem;
+        transition: all 1s;
+        opacity: 0;
+        max-width: 1200px;
+        margin: auto;
+        margin-top: 0.25rem;
+      }
+      
+      .wrap-box.performance {
+        transform: scale(1);
+        animation: performanceScale 1s 1 forwards;
+        
+      }
+      @keyframes performanceScale {
+        0%{
+          transform: translateY(0px);
+          animation-timing-function: cubic-bezier(.53,0,.91,-0.03);
+        }
+        50% {
+          transform: translateY(300px);
+        }
+        
+        100% {
+          animation-timing-function: cubic-bezier(.53,0,.91,-0.03);
+          transform: translateY(0px);
+          opacity: 1;
+        }
+      }
+      .wrap-box * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
+      .wrap-inside {
+        display: flex;
+        height: 100%;
+      }
+
+      .wrap-inside > *,
+      .box > * {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .wrap-inside .item-left {
+        flex: 0 0 20%;
+        background-color: yellow;
+      }
+      .wrap-inside .item-center {
+        flex: 0 0 50%;
+        background-color: blue;
+      }
+      .wrap-inside .item-right {
+        flex: 0 0 30%;
+        background-color: green;
+      }
+      .box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+      .box:hover .item-right {
+        flex-basis: 30%;
+      }
+      .box .item-left {
+        background-color: var(--surface-color);
+        flex: 0 0 20%;
+        border-left: 0.5rem solid var(--primary-color);
+      }
+
+      .box .item-right {
+        background-color: darkblue;
+        flex: 0 0 80%;
+        transition: all 0.25s;
+        color: white;
+      }
+      .box .item-right.performance {
+
+        animation: performanceBasis 1.5s 1s 1 linear;
+        
+
+      }
+      @keyframes performanceBasis {
+        0%{
+          flex: 0 0 80%;
+          animation-timing-function: cubic-bezier(0,1.16,0,.97);
+        }
+        50% {
+          flex: 0 0 30%;
+          animation-timing-function: cubic-bezier(0,1.16,0,.97);
+        }
+        100% {
+          flex: 0 0 80%;
+          animation-timing-function: cubic-bezier(0,1.16,0,.97);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap-box">
+      <div class="wrap-inside">
+        <div class="item-left">Lorem</div>
+        <div class="item-center">Lorem, ipsum dolor.</div>
+        <div class="item-right"></div>
+      </div>
+      <div class="box">
+        <div class="item-left">Lorem</div>
+        <div class="item-right">Lorem, ipsum dolor.</div>
+      </div>
+    </div>
+    <div class="wrap-box">
+      <div class="wrap-inside">
+        <div class="item-left">Lorem</div>
+        <div class="item-center">Lorem, ipsum dolor.</div>
+        <div class="item-right"></div>
+      </div>
+      <div class="box">
+        <div class="item-left">Lorem</div>
+        <div class="item-right">Lorem, ipsum dolor.</div>
+      </div>
+    </div>
+    <div class="wrap-box">
+      <div class="wrap-inside">
+        <div class="item-left">Lorem</div>
+        <div class="item-center">Lorem, ipsum dolor.</div>
+        <div class="item-right"></div>
+      </div>
+      <div class="box">
+        <div class="item-left">Lorem</div>
+        <div class="item-right">Lorem, ipsum dolor.</div>
+      </div>
+    </div>
+    <div class="wrap-box">
+      <div class="wrap-inside">
+        <div class="item-left">Lorem</div>
+        <div class="item-center">Lorem, ipsum dolor.</div>
+        <div class="item-right"></div>
+      </div>
+      <div class="box">
+        <div class="item-left">Lorem</div>
+        <div class="item-right">Lorem, ipsum dolor.</div>
+      </div>
+    </div>
+    <div class="wrap-box">
+      <div class="wrap-inside">
+        <div class="item-left">Lorem</div>
+        <div class="item-center">Lorem, ipsum dolor.</div>
+        <div class="item-right"></div>
+      </div>
+      <div class="box">
+        <div class="item-left">Lorem</div>
+        <div class="item-right">Lorem, ipsum dolor.</div>
+      </div>
+    </div>
+    <script>
+      var wrapBoxs = document.querySelectorAll(".wrap-box");
+      wrapBoxs.forEach((wrapBox,index) => {
+        wrapBox.classList.toggle("performance");
+        wrapBox.style.animationDelay= index*0.2 + "s";
+      });
+      var rightBoxItems = document.querySelectorAll(".wrap-box .box .item-right");
+      var lastChildBox = wrapBoxs[wrapBoxs.length-4];
+      var handleAnimateRightBox = () => {
+        rightBoxItems.forEach((rightBoxItem,index) => {
+        rightBoxItem.classList.toggle("performance");
+        rightBoxItem.style.animationDelay= index*0.1 + "s";
+      });
+      }
+      lastChildBox.addEventListener("animationend",handleAnimateRightBox);
+      
+      
+      
+    </script>
+  </body>
+</html>

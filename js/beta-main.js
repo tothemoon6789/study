@@ -3871,10 +3871,11 @@ var myBraid = [
 {name:"Wheel Object",value:wheelEvent},
 {name:"Style Object",value:styleObject},    
 ]
+
 var count = 0;
-myBraid.forEach((row) => {
+myBraid.forEach((row,index) => {
     var ul = document.createElement("UL");
-    ul.textContent = row.name;
+    ul.textContent = index + 1 + ". "+ row.name;
     row.value.forEach((obj) => {
         var li = document.createElement("LI");
         var a = document.createElement("A");
