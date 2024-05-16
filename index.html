@@ -17,34 +17,36 @@
   <h1>check</h1>
   <div id="demo">
   </div>
-  <div id="touchstart"></div>
+  <!-- <div id="touchstart"></div>
   <div id="touchend"></div>
   <div id="touchmove"></div>
   <div id="touchcancel"></div>
-  <div id="click"></div>
+  <div id="click"></div> -->
+  <div id="result"></div>
 
   <script>
     var x = 0;
-    var touchstart = document.getElementById("touchstart");
-    var touchend = document.getElementById("touchend");
-    var touchmove = document.getElementById("touchmove");
-    var touchcancel = document.getElementById("touchcancel");
-    var click = document.getElementById("click");
+    // var touchstart = document.getElementById("touchstart");
+    // var touchend = document.getElementById("touchend");
+    // var touchmove = document.getElementById("touchmove");
+    // var touchcancel = document.getElementById("touchcancel");
+    // var click = document.getElementById("click");
     var demo = document.getElementById("demo");
+    var result = document.getElementById("result");
     demo.addEventListener("touchstart",function(){
-      touchstart.insertAdjacentHTML("beforeend","<span>demo fire touchstart</span><br>")
+      result.insertAdjacentHTML("beforeend","<span>demo fire touchstart</span><br>")
     })
     demo.addEventListener("touchend",function(){
-      touchend.insertAdjacentHTML("beforeend","<span>demo fire touchend</span><br>")
+      result.insertAdjacentHTML("beforeend","<span>demo fire touchend</span><br>")
     })
     demo.addEventListener("touchmove",function(){
-      touchmove.insertAdjacentHTML("beforeend","<span>demo fire touchmove</span><br>")
+      result.insertAdjacentHTML("beforeend","<span>demo fire touchmove</span><br>")
     })
     demo.addEventListener("touchcancel",function(){
-      touchcancel.insertAdjacentHTML("beforeend","<span>demo fire touchcancel</span><br>")
+      result.insertAdjacentHTML("beforeend","<span>demo fire touchcancel</span><br>")
     })
     demo.addEventListener("click",function(){
-      click.insertAdjacentHTML("beforeend","<span>demo fire click</span><br>")
+      result.insertAdjacentHTML("beforeend","<span>demo fire click</span><br>")
     })
   </script>
 </body>
