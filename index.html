@@ -16,14 +16,35 @@
 <body>
   <h1>check</h1>
   <div id="demo">
-
   </div>
+  <div id="touchstart"></div>
+  <div id="touchend"></div>
+  <div id="touchmove"></div>
+  <div id="touchcancel"></div>
+  <div id="click"></div>
+
   <script>
     var x = 0;
+    var touchstart = document.getElementById("touchstart");
+    var touchend = document.getElementById("touchend");
+    var touchmove = document.getElementById("touchmove");
+    var touchcancel = document.getElementById("touchcancel");
+    var click = document.getElementById("click");
     var demo = document.getElementById("demo");
     demo.addEventListener("touchstart",function(){
-      this.innerText = x;
-      x++
+      touchstart.innerText = "demo fire touchstart";
+    })
+    demo.addEventListener("touchend",function(){
+      touchend.innerText = "demo fire touchend";
+    })
+    demo.addEventListener("touchmove",function(){
+      touchmove.innerText = "demo fire touchmove";
+    })
+    demo.addEventListener("touchcancel",function(){
+      touchcancel.innerText = "demo fire touchcancel";
+    })
+    demo.addEventListener("click",function(){
+      click.innerText = "demo fire click";
     })
   </script>
 </body>
