@@ -32,19 +32,19 @@
     var click = document.getElementById("click");
     var demo = document.getElementById("demo");
     demo.addEventListener("touchstart",function(){
-      touchstart.innerText = "demo fire touchstart";
+      touchstart.insertAdjacentHTML("beforeend","<span>demo fire touchstart</span>")
     })
     demo.addEventListener("touchend",function(){
-      touchend.innerText = "demo fire touchend";
+      touchend.insertAdjacentHTML("beforeend","<span>demo fire touchend</span>")
     })
     demo.addEventListener("touchmove",function(){
-      touchmove.innerText = "demo fire touchmove";
+      touchmove.insertAdjacentHTML("beforeend","<span>demo fire touchmove</span>")
     })
     demo.addEventListener("touchcancel",function(){
-      touchcancel.innerText = "demo fire touchcancel";
+      touchcancel.insertAdjacentHTML("beforeend","<span>demo fire touchcancel</span>")
     })
     demo.addEventListener("click",function(){
-      click.innerText = "demo fire click";
+      click.insertAdjacentHTML("beforeend","<span>demo fire click</span>")
     })
   </script>
 </body>
